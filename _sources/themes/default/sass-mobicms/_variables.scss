@@ -1,0 +1,48 @@
+$brand-primary: #727f94;
+$brand-success: #53a553;
+$brand-info: #88c2de;
+$brand-warning: #f0ad4e;
+$brand-danger: #d9534f;
+
+$body-bg: #4E5869;
+$text-color: #4E5869;
+$link-color: $brand-primary;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: underline;
+
+$font-size-base:          14px !default;
+$font-family-sans-serif: Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-small:         ceil(($font-size-base * 0.75));
+
+$legend-color: $text-color;
+$legend-border-color: lighten($brand-primary, 20%);
+
+$dropdown-bg: #f7f7f7;
+$dropdown-border: rgba(0, 0, 0, .2);
+$dropdown-divider-bg: #dddddd;
+$dropdown-link-color: $text-color;
+$dropdown-link-hover-bg: lighten(#727f94, 40%);
+$dropdown-header-color: $text-color;
+
+$navbar-height: 44px;
+$navbar-margin-bottom: 0;
+$navbar-border-radius: 0;
+$navbar-inverse-color: #9DA6B5;
+$navbar-inverse-bg: #5d687c;
+$navbar-inverse-border: darken($navbar-inverse-bg, 10%);
+$navbar-inverse-link-color: #9DA6B5;
+$navbar-inverse-link-hover-color: lighten(#9DA6B5, 10%);
+$navbar-inverse-link-hover-bg: lighten($navbar-inverse-bg, 5%);
+$navbar-inverse-link-active-bg: lighten($navbar-inverse-bg, 10%);
+$navbar-inverse-toggle-hover-bg: $brand-primary;
+$navbar-inverse-toggle-icon-bar-bg: lighten($brand-primary, 20%);
+$navbar-inverse-toggle-border-color: $brand-primary;
+
+$nav-pills-border-radius: 0;
+
+$progress-bg: #e7e7e7;
+
+$badge-color: #727f94;
+$badge-bg: #e4e4e4;
+
+$table-border-color: #c2c2c2;

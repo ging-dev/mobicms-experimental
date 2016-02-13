@@ -1,0 +1,679 @@
+# ##############################################################################
+# mobiCMS Content Management System (http://mobicms.net)                       #
+#                                                                              #
+# For copyright and license information, please see the LICENSE.md             #
+#                                                                              #
+# @link        http://mobicms.net mobiCMS Project                              #
+# @copyright   Copyright (C) mobiCMS Community                                 #
+# @license     LICENSE.md (see attached file)                                  #
+# ##############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: mobicms\n"
+"POT-Creation-Date: 2016-02-07 12:33+0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"PO-Revision-Date: 2016-02-07 04:24-0500\n"
+"Last-Translator: mobiCMS <dev@mobicms.net>\n"
+"Language-Team: Georgian\n"
+"X-Generator: crowdin.com\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-KeywordsList: _s;_sp:1,2\n"
+"X-Poedit-SearchPath-0: system/includes\n"
+"X-Poedit-SearchPath-1: modules\n"
+"X-Poedit-SearchPath-2: assets/template/includes\n"
+"X-Poedit-SearchPath-3: system/mobicms\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: mobicms\n"
+"X-Crowdin-Language: ka\n"
+"X-Crowdin-File: /system/default.pot\n"
+"Language: ka_GE\n"
+
+#: assets/template/includes/include.navbar.php:24
+msgid "Go To"
+msgstr "წასვლა"
+
+#: assets/template/includes/include.navbar.php:27
+msgid "Home"
+msgstr "მთავარი"
+
+#: assets/template/includes/include.navbar.php:29
+#: assets/template/includes/layout.default.php:20
+#: modules/news/templates/edit_form.php:5 modules/news/templates/index.php:10
+msgid "News"
+msgstr "ახალი ამბები"
+
+#: assets/template/includes/include.navbar.php:31
+#: modules/admin/includes/acl.php:33 modules/home/templates/index.php:11
+#: modules/profile/templates/profile.php:80
+msgid "Guestbook"
+msgstr "სტუმრის წიგნაკი"
+
+#: assets/template/includes/include.navbar.php:32
+#: modules/admin/includes/acl.php:20 modules/admin/includes/quarantine.php:114
+#: modules/admin/includes/sitemap.php:23 modules/home/templates/index.php:12
+msgid "Forum"
+msgstr "ფორუმი"
+
+#: assets/template/includes/include.navbar.php:34
+#: modules/admin/includes/acl.php:57 modules/home/templates/index.php:14
+msgid "Downloads"
+msgstr "ჩამოტვირთვები"
+
+#: assets/template/includes/include.navbar.php:35
+#: modules/admin/includes/acl.php:45 modules/admin/includes/sitemap.php:29
+#: modules/home/templates/index.php:15
+msgid "Library"
+msgstr "ბიბლიოთეკა"
+
+#: assets/template/includes/include.navbar.php:37
+#: modules/home/templates/index.php:16
+msgid "Community"
+msgstr "საზოგადოება"
+
+#: assets/template/includes/include.navbar.php:38
+#: modules/home/templates/index.php:18 modules/profile/templates/profile.php:79
+msgid "Photo Album"
+msgstr "ფოტო ალბომი"
+
+#: assets/template/includes/include.navbar.php:48
+#: modules/admin/templates/edit_form.php:5 modules/admin/templates/index.php:7
+#: modules/admin/templates/scanner.php:5
+msgid "Admin Panel"
+msgstr "ადმინ პანელი"
+
+#: assets/template/includes/include.navbar.php:52
+#: modules/profile/templates/profile.php:84
+msgid "Mail"
+msgstr "ფოსტა"
+
+#: assets/template/includes/include.navbar.php:57
+#: modules/profile/templates/option.php:24
+msgid "Profile"
+msgstr "პროფილი"
+
+#: assets/template/includes/include.navbar.php:59
+#: modules/admin/includes/users_settings.php:37
+#: modules/news/templates/index.php:33
+#: modules/profile/templates/edit_form.php:9
+#: modules/profile/templates/option.php:14
+#: modules/profile/templates/option.php:32
+#: modules/profile/templates/option_avatar.php:12
+#: modules/profile/templates/option_theme.php:10
+#: modules/profile/templates/option_theme_set.php:10
+#: modules/profile/templates/profile.php:29
+msgid "Settings"
+msgstr "პარამეტრები"
+
+#: assets/template/includes/include.navbar.php:61
+#: modules/login/includes/logout.php:28 modules/login/templates/login.php:5
+msgid "Exit"
+msgstr "გასასვლელი"
+
+#: assets/template/includes/include.navbar.php:67
+#: modules/admin/includes/users_settings.php:21
+#: modules/registration/includes/activation.php:28
+#: modules/registration/templates/registered.php:3
+#: modules/registration/templates/registration.php:3
+msgid "Registration"
+msgstr "რეგისტრაცია"
+
+#: assets/template/includes/include.navbar.php:71
+#: modules/login/includes/login.php:41 modules/login/templates/login.php:5
+#: modules/login/templates/login_captcha.php:5
+#: modules/registration/includes/activation.php:23
+msgid "Login"
+msgstr "შესვლა"
+
+#: assets/template/includes/include.user.php:14
+msgid "IP Management"
+msgstr "IP მართვის"
+
+#: assets/template/includes/include.user.php:17
+msgid "Proxy Management"
+msgstr "მარიონეტული მართვის"
+
+#: assets/template/includes/include.user.php:24
+msgid "Block this IP"
+msgstr "ამ IP ბლოკი"
+
+#: assets/template/includes/include.user.php:51
+msgid "Last visit"
+msgstr "ბოლო ვიზიტი"
+
+#: assets/template/includes/layout.default.php:40
+msgid "Help"
+msgstr "დახმარება"
+
+#: assets/template/includes/layout.default.php:41
+msgid "Up"
+msgstr "ზევით"
+
+#: assets/template/includes/message.php:11
+#: modules/login/templates/login_captcha.php:29
+#: system/mobicms/Form/Form.php:225
+msgid "Continue"
+msgstr "გაგრძელება"
+
+#: assets/template/includes/message.php:14 modules/admin/includes/acl.php:82
+#: modules/admin/includes/languages.php:51
+#: modules/admin/includes/quarantine.php:162
+#: modules/admin/includes/scanner.php:39 modules/admin/includes/sitemap.php:51
+#: modules/admin/includes/smilies.php:27
+#: modules/admin/includes/system_settings.php:116
+#: modules/admin/includes/users_settings.php:175
+#: modules/help/includes/avatars.php:54
+#: modules/help/templates/avatars_index.php:4
+#: modules/help/templates/avatars_list.php:4
+#: modules/help/templates/avatars_set.php:7 modules/help/templates/rules.php:4
+#: modules/login/includes/logout.php:32 modules/news/includes/add.php:45
+#: modules/news/includes/delete.php:35 modules/news/includes/delete.php:40
+#: modules/news/includes/edit.php:54 modules/news/includes/edit.php:62
+#: modules/news/includes/edit.php:67
+#: modules/profile/includes/option_avatar_animation.php:33
+#: modules/profile/includes/option_avatar_animation.php:74
+#: modules/profile/includes/option_avatar_gravatar.php:33
+#: modules/profile/includes/option_avatar_image.php:35
+#: modules/profile/includes/option_edit.php:176
+#: modules/profile/includes/option_email.php:57
+#: modules/profile/includes/option_language.php:37
+#: modules/profile/includes/option_nickname.php:54
+#: modules/profile/includes/option_nickname.php:64
+#: modules/profile/includes/option_password.php:47
+#: modules/profile/includes/option_rank.php:56
+#: modules/profile/includes/option_settings.php:82
+#: modules/profile/includes/option_theme.php:70
+#: modules/profile/includes/reputation.php:62 modules/whois/index.php:45
+msgid "Back"
+msgstr "უკან"
+
+#: modules/404/index.php:3
+msgid "Page does not exist"
+msgstr "გვერდი არ არსებობს"
+
+#: modules/404/index.php:4
+msgid "Sorry, but the page you were trying to view does not exist"
+msgstr "უკაცრავად, მაგრამ გვერდზე თქვენ ცდილობთ ნახოთ არ არსებობს"
+
+#: modules/admin/includes/acl.php:71 modules/news/templates/index.php:53
+msgid "Comments"
+msgstr "კომენტარები"
+
+#: modules/admin/includes/acl.php:78 modules/admin/includes/languages.php:47
+#: modules/admin/includes/quarantine.php:158
+#: modules/admin/includes/sitemap.php:47
+#: modules/admin/includes/system_settings.php:112
+#: modules/admin/includes/users_settings.php:171
+#: modules/help/includes/avatars.php:50 modules/news/includes/add.php:41
+#: modules/news/includes/edit.php:50
+#: modules/profile/includes/option_avatar_animation.php:29
+#: modules/profile/includes/option_avatar_gravatar.php:29
+#: modules/profile/includes/option_avatar_image.php:31
+#: modules/profile/includes/option_edit.php:172
+#: modules/profile/includes/option_email.php:53
+#: modules/profile/includes/option_language.php:33
+#: modules/profile/includes/option_nickname.php:50
+#: modules/profile/includes/option_password.php:43
+#: modules/profile/includes/option_rank.php:52
+#: modules/profile/includes/option_settings.php:78
+#: modules/profile/includes/reputation.php:58
+msgid "Save"
+msgstr "შენახვა"
+
+#: modules/admin/includes/quarantine.php:26
+msgid "Quarantine"
+msgstr "კარანტინის"
+
+#: modules/admin/includes/quarantine.php:41
+msgid "Restrictions"
+msgstr "შეზღუდვები"
+
+#: modules/admin/includes/scanner.php:35 modules/admin/includes/smilies.php:23
+msgid "Run"
+msgstr "დაწყება"
+
+#: modules/admin/index.php:67
+msgid "Access forbidden"
+msgstr "წვდომა აკრძალულია"
+
+#: modules/admin/templates/edit_form.php:11 system/mobicms/Form/Form.php:63
+msgid "Data saved successfully"
+msgstr "მონაცემები შენახული წარმატებით"
+
+#: modules/admin/templates/index.php:22 modules/admin/templates/smilies.php:5
+#: modules/help/templates/index.php:9
+msgid "Smilies"
+msgstr "სმაილები"
+
+#: modules/community/templates/user_list.php:7
+#: modules/home/templates/index.php:17 modules/online/includes/index.php:26
+#: modules/online/templates/guests.php:24 modules/online/templates/index.php:25
+#: modules/online/templates/ip.php:24
+msgid "Users"
+msgstr "მომხმარებლები"
+
+#: modules/community/templates/user_list.php:11
+#: modules/news/templates/index.php:15 modules/online/templates/guests.php:11
+#: modules/online/templates/index.php:12 modules/online/templates/ip.php:11
+#: modules/profile/templates/profile.php:19
+msgid "Control"
+msgstr "კონტროლი"
+
+#: modules/community/templates/user_list.php:24
+msgid "Users List"
+msgstr "მომხმარებლების სია"
+
+#: modules/community/templates/user_list.php:31
+#: modules/help/templates/avatars_list.php:23
+#: modules/news/templates/index.php:65 modules/online/templates/guests.php:82
+#: modules/online/templates/index.php:52 modules/online/templates/ip.php:52
+#: modules/profile/templates/option_theme.php:47
+msgid "List is empty"
+msgstr "სია ცარიელია"
+
+#: modules/community/templates/user_list.php:34
+#: modules/help/templates/avatars_list.php:26
+#: modules/news/templates/index.php:70 modules/online/templates/guests.php:85
+#: modules/online/templates/index.php:55 modules/online/templates/ip.php:55
+#: modules/profile/templates/option_theme.php:50
+msgid "Total"
+msgstr "სულ"
+
+#: modules/community/templates/user_list.php:40
+#: modules/online/templates/guests.php:88 modules/online/templates/index.php:58
+msgid "Only for registered users"
+msgstr "მხოლოდ დარეგისტრირებულ მომხმარებლებს"
+
+#: modules/help/includes/avatars.php:45
+#: modules/profile/templates/option_avatar.php:22
+msgid "Set Avatar"
+msgstr "ავატარის დაყენება"
+
+#: modules/help/includes/avatars.php:46
+msgid "Are you sure you want to set yourself this avatar?"
+msgstr "დარწმუნებული ხართ რომ გსურთ თავს ეს ავატარი?"
+
+#: modules/help/includes/avatars.php:69
+msgid "Avatar is installed"
+msgstr "ავატარი არის დაყენებული"
+
+#: modules/help/templates/avatars_index.php:9
+#: modules/help/templates/avatars_list.php:9
+#: modules/help/templates/avatars_set.php:12
+#: modules/help/templates/index.php:10
+msgid "Avatars"
+msgstr "ავატარები"
+
+#: modules/help/templates/index.php:3 modules/home/templates/index.php:8
+#: modules/profile/templates/profile.php:74
+msgid "Information"
+msgstr "ინფორმაცია"
+
+#: modules/help/templates/index.php:8 modules/help/templates/rules.php:9
+msgid "Terms of Use"
+msgstr "მოხმარების წესები"
+
+#: modules/home/templates/index.php:3
+msgid "Welcome"
+msgstr "მოგესალმებით"
+
+#: modules/home/templates/index.php:9 modules/news/templates/index.php:40
+msgid "News Archive"
+msgstr "სიახლეების არქივი"
+
+#: modules/home/templates/index.php:10
+msgid "Communication"
+msgstr "კომუნიკაციის"
+
+#: modules/home/templates/index.php:13
+msgid "Useful"
+msgstr "სასარგებლო"
+
+#: modules/login/includes/login.php:20
+msgid "Nickname or Email"
+msgstr "მეტსახელი ან ელ-ფოსტა"
+
+#: modules/login/includes/login.php:27
+#: modules/registration/includes/registration.php:44
+msgid "Password"
+msgstr "პაროლი"
+
+#: modules/login/includes/login.php:35
+msgid "Remember"
+msgstr "გახსოვდეთ"
+
+#: modules/login/includes/login.php:45
+msgid "Forgot password?"
+msgstr "დაგავიწყდათ პაროლი?"
+
+#: modules/login/includes/login.php:60
+msgid "Login information are incorrect"
+msgstr "ინფორმაცია არასწორია"
+
+#: modules/login/includes/logout.php:19
+msgid "Leave the site?"
+msgstr "დატოვე საიტზე?"
+
+#: modules/login/includes/logout.php:22
+msgid "Remove authorization from all devices"
+msgstr "ამოიღონ ავტორიზაციის ყველა მოწყობილობები"
+
+#: modules/login/templates/login_captcha.php:11
+msgid "Symbols on the picture"
+msgstr "სიმბოლოები სურათი"
+
+#: modules/login/templates/login_captcha.php:17
+#: system/mobicms/Form/Form.php:248
+msgid "If you do not see the picture with the code, turn the graphics support in your browser and refresh the page"
+msgstr "თუ თქვენ ვერ ხედავთ სურათს კოდით, მაშინ ჩართეთ სურათების მხარდაჭერა თქვენს ბრაუზერში და განაახლეთ გვერდი"
+
+#: modules/news/includes/add.php:21 modules/news/includes/edit.php:28
+msgid "Title"
+msgstr "სათაური"
+
+#: modules/news/includes/add.php:27 modules/news/includes/edit.php:35
+msgid "Text"
+msgstr "ტექსტი"
+
+#: modules/news/includes/clean.php:37 modules/news/includes/delete.php:31
+#: modules/profile/includes/option_avatar_delete.php:27
+#: modules/registration/includes/registration.php:83
+#: modules/registration/notice/index.php:66
+msgid "Cancel"
+msgstr "გაუქმება"
+
+#: modules/news/includes/delete.php:27 modules/news/templates/index.php:58
+msgid "Delete"
+msgstr "წაშლა"
+
+#: modules/news/includes/delete.php:34 modules/news/includes/delete.php:39
+#: modules/news/includes/edit.php:61 modules/news/includes/edit.php:66
+msgid "Wrong data"
+msgstr "არასწორი მონაცემები"
+
+#: modules/news/templates/index.php:16
+msgid "Toggle navigation"
+msgstr "ნავიგაცია ბარი"
+
+#: modules/news/templates/index.php:31
+msgid "Add"
+msgstr "დამატება"
+
+#: modules/news/templates/index.php:57
+msgid "Edit"
+msgstr "შეცვლა"
+
+#: modules/online/templates/guests.php:7 modules/online/templates/index.php:8
+#: modules/online/templates/ip.php:7
+msgid "Who is online"
+msgstr "ვინ არის ონლაინი"
+
+#: modules/online/templates/guests.php:27 modules/online/templates/index.php:28
+#: modules/online/templates/ip.php:27
+msgid "History"
+msgstr "ისტორია"
+
+#: modules/online/templates/guests.php:30
+#: modules/online/templates/guests.php:41 modules/online/templates/index.php:33
+#: modules/online/templates/ip.php:30
+msgid "Guests"
+msgstr "სტუმარი"
+
+#: modules/online/templates/guests.php:33 modules/online/templates/index.php:36
+#: modules/online/templates/ip.php:33 modules/online/templates/ip.php:40
+msgid "IP Activity"
+msgstr "IP საქმიანობის"
+
+#: modules/profile/includes/option_edit.php:55
+#: modules/registration/includes/registration.php:57
+msgid "Gender"
+msgstr "სქესი"
+
+#: modules/profile/includes/option_edit.php:59
+#: modules/registration/includes/registration.php:61
+msgid "Male"
+msgstr "მამრობითი"
+
+#: modules/profile/includes/option_edit.php:60
+#: modules/registration/includes/registration.php:62
+msgid "Female"
+msgstr "მდედრობითი"
+
+#: modules/profile/includes/option_email.php:64
+msgid "Invalid Email address"
+msgstr "არასწორი ელ-ფოსტა"
+
+#: modules/profile/includes/option_email.php:66
+#: modules/registration/includes/registration.php:129
+msgid "This Email is already taken"
+msgstr "ელფოსტის ეს არის უკვე მიღებული"
+
+#: modules/profile/includes/option_email.php:71
+#: modules/profile/includes/option_nickname.php:93
+#: modules/profile/includes/option_password.php:67
+#: modules/profile/includes/option_rank.php:61
+msgid "Invalid password"
+msgstr "პაროლი არასწორია"
+
+#: modules/profile/includes/option_nickname.php:35
+#: modules/registration/includes/registration.php:31
+msgid "Min. 2, Max. 20 Characters.<br>Allowed letters are Cyrillic and Latin alphabet, numbers, spaces and punctuation - = @ ! ? ~ . _ ( ) [ ] *"
+msgstr "Min. 2, Max. 20 სიმბოლო.<br>დაშვებული წერილები არის კირილიცას და ლათინური ანბანი, ციფრები, ფართები და პუნქტუაციის- = @ ! ? ~ . _ ( ) [ ] *"
+
+#: modules/profile/includes/option_nickname.php:37
+#: modules/profile/includes/option_nickname.php:60
+msgid "Day"
+msgid_plural "Days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/profile/includes/option_nickname.php:73
+msgid "Invalid characters"
+msgstr "არასწორი გმირები"
+
+#: modules/profile/includes/option_nickname.php:76
+msgid "It is forbidden to use characters of different languages"
+msgstr "აკრძალულია გამოიყენოთ სიმბოლოების სხვადასხვა ენებზე"
+
+#: modules/profile/includes/option_nickname.php:79
+msgid "Nicknames consisting only of numbers are prohibited"
+msgstr "მეტსახელებს რომელიც შედგება მხოლოდ ციფრები აკრძალულია"
+
+#: modules/profile/includes/option_nickname.php:82
+msgid "Repeated characters"
+msgstr "განმეორებითი გმირები"
+
+#: modules/profile/includes/option_nickname.php:85
+#: modules/registration/includes/registration.php:101
+msgid "Email cannot be used as the Nickname"
+msgstr "ელ-ფოსტა არ შეიძლება იყოს გამოყენებული, როგორც მეტსახელი"
+
+#: modules/profile/includes/option_nickname.php:88
+#: modules/registration/includes/registration.php:102
+msgid "This Nickname is already taken"
+msgstr "ეს მეტსახელი არის უკვე მიღებული"
+
+#: modules/profile/includes/option_password.php:30
+#: modules/registration/includes/registration.php:51
+msgid "The password length min. 3 characters"
+msgstr "პაროლის სიგრძე მინ. 3 სიმბოლო"
+
+#: modules/profile/includes/option_password.php:36
+#: modules/registration/includes/registration.php:50
+msgid "Repeat password"
+msgstr "გაიმეორეთ პაროლი"
+
+#: modules/profile/includes/option_password.php:50
+#: modules/registration/includes/registration.php:118
+msgid "Passwords don't coincide"
+msgstr "პაროლები არ ემთხვევა"
+
+#: modules/profile/index.php:71
+msgid "User does not exists"
+msgstr "მომხმარებელი არ არსებობს"
+
+#: modules/profile/templates/profile.php:86
+msgid "Write"
+msgstr "დაწერე"
+
+#: modules/registration/includes/registration.php:30
+msgid "Choose Nickname"
+msgstr "აირჩიეთ მეტსახელი"
+
+#: modules/registration/includes/registration.php:37
+#: modules/registration/notice/index.php:42
+msgid "Your Email"
+msgstr "თქვენი ელ. ფოსტა"
+
+#: modules/registration/includes/registration.php:38
+#: modules/registration/notice/index.php:44
+msgid "Please correctly specify your email address. This address will be sent a confirmation code to your registration."
+msgstr "გთხოვთ, სწორად მიუთითოთ თქვენი ელექტრონული ფოსტის მისამართი. ამ მისამართზე გაიგზავნება დადასტურების კოდი თქვენი გარეშე."
+
+#: modules/registration/includes/registration.php:70
+#: modules/registration/notice/index.php:51
+msgid "Verification code"
+msgstr "შემოწმების კოდი"
+
+#: modules/registration/includes/registration.php:79
+msgid "Sign Up"
+msgstr "რეგისტრაცია"
+
+#: modules/registration/includes/registration.php:96
+msgid "Nickname must be at least 2 and no more than 20 characters in length"
+msgstr ""
+
+#: modules/registration/includes/registration.php:97
+msgid "Nickname contains illegal characters"
+msgstr ""
+
+#: modules/registration/includes/registration.php:98
+msgid "Nickname contains characters from different languages"
+msgstr ""
+
+#: modules/registration/includes/registration.php:99
+msgid "Nicknames consisting only of digits are prohibited"
+msgstr ""
+
+#: modules/registration/includes/registration.php:100
+msgid "Nickname contains recurring characters"
+msgstr ""
+
+#: modules/registration/includes/registration.php:114
+msgid "Password must be at least 3 characters in length"
+msgstr ""
+
+#: modules/registration/includes/registration.php:128
+msgid "Please provide a valid email address"
+msgstr ""
+
+#: modules/registration/includes/registration.php:170
+msgid "When saving the form there errors occurred, try once again. If problem repeat, contact the Site Administrator"
+msgstr "როდესაც გადარჩენის ფორმა არსებობს შეცდომები მოხდა, სცადეთ კიდევ ერთხელ. თუ პრობლემა ვიმეორებ, დაუკავშირდით საიტის ადმინისტრაციას"
+
+#: modules/registration/includes/registration.php:225
+msgid "When sending emails the error occurred. Please contact the site administrator."
+msgstr ""
+
+#: modules/registration/notice/index.php:35
+msgid "Your Nickname"
+msgstr ""
+
+#: modules/registration/notice/index.php:60
+msgid "Send"
+msgstr ""
+
+#: modules/registration/templates/registered.php:7
+msgid "You are already registered"
+msgstr "თქვენ უკვე რეგისტრირებული"
+
+#: modules/registration/templates/registration.php:10
+#, php-format
+msgid "By clicking &quot;Sign Up&quot;, you agree that read our %s, and agree with them."
+msgstr "დაჭერით &quot;რეგისტრაცია&quot;, თქვენ ეთანხმებით, რომ წაიკითხეთ ჩვენი %s, და ეთანხმება მათ."
+
+#: modules/registration/templates/registration.php:10
+msgid "Terms"
+msgstr "პირობები"
+
+#: modules/registration/templates/registration.php:14
+msgid "The site moderation is enabled. You can get authorized access to the web site after the confirmation of Your registration of the Administrator. Confirmation is carried out 1-2 times a day."
+msgstr "საიტზე მოდერაციის ჩართულია. თქვენ შეგიძლიათ მიიღოთ ავტორიზებული წვდომა საიტზე, მას შემდეგ, რაც დადასტურების თქვენი რეგისტრაციას ადმინისტრაციას. დადასტურება ხორციელდება 1-2-ჯერ დღეში."
+
+#: modules/registration/templates/registration.php:20
+msgid "Registration is temporarily closed"
+msgstr "რეგისტრაცია დროებით დახურულია"
+
+#: modules/whois/index.php:34
+msgid "IP address"
+msgstr "IP მისამართი"
+
+#: modules/whois/index.php:41
+msgid "Search"
+msgstr "ძებნა"
+
+#: system/includes/Functions.php:78
+msgid "Today"
+msgstr "დღეს"
+
+#: system/includes/Functions.php:81
+msgid "Yesterday"
+msgstr "გუშინ"
+
+#: system/includes/Functions.php:236
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d დღე"
+msgstr[1] "%d დღის"
+
+#: system/mobicms/Form/AssignValues.php:61
+msgid "This field is required"
+msgstr "სავალდებულო ველი"
+
+#: system/mobicms/Form/Form.php:64
+msgid "Errors occurred"
+msgstr "შეცდომები მოხდა"
+
+#: system/mobicms/Form/Validate.php:47
+msgid "The security code is not correct"
+msgstr "უსაფრთხოების კოდი არ არის სწორი"
+
+#: system/mobicms/Form/Validate.php:66
+#, php-format
+msgid "Min. %d symbol"
+msgid_plural "Min. %d symbols"
+msgstr[0] "მინ. %d სიმბოლო"
+msgstr[1] "მინ. %d სიმბოლოები"
+
+#: system/mobicms/Form/Validate.php:70
+#, php-format
+msgid "Max. %d symbol"
+msgid_plural "Max. %d symbols"
+msgstr[0] "მაქს. %d სიმბოლო"
+msgstr[1] "მაქს. %d სიმბოლოები"
+
+#: system/mobicms/Form/Validate.php:92
+msgid "Must be a number"
+msgstr "უნდა იყოს ნომერი"
+
+#: system/mobicms/Form/Validate.php:98
+#, php-format
+msgid "Minimum %d"
+msgstr "მინიმალური %d"
+
+#: system/mobicms/Form/Validate.php:102
+#, php-format
+msgid "Maximum %d"
+msgstr "მაქსიმალური %d"
+
+#: system/mobicms/Form/Validate.php:123
+msgid "IP address is not valid"
+msgstr "IP მისამართი არ არის სწორი"
+
+#: system/mobicms/Form/Validate.php:141
+msgid "The values do not match"
+msgstr "ღირებულებები არ ემთხვევა"
+

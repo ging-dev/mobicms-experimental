@@ -1,0 +1,11 @@
+<?php
+
+namespace Config;
+
+class Database
+{
+    public static $dbHost = 'localhost';
+    public static $dbName = 'mobicms_core';
+    public static $dbUser = 'root';
+    public static $dbPass = '';
+}

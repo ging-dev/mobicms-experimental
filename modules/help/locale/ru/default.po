@@ -1,0 +1,103 @@
+# ##############################################################################
+# mobiCMS Content Management System (http://mobicms.net)                       #
+#                                                                              #
+# For copyright and license information, please see the LICENSE.md             #
+#                                                                              #
+# @link        http://mobicms.net mobiCMS Project                              #
+# @copyright   Copyright (C) mobiCMS Community                                 #
+# @license     LICENSE.md (see attached file)                                  #
+# ##############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: mobicms\n"
+"POT-Creation-Date: 2015-09-20 12:00+0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"PO-Revision-Date: 2016-02-07 04:24-0500\n"
+"Last-Translator: mobiCMS <dev@mobicms.net>\n"
+"Language-Team: Russian\n"
+"X-Generator: crowdin.com\n"
+"X-Poedit-Basepath: ../../../modules/help\n"
+"X-Poedit-KeywordsList: _m;_mp:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Crowdin-Project: mobicms\n"
+"X-Crowdin-Language: ru\n"
+"X-Crowdin-File: /help/default.pot\n"
+"Language: ru_RU\n"
+
+#: includes/avatars.php:17
+msgid "Animals"
+msgstr "Животные"
+
+#: includes/avatars.php:18
+msgid "Anime"
+msgstr "Аниме"
+
+#: includes/avatars.php:19
+msgid "Girls"
+msgstr "Девушки"
+
+#: includes/avatars.php:20
+msgid "Love"
+msgstr "Любовь"
+
+#: includes/avatars.php:21
+msgid "Miscellaneous"
+msgstr "Разное"
+
+#: includes/avatars.php:22
+msgid "Monsters"
+msgstr "Монстры"
+
+#: includes/avatars.php:23
+msgid "Phrases"
+msgstr "Фразы"
+
+#: templates/rules.php:15
+msgid "\n"
+"<p><strong>Being on the Site, you agree to abide by certain rules of conduct.</strong></p>\n"
+"<p>Reports published in spite of the above warnings will be changed or removed. For repeated violations of these rules may apply to the administration guilty of penalties up to termination of your account.</p>\n"
+"<h3>On the Site is prohibited</h3>\n"
+"    <ul>\n"
+"        <li>Advertising messages.</li>\n"
+"        <li>Messages containing the outright propaganda of racial, national or religious hatred.</li>\n"
+"        <li>Posts that contain abusive language and/or sexual harassment.</li>\n"
+"        <li>Posts, clearly insulting someone.</li>\n"
+"        <li>Intentionally distort the writing of nicknames of other participants of the forum to post any abusive give shade.</li>\n"
+"        <li>Post the same message several times in the same or different forum topics.</li>\n"
+"        <li>Re-publish the messages deleted by moderators.</li>\n"
+"        <li>Post messages not related to the stated topic.</li>\n"
+"        <li>Continue to topics closed by moderators.</li>\n"
+"        <li>Use when registering nicknames that are offensive to others.</li>\n"
+"    </ul>\n"
+"<h3>It is not desirable</h3>\n"
+"    <ul>\n"
+"        <li>To express in public discontent with the wrong actions of the topics the Forum and discuss the actions of moderators. There is a private mail.</li>\n"
+"        <li>Post messages, consisting only of links to another site.</li>\n"
+"        <li>Post messages without taking part in the discussion: consisting only of smileys and / or phrases such as \"Well, well,\" \"And what?\", \"Who's there?\", etc.</li>\n"
+"    </ul>\n"
+msgstr "<p><strong>Находясь на Сайте, Вы обязуетесь соблюдать определенные правила поведения.</strong></p>\n"
+"<p>Сообщения, опубликованные вопреки указанным ниже предупреждениям, будут изменены либо удалены. За неоднократные нарушения настоящих правил администрация вправе применять к виновным штрафные санкции вплоть до удаления учетной записи.</p>\n"
+"<h3>На сайте запрещено</h3>\n"
+"<ul>\n"
+"    <li>Сообщения рекламного характера.</li>\n"
+"    <li>Сообщения, содержащие пропаганду расовой, национальной и религиозной вражды.</li>\n"
+"    <li>Сообщения, содержащие ненормативную лексику и/или сексуальные домогательства.</li>\n"
+"    <li>Сообщения, явно оскорбляющие кого-либо.</li>\n"
+"    <li>Преднамеренно искаженное написание ников других участников форума с целью придания сообщению оскорбительного оттенка.</li>\n"
+"    <li>Публикация одного и того же сообщения несколько раз в одном или разных топиках форума.</li>\n"
+"    <li>Повторная публикация сообщений, удаленных модераторами.</li>\n"
+"    <li>Публиковация сообщений, не относящиеся к заявленной теме.</li>\n"
+"    <li>Продолжение тем, закрытых модераторами.</li>\n"
+"    <li>Использовать при регистрации ники, имеющие оскорбительный для других пользователей характер.</li>\n"
+"</ul>\n"
+"<h3>Крайне нежелательно</h3>\n"
+"<ul>\n"
+"    <li>Высказывать в публичных топиках недовольство некорректными действиями участников форума и обсуждать действия модераторов. Для этого есть приватная почта.</li>\n"
+"    <li>Публиковать сообщения, состоящие только из ссылки на другой сайт.</li>\n"
+"    <li>Публиковать сообщения без признаков дискуссии: состоящие только из смайликов и/или фраз типа \"Ну-ну\", \"И чо?\", \"Кто здесь?\" и тому подобных.</li>\n"
+"</ul>"
+

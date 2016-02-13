@@ -1,0 +1,614 @@
+# ##############################################################################
+# mobiCMS Content Management System (http://mobicms.net)                       #
+#                                                                              #
+# For copyright and license information, please see the LICENSE.md             #
+#                                                                              #
+# @link        http://mobicms.net mobiCMS Project                              #
+# @copyright   Copyright (C) mobiCMS Community                                 #
+# @license     LICENSE.md (see attached file)                                  #
+# ##############################################################################
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mobicms\n"
+"POT-Creation-Date: 2016-02-13 15:41+0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Oleg Kasyanov <dev@mobicms.net>\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-KeywordsList: _s;_sp:1,2\n"
+"X-Poedit-SearchPath-0: system/includes\n"
+"X-Poedit-SearchPath-1: modules\n"
+"X-Poedit-SearchPath-2: assets/template/includes\n"
+"X-Poedit-SearchPath-3: system/mobicms\n"
+
+#: assets/template/includes/include.navbar.php:24
+msgid "Go To"
+msgstr ""
+
+#: assets/template/includes/include.navbar.php:27
+msgid "Home"
+msgstr ""
+
+#: assets/template/includes/include.navbar.php:29
+#: assets/template/includes/layout.default.php:20
+msgid "News"
+msgstr ""
+
+#: assets/template/includes/include.navbar.php:31
+#: modules/admin/includes/acl.php:33 modules/home/templates/index.php:11
+#: modules/profile/templates/profile.php:80
+msgid "Guestbook"
+msgstr ""
+
+#: assets/template/includes/include.navbar.php:32
+#: modules/admin/includes/acl.php:20 modules/admin/includes/quarantine.php:114
+#: modules/admin/includes/sitemap.php:23 modules/home/templates/index.php:12
+msgid "Forum"
+msgstr ""
+
+#: assets/template/includes/include.navbar.php:34
+#: modules/admin/includes/acl.php:57 modules/home/templates/index.php:14
+msgid "Downloads"
+msgstr ""
+
+#: assets/template/includes/include.navbar.php:35
+#: modules/admin/includes/acl.php:45 modules/admin/includes/sitemap.php:29
+#: modules/home/templates/index.php:15
+msgid "Library"
+msgstr ""
+
+#: assets/template/includes/include.navbar.php:37
+#: modules/home/templates/index.php:16
+msgid "Community"
+msgstr ""
+
+#: assets/template/includes/include.navbar.php:38
+#: modules/home/templates/index.php:18 modules/profile/templates/profile.php:79
+msgid "Photo Album"
+msgstr ""
+
+#: assets/template/includes/include.navbar.php:48
+#: modules/admin/templates/edit_form.php:5 modules/admin/templates/index.php:7
+#: modules/admin/templates/scanner.php:5
+msgid "Admin Panel"
+msgstr ""
+
+#: assets/template/includes/include.navbar.php:52
+#: modules/profile/templates/profile.php:84
+msgid "Mail"
+msgstr ""
+
+#: assets/template/includes/include.navbar.php:57
+#: modules/profile/templates/option.php:24
+msgid "Profile"
+msgstr ""
+
+#: assets/template/includes/include.navbar.php:59
+#: modules/admin/includes/users_settings.php:37
+#: modules/profile/templates/edit_form.php:9
+#: modules/profile/templates/option.php:14
+#: modules/profile/templates/option.php:32
+#: modules/profile/templates/option_avatar.php:12
+#: modules/profile/templates/option_theme.php:10
+#: modules/profile/templates/option_theme_set.php:10
+#: modules/profile/templates/profile.php:29
+msgid "Settings"
+msgstr ""
+
+#: assets/template/includes/include.navbar.php:61
+#: modules/login/includes/logout.php:28 modules/login/templates/login.php:5
+msgid "Exit"
+msgstr ""
+
+#: assets/template/includes/include.navbar.php:67
+#: modules/admin/includes/users_settings.php:21
+#: modules/registration/includes/activation.php:32
+#: modules/registration/includes/confirmation.php:20
+#: modules/registration/index.php:27 modules/registration/templates/index.php:3
+msgid "Registration"
+msgstr ""
+
+#: assets/template/includes/include.navbar.php:71
+#: modules/login/includes/login.php:41 modules/login/templates/login.php:5
+#: modules/login/templates/login_captcha.php:5
+#: modules/registration/includes/activation.php:26
+msgid "Login"
+msgstr ""
+
+#: assets/template/includes/include.user.php:14
+msgid "IP Management"
+msgstr ""
+
+#: assets/template/includes/include.user.php:17
+msgid "Proxy Management"
+msgstr ""
+
+#: assets/template/includes/include.user.php:24
+msgid "Block this IP"
+msgstr ""
+
+#: assets/template/includes/include.user.php:51
+msgid "Last visit"
+msgstr ""
+
+#: assets/template/includes/layout.default.php:40
+msgid "Help"
+msgstr ""
+
+#: assets/template/includes/layout.default.php:41
+msgid "Up"
+msgstr ""
+
+#: modules/404/index.php:3
+msgid "Page does not exist"
+msgstr ""
+
+#: modules/404/index.php:4
+msgid "Sorry, but the page you were trying to view does not exist"
+msgstr ""
+
+#: modules/admin/includes/acl.php:71
+msgid "Comments"
+msgstr ""
+
+#: modules/admin/includes/acl.php:78 modules/admin/includes/languages.php:47
+#: modules/admin/includes/quarantine.php:158
+#: modules/admin/includes/sitemap.php:47
+#: modules/admin/includes/system_settings.php:112
+#: modules/admin/includes/users_settings.php:171
+#: modules/help/includes/avatars.php:50
+#: modules/profile/includes/option_avatar_animation.php:29
+#: modules/profile/includes/option_avatar_gravatar.php:29
+#: modules/profile/includes/option_avatar_image.php:31
+#: modules/profile/includes/option_edit.php:172
+#: modules/profile/includes/option_email.php:53
+#: modules/profile/includes/option_language.php:33
+#: modules/profile/includes/option_nickname.php:50
+#: modules/profile/includes/option_password.php:43
+#: modules/profile/includes/option_rank.php:52
+#: modules/profile/includes/option_settings.php:78
+#: modules/profile/includes/reputation.php:58
+msgid "Save"
+msgstr ""
+
+#: modules/admin/includes/acl.php:82 modules/admin/includes/languages.php:51
+#: modules/admin/includes/quarantine.php:162
+#: modules/admin/includes/scanner.php:39 modules/admin/includes/sitemap.php:51
+#: modules/admin/includes/smilies.php:27
+#: modules/admin/includes/system_settings.php:116
+#: modules/admin/includes/users_settings.php:175
+#: modules/help/includes/avatars.php:54
+#: modules/help/templates/avatars_index.php:4
+#: modules/help/templates/avatars_list.php:4
+#: modules/help/templates/avatars_set.php:7 modules/help/templates/rules.php:4
+#: modules/login/includes/logout.php:32
+#: modules/profile/includes/option_avatar_animation.php:33
+#: modules/profile/includes/option_avatar_animation.php:74
+#: modules/profile/includes/option_avatar_gravatar.php:33
+#: modules/profile/includes/option_avatar_image.php:35
+#: modules/profile/includes/option_edit.php:176
+#: modules/profile/includes/option_email.php:57
+#: modules/profile/includes/option_language.php:37
+#: modules/profile/includes/option_nickname.php:54
+#: modules/profile/includes/option_nickname.php:64
+#: modules/profile/includes/option_password.php:47
+#: modules/profile/includes/option_rank.php:56
+#: modules/profile/includes/option_settings.php:82
+#: modules/profile/includes/option_theme.php:70
+#: modules/profile/includes/reputation.php:62 modules/whois/index.php:45
+msgid "Back"
+msgstr ""
+
+#: modules/admin/includes/quarantine.php:26
+msgid "Quarantine"
+msgstr ""
+
+#: modules/admin/includes/quarantine.php:41
+msgid "Restrictions"
+msgstr ""
+
+#: modules/admin/includes/scanner.php:35 modules/admin/includes/smilies.php:23
+msgid "Run"
+msgstr ""
+
+#: modules/admin/index.php:67
+msgid "Access forbidden"
+msgstr ""
+
+#: modules/admin/templates/edit_form.php:11 system/mobicms/Form/Form.php:63
+msgid "Data saved successfully"
+msgstr ""
+
+#: modules/admin/templates/index.php:22 modules/admin/templates/smilies.php:5
+#: modules/help/templates/index.php:9
+msgid "Smilies"
+msgstr ""
+
+#: modules/help/includes/avatars.php:45
+#: modules/profile/templates/option_avatar.php:22
+msgid "Set Avatar"
+msgstr ""
+
+#: modules/help/includes/avatars.php:46
+msgid "Are you sure you want to set yourself this avatar?"
+msgstr ""
+
+#: modules/help/includes/avatars.php:69
+msgid "Avatar is installed"
+msgstr ""
+
+#: modules/help/templates/avatars_index.php:9
+#: modules/help/templates/avatars_list.php:9
+#: modules/help/templates/avatars_set.php:12
+#: modules/help/templates/index.php:10
+msgid "Avatars"
+msgstr ""
+
+#: modules/help/templates/avatars_list.php:23
+#: modules/online/templates/guests.php:82 modules/online/templates/index.php:52
+#: modules/online/templates/ip.php:52
+#: modules/profile/templates/option_theme.php:47
+msgid "List is empty"
+msgstr ""
+
+#: modules/help/templates/avatars_list.php:26
+#: modules/online/templates/guests.php:85 modules/online/templates/index.php:55
+#: modules/online/templates/ip.php:55
+#: modules/profile/templates/option_theme.php:50
+msgid "Total"
+msgstr ""
+
+#: modules/help/templates/index.php:3 modules/home/templates/index.php:8
+#: modules/profile/templates/profile.php:74
+msgid "Information"
+msgstr ""
+
+#: modules/help/templates/index.php:8 modules/help/templates/rules.php:9
+msgid "Terms of Use"
+msgstr ""
+
+#: modules/home/templates/index.php:3
+msgid "Welcome"
+msgstr ""
+
+#: modules/home/templates/index.php:9
+msgid "News Archive"
+msgstr ""
+
+#: modules/home/templates/index.php:10
+msgid "Communication"
+msgstr ""
+
+#: modules/home/templates/index.php:13
+msgid "Useful"
+msgstr ""
+
+#: modules/home/templates/index.php:17 modules/online/includes/index.php:26
+#: modules/online/templates/guests.php:24 modules/online/templates/index.php:25
+#: modules/online/templates/ip.php:24
+msgid "Users"
+msgstr ""
+
+#: modules/login/includes/login.php:20
+msgid "Nickname or Email"
+msgstr ""
+
+#: modules/login/includes/login.php:27
+#: modules/registration/includes/index.php:48
+msgid "Password"
+msgstr ""
+
+#: modules/login/includes/login.php:35
+msgid "Remember"
+msgstr ""
+
+#: modules/login/includes/login.php:45
+msgid "Forgot password?"
+msgstr ""
+
+#: modules/login/includes/login.php:60
+msgid "Login information are incorrect"
+msgstr ""
+
+#: modules/login/includes/logout.php:19
+msgid "Leave the site?"
+msgstr ""
+
+#: modules/login/includes/logout.php:22
+msgid "Remove authorization from all devices"
+msgstr ""
+
+#: modules/login/templates/login_captcha.php:11
+msgid "Symbols on the picture"
+msgstr ""
+
+#: modules/login/templates/login_captcha.php:17
+#: system/mobicms/Form/Form.php:248
+msgid "If you do not see the picture with the code, turn the graphics support in your browser and refresh the page"
+msgstr ""
+
+#: modules/login/templates/login_captcha.php:29
+#: system/mobicms/Form/Form.php:225
+msgid "Continue"
+msgstr ""
+
+#: modules/online/templates/guests.php:7 modules/online/templates/index.php:8
+#: modules/online/templates/ip.php:7
+msgid "Who is online"
+msgstr ""
+
+#: modules/online/templates/guests.php:11 modules/online/templates/index.php:12
+#: modules/online/templates/ip.php:11 modules/profile/templates/profile.php:19
+msgid "Control"
+msgstr ""
+
+#: modules/online/templates/guests.php:27 modules/online/templates/index.php:28
+#: modules/online/templates/ip.php:27
+msgid "History"
+msgstr ""
+
+#: modules/online/templates/guests.php:30
+#: modules/online/templates/guests.php:41 modules/online/templates/index.php:33
+#: modules/online/templates/ip.php:30
+msgid "Guests"
+msgstr ""
+
+#: modules/online/templates/guests.php:33 modules/online/templates/index.php:36
+#: modules/online/templates/ip.php:33 modules/online/templates/ip.php:40
+msgid "IP Activity"
+msgstr ""
+
+#: modules/online/templates/guests.php:88 modules/online/templates/index.php:58
+msgid "Only for registered users"
+msgstr ""
+
+#: modules/profile/includes/option_avatar_delete.php:27
+#: modules/registration/includes/index.php:87
+#: modules/registration/includes/notice.php:69
+msgid "Cancel"
+msgstr ""
+
+#: modules/profile/includes/option_edit.php:55
+#: modules/registration/includes/index.php:61
+msgid "Gender"
+msgstr ""
+
+#: modules/profile/includes/option_edit.php:59
+#: modules/registration/includes/index.php:65
+msgid "Male"
+msgstr ""
+
+#: modules/profile/includes/option_edit.php:60
+#: modules/registration/includes/index.php:66
+msgid "Female"
+msgstr ""
+
+#: modules/profile/includes/option_email.php:64
+msgid "Invalid Email address"
+msgstr ""
+
+#: modules/profile/includes/option_email.php:66
+msgid "This Email is already taken"
+msgstr ""
+
+#: modules/profile/includes/option_email.php:71
+#: modules/profile/includes/option_nickname.php:93
+#: modules/profile/includes/option_password.php:67
+#: modules/profile/includes/option_rank.php:61
+msgid "Invalid password"
+msgstr ""
+
+#: modules/profile/includes/option_nickname.php:35
+#: modules/registration/includes/index.php:35
+msgid "Min. 2, Max. 20 Characters.<br>Allowed letters are Cyrillic and Latin alphabet, numbers, spaces and punctuation - = @ ! ? ~ . _ ( ) [ ] *"
+msgstr ""
+
+#: modules/profile/includes/option_nickname.php:37
+#: modules/profile/includes/option_nickname.php:60
+msgid "Day"
+msgid_plural "Days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/profile/includes/option_nickname.php:73
+msgid "Invalid characters"
+msgstr ""
+
+#: modules/profile/includes/option_nickname.php:76
+msgid "It is forbidden to use characters of different languages"
+msgstr ""
+
+#: modules/profile/includes/option_nickname.php:79
+msgid "Nicknames consisting only of numbers are prohibited"
+msgstr ""
+
+#: modules/profile/includes/option_nickname.php:82
+msgid "Repeated characters"
+msgstr ""
+
+#: modules/profile/includes/option_nickname.php:85
+#: modules/registration/includes/index.php:105
+msgid "Email cannot be used as the Nickname"
+msgstr ""
+
+#: modules/profile/includes/option_nickname.php:88
+#: modules/registration/includes/index.php:106
+msgid "This Nickname is already taken"
+msgstr ""
+
+#: modules/profile/includes/option_password.php:30
+#: modules/registration/includes/index.php:55
+msgid "The password length min. 3 characters"
+msgstr ""
+
+#: modules/profile/includes/option_password.php:36
+#: modules/registration/includes/index.php:54
+msgid "Repeat password"
+msgstr ""
+
+#: modules/profile/includes/option_password.php:50
+#: modules/registration/includes/index.php:122
+msgid "Passwords don't coincide"
+msgstr ""
+
+#: modules/profile/index.php:71
+msgid "User does not exists"
+msgstr ""
+
+#: modules/profile/templates/profile.php:86
+msgid "Write"
+msgstr ""
+
+#: modules/registration/includes/index.php:28
+#, php-format
+msgid "By registering on the site, you acknowledge that you have read <a href=\"%s\">Terms of Use</a> and agree with them."
+msgstr ""
+
+#: modules/registration/includes/index.php:34
+msgid "Choose Nickname"
+msgstr ""
+
+#: modules/registration/includes/index.php:41
+#: modules/registration/includes/notice.php:45
+msgid "Your Email"
+msgstr ""
+
+#: modules/registration/includes/index.php:42
+#: modules/registration/includes/notice.php:47
+msgid "Please correctly specify your email address. This address will be sent a confirmation code to your registration."
+msgstr ""
+
+#: modules/registration/includes/index.php:74
+#: modules/registration/includes/notice.php:54
+msgid "Verification code"
+msgstr ""
+
+#: modules/registration/includes/index.php:83
+msgid "Sign Up"
+msgstr ""
+
+#: modules/registration/includes/index.php:100
+msgid "Nickname must be at least 2 and no more than 20 characters in length"
+msgstr ""
+
+#: modules/registration/includes/index.php:101
+msgid "Nickname contains illegal characters"
+msgstr ""
+
+#: modules/registration/includes/index.php:102
+msgid "Nickname contains characters from different languages"
+msgstr ""
+
+#: modules/registration/includes/index.php:103
+msgid "Nicknames consisting only of digits are prohibited"
+msgstr ""
+
+#: modules/registration/includes/index.php:104
+msgid "Nickname contains recurring characters"
+msgstr ""
+
+#: modules/registration/includes/index.php:118
+msgid "Password must be at least 3 characters in length"
+msgstr ""
+
+#: modules/registration/includes/index.php:169
+msgid "When saving the form there errors occurred, try once again. If problem repeat, contact the Site Administrator"
+msgstr ""
+
+#: modules/registration/includes/index.php:183
+#: modules/registration/includes/notice.php:94
+msgid "When sending emails the error occurred. Please contact the site administrator."
+msgstr ""
+
+#: modules/registration/includes/notice.php:38
+msgid "Your Nickname"
+msgstr ""
+
+#: modules/registration/includes/notice.php:63
+msgid "Send"
+msgstr ""
+
+#: modules/registration/index.php:28
+msgid "You are already registered"
+msgstr ""
+
+#: modules/registration/templates/index.php:12
+msgid "Registration is temporarily closed"
+msgstr ""
+
+#: modules/whois/index.php:34
+msgid "IP address"
+msgstr ""
+
+#: modules/whois/index.php:41
+msgid "Search"
+msgstr ""
+
+#: system/includes/Functions.php:78
+msgid "Today"
+msgstr ""
+
+#: system/includes/Functions.php:81
+msgid "Yesterday"
+msgstr ""
+
+#: system/includes/Functions.php:236
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: system/mobicms/Form/AssignValues.php:61
+msgid "This field is required"
+msgstr ""
+
+#: system/mobicms/Form/Form.php:64
+msgid "Errors occurred"
+msgstr ""
+
+#: system/mobicms/Form/Validate.php:47
+msgid "The security code is not correct"
+msgstr ""
+
+#: system/mobicms/Form/Validate.php:66
+#, php-format
+msgid "Min. %d symbol"
+msgid_plural "Min. %d symbols"
+msgstr[0] ""
+msgstr[1] ""
+
+#: system/mobicms/Form/Validate.php:70
+#, php-format
+msgid "Max. %d symbol"
+msgid_plural "Max. %d symbols"
+msgstr[0] ""
+msgstr[1] ""
+
+#: system/mobicms/Form/Validate.php:92
+msgid "Must be a number"
+msgstr ""
+
+#: system/mobicms/Form/Validate.php:98
+#, php-format
+msgid "Minimum %d"
+msgstr ""
+
+#: system/mobicms/Form/Validate.php:102
+#, php-format
+msgid "Maximum %d"
+msgstr ""
+
+#: system/mobicms/Form/Validate.php:123
+msgid "IP address is not valid"
+msgstr ""
+
+#: system/mobicms/Form/Validate.php:141
+msgid "The values do not match"
+msgstr ""

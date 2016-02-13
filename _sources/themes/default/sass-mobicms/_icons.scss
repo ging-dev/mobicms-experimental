@@ -1,0 +1,848 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?-qq6ui0');
+  src: url('../fonts/icomoon.eot?#iefix-qq6ui0') format('embedded-opentype'),
+  url('../fonts/icomoon.woff?-qq6ui0') format('woff'),
+  url('../fonts/icomoon.ttf?-qq6ui0') format('truetype'),
+  url('../fonts/icomoon.svg?-qq6ui0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  display: inline-block;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.fw {
+    width: 1.4em;
+    text-align: center;
+    margin-right: 6px;
+  }
+
+  ////////////////////////////////////////////////////////////
+  //  Sizes                                                 //
+  ////////////////////////////////////////////////////////////
+
+  &.lg {
+    font-size: (4em / 3);
+    line-height: (3em / 4);
+    vertical-align: -15%;
+  }
+
+  &.lg-2x {
+    font-size: 2em;
+  }
+
+  &.lg-3x {
+    font-size: 3em;
+  }
+
+  &.lg-4x {
+    font-size: 4em;
+  }
+
+  &.lg-5x {
+    font-size: 5em;
+  }
+
+  ////////////////////////////////////////////////////////////
+  //  Icons                                                 //
+  ////////////////////////////////////////////////////////////
+
+  &.font-size:before {
+    content: "\e453";
+  }
+
+  &.home:before {
+    content: "\e001";
+  }
+
+  &.user:before {
+    content: "\f008";
+  }
+
+  &.group:before {
+    content: "\f0c0";
+  }
+
+  &.admin:before {
+    content: "\e199";
+  }
+
+  &.male:before {
+    content: "\f183";
+  }
+
+  &.female:before {
+    content: "\f182";
+  }
+
+  &.child:before {
+    content: "\f1ae";
+  }
+
+  &.male-symbol:before {
+    content: "\e247";
+  }
+
+  &.female-symbol:before {
+    content: "\e248";
+  }
+
+  &.enter:before {
+    content: "\e37d";
+  }
+
+  &.exit:before {
+    content: "\e37e";
+  }
+
+  &.sign-in:before {
+    content: "\f090";
+  }
+
+  &.sign-out:before {
+    content: "\f08b";
+  }
+
+  &.settings:before {
+    content: "\e281";
+  }
+
+  &.cogs:before {
+    content: "\f085";
+  }
+
+  &.sitemap:before {
+    content: "\f0e8";
+  }
+
+  &.edit:before {
+    content: "\f046";
+  }
+
+  &.share-square-o:before {
+    content: "\f047";
+  }
+
+  &.check-square-o:before {
+    content: "\f048";
+  }
+
+  &.comment:before {
+    content: "\f075";
+  }
+
+  &.comments:before {
+    content: "\f086";
+  }
+
+  &.comment-o:before {
+    content: "\f0e5";
+  }
+
+  &.comments-o:before {
+    content: "\f0e6";
+  }
+
+  &.plus:before {
+    content: "\f067";
+  }
+
+  &.minus:before {
+    content: "\f068";
+  }
+
+  &.check:before {
+    content: "\f00c";
+  }
+
+  &.close:before {
+    content: "\f00d";
+  }
+
+  &.question:before {
+    content: "\f128";
+  }
+
+  &.info:before {
+    content: "\f129";
+  }
+
+  &.exclamation:before {
+    content: "\f12a";
+  }
+
+  &.plus-circle:before {
+    content: "\f055";
+  }
+
+  &.minus-circle:before {
+    content: "\f056";
+  }
+
+  &.check-circle:before {
+    content: "\f058";
+  }
+
+  &.times-circle:before {
+    content: "\f057";
+  }
+
+  &.question-circle:before {
+    content: "\f059";
+  }
+
+  &.info-circle:before {
+    content: "\f05a";
+  }
+
+  &.exclamation-circle:before {
+    content: "\f06b";
+  }
+
+  &.bin:before {
+    content: "\e252";
+  }
+
+  &.book2:before {
+    content: "\e071";
+  }
+
+  &.books:before {
+    content: "\e072";
+  }
+
+  &.book_open:before {
+    content: "\e352";
+  }
+
+  &.adress_book:before {
+    content: "\e089";
+  }
+
+  &.log_book:before {
+    content: "\e088";
+  }
+
+  &.book3:before {
+    content: "\f02e";
+  }
+
+  &.charts:before {
+    content: "\e043";
+  }
+
+  &.bar-chart:before {
+    content: "\f080";
+  }
+
+  &.area-chart:before {
+    content: "\f1fe";
+  }
+
+  &.line-chart:before {
+    content: "\f201";
+  }
+
+  &.stats-dots:before {
+    content: "\e1fe";
+  }
+
+  &.stats-bars:before {
+    content: "\e204";
+  }
+
+  &.pie-chart:before {
+    content: "\f200";
+  }
+
+  &.attachment:before {
+    content: "\e2d7";
+  }
+
+  &.music:before {
+    content: "\e03c";
+  }
+
+  &.lock:before {
+    content: "\e1d3";
+  }
+
+  &.unlocked:before {
+    content: "\e1d4";
+  }
+
+  &.eyedropper:before {
+    content: "\e023";
+  }
+
+  &.paint-format:before {
+    content: "\e02a";
+  }
+
+  &.aid-kit:before {
+    content: "\e1ef";
+  }
+
+  &.newspaper:before {
+    content: "\e00c";
+  }
+
+  &.camera:before {
+    content: "\e036";
+  }
+
+  &.bullhorn:before {
+    content: "\e05f";
+  }
+
+  &.phone:before {
+    content: "\e0dc";
+  }
+
+  &.box-add:before {
+    content: "\e130";
+  }
+
+  &.box-remove:before {
+    content: "\e131";
+  }
+
+  &.download:before {
+    content: "\e132";
+  }
+
+  &.upload:before {
+    content: "\e133";
+  }
+
+  &.key:before {
+    content: "\e1ca";
+  }
+
+  &.eye:before {
+    content: "\e2d9";
+  }
+
+  &.eye-blocked:before {
+    content: "\e2da";
+  }
+
+  &.sun:before {
+    content: "\e2ee";
+  }
+
+  &.contrast:before {
+    content: "\e2f8";
+  }
+
+  &.bold:before {
+    content: "\e02b";
+  }
+
+  &.italic:before {
+    content: "\e02c";
+  }
+
+  &.underline:before {
+    content: "\e02d";
+  }
+
+  &.strikethrough:before {
+    content: "\e02e";
+  }
+
+  &.superscript:before {
+    content: "\e01f";
+  }
+
+  &.subscript:before {
+    content: "\e01e";
+  }
+
+  &.font-size2:before {
+    content: "\e454";
+  }
+
+  &.section:before {
+    content: "\eeb1";
+  }
+
+  &.align-left:before {
+    content: "\e003";
+  }
+
+  &.align-center:before {
+    content: "\e004";
+  }
+
+  &.align-right:before {
+    content: "\e005";
+  }
+
+  &.justify:before {
+    content: "\e006";
+  }
+
+  &.list-ul:before {
+    content: "\e00a";
+  }
+
+  &.list-ol:before {
+    content: "\e00b";
+  }
+
+  &.indent:before {
+    content: "\e00d";
+  }
+
+  &.outdent:before {
+    content: "\e00e";
+  }
+
+  &.quote:before {
+    content: "\e00f";
+  }
+
+  &.link:before {
+    content: "\e011";
+  }
+
+  &.unlink:before {
+    content: "\e012";
+  }
+
+  &.picture:before {
+    content: "\e02f";
+  }
+
+  &.pictures:before {
+    content: "\e030";
+  }
+
+  &.source:before {
+    content: "\e47f";
+  }
+
+  &.code:before {
+    content: "\e480";
+  }
+
+  &.hr:before {
+    content: "\e01c";
+  }
+
+  &.pagebreak:before {
+    content: "\e027";
+  }
+
+  &.floppy-o:before {
+    content: "\f0c7";
+  }
+
+  &.folder:before {
+    content: "\f07b";
+  }
+
+  &.folder-open:before {
+    content: "\f07c";
+  }
+
+  &.folder-o:before {
+    content: "\f114";
+  }
+
+  &.folder-open-o:before {
+    content: "\f115";
+  }
+
+  &.files-empty:before {
+    content: "\e08e";
+  }
+
+  &.file-empty:before {
+    content: "\e08d";
+  }
+
+  &.file-text:before {
+    content: "\e086";
+  }
+
+  &.file-pdf:before {
+    content: "\f1c1";
+  }
+
+  &.file-word:before {
+    content: "\f1c2";
+  }
+
+  &.file-excel:before {
+    content: "\f1c3";
+  }
+
+  &.file-powerpoint:before {
+    content: "\f1c4";
+  }
+
+  &.file-picture:before {
+    content: "\e9af";
+  }
+
+  &.file-music:before {
+    content: "\e9b1";
+  }
+
+  &.file-video:before {
+    content: "\e9b5";
+  }
+
+  &.file-code:before {
+    content: "\f1c9";
+  }
+
+  &.file-zip:before {
+    content: "\e4e6";
+  }
+
+  &.life-bouy:before {
+    content: "\f1cd";
+  }
+
+  &.search:before {
+    content: "\f002";
+  }
+
+  &.search-plus:before {
+    content: "\f00e";
+  }
+
+  &.search-minus:before {
+    content: "\f010";
+  }
+
+  &.power-off:before {
+    content: "\f011";
+  }
+
+  &.clock-o:before {
+    content: "\f017";
+  }
+
+  &.repeat:before {
+    content: "\f01e";
+  }
+
+  &.refresh:before {
+    content: "\f021";
+  }
+
+  &.th-list:before {
+    content: "\f00b";
+  }
+
+  &.list-alt:before {
+    content: "\f022";
+  }
+
+  &.calendar:before {
+    content: "\f073";
+  }
+
+  &.table:before {
+    content: "\e466";
+  }
+
+  &.flag:before {
+    content: "\f024";
+  }
+
+  &.tag:before {
+    content: "\f02b";
+  }
+
+  &.tags:before {
+    content: "\f02c";
+  }
+
+  &.bookmark:before {
+    content: "\f02f";
+  }
+
+  &.pencil:before {
+    content: "\f043";
+  }
+
+  &.asterisk:before {
+    content: "\f06a";
+  }
+
+  &.exclamation-triangle:before {
+    content: "\f071";
+  }
+
+  &.heart:before {
+    content: "\f004";
+  }
+
+  &.briefcase:before {
+    content: "\e342";
+  }
+
+  &.globe:before {
+    content: "\e341";
+  }
+
+  &.podium:before {
+    content: "\e329";
+  }
+
+  &.more:before {
+    content: "\e188";
+  }
+
+  &.thumbs-o-up:before {
+    content: "\f087";
+  }
+
+  &.thumbs-o-down:before {
+    content: "\f088";
+  }
+
+  &.pushpin:before {
+    content: "\e336";
+  }
+
+  &.thumb-tack:before {
+    content: "\f08d";
+  }
+
+  &.bars:before {
+    content: "\f0c9";
+  }
+
+  &.dashboard:before {
+    content: "\f0e4";
+  }
+
+  &.lightbulb-o:before {
+    content: "\f0eb";
+  }
+
+  &.bug:before {
+    content: "\f188";
+  }
+
+  &.database:before {
+    content: "\f1c0";
+  }
+
+  &.toggle-off:before {
+    content: "\f204";
+  }
+
+  &.toggle-on:before {
+    content: "\f205";
+  }
+
+  &.download-alt:before {
+    content: "\f019";
+  }
+
+  &.rss:before {
+    content: "\f09e";
+  }
+
+  &.sort-alpha-asc:before {
+    content: "\f15d";
+  }
+
+  &.sort-alpha-desc:before {
+    content: "\f15e";
+  }
+
+  &.sort-amount-asc:before {
+    content: "\f160";
+  }
+
+  &.sort-amount-desc:before {
+    content: "\f161";
+  }
+
+  &.sort-numeric-asc:before {
+    content: "\f162";
+  }
+
+  &.sort-numeric-desc:before {
+    content: "\f163";
+  }
+
+  &.caret-down:before {
+    content: "\f0d7";
+  }
+
+  &.caret-up:before {
+    content: "\f0d8";
+  }
+
+  &.caret-left:before {
+    content: "\f0d9";
+  }
+
+  &.caret-right:before {
+    content: "\f0da";
+  }
+
+  &.sort:before {
+    content: "\f0dc";
+  }
+
+  &.arrow-circle-o-left:before {
+    content: "\f190";
+  }
+
+  &.arrow-circle-o-right:before {
+    content: "\f18e";
+  }
+
+  &.arrow-circle-o-up:before {
+    content: "\f01b";
+  }
+
+  &.arrow-circle-o-down:before {
+    content: "\f01a";
+  }
+
+  &.arrow-circle-left:before {
+    content: "\f0a8";
+  }
+
+  &.arrow-circle-right:before {
+    content: "\f0a9";
+  }
+
+  &.arrow-circle-up:before {
+    content: "\f0aa";
+  }
+
+  &.arrow-circle-down:before {
+    content: "\f0ab";
+  }
+
+  &.chevron-circle-left:before {
+    content: "\f137";
+  }
+
+  &.chevron-circle-right:before {
+    content: "\f138";
+  }
+
+  &.chevron-circle-up:before {
+    content: "\f139";
+  }
+
+  &.chevron-circle-down:before {
+    content: "\f13a";
+  }
+
+  &.chevron-left:before {
+    content: "\f053";
+  }
+
+  &.chevron-right:before {
+    content: "\f054";
+  }
+
+  &.chevron-up:before {
+    content: "\f077";
+  }
+
+  &.chevron-down:before {
+    content: "\f078";
+  }
+
+  &.arrow-left:before {
+    content: "\f060";
+  }
+
+  &.arrow-right:before {
+    content: "\f061";
+  }
+
+  &.arrow-up:before {
+    content: "\f062";
+  }
+
+  &.arrow-down:before {
+    content: "\f063";
+  }
+
+  &.film:before {
+    content: "\f009";
+  }
+
+  &.smile:before {
+    content: "\f118";
+  }
+
+  &.graduation-cap:before {
+    content: "\f19d";
+  }
+
+  &.beer:before {
+    content: "\f069";
+  }
+
+  &.cog:before {
+    content: "\f013";
+  }
+
+  &.ban:before {
+    content: "\f05e";
+  }
+
+  &.bolt:before {
+    content: "\f0e7";
+  }
+
+  &.envelope:before {
+    content: "\e600";
+  }
+
+  &.envelope-open:before {
+    content: "\e601";
+  }
+
+  &.star-outline:before {
+    content: "\e602";
+  }
+
+  &.star-half:before {
+    content: "\e603";
+  }
+
+  &.star:before {
+    content: "\e604";
+  }
+
+  &.shield:before {
+    content: "\e605";
+  }
+
+  &.language:before {
+    content: "\e606";
+  }
+
+  &.flower:before {
+    content: "\e607";
+  }
+}

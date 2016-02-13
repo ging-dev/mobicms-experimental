@@ -1,0 +1,17 @@
+languages:
+  Ruby: false
+  JavaScript: false
+  PHP: true
+  Python: false
+exclude_paths:
+  - ".sources/**/*"
+  - "assets/**/*"
+  - "install/**/*"
+  - "modules/**/*"
+  - "themes/**/*"
+  - "uploads/**/*"
+  - "system/config/*"
+  - "system/includes/*"
+  - "system/logs/*"
+  - "system/bootstrap.php"
+  - "system/vendor/**/*"

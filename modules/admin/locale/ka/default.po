@@ -1,0 +1,456 @@
+# ##############################################################################
+# mobiCMS Content Management System (http://mobicms.net)                       #
+#                                                                              #
+# For copyright and license information, please see the LICENSE.md             #
+#                                                                              #
+# @link        http://mobicms.net mobiCMS Project                              #
+# @copyright   Copyright (C) mobiCMS Community                                 #
+# @license     LICENSE.md (see attached file)                                  #
+# ##############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: mobicms\n"
+"POT-Creation-Date: 2016-01-18 23:29+0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"PO-Revision-Date: 2016-01-18 14:33-0500\n"
+"Last-Translator: mobiCMS <dev@mobicms.net>\n"
+"Language-Team: Georgian\n"
+"X-Generator: crowdin.com\n"
+"X-Poedit-Basepath: ../../../modules/admin\n"
+"X-Poedit-KeywordsList: _m;_mp:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: mobicms\n"
+"X-Crowdin-Language: ka\n"
+"X-Crowdin-File: /admin/default.pot\n"
+"Language: ka_GE\n"
+
+#: includes/acl.php:26 includes/acl.php:40 includes/acl.php:51
+#: includes/acl.php:63
+msgid "Access is open"
+msgstr "წვდომის ღიაა"
+
+#: includes/acl.php:27 includes/acl.php:52 includes/acl.php:64
+msgid "Only for the authorized"
+msgstr "მხოლოდ ავტორიზებული"
+
+#: includes/acl.php:28
+msgid "Read only"
+msgstr "შეიტყვეთ მხოლოდ"
+
+#: includes/acl.php:29 includes/acl.php:41 includes/acl.php:53
+#: includes/acl.php:65
+msgid "Access denied"
+msgstr "შესვლა აკრძალულია"
+
+#: includes/acl.php:39
+msgid "Enable posting for guests"
+msgstr "საშუალებას განთავსებას სტუმრებისათვის"
+
+#: includes/languages.php:21 includes/languages.php:25
+msgid "Clear Cache"
+msgstr "გარკვევა ქეში"
+
+#: includes/languages.php:22
+msgid "The Cache clearing is required after installing a new language or upgrade existing ones."
+msgstr "ქეში გაწმენდის საჭირო დაინსტალირების შემდეგ ახალი ენის ან განახლება არსებული."
+
+#: includes/languages.php:29
+msgid "Default Language"
+msgstr "ძირითადი ენა"
+
+#: includes/languages.php:33
+msgid "If the choice is prohibited, the language will be forced to set for all visitors. If the choice is allowed, it will be applied only in the case, if requested by the client language is not in the system."
+msgstr "თუ არჩევანი არის აკრძალული, ენა იძულებული იქნება მითითებული ყველა სია. თუ არჩევანი არის დაშვებული, ის გამოყენებული იქნება მხოლოდ იმ შემთხვევაში, თუ მოთხოვნილი კლიენტის მიერ ენაზე არ არის ამ სისტემაში."
+
+#: includes/languages.php:40
+msgid "Allow to choose"
+msgstr "საშუალებას აირჩიოს"
+
+#: includes/languages.php:41
+msgid "Allow visitors specify the desired language from the list of available in the system. Including activated auto select languages by signatures of the browser."
+msgstr "საშუალებას სია მიუთითოთ სასურველი ენა სიაში არსებული სისტემა. მათ შორის გააქტიურებული auto აირჩიეთ ენებზე ხელმოწერების ბრაუზერში."
+
+#: includes/quarantine.php:26 includes/users_settings.php:54
+msgid "Quarantine allows you to temporarily restrict user activity"
+msgstr "საკარანტინო საშუალებას გაძლევთ დროებით შეზღუდოს მომხმარებლის აქტიურობა"
+
+#: includes/quarantine.php:29
+msgid "The Quarantine action period, in hours"
+msgstr "საკარანტინო მოქმედების პერიოდში, საათი"
+
+#: includes/quarantine.php:41
+msgid "For the duration of the quarantine period, will be active the following restrictions:"
+msgstr "ხანგრძლივობა საკარანტინო პერიოდში, აქტიური იქნება შემდეგი შეზღუდვები:"
+
+#: includes/quarantine.php:44
+msgid "How much mail can be sent?"
+msgstr "რამდენი ფოსტის გაგზავნა შეიძლება?"
+
+#: includes/quarantine.php:57
+msgid "How many mail recipients?"
+msgstr "რამდენი ფოსტის მიმღები?"
+
+#: includes/quarantine.php:70
+msgid "How many comments are allowed?"
+msgstr "რამდენი კომენტარები დაშვებულია?"
+
+#: includes/quarantine.php:83
+msgid "How many Chat posts are allowed?"
+msgstr "რამდენი ჩატი შეტყობინება ეძლევათ?"
+
+#: includes/quarantine.php:96
+msgid "How many images are allowed to upload into the Album?"
+msgstr "რამდენი გამოსახულებები დასაშვებია, რომ ატვირთეთ შევიდა ალბომი?"
+
+#: includes/quarantine.php:109
+msgid "Allow Reputation"
+msgstr "საშუალებას რეპუტაცია"
+
+#: includes/quarantine.php:116
+msgid "How many Topics is allowed to create?"
+msgstr "რამდენი თემა არის დაშვებული, რათა შეიქმნას?"
+
+#: includes/quarantine.php:129
+msgid "The Sections of the Forum which allowed to create Topics"
+msgstr "მონაკვეთზე ფორუმი რომელიც საშუალებას შექმნათ თემები"
+
+#: includes/quarantine.php:131
+msgid "Type (separated by commas) ID of Sections where it is permitted to create Topics.<br>If the list is empty, then allowed to create anywhere."
+msgstr "ტიპი (მძიმით) ID სექციები, სადაც ეს ნებადართულია, რათა შექმნათ თემები.<br>თუ სიაში არის ცარიელი, მაშინ დაშვებული, რათა შეიქმნას სადმე."
+
+#: includes/quarantine.php:136
+msgid "How many Forum posts are allowed?"
+msgstr "რამდენი ფორუმის შეტყობინება დასაშვებია?"
+
+#: includes/quarantine.php:149
+msgid "The Topics of the Forum which allowed to create posts"
+msgstr "თემა ფორუმზე, რომელიც იყო დაშვებული, რათა შეიქმნას პოსტები"
+
+#: includes/quarantine.php:151
+msgid "Type (separated by commas) ID of topics where it is permitted to post messages.<br>If the list is empty, then allowed to write anywhere. Please note, if allowed the creation of a topic, then they will be allowed posting messages, regardless of the limitations of this list."
+msgstr "ტიპი (მძიმით) ID თემები, სადაც დასაშვებია პოსტი შეტყობინებები.<br>თუ სიაში არის ცარიელი, მაშინ დაშვებული დაწერა სადმე. გთხოვთ, გაითვალისწინოთ, თუ დაშვებული შექმნის თემა, მაშინ მათ მიეცემათ მესიჯების, მიუხედავად იმისა, შეზღუდვები ამ სიაში."
+
+#: includes/scanner.php:20 templates/index.php:28
+msgid "Anti-Spyware"
+msgstr "ანტი ჯაშუში"
+
+#: includes/scanner.php:26
+msgid "Scan to the appropriate distribution"
+msgstr "სკანირების შესაბამის განაწილების"
+
+#: includes/scanner.php:27
+msgid "Snapshot scan"
+msgstr "სკანირების სნაფშოთის"
+
+#: includes/scanner.php:28
+msgid "Make snapshot"
+msgstr "რათა სნაფშოთი"
+
+#: includes/scanner.php:53
+msgid "Distributive inconsistency!"
+msgstr "განაწილებითი შეუსაბამობა!"
+
+#: includes/scanner.php:55
+msgid "List of files corresponds to the distributive"
+msgstr "სია ფაილი შეესაბამება განაწილებითი"
+
+#: includes/scanner.php:63
+msgid "Snapshot image is not created"
+msgstr "სნაფშოთის გამოსახულება არ არის შექმნილი"
+
+#: includes/scanner.php:69
+msgid "Snapshot inconsistency"
+msgstr "სნაფშოთის შეუსაბამობა"
+
+#: includes/scanner.php:71
+msgid "All files are consistent with previously made image"
+msgstr "ყველა ფაილი შეესაბამება ადრე გააკეთა სნაფშოთი"
+
+#: includes/scanner.php:79
+msgid "Snapshot successfully created"
+msgstr "სნაფშოთი წარმატებით შეიქმნა"
+
+#: includes/sitemap.php:20
+msgid "Where to turn?"
+msgstr "სად უნდა იქცეს?"
+
+#: includes/sitemap.php:33
+msgid "To whom to show?"
+msgstr "ვის უნდა ნახოთ?"
+
+#: includes/sitemap.php:39
+msgid "All"
+msgstr "ყველა"
+
+#: includes/sitemap.php:40
+msgid "Guests only"
+msgstr "სტუმრები მხოლოდ"
+
+#: includes/smilies.php:19
+msgid "Update cache"
+msgstr "განახლება ქეში"
+
+#: includes/smilies.php:54
+msgid "The cache is updated"
+msgstr "ქეში არის განახლებული"
+
+#: includes/smilies.php:56
+msgid "When updating a cache there was a error"
+msgstr "როდესაც განახლება ქეში იყო შეცდომა"
+
+#: includes/system_settings.php:21
+msgid "System Time"
+msgstr "სისტემა დრო"
+
+#: includes/system_settings.php:26
+msgid "Time Shift"
+msgstr "დროის ცვლა"
+
+#: includes/system_settings.php:35
+msgid "Upload Files"
+msgstr "ფაილების ატვირთვა"
+
+#: includes/system_settings.php:39
+msgid "Max. File size"
+msgstr "მაქს. ფაილის ზომა"
+
+#: includes/system_settings.php:40
+msgid "Note that the maximum size of uploaded file may be limited by your PHP settings. Most often the default 2000kb."
+msgstr "გაითვალისწინეთ, რომ მაქსიმალური ზომა ატვირთული ფაილი შეიძლება შეიზღუდოს თქვენი PHP პარამეტრები. ყველაზე ხშირად ნაგულისხმევი 2000kb."
+
+#: includes/system_settings.php:50
+msgid "Profiling"
+msgstr "პროფილირბა"
+
+#: includes/system_settings.php:54
+msgid "Show generation time"
+msgstr "შოუ თაობის დრო"
+
+#: includes/system_settings.php:60
+msgid "Show used memory"
+msgstr "შოუ მეორადი მეხსიერება"
+
+#: includes/system_settings.php:63
+msgid "Site Requisites"
+msgstr "საიტზე რეკვიზიტები"
+
+#: includes/system_settings.php:67
+msgid "Site Email"
+msgstr "საიტზე ელფოსტა"
+
+#: includes/system_settings.php:73
+msgid "Copyright"
+msgstr "საავტორო უფლებები"
+
+#: includes/system_settings.php:76
+msgid "SEO Attributes"
+msgstr "SEO ატრიბუტები"
+
+#: includes/system_settings.php:81
+msgid "Homepage title"
+msgstr "მთავარ სათაური"
+
+#: includes/system_settings.php:82
+msgid "In the search results for keywords, search engines use the page title for the reference to the document. Well written title containing keywords will attract many visitors and increase chances are that the site is visited by many people."
+msgstr "ძიების შედეგები, საკვანძო სიტყვები, საძიებო გვერდი გამოიყენოთ სათაური მინიშნება დოკუმენტი. კარგად დაწერილი სათაური შეიცავს საკვანძო სიტყვები მოიზიდავს ბევრი სია და გაზრდის შანსი, რომ საიტი არ არის ეწვია ბევრი ადამიანი."
+
+#: includes/system_settings.php:89
+msgid "Keywords (or phrases) separated by commas. This meta tag search engines use to determine the relevance of links. In forming this tag should be used only the words that are contained in the document. The use of words that are not on the page, is not recommended. The recommended number of words in this tag - no more than ten. In addition,revealed that the breakdown of the tag on a few lines affect the estimate of links by search engines.<br>Max. 250 characters."
+msgstr "ძირითადი სიტყვები (ან ფრაზები) მძიმით. ეს meta tag საძიებო გამოყენება, რათა დადგინდეს შესაბამისობა ბმულები. ჩამოყალიბებაში ამ საკვანძო უნდა იყოს გამოყენებული მხოლოდ სიტყვები, რომლებიც შეიცავს დოკუმენტი. გამოყენების სიტყვები, რომლებიც არ არიან გვერდი, რეკომენდებული არ არის. რეკომენდირებული პუნქტების სიტყვები,, ამ საკვანძო - არა უმეტეს ათი. გარდა ამისა,დადგინდა, რომ ავარია საკვანძო რამდენიმე ხაზები იმოქმედებს ხარჯთაღრიცხვა კავშირების მიერ საძიებო სისტემებში.<br>მაქს. 250 სიმბოლო."
+
+#: includes/system_settings.php:101
+msgid "This tag is used to create a short description of the page, use the search engines to index, as well as to create annotations the extradition request. In the absence of a tag search system gives the first line in the summary of the document or a passage containing the keywords. Displayed after the link in the search pages in search engine. Different search engines charge different rates for the length of the tag. Try to write a small description of 150 characters.<br>Max. 250 characters."
+msgstr "ეს ტეგი გამოიყენება, რათა შეიქმნას მოკლე აღწერა გვერდზე, გამოიყენეთ საძიებო ინდექსი, ისევე როგორც შექმნა ანოტაციები ექსტრადიციის მოთხოვნა. არარსებობის საკვანძო საძიებო სისტემა აძლევს პირველი ხაზი შემაჯამებელი დოკუმენტი ან გადასასვლელი შემცველი სიტყვები. ნაჩვენებია შემდეგ ბმულზე search pages in საძიებო სისტემა. სხვადასხვა საძიებო სისტემებში პასუხისმგებელი სხვადასხვა განაკვეთები სიგრძე აქვს. ცდილობენ წერენ მცირე აღწერა 150 სიმბოლო.<br>მაქს. 250 სიმბოლო."
+
+#: includes/users_settings.php:24
+msgid "Allow registration"
+msgstr "მისცემს გარეშე"
+
+#: includes/users_settings.php:31
+msgid "Confirmation by Email"
+msgstr "დადასტურებას ელ-ფოსტის საშუალებით"
+
+#: includes/users_settings.php:33
+msgid "On the specified at registration address will be sent an Email with a confirmation link"
+msgstr "მითითებულ ზე რეგისტრაციის მისამართზე გაიგზავნება ელ დადასტურების ბმული"
+
+#: includes/users_settings.php:38
+msgid "Set an Gravatar based on the specified Email"
+msgstr "დაყენება Gravatar საფუძველზე მითითებულ ელ-ფოსტა"
+
+#: includes/users_settings.php:40
+msgid "If for Email specified at registration there is Gravatar, it will be set as an avatar"
+msgstr "თუ ელ მითითებული რეგისტრაციის დროს არ არის Gravatar, ეს იქნება მითითებული, როგორც avatar"
+
+#: includes/users_settings.php:45
+msgid "Confirmation by the Administrator"
+msgstr "დადასტურებას ადმინისტრატორის მიერ"
+
+#: includes/users_settings.php:47
+msgid "Regardless of other settings, the User will be activated only after confirmation by the Administrator"
+msgstr "მიუხედავად სხვა პარამეტრები, მომხმარებლის ამოქმედდება მხოლოდ მას შემდეგ, რაც დადასტურებას ადმინისტრატორის მიერ"
+
+#: includes/users_settings.php:52
+msgid "Enable Quarantine"
+msgstr "საშუალებას საკარანტინო"
+
+#: includes/users_settings.php:60
+msgid "For Users"
+msgstr "მომხმარებელი"
+
+#: includes/users_settings.php:63
+msgid "Change Sex"
+msgstr "სქესის შეცვლის"
+
+#: includes/users_settings.php:69
+msgid "Change Status"
+msgstr "სტატუსის შეცვლა"
+
+#: includes/users_settings.php:75
+msgid "Upload Avatars"
+msgstr "ატვირთეთ სმაილები"
+
+#: includes/users_settings.php:81
+msgid "Allow Gravatar"
+msgstr "საშუალებას Gravatar"
+
+#: includes/users_settings.php:87
+msgid "Allow Nicknames, consisting of digits"
+msgstr "საშუალებას მეტსახელებს, რომელიც შედგება ციფრები"
+
+#: includes/users_settings.php:93
+msgid "Allow to change Nickname"
+msgstr "საშუალებას შეცვალოს მეტსახელი"
+
+#: includes/users_settings.php:99
+msgid "After how many days?"
+msgstr "მას შემდეგ, რამდენი დღე?"
+
+#: includes/users_settings.php:110
+msgid "For Guests"
+msgstr "სტუმრებისათვის"
+
+#: includes/users_settings.php:113
+msgid "Online Lists"
+msgstr "ონლაინ სიები"
+
+#: includes/users_settings.php:119
+msgid "List of Users"
+msgstr "სია მომხმარებლებს"
+
+#: includes/users_settings.php:125
+msgid "View Profiles"
+msgstr "იხილეთ პროფილები"
+
+#: includes/users_settings.php:129
+msgid "Antiflood"
+msgstr "ანტი წყალდიდობის"
+
+#: includes/users_settings.php:135
+msgid "Day mode"
+msgstr ""
+
+#: includes/users_settings.php:136
+msgid "Night mode"
+msgstr ""
+
+#: includes/users_settings.php:137
+msgid "Autoswitch"
+msgstr "განცხადება გადართვის"
+
+#: includes/users_settings.php:137
+msgid "From 10:00 till 20:00 the day mode, in the rest of the time the night mode is active"
+msgstr ""
+
+#: includes/users_settings.php:138
+msgid "Adaptive"
+msgstr "ადაპტური"
+
+#: includes/users_settings.php:138
+msgid "If on the site there is someone from administration, the day mode, differently the night mode is active"
+msgstr ""
+
+#: includes/users_settings.php:146
+msgid "Day mode, delay in seconds"
+msgstr ""
+
+#: includes/users_settings.php:159
+msgid "Night mode, delay in seconds"
+msgstr ""
+
+#: templates/edit_form.php:13
+msgid "Options set to default"
+msgstr "პარამეტრები მითითებული ნაგულისხმევია"
+
+#: templates/edit_form.php:15
+msgid "The Cache cleared successfully"
+msgstr "ქეში განბაჟებული წარმატებით"
+
+#: templates/index.php:12
+msgid "Modules"
+msgstr "მოდულები"
+
+#: templates/index.php:14
+msgid "Counters"
+msgstr "ხელისშემშლელი"
+
+#: templates/index.php:15
+msgid "Site Map"
+msgstr "საიტის რუკა"
+
+#: templates/index.php:17
+msgid "System"
+msgstr "სისტემა"
+
+#: templates/index.php:19
+msgid "System Settings"
+msgstr "სისტემის პარამეტრები"
+
+#: templates/index.php:20
+msgid "Users Settings"
+msgstr "მომხმარებლებს პარამეტრები"
+
+#: templates/index.php:21
+msgid "Languages"
+msgstr "ენები"
+
+#: templates/index.php:24
+msgid "Security"
+msgstr "უსაფრთხოება"
+
+#: templates/index.php:25
+msgid "Access Control"
+msgstr "დაშვების კონტროლის"
+
+#: templates/index.php:27
+msgid "Firewall"
+msgstr "ფაიერვოლი"
+
+#: templates/scanner.php:24
+msgid "Modified files"
+msgstr "მოდიფიცირებული ფაილი"
+
+#: templates/scanner.php:25
+msgid "These files have been modified. If you do not make modifications to these files, it is strongly recommended to replace them with the original distributive of the correct version."
+msgstr "ეს ფაილი უკვე შეცვლილია. თუ თქვენ არ მიიღოს ცვლილებები, რათა ეს ფაილი, მკაცრად რეკომენდირებულია, რომ შეცვლის მათ ორიგინალური განაწილებითი სწორი ვერსია."
+
+#: templates/scanner.php:38
+msgid "Missing files"
+msgstr "დაკარგული ფაილები"
+
+#: templates/scanner.php:39
+msgid "These files were in the distribution, but if you lack. Without them, can not be guaranteed and normal system operation. It is recommended to restore all missing files from correct version distributive."
+msgstr "ეს ფაილი იმყოფებოდნენ, მაგრამ თუ თქვენ არ გააჩნიათ. მათ გარეშე, ვერ იქნება გარანტირებული და ნორმალური სისტემის ოპერაცია. ეს არის რეკომენდირებული, რათა აღადგინოს დაკარგული ფაილები სწორი ვერსია განაწილებითი."
+
+#: templates/scanner.php:49
+msgid "New files"
+msgstr "ახალი ფაილები"
+
+#: templates/scanner.php:50
+msgid "If the files listed below does not pertain to your additional modules and you are not assured of their safety, remove them. They can be dangerous for your site."
+msgstr "თუ ფაილი ქვემოთ ჩამოთვლილი არ ეხება თქვენს დამატებითი მოდულები და თქვენ არ დავრწმუნდი, მათი უსაფრთხოების მიზნით, ამოიღონ მათ. ისინი შეიძლება იყოს საშიში თქვენს საიტზე."
+

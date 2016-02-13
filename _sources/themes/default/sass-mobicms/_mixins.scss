@@ -1,0 +1,19 @@
+@mixin mobi-gradient($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+  background-image: -webkit-linear-gradient($start-color, $mid-color $color-stop, $end-color);
+  background-image: -o-linear-gradient($start-color, $mid-color $color-stop, $end-color);
+  background-image: linear-gradient($start-color, $mid-color $color-stop, $end-color);
+  background-repeat: no-repeat;
+}
+
+@mixin list-icon($content: "\f054", $font-size: 1.1em) {
+  font-family: 'icomoon';
+  font-size: $font-size;
+  font-weight: normal;
+  content: $content;
+  position: absolute;
+  margin-top: -10px;
+  top: 50%;
+  right: 9px;
+  color: rgba(114, 127, 148, 0.51);
+  display: block;
+}

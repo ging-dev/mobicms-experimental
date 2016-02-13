@@ -1,0 +1,210 @@
+hr {
+  border-color: #b7b7b7;
+}
+
+////////////////////////////////////////////////////////////
+// Navbar                                                 //
+////////////////////////////////////////////////////////////
+.navbar {
+  border: none;
+}
+
+.container,
+.container-fluid {
+  > .navbar-header,
+  > .navbar-collapse {
+    padding-right: 0;
+  }
+}
+
+.navbar-brand {
+  padding: $navbar-padding-vertical - 3 $navbar-padding-horizontal;
+}
+
+.navbar-toggle {
+  margin: 0;
+  padding: 9px 11px;
+  border: none;
+  border-radius: 0;
+  width: 44px;
+  height: 44px;
+}
+
+.navbar-collapse,
+.navbar-form {
+  overflow: hidden;
+}
+
+////////////////////////////////////////////////////////////
+// Navs                                                   //
+////////////////////////////////////////////////////////////
+ul.nav{
+  li.title{
+    background-color: #d7d7d7;
+    text-transform: uppercase;
+    color: #7b889f;
+    padding: 3px 14px;
+    text-shadow: none;
+    @include mobi-gradient(#e2e2e2, #d7d7d7, 50%, #e2e2e2);
+  }
+
+  .chevron{
+    float: right;
+  }
+}
+
+.nav-pills {
+  > li {
+    > a {
+      color: #4E5869;
+    }
+
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: lighten($nav-pills-active-link-hover-bg, 7%);
+      }
+    }
+  }
+}
+
+.nav-stacked {
+  > li {
+    border-bottom: 1px solid #c7c7c7;
+    float: none;
+    font-size: small;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #ffffff;
+
+    > a {
+      padding: 13px 36px 13px 12px;
+      //padding-right: 36px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+
+      &:after {
+        @include list-icon();
+      }
+
+      .badge {
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        right: 34px;
+      }
+    }
+
+    + li {
+      margin-top: 0;
+      margin-left: 0; // no need for this gap between nav items
+    }
+  }
+}
+
+.nav-justified {
+  width: 100%;
+
+  > li {
+    border-bottom: 1px solid #c7c7c7;
+
+    // Active state
+    &.active {
+      background-color: $nav-pills-active-link-hover-bg;
+      border: none;
+    }
+
+    > a {
+      text-align: left;
+      margin-bottom: 0;
+
+      &:after {
+        @include list-icon();
+      }
+    }
+  }
+
+  > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    > li {
+      display: table-cell;
+      width: 1%;
+
+      > a {
+        text-align: center;
+        margin-bottom: 0;
+
+        &:after {
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////
+// Dropdown menus                                         //
+////////////////////////////////////////////////////////////
+.dropdown-menu {
+  top: 90%;
+  padding: 0;
+  margin: 0; // override default ul
+  border-radius: 0;
+
+  // Links within the dropdown menu
+  > li > a {
+    padding: 4px 10px;
+  }
+}
+
+.dropdown-header {
+  padding: 3px 12px;
+  background-color: lighten($brand-primary, 30%);
+  font-weight: bold;
+}
+
+////////////////////////////////////////////////////////////
+// Badges                                                 //
+////////////////////////////////////////////////////////////
+.badge {
+  padding: 3px 7px 4px 7px;
+  border: 1px solid #cdcdcd;
+}
+
+////////////////////////////////////////////////////////////
+// Alerts                                                 //
+////////////////////////////////////////////////////////////
+.alert {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  word-wrap: break-word;
+}
+
+.alert-neytral {
+  @include alert-variant(#f2f2f2, #cccccc, $text-color);
+}
+
+////////////////////////////////////////////////////////////
+// Progress bars                                          //
+////////////////////////////////////////////////////////////
+.progress {
+  height: 8px;
+  margin-bottom: 1px;
+}
+
+.progress-bar-neytral {
+  @include progress-bar-variant(#a7a7a7);
+}
+
+////////////////////////////////////////////////////////////
+// Pagination                                             //
+////////////////////////////////////////////////////////////
+.pagination {
+  > .divider {
+    float: left;
+  }
+}

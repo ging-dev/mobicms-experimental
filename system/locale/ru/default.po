@@ -1,0 +1,683 @@
+# ##############################################################################
+# mobiCMS Content Management System (http://mobicms.net)                       #
+#                                                                              #
+# For copyright and license information, please see the LICENSE.md             #
+#                                                                              #
+# @link        http://mobicms.net mobiCMS Project                              #
+# @copyright   Copyright (C) mobiCMS Community                                 #
+# @license     LICENSE.md (see attached file)                                  #
+# ##############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: mobicms\n"
+"POT-Creation-Date: 2016-02-07 12:33+0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"PO-Revision-Date: 2016-02-07 04:24-0500\n"
+"Last-Translator: mobiCMS <dev@mobicms.net>\n"
+"Language-Team: Russian\n"
+"X-Generator: crowdin.com\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-KeywordsList: _s;_sp:1,2\n"
+"X-Poedit-SearchPath-0: system/includes\n"
+"X-Poedit-SearchPath-1: modules\n"
+"X-Poedit-SearchPath-2: assets/template/includes\n"
+"X-Poedit-SearchPath-3: system/mobicms\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Crowdin-Project: mobicms\n"
+"X-Crowdin-Language: ru\n"
+"X-Crowdin-File: /system/default.pot\n"
+"Language: ru_RU\n"
+
+#: assets/template/includes/include.navbar.php:24
+msgid "Go To"
+msgstr "Перейти"
+
+#: assets/template/includes/include.navbar.php:27
+msgid "Home"
+msgstr "Главная"
+
+#: assets/template/includes/include.navbar.php:29
+#: assets/template/includes/layout.default.php:20
+#: modules/news/templates/edit_form.php:5 modules/news/templates/index.php:10
+msgid "News"
+msgstr "Новости"
+
+#: assets/template/includes/include.navbar.php:31
+#: modules/admin/includes/acl.php:33 modules/home/templates/index.php:11
+#: modules/profile/templates/profile.php:80
+msgid "Guestbook"
+msgstr "Гостевая книга"
+
+#: assets/template/includes/include.navbar.php:32
+#: modules/admin/includes/acl.php:20 modules/admin/includes/quarantine.php:114
+#: modules/admin/includes/sitemap.php:23 modules/home/templates/index.php:12
+msgid "Forum"
+msgstr "Форум"
+
+#: assets/template/includes/include.navbar.php:34
+#: modules/admin/includes/acl.php:57 modules/home/templates/index.php:14
+msgid "Downloads"
+msgstr "Загрузки"
+
+#: assets/template/includes/include.navbar.php:35
+#: modules/admin/includes/acl.php:45 modules/admin/includes/sitemap.php:29
+#: modules/home/templates/index.php:15
+msgid "Library"
+msgstr "Библиотека"
+
+#: assets/template/includes/include.navbar.php:37
+#: modules/home/templates/index.php:16
+msgid "Community"
+msgstr "Сообщество"
+
+#: assets/template/includes/include.navbar.php:38
+#: modules/home/templates/index.php:18 modules/profile/templates/profile.php:79
+msgid "Photo Album"
+msgstr "Фотоальбом"
+
+#: assets/template/includes/include.navbar.php:48
+#: modules/admin/templates/edit_form.php:5 modules/admin/templates/index.php:7
+#: modules/admin/templates/scanner.php:5
+msgid "Admin Panel"
+msgstr "Панель администратора"
+
+#: assets/template/includes/include.navbar.php:52
+#: modules/profile/templates/profile.php:84
+msgid "Mail"
+msgstr "Почта"
+
+#: assets/template/includes/include.navbar.php:57
+#: modules/profile/templates/option.php:24
+msgid "Profile"
+msgstr "Профиль"
+
+#: assets/template/includes/include.navbar.php:59
+#: modules/admin/includes/users_settings.php:37
+#: modules/news/templates/index.php:33
+#: modules/profile/templates/edit_form.php:9
+#: modules/profile/templates/option.php:14
+#: modules/profile/templates/option.php:32
+#: modules/profile/templates/option_avatar.php:12
+#: modules/profile/templates/option_theme.php:10
+#: modules/profile/templates/option_theme_set.php:10
+#: modules/profile/templates/profile.php:29
+msgid "Settings"
+msgstr "Настройки"
+
+#: assets/template/includes/include.navbar.php:61
+#: modules/login/includes/logout.php:28 modules/login/templates/login.php:5
+msgid "Exit"
+msgstr "Выход"
+
+#: assets/template/includes/include.navbar.php:67
+#: modules/admin/includes/users_settings.php:21
+#: modules/registration/includes/activation.php:28
+#: modules/registration/templates/registered.php:3
+#: modules/registration/templates/registration.php:3
+msgid "Registration"
+msgstr "Регистрация"
+
+#: assets/template/includes/include.navbar.php:71
+#: modules/login/includes/login.php:41 modules/login/templates/login.php:5
+#: modules/login/templates/login_captcha.php:5
+#: modules/registration/includes/activation.php:23
+msgid "Login"
+msgstr "Вход"
+
+#: assets/template/includes/include.user.php:14
+msgid "IP Management"
+msgstr "Управление IP"
+
+#: assets/template/includes/include.user.php:17
+msgid "Proxy Management"
+msgstr "Управление Прокси"
+
+#: assets/template/includes/include.user.php:24
+msgid "Block this IP"
+msgstr "Блокировать этот IP"
+
+#: assets/template/includes/include.user.php:51
+msgid "Last visit"
+msgstr "Последнее посещение"
+
+#: assets/template/includes/layout.default.php:40
+msgid "Help"
+msgstr "Справка"
+
+#: assets/template/includes/layout.default.php:41
+msgid "Up"
+msgstr "Вверх"
+
+#: assets/template/includes/message.php:11
+#: modules/login/templates/login_captcha.php:29
+#: system/mobicms/Form/Form.php:225
+msgid "Continue"
+msgstr "Продолжить"
+
+#: assets/template/includes/message.php:14 modules/admin/includes/acl.php:82
+#: modules/admin/includes/languages.php:51
+#: modules/admin/includes/quarantine.php:162
+#: modules/admin/includes/scanner.php:39 modules/admin/includes/sitemap.php:51
+#: modules/admin/includes/smilies.php:27
+#: modules/admin/includes/system_settings.php:116
+#: modules/admin/includes/users_settings.php:175
+#: modules/help/includes/avatars.php:54
+#: modules/help/templates/avatars_index.php:4
+#: modules/help/templates/avatars_list.php:4
+#: modules/help/templates/avatars_set.php:7 modules/help/templates/rules.php:4
+#: modules/login/includes/logout.php:32 modules/news/includes/add.php:45
+#: modules/news/includes/delete.php:35 modules/news/includes/delete.php:40
+#: modules/news/includes/edit.php:54 modules/news/includes/edit.php:62
+#: modules/news/includes/edit.php:67
+#: modules/profile/includes/option_avatar_animation.php:33
+#: modules/profile/includes/option_avatar_animation.php:74
+#: modules/profile/includes/option_avatar_gravatar.php:33
+#: modules/profile/includes/option_avatar_image.php:35
+#: modules/profile/includes/option_edit.php:176
+#: modules/profile/includes/option_email.php:57
+#: modules/profile/includes/option_language.php:37
+#: modules/profile/includes/option_nickname.php:54
+#: modules/profile/includes/option_nickname.php:64
+#: modules/profile/includes/option_password.php:47
+#: modules/profile/includes/option_rank.php:56
+#: modules/profile/includes/option_settings.php:82
+#: modules/profile/includes/option_theme.php:70
+#: modules/profile/includes/reputation.php:62 modules/whois/index.php:45
+msgid "Back"
+msgstr "Назад"
+
+#: modules/404/index.php:3
+msgid "Page does not exist"
+msgstr "Страница не существует"
+
+#: modules/404/index.php:4
+msgid "Sorry, but the page you were trying to view does not exist"
+msgstr "Извините, но страница, которую вы ищете, не существует"
+
+#: modules/admin/includes/acl.php:71 modules/news/templates/index.php:53
+msgid "Comments"
+msgstr "Комментарии"
+
+#: modules/admin/includes/acl.php:78 modules/admin/includes/languages.php:47
+#: modules/admin/includes/quarantine.php:158
+#: modules/admin/includes/sitemap.php:47
+#: modules/admin/includes/system_settings.php:112
+#: modules/admin/includes/users_settings.php:171
+#: modules/help/includes/avatars.php:50 modules/news/includes/add.php:41
+#: modules/news/includes/edit.php:50
+#: modules/profile/includes/option_avatar_animation.php:29
+#: modules/profile/includes/option_avatar_gravatar.php:29
+#: modules/profile/includes/option_avatar_image.php:31
+#: modules/profile/includes/option_edit.php:172
+#: modules/profile/includes/option_email.php:53
+#: modules/profile/includes/option_language.php:33
+#: modules/profile/includes/option_nickname.php:50
+#: modules/profile/includes/option_password.php:43
+#: modules/profile/includes/option_rank.php:52
+#: modules/profile/includes/option_settings.php:78
+#: modules/profile/includes/reputation.php:58
+msgid "Save"
+msgstr "Сохранить"
+
+#: modules/admin/includes/quarantine.php:26
+msgid "Quarantine"
+msgstr "Карантин"
+
+#: modules/admin/includes/quarantine.php:41
+msgid "Restrictions"
+msgstr "Ограничения"
+
+#: modules/admin/includes/scanner.php:35 modules/admin/includes/smilies.php:23
+msgid "Run"
+msgstr "Выполнить"
+
+#: modules/admin/index.php:67
+msgid "Access forbidden"
+msgstr "Доступ запрещен"
+
+#: modules/admin/templates/edit_form.php:11 system/mobicms/Form/Form.php:63
+msgid "Data saved successfully"
+msgstr "Данные успешно сохранены"
+
+#: modules/admin/templates/index.php:22 modules/admin/templates/smilies.php:5
+#: modules/help/templates/index.php:9
+msgid "Smilies"
+msgstr "Смайлики"
+
+#: modules/community/templates/user_list.php:7
+#: modules/home/templates/index.php:17 modules/online/includes/index.php:26
+#: modules/online/templates/guests.php:24 modules/online/templates/index.php:25
+#: modules/online/templates/ip.php:24
+msgid "Users"
+msgstr "Пользователи"
+
+#: modules/community/templates/user_list.php:11
+#: modules/news/templates/index.php:15 modules/online/templates/guests.php:11
+#: modules/online/templates/index.php:12 modules/online/templates/ip.php:11
+#: modules/profile/templates/profile.php:19
+msgid "Control"
+msgstr "Управление"
+
+#: modules/community/templates/user_list.php:24
+msgid "Users List"
+msgstr "Список пользователей"
+
+#: modules/community/templates/user_list.php:31
+#: modules/help/templates/avatars_list.php:23
+#: modules/news/templates/index.php:65 modules/online/templates/guests.php:82
+#: modules/online/templates/index.php:52 modules/online/templates/ip.php:52
+#: modules/profile/templates/option_theme.php:47
+msgid "List is empty"
+msgstr "Список пуст"
+
+#: modules/community/templates/user_list.php:34
+#: modules/help/templates/avatars_list.php:26
+#: modules/news/templates/index.php:70 modules/online/templates/guests.php:85
+#: modules/online/templates/index.php:55 modules/online/templates/ip.php:55
+#: modules/profile/templates/option_theme.php:50
+msgid "Total"
+msgstr "Всего"
+
+#: modules/community/templates/user_list.php:40
+#: modules/online/templates/guests.php:88 modules/online/templates/index.php:58
+msgid "Only for registered users"
+msgstr "Только для зарегистрированных пользователей"
+
+#: modules/help/includes/avatars.php:45
+#: modules/profile/templates/option_avatar.php:22
+msgid "Set Avatar"
+msgstr "Установить Аватар"
+
+#: modules/help/includes/avatars.php:46
+msgid "Are you sure you want to set yourself this avatar?"
+msgstr "Вы уверены, что хотите установить себе этот аватар?"
+
+#: modules/help/includes/avatars.php:69
+msgid "Avatar is installed"
+msgstr "Аватар установлен"
+
+#: modules/help/templates/avatars_index.php:9
+#: modules/help/templates/avatars_list.php:9
+#: modules/help/templates/avatars_set.php:12
+#: modules/help/templates/index.php:10
+msgid "Avatars"
+msgstr "Аватары"
+
+#: modules/help/templates/index.php:3 modules/home/templates/index.php:8
+#: modules/profile/templates/profile.php:74
+msgid "Information"
+msgstr "Информация"
+
+#: modules/help/templates/index.php:8 modules/help/templates/rules.php:9
+msgid "Terms of Use"
+msgstr "Условия использования"
+
+#: modules/home/templates/index.php:3
+msgid "Welcome"
+msgstr "Добро пожаловать"
+
+#: modules/home/templates/index.php:9 modules/news/templates/index.php:40
+msgid "News Archive"
+msgstr "Архив новостей"
+
+#: modules/home/templates/index.php:10
+msgid "Communication"
+msgstr "Общение"
+
+#: modules/home/templates/index.php:13
+msgid "Useful"
+msgstr "Полезное"
+
+#: modules/login/includes/login.php:20
+msgid "Nickname or Email"
+msgstr "Ник или E-mail"
+
+#: modules/login/includes/login.php:27
+#: modules/registration/includes/registration.php:44
+msgid "Password"
+msgstr "Пароль"
+
+#: modules/login/includes/login.php:35
+msgid "Remember"
+msgstr "Запомнить"
+
+#: modules/login/includes/login.php:45
+msgid "Forgot password?"
+msgstr "Забыли пароль?"
+
+#: modules/login/includes/login.php:60
+msgid "Login information are incorrect"
+msgstr "Данные для входа указаны неверно"
+
+#: modules/login/includes/logout.php:19
+msgid "Leave the site?"
+msgstr "Желаете покинуть сайт?"
+
+#: modules/login/includes/logout.php:22
+msgid "Remove authorization from all devices"
+msgstr "Удалить авторизацию со всех устройств"
+
+#: modules/login/templates/login_captcha.php:11
+msgid "Symbols on the picture"
+msgstr "Символы, изображенные на картинке"
+
+#: modules/login/templates/login_captcha.php:17
+#: system/mobicms/Form/Form.php:248
+msgid "If you do not see the picture with the code, turn the graphics support in your browser and refresh the page"
+msgstr "Если вы не видите картинку с кодом, включите поддержку графики в вашем браузере и обновите страницу"
+
+#: modules/news/includes/add.php:21 modules/news/includes/edit.php:28
+msgid "Title"
+msgstr "Заголовок"
+
+#: modules/news/includes/add.php:27 modules/news/includes/edit.php:35
+msgid "Text"
+msgstr "Текст"
+
+#: modules/news/includes/clean.php:37 modules/news/includes/delete.php:31
+#: modules/profile/includes/option_avatar_delete.php:27
+#: modules/registration/includes/registration.php:83
+#: modules/registration/notice/index.php:66
+msgid "Cancel"
+msgstr "Отмена"
+
+#: modules/news/includes/delete.php:27 modules/news/templates/index.php:58
+msgid "Delete"
+msgstr "Удалить"
+
+#: modules/news/includes/delete.php:34 modules/news/includes/delete.php:39
+#: modules/news/includes/edit.php:61 modules/news/includes/edit.php:66
+msgid "Wrong data"
+msgstr "Неверные данные"
+
+#: modules/news/templates/index.php:16
+msgid "Toggle navigation"
+msgstr "Переключить навигацию"
+
+#: modules/news/templates/index.php:31
+msgid "Add"
+msgstr "Добавить"
+
+#: modules/news/templates/index.php:57
+msgid "Edit"
+msgstr "Изменить"
+
+#: modules/online/templates/guests.php:7 modules/online/templates/index.php:8
+#: modules/online/templates/ip.php:7
+msgid "Who is online"
+msgstr "Кто на сайте"
+
+#: modules/online/templates/guests.php:27 modules/online/templates/index.php:28
+#: modules/online/templates/ip.php:27
+msgid "History"
+msgstr "История"
+
+#: modules/online/templates/guests.php:30
+#: modules/online/templates/guests.php:41 modules/online/templates/index.php:33
+#: modules/online/templates/ip.php:30
+msgid "Guests"
+msgstr "Гости"
+
+#: modules/online/templates/guests.php:33 modules/online/templates/index.php:36
+#: modules/online/templates/ip.php:33 modules/online/templates/ip.php:40
+msgid "IP Activity"
+msgstr "Активность IP"
+
+#: modules/profile/includes/option_edit.php:55
+#: modules/registration/includes/registration.php:57
+msgid "Gender"
+msgstr "Пол"
+
+#: modules/profile/includes/option_edit.php:59
+#: modules/registration/includes/registration.php:61
+msgid "Male"
+msgstr "Парень"
+
+#: modules/profile/includes/option_edit.php:60
+#: modules/registration/includes/registration.php:62
+msgid "Female"
+msgstr "Девушка"
+
+#: modules/profile/includes/option_email.php:64
+msgid "Invalid Email address"
+msgstr "Недопустимый адрес электронной почты"
+
+#: modules/profile/includes/option_email.php:66
+#: modules/registration/includes/registration.php:129
+msgid "This Email is already taken"
+msgstr "Этот адрес уже используется"
+
+#: modules/profile/includes/option_email.php:71
+#: modules/profile/includes/option_nickname.php:93
+#: modules/profile/includes/option_password.php:67
+#: modules/profile/includes/option_rank.php:61
+msgid "Invalid password"
+msgstr "Неверный пароль"
+
+#: modules/profile/includes/option_nickname.php:35
+#: modules/registration/includes/registration.php:31
+msgid "Min. 2, Max. 20 Characters.<br>Allowed letters are Cyrillic and Latin alphabet, numbers, spaces and punctuation - = @ ! ? ~ . _ ( ) [ ] *"
+msgstr "Мин. 2, Макс. 20 символов.<br>Допускаются буквы кириллицы и латинского алфавита, цифры, пробелы и знаки пунктуации - = @ ! ? ~ . _ ( ) [ ] *"
+
+#: modules/profile/includes/option_nickname.php:37
+#: modules/profile/includes/option_nickname.php:60
+msgid "Day"
+msgid_plural "Days"
+msgstr[0] "День"
+msgstr[1] "Дня"
+msgstr[2] "Дней"
+
+#: modules/profile/includes/option_nickname.php:73
+msgid "Invalid characters"
+msgstr "Недопустимые символы"
+
+#: modules/profile/includes/option_nickname.php:76
+msgid "It is forbidden to use characters of different languages"
+msgstr "Запрещается использовать символы разных языков"
+
+#: modules/profile/includes/option_nickname.php:79
+msgid "Nicknames consisting only of numbers are prohibited"
+msgstr "Ники, состоящие только из чисел запрещены"
+
+#: modules/profile/includes/option_nickname.php:82
+msgid "Repeated characters"
+msgstr "Повторяющиеся символы"
+
+#: modules/profile/includes/option_nickname.php:85
+#: modules/registration/includes/registration.php:101
+msgid "Email cannot be used as the Nickname"
+msgstr "E-mail не может использоваться как Ник"
+
+#: modules/profile/includes/option_nickname.php:88
+#: modules/registration/includes/registration.php:102
+msgid "This Nickname is already taken"
+msgstr "Этот Ник уже занят"
+
+#: modules/profile/includes/option_password.php:30
+#: modules/registration/includes/registration.php:51
+msgid "The password length min. 3 characters"
+msgstr "Длина пароля мин. 3 символа"
+
+#: modules/profile/includes/option_password.php:36
+#: modules/registration/includes/registration.php:50
+msgid "Repeat password"
+msgstr "Повторите пароль"
+
+#: modules/profile/includes/option_password.php:50
+#: modules/registration/includes/registration.php:118
+msgid "Passwords don't coincide"
+msgstr "Пароли не совпадают"
+
+#: modules/profile/index.php:71
+msgid "User does not exists"
+msgstr "Пользователь не существует"
+
+#: modules/profile/templates/profile.php:86
+msgid "Write"
+msgstr "Написать"
+
+#: modules/registration/includes/registration.php:30
+msgid "Choose Nickname"
+msgstr "Выберите Ник"
+
+#: modules/registration/includes/registration.php:37
+#: modules/registration/notice/index.php:42
+msgid "Your Email"
+msgstr "Ваш E-mail"
+
+#: modules/registration/includes/registration.php:38
+#: modules/registration/notice/index.php:44
+msgid "Please correctly specify your email address. This address will be sent a confirmation code to your registration."
+msgstr "Пожалуйста правильно указывайте свой E-mail адрес. На него будет выслан код подтверждения Вашей регистрации."
+
+#: modules/registration/includes/registration.php:70
+#: modules/registration/notice/index.php:51
+msgid "Verification code"
+msgstr "Проверочный код"
+
+#: modules/registration/includes/registration.php:79
+msgid "Sign Up"
+msgstr "Регистрация"
+
+#: modules/registration/includes/registration.php:96
+msgid "Nickname must be at least 2 and no more than 20 characters in length"
+msgstr "Ник должен быть не менее 2 и не более 20 символов в длину"
+
+#: modules/registration/includes/registration.php:97
+msgid "Nickname contains illegal characters"
+msgstr "Ник содержит запрещенные символы"
+
+#: modules/registration/includes/registration.php:98
+msgid "Nickname contains characters from different languages"
+msgstr "Ник содержит символы из разных языков"
+
+#: modules/registration/includes/registration.php:99
+msgid "Nicknames consisting only of digits are prohibited"
+msgstr "Ники состоящие только из цифр запрещены"
+
+#: modules/registration/includes/registration.php:100
+msgid "Nickname contains recurring characters"
+msgstr "Ник содержит повторяющиеся символы"
+
+#: modules/registration/includes/registration.php:114
+msgid "Password must be at least 3 characters in length"
+msgstr "Пароль должен содержать не менее 3 символов"
+
+#: modules/registration/includes/registration.php:128
+msgid "Please provide a valid email address"
+msgstr "Введите корректный адрес электронной почты"
+
+#: modules/registration/includes/registration.php:170
+msgid "When saving the form there errors occurred, try once again. If problem repeat, contact the Site Administrator"
+msgstr "При сохранении формы произошла ошибка, попробуйте еще раз. Если проблема повторится, свяжитесь с администратором сайта"
+
+#: modules/registration/includes/registration.php:225
+msgid "When sending emails the error occurred. Please contact the site administrator."
+msgstr "При отправке письма произошла ошибка. Пожалуйста, свяжитесь с администратором сайта."
+
+#: modules/registration/notice/index.php:35
+msgid "Your Nickname"
+msgstr "Ваш Ник"
+
+#: modules/registration/notice/index.php:60
+msgid "Send"
+msgstr "Отправить"
+
+#: modules/registration/templates/registered.php:7
+msgid "You are already registered"
+msgstr "Вы уже зарегистрированы"
+
+#: modules/registration/templates/registration.php:10
+#, php-format
+msgid "By clicking &quot;Sign Up&quot;, you agree that read our %s, and agree with them."
+msgstr "Регистрируясь на сайте, Вы подтверждаете, что читали %s и согласны с ними."
+
+#: modules/registration/templates/registration.php:10
+msgid "Terms"
+msgstr "Условия"
+
+#: modules/registration/templates/registration.php:14
+msgid "The site moderation is enabled. You can get authorized access to the web site after the confirmation of Your registration of the Administrator. Confirmation is carried out 1-2 times a day."
+msgstr "На сайте включена модерация. Вы сможете получить авторизованный доступ к разделам сайта после подтверждения Вашей регистрации Администратором. Подтверждение проводится 1-2 раза в сутки."
+
+#: modules/registration/templates/registration.php:20
+msgid "Registration is temporarily closed"
+msgstr "Регистрация временно закрыта"
+
+#: modules/whois/index.php:34
+msgid "IP address"
+msgstr "IP адрес"
+
+#: modules/whois/index.php:41
+msgid "Search"
+msgstr "Поиск"
+
+#: system/includes/Functions.php:78
+msgid "Today"
+msgstr "Сегодня"
+
+#: system/includes/Functions.php:81
+msgid "Yesterday"
+msgstr "Вчера"
+
+#: system/includes/Functions.php:236
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d день"
+msgstr[1] "%d дня"
+msgstr[2] "%d дней"
+
+#: system/mobicms/Form/AssignValues.php:61
+msgid "This field is required"
+msgstr "Это поле обязательно для заполнения"
+
+#: system/mobicms/Form/Form.php:64
+msgid "Errors occurred"
+msgstr "Произошла ошибка"
+
+#: system/mobicms/Form/Validate.php:47
+msgid "The security code is not correct"
+msgstr "Проверочный код указан неверно"
+
+#: system/mobicms/Form/Validate.php:66
+#, php-format
+msgid "Min. %d symbol"
+msgid_plural "Min. %d symbols"
+msgstr[0] "Мин. %d символ"
+msgstr[1] "Мин. %d символа"
+msgstr[2] "Мин. %d символов"
+
+#: system/mobicms/Form/Validate.php:70
+#, php-format
+msgid "Max. %d symbol"
+msgid_plural "Max. %d symbols"
+msgstr[0] "Макс. %d символ"
+msgstr[1] "Макс. %d символа"
+msgstr[2] "Макс. %d символов"
+
+#: system/mobicms/Form/Validate.php:92
+msgid "Must be a number"
+msgstr "Должно быть числом"
+
+#: system/mobicms/Form/Validate.php:98
+#, php-format
+msgid "Minimum %d"
+msgstr "Минимум %d"
+
+#: system/mobicms/Form/Validate.php:102
+#, php-format
+msgid "Maximum %d"
+msgstr "Максимум %d"
+
+#: system/mobicms/Form/Validate.php:123
+msgid "IP address is not valid"
+msgstr "IP-адрес не является допустимым"
+
+#: system/mobicms/Form/Validate.php:141
+msgid "The values do not match"
+msgstr "Значения не совпадают"
+

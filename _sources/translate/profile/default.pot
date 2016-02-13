@@ -1,0 +1,440 @@
+# ##############################################################################
+# mobiCMS Content Management System (http://mobicms.net)                       #
+#                                                                              #
+# For copyright and license information, please see the LICENSE.md             #
+#                                                                              #
+# @link        http://mobicms.net mobiCMS Project                              #
+# @copyright   Copyright (C) mobiCMS Community                                 #
+# @license     LICENSE.md (see attached file)                                  #
+# ##############################################################################
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mobicms\n"
+"POT-Creation-Date: 2016-02-13 15:41+0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Oleg Kasyanov <dev@mobicms.net>\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ../../../modules/profile\n"
+"X-Poedit-KeywordsList: _m;_mp:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/option_avatar_animation.php:18 templates/option_avatar.php:25
+msgid "Upload GIF animation"
+msgstr ""
+
+#: includes/option_avatar_animation.php:22 includes/option_avatar_image.php:24
+msgid "Image"
+msgstr ""
+
+#: includes/option_avatar_animation.php:23
+msgid "Only GIF files allowed for upload, file size should not exceed 20kb.<br>Image size must be 48x48."
+msgstr ""
+
+#: includes/option_avatar_animation.php:40
+msgid "Weight of the file exceeds 20kb"
+msgstr ""
+
+#: includes/option_avatar_animation.php:47
+msgid "Invalid file type, are only allowed to upload images in GIF format"
+msgstr ""
+
+#: includes/option_avatar_animation.php:52
+msgid "The size of the images must be 48x48"
+msgstr ""
+
+#: includes/option_avatar_animation.php:67 includes/option_avatar_image.php:68
+msgid "Avatar is uploaded"
+msgstr ""
+
+#: includes/option_avatar_animation.php:71
+msgid "Error uploading avatar"
+msgstr ""
+
+#: includes/option_avatar_animation.php:78 includes/option_avatar_image.php:78
+msgid "The file is not selected"
+msgstr ""
+
+#: includes/option_avatar_delete.php:18 templates/option_avatar.php:34
+msgid "Delete Avatar"
+msgstr ""
+
+#: includes/option_avatar_delete.php:19
+msgid "You really want to delete avatar?"
+msgstr ""
+
+#: includes/option_avatar_delete.php:23 templates/profile.php:33
+msgid "Delete"
+msgstr ""
+
+#: includes/option_avatar_delete.php:43
+msgid "Avatar is deleted"
+msgstr ""
+
+#: includes/option_avatar_gravatar.php:18 templates/option_avatar.php:28
+msgid "Set Gravatar"
+msgstr ""
+
+#: includes/option_avatar_gravatar.php:22
+msgid "Gravatar (an abbreviation for globally recognized avatar) is a service for providing globally unique avatars. On Gravatar, users can <a href=\"http://gravatar.com\">register an account</a> based on their email address, and upload an avatar to be associated with the account. Next, in your profile when you install avatar, just specify your Email address and will be used as your global avatar."
+msgstr ""
+
+#: includes/option_avatar_gravatar.php:51
+msgid "Avatar is established"
+msgstr ""
+
+#: includes/option_avatar_image.php:20 templates/option_avatar.php:24
+msgid "Upload image"
+msgstr ""
+
+#: includes/option_avatar_image.php:25
+msgid "The following files are allowed to unload: JPG, JPEG, PNG, GIF. File size should not exceed 100kb. Regardless of the resolution of the source file, it will be converted to the size of the 48х48. For best results, the image should have an equal ratio. New image replaces the old (if it was)."
+msgstr ""
+
+#: includes/option_edit.php:20 templates/option.php:25
+msgid "Edit Profile"
+msgstr ""
+
+#: includes/option_edit.php:31
+msgid "Status"
+msgstr ""
+
+#: includes/option_edit.php:33
+msgid "Min.3, Max. 50 symbols, or blank to remove status"
+msgstr ""
+
+#: includes/option_edit.php:43
+msgid "Your Name"
+msgstr ""
+
+#: includes/option_edit.php:46 includes/option_edit.php:156
+msgid "Max. 50 characters"
+msgstr ""
+
+#: includes/option_edit.php:69
+msgid "Birthday"
+msgstr ""
+
+#: includes/option_edit.php:89
+msgid "Day, month, year"
+msgstr ""
+
+#: includes/option_edit.php:95
+msgid "Accommodation"
+msgstr ""
+
+#: includes/option_edit.php:98
+msgid "Specify the country of residence, your city.<br/>Max. 100 characters."
+msgstr ""
+
+#: includes/option_edit.php:104
+msgid "About yourself"
+msgstr ""
+
+#: includes/option_edit.php:108
+msgid "Max. 5000 characters"
+msgstr ""
+
+#: includes/option_edit.php:113
+msgid "Phone Number"
+msgstr ""
+
+#: includes/option_edit.php:116
+msgid "Max. 100 characters"
+msgstr ""
+
+#: includes/option_edit.php:122 includes/option_theme.php:54
+#: templates/option_theme.php:32
+msgid "Site"
+msgstr ""
+
+#: includes/option_edit.php:125
+msgid "You can enter multiple URL, separated by spaces.<br/>Max. 100 characters"
+msgstr ""
+
+#: includes/option_edit.php:142
+msgid "Show in the Profile"
+msgstr ""
+
+#: includes/option_edit.php:144 includes/option_email.php:41
+msgid "Correctly specify your email address, that it will be sent your password.<br/>Max. 50 characters"
+msgstr ""
+
+#: includes/option_edit.php:145 includes/option_email.php:18
+#: templates/option.php:28
+msgid "Change E-mail"
+msgstr ""
+
+#: includes/option_edit.php:165
+msgid "Enter your UIN number"
+msgstr ""
+
+#: includes/option_email.php:23
+msgid "Old E-mail"
+msgstr ""
+
+#: includes/option_email.php:33
+msgid "New E-mail"
+msgstr ""
+
+#: includes/option_email.php:39
+msgid "Repeat E-mail"
+msgstr ""
+
+#: includes/option_email.php:46 includes/option_nickname.php:43
+#: includes/option_rank.php:45
+msgid "Your Password"
+msgstr ""
+
+#: includes/option_language.php:18
+msgid "Select automatically"
+msgstr ""
+
+#: includes/option_language.php:22
+msgid "Select Language"
+msgstr ""
+
+#: includes/option_language.php:27
+msgid "If you turn on automatic mode, the system language is set depending on the settings of your browser."
+msgstr ""
+
+#: includes/option_nickname.php:23 templates/option.php:30
+msgid "Change Nickname"
+msgstr ""
+
+#: includes/option_nickname.php:26
+msgid "New Nickname"
+msgstr ""
+
+#: includes/option_nickname.php:33
+msgid "Repeat Nickname"
+msgstr ""
+
+#: includes/option_nickname.php:36
+msgid "Please note that while changing the nickname is changing your Login on the site.<br>The next change of nickname is allowed through"
+msgstr ""
+
+#: includes/option_nickname.php:60
+msgid "Nickname can not change more than once a"
+msgstr ""
+
+#: includes/option_nickname.php:61
+msgid "You have already changed their nickname:"
+msgstr ""
+
+#: includes/option_nickname.php:62
+msgid "Next time will be able to change:"
+msgstr ""
+
+#: includes/option_nickname.php:104
+msgid "Nickname successfully changed"
+msgstr ""
+
+#: includes/option_password.php:20 templates/option.php:27
+msgid "Change Password"
+msgstr ""
+
+#: includes/option_password.php:23
+msgid "Old Password"
+msgstr ""
+
+#: includes/option_password.php:23
+msgid "Admin Password"
+msgstr ""
+
+#: includes/option_password.php:29
+msgid "New Password"
+msgstr ""
+
+#: includes/option_password.php:64
+msgid "The password is successfully changed"
+msgstr ""
+
+#: includes/option_rank.php:22
+msgid "User"
+msgstr ""
+
+#: includes/option_rank.php:23
+msgid "Forum Moderator"
+msgstr ""
+
+#: includes/option_rank.php:24
+msgid "Downloads Moderator"
+msgstr ""
+
+#: includes/option_rank.php:25
+msgid "Library Moderator"
+msgstr ""
+
+#: includes/option_rank.php:26
+msgid "Super Modererator"
+msgstr ""
+
+#: includes/option_rank.php:30
+msgid "Administrator"
+msgstr ""
+
+#: includes/option_rank.php:31
+msgid "Supervisor"
+msgstr ""
+
+#: includes/option_rank.php:36 templates/option.php:39
+msgid "Rank"
+msgstr ""
+
+#: includes/option_settings.php:21
+msgid "Without Editor"
+msgstr ""
+
+#: includes/option_settings.php:22
+msgid "WYSIWYG Editor"
+msgstr ""
+
+#: includes/option_settings.php:25
+msgid "HTML Editor"
+msgstr ""
+
+#: includes/option_settings.php:30 templates/option.php:33
+msgid "System Settings"
+msgstr ""
+
+#: includes/option_settings.php:34
+msgid "Time settings"
+msgstr ""
+
+#: includes/option_settings.php:35
+msgid "Time Shift"
+msgstr ""
+
+#: includes/option_settings.php:49
+msgid "List Size"
+msgstr ""
+
+#: includes/option_settings.php:50
+msgid "Number of items per page"
+msgstr ""
+
+#: includes/option_settings.php:64
+msgid "Direct URL"
+msgstr ""
+
+#: includes/option_settings.php:68
+msgid "Text Editor"
+msgstr ""
+
+#: includes/option_theme.php:53 templates/option_theme.php:29
+msgid "Author"
+msgstr ""
+
+#: includes/option_theme.php:56 templates/option_theme.php:38
+msgid "Description"
+msgstr ""
+
+#: includes/option_theme.php:61 templates/option.php:34
+msgid "Choose Skin"
+msgstr ""
+
+#: includes/option_theme.php:66
+msgid "Choose"
+msgstr ""
+
+#: includes/reputation.php:40
+msgid "Vote"
+msgstr ""
+
+#: includes/reputation.php:41
+msgid "You can express your relationship to the person, what is its reputation in your opinion. You can change your attitude when you want, no restrictions."
+msgstr ""
+
+#: includes/reputation.php:47 templates/reputation.php:33
+msgid "Excellent"
+msgstr ""
+
+#: includes/reputation.php:48 templates/reputation.php:41
+msgid "Good"
+msgstr ""
+
+#: includes/reputation.php:49 templates/reputation.php:49
+msgid "Neutrally"
+msgstr ""
+
+#: includes/reputation.php:50 templates/reputation.php:57
+msgid "Bad"
+msgstr ""
+
+#: includes/reputation.php:51 templates/reputation.php:65
+msgid "Very Bad"
+msgstr ""
+
+#: templates/option.php:26
+msgid "Set Avatar"
+msgstr ""
+
+#: templates/option.php:36
+msgid "Choose Language"
+msgstr ""
+
+#: templates/option_avatar.php:31
+msgid "Choose in the catalog"
+msgstr ""
+
+#: templates/option_theme.php:15
+msgid "Themes"
+msgstr ""
+
+#: templates/profile.php:16 templates/reputation.php:10
+msgid "My Profile"
+msgstr ""
+
+#: templates/profile.php:16 templates/reputation.php:10
+msgid "User Profile"
+msgstr ""
+
+#: templates/profile.php:31
+msgid "Kick"
+msgstr ""
+
+#: templates/profile.php:32
+msgid "Ban"
+msgstr ""
+
+#: templates/profile.php:46 templates/reputation.php:24
+msgid "Reputation"
+msgstr ""
+
+#: templates/profile.php:75
+msgid "Personal Data"
+msgstr ""
+
+#: templates/profile.php:76
+msgid "Activity"
+msgstr ""
+
+#: templates/profile.php:78
+msgid "Assets"
+msgstr ""
+
+#: templates/profile.php:81
+msgid "Friends"
+msgstr ""
+
+#: templates/profile.php:87
+msgid "Remove from Contacts"
+msgstr ""
+
+#: templates/profile.php:87
+msgid "Add to Contacts"
+msgstr ""
+
+#: templates/profile.php:91
+msgid "Remove from Ignore List"
+msgstr ""
+
+#: templates/profile.php:91
+msgid "Add to Ignore List"
+msgstr ""

@@ -1,0 +1,124 @@
+# ##############################################################################
+# mobiCMS Content Management System (http://mobicms.net)                       #
+#                                                                              #
+# For copyright and license information, please see the LICENSE.md             #
+#                                                                              #
+# @link        http://mobicms.net mobiCMS Project                              #
+# @copyright   Copyright (C) mobiCMS Community                                 #
+# @license     LICENSE.md (see attached file)                                  #
+# ##############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: mobicms\n"
+"POT-Creation-Date: 2016-02-07 12:32+0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"PO-Revision-Date: 2016-02-07 04:24-0500\n"
+"Last-Translator: mobiCMS <dev@mobicms.net>\n"
+"Language-Team: Kazakh\n"
+"X-Generator: crowdin.com\n"
+"X-Poedit-Basepath: ../../../modules/registration\n"
+"X-Poedit-KeywordsList: _m;_mp:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: mobicms\n"
+"X-Crowdin-Language: kk\n"
+"X-Crowdin-File: /registration/default.pot\n"
+"Language: kk_KZ\n"
+
+#: includes/activation.php:11
+msgid "<h3>Activation failed</h3>Possible reasons:<ul><li>You've followed a broken activation link</li><li>From the moment of registration passed more than 24 hours.<br>In this case you need to be registered again.</li></ul>"
+msgstr ""
+
+#: includes/activation.php:14
+msgid "<h3>Activation error</h3>You've followed a broken activation link"
+msgstr ""
+
+#: includes/activation.php:22
+msgid "<h3>Your Account has been successfully activated</h3>You can now log in using the username and password you chose during the registration.<br>Thank you for registering."
+msgstr ""
+
+#: includes/registration.php:184
+#, php-format
+msgid "Hello %s,\n\n"
+"Thank you for registering at %s."
+msgstr ""
+
+#: includes/registration.php:189 includes/registration.php:238
+#, php-format
+msgid "Your account is created and must be verified before you can use it.\n"
+"To verify the account select the following link or copy-paste it in your browser:\n"
+"%s\n\n"
+"The link is valid for 24 hours.\n"
+"After verification an administrator will be notified to activate your account. You'll receive a confirmation when it's done.\n"
+"Once that account has been activated you may login to %s using the username and password you entered during registration."
+msgstr ""
+
+#: includes/registration.php:193
+#, php-format
+msgid "Your account is created and must be activated before you can use it.\n"
+"To activate the account select the following link or copy-paste it in your browser:\n"
+"%s\n"
+"The link is valid for 24 hours.\n\n"
+"After activation you may login to %s using the username and password you entered during registration."
+msgstr ""
+
+#: includes/registration.php:197
+#, php-format
+msgid "Administrator will be notified to activate your account. You'll receive a confirmation when it's done.\n"
+"Once that account has been activated you may login to %s using the username and password you entered during registration."
+msgstr ""
+
+#: includes/registration.php:201
+msgid "or"
+msgstr ""
+
+#: includes/registration.php:202
+msgid "Only you know it :)"
+msgstr ""
+
+#: includes/registration.php:203
+#, php-format
+msgid "\n"
+"Yours faithfully,\n"
+"%s"
+msgstr ""
+
+#: notice/index.php:19
+msgid "Your account is not activated yet."
+msgstr ""
+
+#: notice/index.php:20
+msgid "Check your mailbox, it should have letter with an activation instructions. Follow these instructions. If you can not find, check your spam folder, maybe a letter by mistake got there."
+msgstr ""
+
+#: notice/index.php:21
+msgid "What to do if there is no letter?"
+msgstr ""
+
+#: notice/index.php:23
+msgid "If you sure that entered the correct Email, try to send the letter again."
+msgstr ""
+
+#: notice/index.php:24
+msgid "If the message still does not come, try to change Email and send the letter again."
+msgstr ""
+
+#: notice/index.php:25
+msgid "If Email was specified in error, correct it and send the letter again."
+msgstr ""
+
+#: notice/index.php:82
+msgid "Send an activation again"
+msgstr ""
+
+#: notice/index.php:88
+msgid "Your account must be approved by Administrator, but before that need activation.<br>Follow the instructions below."
+msgstr ""
+
+#: notice/index.php:91
+msgid "Your account must be approved by Administrator.<br>Please wait..."
+msgstr ""
+

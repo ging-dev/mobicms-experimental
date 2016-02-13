@@ -1,0 +1,143 @@
+# ##############################################################################
+# mobiCMS Content Management System (http://mobicms.net)                       #
+#                                                                              #
+# For copyright and license information, please see the LICENSE.md             #
+#                                                                              #
+# @link        http://mobicms.net mobiCMS Project                              #
+# @copyright   Copyright (C) mobiCMS Community                                 #
+# @license     LICENSE.md (see attached file)                                  #
+# ##############################################################################
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mobicms\n"
+"POT-Creation-Date: 2016-02-13 15:41+0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Oleg Kasyanov <dev@mobicms.net>\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ../../../modules/registration\n"
+"X-Poedit-KeywordsList: _m;_mp:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: classes/WelcomeLetter.php:81
+#, php-format
+msgid ""
+"Hello %s,\n"
+"\n"
+"Thank you for registering at %s."
+msgstr ""
+
+#: classes/WelcomeLetter.php:89
+#, php-format
+msgid ""
+"Your account is created and must be verified before you can use it.\n"
+"To verify the account select the following link or copy-paste it in your browser:\n"
+"%s\n"
+"\n"
+"The link is valid for 24 hours.\n"
+"After verification an administrator will be notified to activate your account. You'll receive a confirmation when it's done.\n"
+"Once that account has been activated you may login to %s using the username and password you entered during registration."
+msgstr ""
+
+#: classes/WelcomeLetter.php:96
+#, php-format
+msgid ""
+"Your account is created and must be activated before you can use it.\n"
+"To activate the account select the following link or copy-paste it in your browser:\n"
+"%s\n"
+"The link is valid for 24 hours.\n"
+"\n"
+"After activation you may login to %s using the username and password you entered during registration."
+msgstr ""
+
+#: classes/WelcomeLetter.php:103
+#, php-format
+msgid ""
+"Administrator will be notified to activate your account. You'll receive a confirmation when it's done.\n"
+"Once that account has been activated you may login to %s using the username and password you entered during registration."
+msgstr ""
+
+#: classes/WelcomeLetter.php:108
+msgid "or"
+msgstr ""
+
+#: classes/WelcomeLetter.php:109
+msgid "Only you know it :)"
+msgstr ""
+
+#: classes/WelcomeLetter.php:110
+#, php-format
+msgid ""
+"\n"
+"Yours faithfully,\n"
+"%s"
+msgstr ""
+
+#: includes/activation.php:11
+msgid "<h3>Activation failed</h3>Possible reasons:<ul><li>You've followed a broken activation link</li><li>From the moment of registration passed more than 24 hours.<br>In this case you need to be registered again.</li></ul>"
+msgstr ""
+
+#: includes/activation.php:14
+msgid "<h3>Activation error</h3>You've followed a broken activation link"
+msgstr ""
+
+#: includes/activation.php:22
+msgid "<h3>Your Account has been successfully activated</h3>You can now log in using the username and password you chose during the registration.<br>Thank you for registering."
+msgstr ""
+
+#: includes/confirmation.php:11
+msgid "Your account is created and must be verified before you can use it.<ul><li>You sent an email with verification instructions</li><li>Open the email and follow the instructions</li><li>After verification an administrator will be notified to activate your account</li><li>You'll receive a confirmation when it's done</li><li>Once that account has been activated you may login using the username and password you entered during registration</li></ul>"
+msgstr ""
+
+#: includes/confirmation.php:14
+msgid "Your account is created and must be activated before you can use it.<ul><li>You sent an email with activation instructions</li><li>Open the email and follow the instructions</li><li>Once that account has been activated you may login using the username and password you entered during registration</li></ul>"
+msgstr ""
+
+#: includes/confirmation.php:17
+msgid "Your account has been created, but must be approved by the Administrator.<br>Once that account has been approved you may login using the username and password you entered during registration."
+msgstr ""
+
+#: includes/index.php:133
+msgid "The email address you entered is already in use or invalid. Please enter another email address."
+msgstr ""
+
+#: includes/notice.php:22
+msgid "Your account is not activated yet."
+msgstr ""
+
+#: includes/notice.php:23
+msgid "Check your mailbox, it should have letter with an activation instructions. Follow these instructions. If you can not find, check your spam folder, maybe a letter by mistake got there."
+msgstr ""
+
+#: includes/notice.php:24
+msgid "What to do if there is no letter?"
+msgstr ""
+
+#: includes/notice.php:26
+msgid "If you sure that entered the correct Email, try to send the letter again."
+msgstr ""
+
+#: includes/notice.php:27
+msgid "If the message still does not come, try to change Email and send the letter again."
+msgstr ""
+
+#: includes/notice.php:28
+msgid "If Email was specified in error, correct it and send the letter again."
+msgstr ""
+
+#: includes/notice.php:85
+msgid "Send an activation again"
+msgstr ""
+
+#: includes/notice.php:102
+msgid "Your account must be approved by Administrator, but before that need activation.<br>Follow the instructions below."
+msgstr ""
+
+#: includes/notice.php:105
+msgid "Your account must be approved by Administrator.<br>Please wait..."
+msgstr ""

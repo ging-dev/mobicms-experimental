@@ -1,0 +1,456 @@
+# ##############################################################################
+# mobiCMS Content Management System (http://mobicms.net)                       #
+#                                                                              #
+# For copyright and license information, please see the LICENSE.md             #
+#                                                                              #
+# @link        http://mobicms.net mobiCMS Project                              #
+# @copyright   Copyright (C) mobiCMS Community                                 #
+# @license     LICENSE.md (see attached file)                                  #
+# ##############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: mobicms\n"
+"POT-Creation-Date: 2016-01-18 23:29+0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"PO-Revision-Date: 2016-02-07 04:24-0500\n"
+"Last-Translator: mobiCMS <dev@mobicms.net>\n"
+"Language-Team: Ukrainian\n"
+"X-Generator: crowdin.com\n"
+"X-Poedit-Basepath: ../../../modules/admin\n"
+"X-Poedit-KeywordsList: _m;_mp:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Crowdin-Project: mobicms\n"
+"X-Crowdin-Language: uk\n"
+"X-Crowdin-File: /admin/default.pot\n"
+"Language: uk_UA\n"
+
+#: includes/acl.php:26 includes/acl.php:40 includes/acl.php:51
+#: includes/acl.php:63
+msgid "Access is open"
+msgstr "Доступ відкрито"
+
+#: includes/acl.php:27 includes/acl.php:52 includes/acl.php:64
+msgid "Only for the authorized"
+msgstr "Тільки для уповноваженого"
+
+#: includes/acl.php:28
+msgid "Read only"
+msgstr "Лише для читання"
+
+#: includes/acl.php:29 includes/acl.php:41 includes/acl.php:53
+#: includes/acl.php:65
+msgid "Access denied"
+msgstr "У доступі відмовлено"
+
+#: includes/acl.php:39
+msgid "Enable posting for guests"
+msgstr "Дозволено писати гостям"
+
+#: includes/languages.php:21 includes/languages.php:25
+msgid "Clear Cache"
+msgstr "Очистити кеш"
+
+#: includes/languages.php:22
+msgid "The Cache clearing is required after installing a new language or upgrade existing ones."
+msgstr "Очищення кешу потрібно після установки нових мов або для оновлення існуючих."
+
+#: includes/languages.php:29
+msgid "Default Language"
+msgstr "Мова за замовчуванням"
+
+#: includes/languages.php:33
+msgid "If the choice is prohibited, the language will be forced to set for all visitors. If the choice is allowed, it will be applied only in the case, if requested by the client language is not in the system."
+msgstr "Якщо можливість вибору заборонена, то зазначена мова буде примусово встановлена для всіх відвідувачів. Якщо вибір дозволений, то буде застосовуватися тільки в тому випадку, якщо запитуваної клієнтом мови немає в системі."
+
+#: includes/languages.php:40
+msgid "Allow to choose"
+msgstr "Дозволяють вибрати"
+
+#: includes/languages.php:41
+msgid "Allow visitors specify the desired language from the list of available in the system. Including activated auto select languages by signatures of the browser."
+msgstr "Дозволити відвідувачам вказувати бажану мову зі списку доступних в системі. В тому числі, активується автовибір мов по сигнатурах браузера."
+
+#: includes/quarantine.php:26 includes/users_settings.php:54
+msgid "Quarantine allows you to temporarily restrict user activity"
+msgstr "Карантин дозволяє тимчасово обмежити активності користувача"
+
+#: includes/quarantine.php:29
+msgid "The Quarantine action period, in hours"
+msgstr "Період дії карантину, в годинах"
+
+#: includes/quarantine.php:41
+msgid "For the duration of the quarantine period, will be active the following restrictions:"
+msgstr "За Тривалість карантинного періоду будуть активні наступні обмеження:"
+
+#: includes/quarantine.php:44
+msgid "How much mail can be sent?"
+msgstr "Скільки пошти, можна надіслати?"
+
+#: includes/quarantine.php:57
+msgid "How many mail recipients?"
+msgstr "Скільки одержувачів пошти?"
+
+#: includes/quarantine.php:70
+msgid "How many comments are allowed?"
+msgstr "Скільки коментарі можна?"
+
+#: includes/quarantine.php:83
+msgid "How many Chat posts are allowed?"
+msgstr "Скільки чат пости допускаються?"
+
+#: includes/quarantine.php:96
+msgid "How many images are allowed to upload into the Album?"
+msgstr "Скільки зображень дозволяється завантажувати в альбом?"
+
+#: includes/quarantine.php:109
+msgid "Allow Reputation"
+msgstr "Дозволити Репутації"
+
+#: includes/quarantine.php:116
+msgid "How many Topics is allowed to create?"
+msgstr "Скільки теми дозволяється створювати?"
+
+#: includes/quarantine.php:129
+msgid "The Sections of the Forum which allowed to create Topics"
+msgstr "Розділів форуму, який дозволив створити теми"
+
+#: includes/quarantine.php:131
+msgid "Type (separated by commas) ID of Sections where it is permitted to create Topics.<br>If the list is empty, then allowed to create anywhere."
+msgstr "Введіть (через кому) ідентифікатор розділах, де це дозволено створювати теми.<br>Якщо список порожній, то дозволено створити в будь-якому місці."
+
+#: includes/quarantine.php:136
+msgid "How many Forum posts are allowed?"
+msgstr "Скільки повідомлень на форумі дозволяється?"
+
+#: includes/quarantine.php:149
+msgid "The Topics of the Forum which allowed to create posts"
+msgstr "Теми форуму, які дозволяють створювати пости"
+
+#: includes/quarantine.php:151
+msgid "Type (separated by commas) ID of topics where it is permitted to post messages.<br>If the list is empty, then allowed to write anywhere. Please note, if allowed the creation of a topic, then they will be allowed posting messages, regardless of the limitations of this list."
+msgstr "Введіть (через кому) ідентифікатор теми, де дозволено розміщувати повідомлення.<br>Якщо список порожній, то дозволено писати в будь-якому місці. Зверніть увагу, якщо це не заборонено створення теми, тоді їм буде дозволено публікувати повідомлення, не залежно від обмеження цього списку."
+
+#: includes/scanner.php:20 templates/index.php:28
+msgid "Anti-Spyware"
+msgstr "Антишпигун"
+
+#: includes/scanner.php:26
+msgid "Scan to the appropriate distribution"
+msgstr "Сканування на відповідність дистрибутиву"
+
+#: includes/scanner.php:27
+msgid "Snapshot scan"
+msgstr "Сканування по знімку"
+
+#: includes/scanner.php:28
+msgid "Make snapshot"
+msgstr "Зробити знімок"
+
+#: includes/scanner.php:53
+msgid "Distributive inconsistency!"
+msgstr "Невідповідність дистрибутиву!"
+
+#: includes/scanner.php:55
+msgid "List of files corresponds to the distributive"
+msgstr "Список файлів відповідає дистрибутиву"
+
+#: includes/scanner.php:63
+msgid "Snapshot image is not created"
+msgstr "Помилка створення знімка"
+
+#: includes/scanner.php:69
+msgid "Snapshot inconsistency"
+msgstr "Невідповідність знімку"
+
+#: includes/scanner.php:71
+msgid "All files are consistent with previously made image"
+msgstr "Всі файли узгоджуються з раніше зробленим знімком"
+
+#: includes/scanner.php:79
+msgid "Snapshot successfully created"
+msgstr "Знімок успішно створений"
+
+#: includes/sitemap.php:20
+msgid "Where to turn?"
+msgstr "Що включити?"
+
+#: includes/sitemap.php:33
+msgid "To whom to show?"
+msgstr "Кому показати?"
+
+#: includes/sitemap.php:39
+msgid "All"
+msgstr "Всі"
+
+#: includes/sitemap.php:40
+msgid "Guests only"
+msgstr "Тільки гостям"
+
+#: includes/smilies.php:19
+msgid "Update cache"
+msgstr "Оновити кеш"
+
+#: includes/smilies.php:54
+msgid "The cache is updated"
+msgstr "Кеш успішно оновлено"
+
+#: includes/smilies.php:56
+msgid "When updating a cache there was a error"
+msgstr "При оновленні кешу сталася помилка"
+
+#: includes/system_settings.php:21
+msgid "System Time"
+msgstr "Системий час"
+
+#: includes/system_settings.php:26
+msgid "Time Shift"
+msgstr "Зсув у часі"
+
+#: includes/system_settings.php:35
+msgid "Upload Files"
+msgstr "Завантажити файл"
+
+#: includes/system_settings.php:39
+msgid "Max. File size"
+msgstr "Макс. розмір файлу"
+
+#: includes/system_settings.php:40
+msgid "Note that the maximum size of uploaded file may be limited by your PHP settings. Most often the default 2000kb."
+msgstr "Зверніть увагу, що максимальний розмір завантажуваного файлу може бути обмежений у налаштуваннях PHP. Найчастіше за замовчуванням 2000 КБ."
+
+#: includes/system_settings.php:50
+msgid "Profiling"
+msgstr "Профілювання"
+
+#: includes/system_settings.php:54
+msgid "Show generation time"
+msgstr "Показувати час генерації"
+
+#: includes/system_settings.php:60
+msgid "Show used memory"
+msgstr "Показати використовувану пам'ять"
+
+#: includes/system_settings.php:63
+msgid "Site Requisites"
+msgstr "Реквізити сайту"
+
+#: includes/system_settings.php:67
+msgid "Site Email"
+msgstr "E-mail сайту"
+
+#: includes/system_settings.php:73
+msgid "Copyright"
+msgstr "Копірайт"
+
+#: includes/system_settings.php:76
+msgid "SEO Attributes"
+msgstr "SEO атрибути"
+
+#: includes/system_settings.php:81
+msgid "Homepage title"
+msgstr "Назва домашньої сторінки"
+
+#: includes/system_settings.php:82
+msgid "In the search results for keywords, search engines use the page title for the reference to the document. Well written title containing keywords will attract many visitors and increase chances are that the site is visited by many people."
+msgstr "У результатах пошуку за ключовими словами, пошукові системи використовують заголовок сторінки для зазначення посилання на цей документ. Цікаво написаний заголовок, який містить ключові слова, приверне більше уваги відвідувачів і збільшить шанси на те, що сайт відвідає більше людей."
+
+#: includes/system_settings.php:89
+msgid "Keywords (or phrases) separated by commas. This meta tag search engines use to determine the relevance of links. In forming this tag should be used only the words that are contained in the document. The use of words that are not on the page, is not recommended. The recommended number of words in this tag - no more than ten. In addition,revealed that the breakdown of the tag on a few lines affect the estimate of links by search engines.<br>Max. 250 characters."
+msgstr "Ключові слова (фрази) розділяються комами. Цей мета-тег пошукові системи використовують для того, щоб визначити релевантність посилання. При формуванні даного тега бажано використовувати тільки ті слова, які містяться в самому документі. Використання тих слів, яких немає на сторінках сайту, не рекомендується. Рекомендована кількість слів у цьому тегу - не більше десяти. Крім того, виявлено, що розбивка цього тега на кілька рядків впливає на оцінку посилання пошуковими машинами.<br>Макс. 250 символів."
+
+#: includes/system_settings.php:101
+msgid "This tag is used to create a short description of the page, use the search engines to index, as well as to create annotations the extradition request. In the absence of a tag search system gives the first line in the summary of the document or a passage containing the keywords. Displayed after the link in the search pages in search engine. Different search engines charge different rates for the length of the tag. Try to write a small description of 150 characters.<br>Max. 250 characters."
+msgstr "Даний тег використовується при створенні короткого опису сторінки, використовується пошуковими системами для індексації, а також при створенні анотації у видачі за запитом. При відсутності тега пошукові системи видають в анотації перший рядок документа або уривок, який містить ключові слова. Відображається після посилання при пошуку сторінок в пошуковику. Різні пошукові системи встановлюють різні норми для довжини цього тега. Намагайтеся писати невеликий опис близько 150 символів.<br>Макс. 250 символів."
+
+#: includes/users_settings.php:24
+msgid "Allow registration"
+msgstr "Дозволити реєстрацію"
+
+#: includes/users_settings.php:31
+msgid "Confirmation by Email"
+msgstr "Підтвердження по електронній пошті"
+
+#: includes/users_settings.php:33
+msgid "On the specified at registration address will be sent an Email with a confirmation link"
+msgstr "На вказаний при реєстрації адресу буде відправлено лист з посиланням для підтвердження"
+
+#: includes/users_settings.php:38
+msgid "Set an Gravatar based on the specified Email"
+msgstr "Встановити Граватар, засновані на вказану адресу електронної пошти"
+
+#: includes/users_settings.php:40
+msgid "If for Email specified at registration there is Gravatar, it will be set as an avatar"
+msgstr "Якщо для електронної пошти, вказану при реєстрації є Граватар, то він буде встановлений в якості аватара"
+
+#: includes/users_settings.php:45
+msgid "Confirmation by the Administrator"
+msgstr "Підтвердження адміністратором"
+
+#: includes/users_settings.php:47
+msgid "Regardless of other settings, the User will be activated only after confirmation by the Administrator"
+msgstr "Незалежно від інших налаштувань користувач активований тільки після підтвердження Адміністратором"
+
+#: includes/users_settings.php:52
+msgid "Enable Quarantine"
+msgstr "Увімкнути карантин"
+
+#: includes/users_settings.php:60
+msgid "For Users"
+msgstr "Для Користувачів"
+
+#: includes/users_settings.php:63
+msgid "Change Sex"
+msgstr "Змінити стать"
+
+#: includes/users_settings.php:69
+msgid "Change Status"
+msgstr "Змінити статус"
+
+#: includes/users_settings.php:75
+msgid "Upload Avatars"
+msgstr "Завантажити аватар"
+
+#: includes/users_settings.php:81
+msgid "Allow Gravatar"
+msgstr "Дозволити Gravatar"
+
+#: includes/users_settings.php:87
+msgid "Allow Nicknames, consisting of digits"
+msgstr "Дозволити Ніки, що складаються з цифр"
+
+#: includes/users_settings.php:93
+msgid "Allow to change Nickname"
+msgstr "Дозволити змінювати Нік"
+
+#: includes/users_settings.php:99
+msgid "After how many days?"
+msgstr "Через скільки днів?"
+
+#: includes/users_settings.php:110
+msgid "For Guests"
+msgstr "Для гостей"
+
+#: includes/users_settings.php:113
+msgid "Online Lists"
+msgstr "Онлайн списки"
+
+#: includes/users_settings.php:119
+msgid "List of Users"
+msgstr "Список користувачів"
+
+#: includes/users_settings.php:125
+msgid "View Profiles"
+msgstr "Переглянути профіль"
+
+#: includes/users_settings.php:129
+msgid "Antiflood"
+msgstr "Антифлуд"
+
+#: includes/users_settings.php:135
+msgid "Day mode"
+msgstr ""
+
+#: includes/users_settings.php:136
+msgid "Night mode"
+msgstr ""
+
+#: includes/users_settings.php:137
+msgid "Autoswitch"
+msgstr "Автоперемикач"
+
+#: includes/users_settings.php:137
+msgid "From 10:00 till 20:00 the day mode, in the rest of the time the night mode is active"
+msgstr ""
+
+#: includes/users_settings.php:138
+msgid "Adaptive"
+msgstr "Адаптивний режим"
+
+#: includes/users_settings.php:138
+msgid "If on the site there is someone from administration, the day mode, differently the night mode is active"
+msgstr ""
+
+#: includes/users_settings.php:146
+msgid "Day mode, delay in seconds"
+msgstr ""
+
+#: includes/users_settings.php:159
+msgid "Night mode, delay in seconds"
+msgstr ""
+
+#: templates/edit_form.php:13
+msgid "Options set to default"
+msgstr "Параметри, встановлені за замовчуванням"
+
+#: templates/edit_form.php:15
+msgid "The Cache cleared successfully"
+msgstr "Кеш успішно очищений"
+
+#: templates/index.php:12
+msgid "Modules"
+msgstr "Модулі"
+
+#: templates/index.php:14
+msgid "Counters"
+msgstr "Лічильники"
+
+#: templates/index.php:15
+msgid "Site Map"
+msgstr "Мапа сайту"
+
+#: templates/index.php:17
+msgid "System"
+msgstr "Система"
+
+#: templates/index.php:19
+msgid "System Settings"
+msgstr "Системні параметри"
+
+#: templates/index.php:20
+msgid "Users Settings"
+msgstr "Налаштування користувача"
+
+#: templates/index.php:21
+msgid "Languages"
+msgstr "Мови"
+
+#: templates/index.php:24
+msgid "Security"
+msgstr "Безпека"
+
+#: templates/index.php:25
+msgid "Access Control"
+msgstr "Контроль доступу"
+
+#: templates/index.php:27
+msgid "Firewall"
+msgstr "Брандмауер"
+
+#: templates/scanner.php:24
+msgid "Modified files"
+msgstr "Змінені файли"
+
+#: templates/scanner.php:25
+msgid "These files have been modified. If you do not make modifications to these files, it is strongly recommended to replace them with the original distributive of the correct version."
+msgstr "Ці файли були змінені. Якщо Ви не вносили зміни у ці файли, рекомендується замінити їх на оригінальні, з дистрибутиву потрібної версії."
+
+#: templates/scanner.php:38
+msgid "Missing files"
+msgstr "Відсутні файли"
+
+#: templates/scanner.php:39
+msgid "These files were in the distribution, but if you lack. Without them, can not be guaranteed and normal system operation. It is recommended to restore all missing files from correct version distributive."
+msgstr "Ці файли були в дистрибутиві, але відсутні у Вас. Без них не може бути гарантована нормальна робота системи. Рекомендується відновити всі відсутні файли з потрібної версії дистрибутива."
+
+#: templates/scanner.php:49
+msgid "New files"
+msgstr "Нові файли"
+
+#: templates/scanner.php:50
+msgid "If the files listed below does not pertain to your additional modules and you are not assured of their safety, remove them. They can be dangerous for your site."
+msgstr "Якщо файли, перераховані нижче, не відносяться до ваших додаткових модулей і Ви не впевнені в їх безпеці, видаліть їх. Вони можуть бути небезпечними для вашого сайту."
+

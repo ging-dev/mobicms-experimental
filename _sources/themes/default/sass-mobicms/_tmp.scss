@@ -1,0 +1,29 @@
+/*======================================================
+Временно. После доработки удалить!!!
+======================================================*/
+
+.error-text {
+  color: #ce0000;
+  font-size: x-small;
+  display: block;
+  font-weight: bold;
+  padding-bottom: 4px;
+  text-shadow: 0 1px 1px #ffffff;
+}
+
+.sex {
+  color: lighten($brand-primary, 10%);
+  margin-right: 3px;
+
+  &.online{
+    color: $brand-success;
+  }
+
+  &.deleted{
+    color: $brand-danger;
+  }
+}
+
+.danger{
+  color: $brand-danger;
+}

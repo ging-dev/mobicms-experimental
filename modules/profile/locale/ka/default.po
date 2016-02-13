@@ -1,0 +1,445 @@
+# ##############################################################################
+# mobiCMS Content Management System (http://mobicms.net)                       #
+#                                                                              #
+# For copyright and license information, please see the LICENSE.md             #
+#                                                                              #
+# @link        http://mobicms.net mobiCMS Project                              #
+# @copyright   Copyright (C) mobiCMS Community                                 #
+# @license     LICENSE.md (see attached file)                                  #
+# ##############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: mobicms\n"
+"POT-Creation-Date: 2015-09-25 16:23+0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"PO-Revision-Date: 2015-10-12 07:30-0400\n"
+"Last-Translator: mobiCMS <dev@mobicms.net>\n"
+"Language-Team: Georgian\n"
+"X-Generator: crowdin.com\n"
+"X-Poedit-Basepath: ../../../modules/profile\n"
+"X-Poedit-KeywordsList: _m;_mp:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: mobicms\n"
+"X-Crowdin-Language: ka\n"
+"X-Crowdin-File: /profile/default.pot\n"
+"Language: ka_GE\n"
+
+#: includes/option_avatar_animation.php:17 templates/option_avatar.php:23
+msgid "Upload GIF animation"
+msgstr "ატვირთეთ GIF ანიმაციები"
+
+#: includes/option_avatar_animation.php:21 includes/option_avatar_image.php:23
+msgid "Image"
+msgstr "სურათი"
+
+#: includes/option_avatar_animation.php:22
+msgid "Only GIF files allowed for upload, file size should not exceed 20kb.<br>Image size must be 48x48."
+msgstr "მხოლოდ GIF ფაილი დაშვებული ატვირთეთ, ფაილის ზომა არ უნდა აღემატებოდეს 20kb.<br>სურათის ზომა უნდა იყოს 48x48."
+
+#: includes/option_avatar_animation.php:39
+msgid "Weight of the file exceeds 20kb"
+msgstr "წონა ფაილი აღემატება 20kb"
+
+#: includes/option_avatar_animation.php:46
+msgid "Invalid file type, are only allowed to upload images in GIF format"
+msgstr "არასწორი ფაილის ტიპი, ნებადართულია მხოლოდ ატვირთეთ სურათები GIF ფორმატში"
+
+#: includes/option_avatar_animation.php:51
+msgid "The size of the images must be 48x48"
+msgstr "ზომის სურათები უნდა იყოს 48x48"
+
+#: includes/option_avatar_animation.php:66 includes/option_avatar_image.php:67
+msgid "Avatar is uploaded"
+msgstr "ავატარი არის ატვირთული"
+
+#: includes/option_avatar_animation.php:70
+msgid "Error uploading avatar"
+msgstr "შეცდომა ატვირთვა ავატარი"
+
+#: includes/option_avatar_animation.php:77 includes/option_avatar_image.php:77
+msgid "The file is not selected"
+msgstr "ფაილი არ არის არჩეული"
+
+#: includes/option_avatar_delete.php:17 templates/option_avatar.php:32
+msgid "Delete Avatar"
+msgstr "წაშლა ავატარი"
+
+#: includes/option_avatar_delete.php:18
+msgid "You really want to delete avatar?"
+msgstr "თქვენ ნამდვილად გსურთ წაშალოთ ავატარი?"
+
+#: includes/option_avatar_delete.php:22 templates/profile.php:32
+msgid "Delete"
+msgstr "წაშლა"
+
+#: includes/option_avatar_delete.php:42
+msgid "Avatar is deleted"
+msgstr "ავატარი არის წაშლილი"
+
+#: includes/option_avatar_gravatar.php:17 templates/option_avatar.php:26
+msgid "Set Gravatar"
+msgstr "მითითებული Gravatar"
+
+#: includes/option_avatar_gravatar.php:21
+msgid "Gravatar (an abbreviation for globally recognized avatar) is a service for providing globally unique avatars. On Gravatar, users can <a href=\"http://gravatar.com\">register an account</a> based on their email address, and upload an avatar to be associated with the account. Next, in your profile when you install avatar, just specify your Email address and will be used as your global avatar."
+msgstr "Gravatar (აბრევიატურა გლობალურად აღიარებული ავატარა) არის სერვისი, რომელიც უზრუნველყოფს გლობალურად უნიკალური ავატარები. მომხმარებლებს შეუძლიათ <a href=\"http://gravatar.com\">ანგარიშის რეგისტრაცია</a> ეფუძნება მათი ელექტრონული ფოსტის მისამართი და ატვირთეთ avatar დაკავშირებული იყოს ანგარიშზე. შემდეგი, თქვენი პროფილის როდესაც თქვენ დააყენოთ ავატარი, უბრალოდ, მიუთითოთ თქვენი ელ. ფოსტის მისამართი და გამოყენებული იქნება როგორც თქვენი გლობალური ავატარი."
+
+#: includes/option_avatar_gravatar.php:50
+msgid "Avatar is established"
+msgstr "ავატარი არის დადგენილი"
+
+#: includes/option_avatar_image.php:19 templates/option_avatar.php:22
+msgid "Upload image"
+msgstr "ატვირთეთ სურათი"
+
+#: includes/option_avatar_image.php:24
+msgid "The following files are allowed to unload: JPG, JPEG, PNG, GIF. File size should not exceed 100kb. Regardless of the resolution of the source file, it will be converted to the size of the 48х48. For best results, the image should have an equal ratio. New image replaces the old (if it was)."
+msgstr "შემდეგი ფაილი ეძლევათ განიტვირთოს: JPG, JPEG, PNG, GIF. ფაილის ზომა არ უნდა აღემატებოდეს 100kb. მიუხედავად იმისა, რომ რეზოლუცია წყარო ფაილი, ეს იქნება მოაქცია ზომა 48х48. საუკეთესო შედეგები, იმიჯი უნდა ჰქონდეს თანაბარი კოეფიციენტი. ახალი იმიჯი ცვლის ძველი (თუ ეს იყო)."
+
+#: includes/option_edit.php:19 templates/option.php:23
+msgid "Edit Profile"
+msgstr "პროფილის შეცვლა"
+
+#: includes/option_edit.php:26
+msgid "Status"
+msgstr "სტატუსი"
+
+#: includes/option_edit.php:28
+msgid "Min.3, Max. 50 symbols, or blank to remove status"
+msgstr "მინ.3, მაქს. 50 სიმბოლოები, ან ცარიელი ამოიღონ სტატუსი"
+
+#: includes/option_edit.php:38
+msgid "Your Name"
+msgstr "თქვენი სახელი"
+
+#: includes/option_edit.php:40 includes/option_edit.php:142
+msgid "Max. 50 characters"
+msgstr "მაქს. 50 სიმბოლო"
+
+#: includes/option_edit.php:63
+msgid "Birthday"
+msgstr "დაბადების დღე"
+
+#: includes/option_edit.php:80
+msgid "Day, month, year"
+msgstr "დღე, თვე, წელი"
+
+#: includes/option_edit.php:86
+msgid "Accommodation"
+msgstr "განსახლების"
+
+#: includes/option_edit.php:88
+msgid "Specify the country of residence, your city.<br/>Max. 100 characters."
+msgstr "მიუთითეთ ქვეყანა, თქვენს ქალაქში.<br>მაქს. 100 სიმბოლო."
+
+#: includes/option_edit.php:94
+msgid "About yourself"
+msgstr "თქვენს შესახებ"
+
+#: includes/option_edit.php:97
+msgid "Max. 5000 characters"
+msgstr "მაქს. 5000 გმირები"
+
+#: includes/option_edit.php:102
+msgid "Phone Number"
+msgstr "ტელეფონი"
+
+#: includes/option_edit.php:104
+msgid "Max. 100 characters"
+msgstr "მაქს. 5000 გმირები"
+
+#: includes/option_edit.php:110 includes/option_theme.php:50
+#: templates/option_theme.php:32
+msgid "Site"
+msgstr "საიტზე"
+
+#: includes/option_edit.php:112
+msgid "You can enter multiple URL, separated by spaces.<br/>Max. 100 characters"
+msgstr "თქვენ შეგიძლიათ შეიყვანოთ მრავალი URL, გამოყოფილი ფართები.<br>მაქს. 100 სიმბოლო"
+
+#: includes/option_edit.php:129
+msgid "Show in the Profile"
+msgstr "შოუ პროფილი"
+
+#: includes/option_edit.php:131 includes/option_email.php:40
+msgid "Correctly specify your email address, that it will be sent your password.<br/>Max. 50 characters"
+msgstr "სწორად მიუთითოთ თქვენი ელექტრონული ფოსტის მისამართი, რომ ეს გამოიგზავნება თქვენი პაროლი.<br>მაქს. 50 სიმბოლო"
+
+#: includes/option_edit.php:132 includes/option_email.php:17
+#: templates/option.php:26
+msgid "Change E-mail"
+msgstr "ელ-ფოსტის შეცვლა"
+
+#: includes/option_edit.php:150
+msgid "Enter your UIN number"
+msgstr "შეიყვანეთ თქვენი UIN ნომერი"
+
+#: includes/option_email.php:22
+msgid "Old E-mail"
+msgstr "ძველი ელ-ფოსტა"
+
+#: includes/option_email.php:32
+msgid "New E-mail"
+msgstr "ახალი ელ-ფოსტა"
+
+#: includes/option_email.php:38
+msgid "Repeat E-mail"
+msgstr "გაიმეორეთ ელ-ფოსტა"
+
+#: includes/option_email.php:45 includes/option_nickname.php:42
+#: includes/option_rank.php:44
+msgid "Your Password"
+msgstr "თქვენი პაროლი"
+
+#: includes/option_language.php:17
+msgid "Select automatically"
+msgstr "აირჩიეთ ავტომატურად"
+
+#: includes/option_language.php:21
+msgid "Select Language"
+msgstr "აირჩიეთ ენა"
+
+#: includes/option_language.php:26
+msgid "If you turn on automatic mode, the system language is set depending on the settings of your browser."
+msgstr "თუ თქვენ ჩართოთ ავტომატური რეჟიმი, სისტემა ენა არის მითითებული დამოკიდებულია პარამეტრების თქვენს ბრაუზერში."
+
+#: includes/option_nickname.php:22 templates/option.php:28
+msgid "Change Nickname"
+msgstr "მეტსახელის შეცვლა"
+
+#: includes/option_nickname.php:25
+msgid "New Nickname"
+msgstr "ახალი მეტსახელი"
+
+#: includes/option_nickname.php:32
+msgid "Repeat Nickname"
+msgstr "ვიმეორებ, მეტსახელად"
+
+#: includes/option_nickname.php:35
+msgid "Please note that while changing the nickname is changing your Login on the site.<br>The next change of nickname is allowed through"
+msgstr "გთხოვთ, გაითვალისწინოთ, რომ მიუხედავად იმისა, რომ იცვლება მეტსახელად იცვლება თქვენი ლოგინი საიტზე.<br>შემდეგი ცვლილება მეტსახელი არის დაშვებული მეშვეობით"
+
+#: includes/option_nickname.php:59
+msgid "Nickname can not change more than once a"
+msgstr "მეტსახელი ვერ შეცვლის მეტი, ვიდრე ერთხელ"
+
+#: includes/option_nickname.php:60
+msgid "You have already changed their nickname:"
+msgstr "თქვენ უკვე შეიცვალა მათი ზედმეტსახელი:"
+
+#: includes/option_nickname.php:61
+msgid "Next time will be able to change:"
+msgstr "მომავალი დრო შეძლებთ შეცვალოთ:"
+
+#: includes/option_nickname.php:103
+msgid "Nickname successfully changed"
+msgstr "მეტსახელი წარმატებით შეცვალა"
+
+#: includes/option_password.php:19 templates/option.php:25
+msgid "Change Password"
+msgstr "პაროლის შეცვლა"
+
+#: includes/option_password.php:22
+msgid "Old Password"
+msgstr "ძველი პაროლი"
+
+#: includes/option_password.php:22
+msgid "Admin Password"
+msgstr "ადმინ დაგავიწყდათ"
+
+#: includes/option_password.php:28
+msgid "New Password"
+msgstr "ახალი პაროლი"
+
+#: includes/option_password.php:63
+msgid "The password is successfully changed"
+msgstr "პაროლი წარმატებით შეიცვალა"
+
+#: includes/option_rank.php:21
+msgid "User"
+msgstr "მომხმარებელი"
+
+#: includes/option_rank.php:22
+msgid "Forum Moderator"
+msgstr "ფორუმის მოდერატორი"
+
+#: includes/option_rank.php:23
+msgid "Downloads Moderator"
+msgstr "გადმოწერა მოდერატორი"
+
+#: includes/option_rank.php:24
+msgid "Library Moderator"
+msgstr "ბიბლიოთეკა მოდერატორი"
+
+#: includes/option_rank.php:25
+msgid "Super Modererator"
+msgstr "სუპერ მოდერატორი"
+
+#: includes/option_rank.php:29
+msgid "Administrator"
+msgstr "ადმინისტრატორი"
+
+#: includes/option_rank.php:30
+msgid "Supervisor"
+msgstr "ხელმძღვანელი"
+
+#: includes/option_rank.php:35 templates/option.php:37
+msgid "Rank"
+msgstr "რანგი"
+
+#: includes/option_settings.php:20
+msgid "Without Editor"
+msgstr "გარეშე რედაქტორი"
+
+#: includes/option_settings.php:21
+msgid "WYSIWYG Editor"
+msgstr "WYSIWYG რედაქტორი"
+
+#: includes/option_settings.php:24
+msgid "HTML Editor"
+msgstr "HTML რედაქტორი"
+
+#: includes/option_settings.php:29 templates/option.php:31
+msgid "System Settings"
+msgstr "სისტემის პარამეტრები"
+
+#: includes/option_settings.php:33
+msgid "Time settings"
+msgstr "დრო პარამეტრები"
+
+#: includes/option_settings.php:34
+msgid "Time Shift"
+msgstr "დროის ცვლა"
+
+#: includes/option_settings.php:48
+msgid "List Size"
+msgstr "სია ზომა"
+
+#: includes/option_settings.php:49
+msgid "Number of items per page"
+msgstr "რაოდენობის ნივთები თითო გვერდი"
+
+#: includes/option_settings.php:63
+msgid "Direct URL"
+msgstr "პირდაპირი URL"
+
+#: includes/option_settings.php:67
+msgid "Text Editor"
+msgstr "ტექსტური რედაქტორი"
+
+#: includes/option_theme.php:49 templates/option_theme.php:29
+msgid "Author"
+msgstr "ავტორი"
+
+#: includes/option_theme.php:52 templates/option_theme.php:38
+msgid "Description"
+msgstr "აღწერა"
+
+#: includes/option_theme.php:57 templates/option.php:32
+msgid "Choose Skin"
+msgstr "აირჩიეთ კანს"
+
+#: includes/option_theme.php:62
+msgid "Choose"
+msgstr "არჩევა"
+
+#: includes/reputation.php:39
+msgid "Vote"
+msgstr "ხმის მიცემა"
+
+#: includes/reputation.php:40
+msgid "You can express your relationship to the person, what is its reputation in your opinion. You can change your attitude when you want, no restrictions."
+msgstr "თქვენ შეგიძლიათ გამოხატოთ თქვენი ურთიერთობა პირი, რა არის მისი რეპუტაცია, თქვენი აზრით. თქვენ შეგიძლიათ შეცვალოთ თქვენი დამოკიდებულება, როდესაც გსურთ, არანაირი შეზღუდვა."
+
+#: includes/reputation.php:46 templates/reputation.php:33
+msgid "Excellent"
+msgstr "შესანიშნავი"
+
+#: includes/reputation.php:47 templates/reputation.php:41
+msgid "Good"
+msgstr "კარგი"
+
+#: includes/reputation.php:48 templates/reputation.php:49
+msgid "Neutrally"
+msgstr "ნეიტრალურად"
+
+#: includes/reputation.php:49 templates/reputation.php:57
+msgid "Bad"
+msgstr "ცუდი"
+
+#: includes/reputation.php:50 templates/reputation.php:65
+msgid "Very Bad"
+msgstr "ძალიან ცუდი"
+
+#: templates/option.php:24
+msgid "Set Avatar"
+msgstr "ავატარის დაყენება"
+
+#: templates/option.php:34
+msgid "Choose Language"
+msgstr "აირჩიეთ ენა"
+
+#: templates/option_avatar.php:29
+msgid "Choose in the catalog"
+msgstr "აირჩიეთ კატალოგი"
+
+#: templates/option_theme.php:15
+msgid "Themes"
+msgstr "თემები"
+
+#: templates/profile.php:15 templates/reputation.php:10
+msgid "My Profile"
+msgstr "ჩემი პროფილი"
+
+#: templates/profile.php:15 templates/reputation.php:10
+msgid "User Profile"
+msgstr "მომხმარებლის პროფილი"
+
+#: templates/profile.php:30
+msgid "Kick"
+msgstr "განდევნა"
+
+#: templates/profile.php:31
+msgid "Ban"
+msgstr "ბანი"
+
+#: templates/profile.php:45 templates/reputation.php:24
+msgid "Reputation"
+msgstr "რეპუტაცია"
+
+#: templates/profile.php:74
+msgid "Personal Data"
+msgstr "პირადი მონაცემები"
+
+#: templates/profile.php:75
+msgid "Activity"
+msgstr "აქტივობა"
+
+#: templates/profile.php:77
+msgid "Assets"
+msgstr "აქტივების"
+
+#: templates/profile.php:80
+msgid "Friends"
+msgstr "მეგობრები"
+
+#: templates/profile.php:86
+msgid "Remove from Contacts"
+msgstr "ამოღება კონტაქტები"
+
+#: templates/profile.php:86
+msgid "Add to Contacts"
+msgstr "დამატება კონტაქტი"
+
+#: templates/profile.php:90
+msgid "Remove from Ignore List"
+msgstr "ამოღება იგნორირება სია"
+
+#: templates/profile.php:90
+msgid "Add to Ignore List"
+msgstr "რჩეულებში იგნორირება სია"
+

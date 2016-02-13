@@ -1,0 +1,221 @@
+global_exclude_dirs:
+    - .sources
+    - assets
+    - install
+    - modules
+    - themes
+    - uploads
+    - system/config
+    - system/includes
+    - system/vendor
+
+exclude_patterns:
+    - system/bootstrap.php
+    - .htaccess
+    - system/.htaccess
+
+rules:
+    composer.apc_class_loader_should_be_enabled:
+        enabled: false
+    composer.dependencies_not_installable:
+        enabled: false
+    composer.invalid_file:
+        enabled: false
+    composer.security_issue_in_composer:
+        enabled: false
+    composer.unfixed_dependency_version:
+        enabled: false
+    composer.warning:
+        enabled: false
+    doctrine.database_query_contains_string_and_variable_concatenation:
+        enabled: false
+    doctrine.invalid_schema:
+        enabled: false
+    doctrine.use_flush_in_loop:
+        enabled: false
+    git.user_specific_ignored_file:
+        enabled: true
+    html.html_link_contains_javascript:
+        enabled: true
+    php.absolute_path_present:
+        enabled: true
+        allowed_paths: [/dev, /etc, /proc]
+    php.bad_mutator_method_name_for_boolean_property:
+        enabled: true
+    php.class_too_long:
+        enabled: true
+        max_length: 500
+        threshold: 5
+    php.commented_out_code:
+        enabled: true
+    php.contaminant_third_party_component_license:
+        enabled: true
+    php.debug_statements:
+        enabled: true
+    php.dynamically_change_configuration:
+        enabled: false
+    php.file_contains_more_than_one_class:
+        enabled: true
+    php.for_loop_uses_test_function:
+        enabled: true
+    php.method_too_long:
+        enabled: true
+        max_length: 50
+        threshold: 5
+    php.missing_use_statement:
+        enabled: true
+    php.neglected_tests:
+        enabled: true
+    php.object_parameter_not_type_hinted:
+        enabled: true
+    php.php_magic_methods:
+        enabled: true
+    php.php_syntax_error:
+        enabled: true
+    php.too_many_files_per_folder_for_performance:
+        enabled: true
+        max_count: 10000
+    php.too_permissive_file_permissions:
+        enabled: true
+        allowed_dirs: [bin, scripts]
+    php.unreachable_code:
+        enabled: true
+    php.unused_local_variable_or_private_member:
+        enabled: true
+    php.unused_use_statement:
+        enabled: true
+    php.use_deprecated_function:
+        enabled: true
+    php.use_exit_function:
+        enabled: false
+    php.use_global_variable_or_function:
+        enabled: true
+    php.use_php_ereg_function:
+        enabled: true
+    php.use_php_eval_function:
+        enabled: true
+    php.use_php_sleep_function:
+        enabled: true
+    symfony.acme_bundle_found:
+        enabled: false
+    symfony.app.cache_or_log_file_in_repository:
+        enabled: false
+    symfony.app.confidential_parameters_file_present_in_repository:
+        enabled: false
+    symfony.app.first_level_service:
+        enabled: false
+    symfony.app.sensitive_data_found_in_application_configuration:
+        enabled: false
+    symfony.application_not_bootable:
+        enabled: false
+    symfony.configuration.yaml_syntax_error:
+        enabled: false
+    symfony.controller.action_method_too_long:
+        enabled: false
+        max_length: 20
+        threshold: 10
+    symfony.controller.get_action_mutates_resource:
+        enabled: false
+    symfony.controller.missing_redirect_after_post:
+        enabled: false
+    symfony.controller.non_action_public_method_in_controller_class:
+        enabled: false
+    symfony.controller.too_many_actions_per_controller:
+        enabled: false
+        max_count: 10
+        threshold: 5
+    symfony.controller.too_many_template_variables:
+        enabled: false
+        max_count: 6
+        threshold: 5
+    symfony.dependency_injection.no_container_as_parameter:
+        enabled: false
+    symfony.dependency_injection.no_entity_manager_as_parameter:
+        enabled: false
+    symfony.dependency_injection.use_dir_file_constant:
+        enabled: false
+    symfony.exceptions_enabled_in_production:
+        enabled: false
+    symfony.form.form_type_not_in_type_form_folder:
+        enabled: false
+    symfony.include_statement_used:
+        enabled: false
+    symfony.inject_request_service:
+        enabled: false
+    symfony.obvious_csrf_key:
+        enabled: false
+    symfony.print_statements:
+        enabled: false
+    symfony.request.session_cookie_default_name:
+        enabled: false
+    symfony.request.use_create_from_globals:
+        enabled: false
+    symfony.routing.action_not_restricted_by_method:
+        enabled: false
+    symfony.routing.route_references_non_existent_action:
+        enabled: false
+    symfony.routing.route_resource_not_loadable:
+        enabled: false
+    symfony.security.insecure_password_hashing_algorithm:
+        enabled: false
+    symfony.security.throw_access_denied_http_exception:
+        enabled: false
+    symfony.templating.too_many_esi_inclusions:
+        enabled: false
+    symfony.twig_not_bootable:
+        enabled: false
+    symfony.use_php_database_function:
+        enabled: false
+    symfony.use_php_response_function:
+        enabled: false
+    symfony.use_php_session_function:
+        enabled: false
+    symfony.use_super_globals:
+        enabled: false
+    symfony.verbose_logging_in_production:
+        enabled: false
+    symfony.version.end_of_life:
+        enabled: false
+    symfony.version.latest_stable:
+        enabled: false
+    symfony.version.out_of_maintenance:
+        enabled: false
+    symfony.web.contains_php_files:
+        enabled: false
+    symfony.web.web_bundle_folder_present_in_repository:
+        enabled: false
+    symfony.web_config_should_not_be_present:
+        enabled: false
+    task_fixme_comment:
+        enabled: true
+    task_todo_comment:
+        enabled: false
+    task_xxx_comment:
+        enabled: true
+    third_party.use_deprecated_class:
+        enabled: true
+    third_party.use_deprecated_service:
+        enabled: true
+    twig.disabled_escaper:
+        enabled: false
+    twig.template_too_complex:
+        enabled: true
+        max_depth: 5
+    twig.template_too_long:
+        enabled: false
+        max_length: 200
+        threshold: 5
+    twig.twig_syntax_error:
+        enabled: false
+    twig.xss_vulnerability:
+        enabled: false
+    web.default_favicon:
+        enabled: true
+    web.missing_favicon:
+        enabled: true
+    web.missing_robots_txt:
+        enabled: true
+    web.non_utf8_encoding:
+        enabled: true
+    xml.syntax_error:
+        enabled: true

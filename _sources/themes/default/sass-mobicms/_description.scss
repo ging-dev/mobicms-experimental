@@ -1,0 +1,64 @@
+dl.description {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  > dt {
+    color: lighten($brand-primary, 20%);
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 48px;
+
+    &.narrow {
+      width: 24px;
+    }
+
+    &.wide{
+      width: 128px;
+    }
+  }
+
+  > dd {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 12px;
+
+    .header {
+      color: $text-color;
+      font-weight: bold;
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .small {
+      font-size: .7em;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .inline {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .margin {
+      margin-top: .5em;
+    }
+
+    .colored {
+      color: #CD853F;
+    }
+
+    .danger {
+      color: $brand-danger;
+    }
+  }
+}

@@ -1,0 +1,675 @@
+# ##############################################################################
+# mobiCMS Content Management System (http://mobicms.net)                       #
+#                                                                              #
+# For copyright and license information, please see the LICENSE.md             #
+#                                                                              #
+# @link        http://mobicms.net mobiCMS Project                              #
+# @copyright   Copyright (C) mobiCMS Community                                 #
+# @license     LICENSE.md (see attached file)                                  #
+# ##############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: mobicms\n"
+"POT-Creation-Date: 2016-02-07 12:33+0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"PO-Revision-Date: 2016-02-07 04:24-0500\n"
+"Last-Translator: mobiCMS <dev@mobicms.net>\n"
+"Language-Team: Kazakh\n"
+"X-Generator: crowdin.com\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-KeywordsList: _s;_sp:1,2\n"
+"X-Poedit-SearchPath-0: system/includes\n"
+"X-Poedit-SearchPath-1: modules\n"
+"X-Poedit-SearchPath-2: assets/template/includes\n"
+"X-Poedit-SearchPath-3: system/mobicms\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: mobicms\n"
+"X-Crowdin-Language: kk\n"
+"X-Crowdin-File: /system/default.pot\n"
+"Language: kk_KZ\n"
+
+#: assets/template/includes/include.navbar.php:24
+msgid "Go To"
+msgstr "Өтіу"
+
+#: assets/template/includes/include.navbar.php:27
+msgid "Home"
+msgstr "Басты бет"
+
+#: assets/template/includes/include.navbar.php:29
+#: assets/template/includes/layout.default.php:20
+#: modules/news/templates/edit_form.php:5 modules/news/templates/index.php:10
+msgid "News"
+msgstr "Жаңалықтар"
+
+#: assets/template/includes/include.navbar.php:31
+#: modules/admin/includes/acl.php:33 modules/home/templates/index.php:11
+#: modules/profile/templates/profile.php:80
+msgid "Guestbook"
+msgstr "Қонақ кітәпшасы"
+
+#: assets/template/includes/include.navbar.php:32
+#: modules/admin/includes/acl.php:20 modules/admin/includes/quarantine.php:114
+#: modules/admin/includes/sitemap.php:23 modules/home/templates/index.php:12
+msgid "Forum"
+msgstr "Форум"
+
+#: assets/template/includes/include.navbar.php:34
+#: modules/admin/includes/acl.php:57 modules/home/templates/index.php:14
+msgid "Downloads"
+msgstr "Жүктеулер"
+
+#: assets/template/includes/include.navbar.php:35
+#: modules/admin/includes/acl.php:45 modules/admin/includes/sitemap.php:29
+#: modules/home/templates/index.php:15
+msgid "Library"
+msgstr "Кітапхана"
+
+#: assets/template/includes/include.navbar.php:37
+#: modules/home/templates/index.php:16
+msgid "Community"
+msgstr "Қауым-қатынас"
+
+#: assets/template/includes/include.navbar.php:38
+#: modules/home/templates/index.php:18 modules/profile/templates/profile.php:79
+msgid "Photo Album"
+msgstr "Фотоальбом"
+
+#: assets/template/includes/include.navbar.php:48
+#: modules/admin/templates/edit_form.php:5 modules/admin/templates/index.php:7
+#: modules/admin/templates/scanner.php:5
+msgid "Admin Panel"
+msgstr "Әкімшілік панелі"
+
+#: assets/template/includes/include.navbar.php:52
+#: modules/profile/templates/profile.php:84
+msgid "Mail"
+msgstr "Пошта"
+
+#: assets/template/includes/include.navbar.php:57
+#: modules/profile/templates/option.php:24
+msgid "Profile"
+msgstr "Профиль"
+
+#: assets/template/includes/include.navbar.php:59
+#: modules/admin/includes/users_settings.php:37
+#: modules/news/templates/index.php:33
+#: modules/profile/templates/edit_form.php:9
+#: modules/profile/templates/option.php:14
+#: modules/profile/templates/option.php:32
+#: modules/profile/templates/option_avatar.php:12
+#: modules/profile/templates/option_theme.php:10
+#: modules/profile/templates/option_theme_set.php:10
+#: modules/profile/templates/profile.php:29
+msgid "Settings"
+msgstr "Баптаулар"
+
+#: assets/template/includes/include.navbar.php:61
+#: modules/login/includes/logout.php:28 modules/login/templates/login.php:5
+msgid "Exit"
+msgstr "Шығу"
+
+#: assets/template/includes/include.navbar.php:67
+#: modules/admin/includes/users_settings.php:21
+#: modules/registration/includes/activation.php:28
+#: modules/registration/templates/registered.php:3
+#: modules/registration/templates/registration.php:3
+msgid "Registration"
+msgstr "Тіркелу"
+
+#: assets/template/includes/include.navbar.php:71
+#: modules/login/includes/login.php:41 modules/login/templates/login.php:5
+#: modules/login/templates/login_captcha.php:5
+#: modules/registration/includes/activation.php:23
+msgid "Login"
+msgstr "Шығу"
+
+#: assets/template/includes/include.user.php:14
+msgid "IP Management"
+msgstr ""
+
+#: assets/template/includes/include.user.php:17
+msgid "Proxy Management"
+msgstr ""
+
+#: assets/template/includes/include.user.php:24
+msgid "Block this IP"
+msgstr ""
+
+#: assets/template/includes/include.user.php:51
+msgid "Last visit"
+msgstr "соңғы кіруіңіз"
+
+#: assets/template/includes/layout.default.php:40
+msgid "Help"
+msgstr "Анықтама"
+
+#: assets/template/includes/layout.default.php:41
+msgid "Up"
+msgstr "Жоғары"
+
+#: assets/template/includes/message.php:11
+#: modules/login/templates/login_captcha.php:29
+#: system/mobicms/Form/Form.php:225
+msgid "Continue"
+msgstr "Жалғастыру"
+
+#: assets/template/includes/message.php:14 modules/admin/includes/acl.php:82
+#: modules/admin/includes/languages.php:51
+#: modules/admin/includes/quarantine.php:162
+#: modules/admin/includes/scanner.php:39 modules/admin/includes/sitemap.php:51
+#: modules/admin/includes/smilies.php:27
+#: modules/admin/includes/system_settings.php:116
+#: modules/admin/includes/users_settings.php:175
+#: modules/help/includes/avatars.php:54
+#: modules/help/templates/avatars_index.php:4
+#: modules/help/templates/avatars_list.php:4
+#: modules/help/templates/avatars_set.php:7 modules/help/templates/rules.php:4
+#: modules/login/includes/logout.php:32 modules/news/includes/add.php:45
+#: modules/news/includes/delete.php:35 modules/news/includes/delete.php:40
+#: modules/news/includes/edit.php:54 modules/news/includes/edit.php:62
+#: modules/news/includes/edit.php:67
+#: modules/profile/includes/option_avatar_animation.php:33
+#: modules/profile/includes/option_avatar_animation.php:74
+#: modules/profile/includes/option_avatar_gravatar.php:33
+#: modules/profile/includes/option_avatar_image.php:35
+#: modules/profile/includes/option_edit.php:176
+#: modules/profile/includes/option_email.php:57
+#: modules/profile/includes/option_language.php:37
+#: modules/profile/includes/option_nickname.php:54
+#: modules/profile/includes/option_nickname.php:64
+#: modules/profile/includes/option_password.php:47
+#: modules/profile/includes/option_rank.php:56
+#: modules/profile/includes/option_settings.php:82
+#: modules/profile/includes/option_theme.php:70
+#: modules/profile/includes/reputation.php:62 modules/whois/index.php:45
+msgid "Back"
+msgstr "Артқа"
+
+#: modules/404/index.php:3
+msgid "Page does not exist"
+msgstr "Сіз сұраған бет табылмады"
+
+#: modules/404/index.php:4
+msgid "Sorry, but the page you were trying to view does not exist"
+msgstr "Кешіріңіз, Сіз сұраған бет жоқ"
+
+#: modules/admin/includes/acl.php:71 modules/news/templates/index.php:53
+msgid "Comments"
+msgstr "Пікірлер"
+
+#: modules/admin/includes/acl.php:78 modules/admin/includes/languages.php:47
+#: modules/admin/includes/quarantine.php:158
+#: modules/admin/includes/sitemap.php:47
+#: modules/admin/includes/system_settings.php:112
+#: modules/admin/includes/users_settings.php:171
+#: modules/help/includes/avatars.php:50 modules/news/includes/add.php:41
+#: modules/news/includes/edit.php:50
+#: modules/profile/includes/option_avatar_animation.php:29
+#: modules/profile/includes/option_avatar_gravatar.php:29
+#: modules/profile/includes/option_avatar_image.php:31
+#: modules/profile/includes/option_edit.php:172
+#: modules/profile/includes/option_email.php:53
+#: modules/profile/includes/option_language.php:33
+#: modules/profile/includes/option_nickname.php:50
+#: modules/profile/includes/option_password.php:43
+#: modules/profile/includes/option_rank.php:52
+#: modules/profile/includes/option_settings.php:78
+#: modules/profile/includes/reputation.php:58
+msgid "Save"
+msgstr "Сақтау"
+
+#: modules/admin/includes/quarantine.php:26
+msgid "Quarantine"
+msgstr ""
+
+#: modules/admin/includes/quarantine.php:41
+msgid "Restrictions"
+msgstr ""
+
+#: modules/admin/includes/scanner.php:35 modules/admin/includes/smilies.php:23
+msgid "Run"
+msgstr "Орындау"
+
+#: modules/admin/index.php:67
+msgid "Access forbidden"
+msgstr "Рұқсат жоқ"
+
+#: modules/admin/templates/edit_form.php:11 system/mobicms/Form/Form.php:63
+msgid "Data saved successfully"
+msgstr "Деректер сәтті сақталды"
+
+#: modules/admin/templates/index.php:22 modules/admin/templates/smilies.php:5
+#: modules/help/templates/index.php:9
+msgid "Smilies"
+msgstr "Смайлдар"
+
+#: modules/community/templates/user_list.php:7
+#: modules/home/templates/index.php:17 modules/online/includes/index.php:26
+#: modules/online/templates/guests.php:24 modules/online/templates/index.php:25
+#: modules/online/templates/ip.php:24
+msgid "Users"
+msgstr "Қолданушылар"
+
+#: modules/community/templates/user_list.php:11
+#: modules/news/templates/index.php:15 modules/online/templates/guests.php:11
+#: modules/online/templates/index.php:12 modules/online/templates/ip.php:11
+#: modules/profile/templates/profile.php:19
+msgid "Control"
+msgstr "Басқару"
+
+#: modules/community/templates/user_list.php:24
+msgid "Users List"
+msgstr "Қолданушылар тізімі"
+
+#: modules/community/templates/user_list.php:31
+#: modules/help/templates/avatars_list.php:23
+#: modules/news/templates/index.php:65 modules/online/templates/guests.php:82
+#: modules/online/templates/index.php:52 modules/online/templates/ip.php:52
+#: modules/profile/templates/option_theme.php:47
+msgid "List is empty"
+msgstr "Тізім бос"
+
+#: modules/community/templates/user_list.php:34
+#: modules/help/templates/avatars_list.php:26
+#: modules/news/templates/index.php:70 modules/online/templates/guests.php:85
+#: modules/online/templates/index.php:55 modules/online/templates/ip.php:55
+#: modules/profile/templates/option_theme.php:50
+msgid "Total"
+msgstr "Барлығы"
+
+#: modules/community/templates/user_list.php:40
+#: modules/online/templates/guests.php:88 modules/online/templates/index.php:58
+msgid "Only for registered users"
+msgstr "Тек сайтқа тіркелгендерге ғана"
+
+#: modules/help/includes/avatars.php:45
+#: modules/profile/templates/option_avatar.php:22
+msgid "Set Avatar"
+msgstr "Аватар орнату"
+
+#: modules/help/includes/avatars.php:46
+msgid "Are you sure you want to set yourself this avatar?"
+msgstr "Сіз өзіңізге осы аватарды орнатуды растайсызба?"
+
+#: modules/help/includes/avatars.php:69
+msgid "Avatar is installed"
+msgstr "Аватар қойылды"
+
+#: modules/help/templates/avatars_index.php:9
+#: modules/help/templates/avatars_list.php:9
+#: modules/help/templates/avatars_set.php:12
+#: modules/help/templates/index.php:10
+msgid "Avatars"
+msgstr "Аватар"
+
+#: modules/help/templates/index.php:3 modules/home/templates/index.php:8
+#: modules/profile/templates/profile.php:74
+msgid "Information"
+msgstr "Мәлімет"
+
+#: modules/help/templates/index.php:8 modules/help/templates/rules.php:9
+msgid "Terms of Use"
+msgstr "Қолдану ережелері"
+
+#: modules/home/templates/index.php:3
+msgid "Welcome"
+msgstr "Қош келдіңіз"
+
+#: modules/home/templates/index.php:9 modules/news/templates/index.php:40
+msgid "News Archive"
+msgstr "Жаңалықтар мұрағаты"
+
+#: modules/home/templates/index.php:10
+msgid "Communication"
+msgstr "қарым-қатынас"
+
+#: modules/home/templates/index.php:13
+msgid "Useful"
+msgstr "Пайдалы"
+
+#: modules/login/includes/login.php:20
+msgid "Nickname or Email"
+msgstr "Пайдаланушының аты немесе электрондық поштасы"
+
+#: modules/login/includes/login.php:27
+#: modules/registration/includes/registration.php:44
+msgid "Password"
+msgstr "Құпия сөз"
+
+#: modules/login/includes/login.php:35
+msgid "Remember"
+msgstr "Есте сақтау"
+
+#: modules/login/includes/login.php:45
+msgid "Forgot password?"
+msgstr "Құпия сөзіңізді ұмыттыңыз ба?"
+
+#: modules/login/includes/login.php:60
+msgid "Login information are incorrect"
+msgstr ""
+
+#: modules/login/includes/logout.php:19
+msgid "Leave the site?"
+msgstr "Сіз сайттан шығып кеткіңіз келеме?"
+
+#: modules/login/includes/logout.php:22
+msgid "Remove authorization from all devices"
+msgstr "Барлық құрылғылардың рұқсатын өшіру"
+
+#: modules/login/templates/login_captcha.php:11
+msgid "Symbols on the picture"
+msgstr "Суреттегі таңбалар"
+
+#: modules/login/templates/login_captcha.php:17
+#: system/mobicms/Form/Form.php:248
+msgid "If you do not see the picture with the code, turn the graphics support in your browser and refresh the page"
+msgstr "Егер сіз код суретін көрмей тұрсаңыз, сіздің браузеріңізде сурет жүктеуді қосыңыз немесе бетті жаңартыңыз"
+
+#: modules/news/includes/add.php:21 modules/news/includes/edit.php:28
+msgid "Title"
+msgstr "Тақырып"
+
+#: modules/news/includes/add.php:27 modules/news/includes/edit.php:35
+msgid "Text"
+msgstr "Мәтін"
+
+#: modules/news/includes/clean.php:37 modules/news/includes/delete.php:31
+#: modules/profile/includes/option_avatar_delete.php:27
+#: modules/registration/includes/registration.php:83
+#: modules/registration/notice/index.php:66
+msgid "Cancel"
+msgstr "Бас тарту"
+
+#: modules/news/includes/delete.php:27 modules/news/templates/index.php:58
+msgid "Delete"
+msgstr "Өшіру"
+
+#: modules/news/includes/delete.php:34 modules/news/includes/delete.php:39
+#: modules/news/includes/edit.php:61 modules/news/includes/edit.php:66
+msgid "Wrong data"
+msgstr "Мәліметтер дұрыс емес"
+
+#: modules/news/templates/index.php:16
+msgid "Toggle navigation"
+msgstr "Навигацияны қосу"
+
+#: modules/news/templates/index.php:31
+msgid "Add"
+msgstr "Қосу"
+
+#: modules/news/templates/index.php:57
+msgid "Edit"
+msgstr "Өзгерту"
+
+#: modules/online/templates/guests.php:7 modules/online/templates/index.php:8
+#: modules/online/templates/ip.php:7
+msgid "Who is online"
+msgstr "Сайтта онлайн отырғандар"
+
+#: modules/online/templates/guests.php:27 modules/online/templates/index.php:28
+#: modules/online/templates/ip.php:27
+msgid "History"
+msgstr "Тарих"
+
+#: modules/online/templates/guests.php:30
+#: modules/online/templates/guests.php:41 modules/online/templates/index.php:33
+#: modules/online/templates/ip.php:30
+msgid "Guests"
+msgstr "Қонақтар"
+
+#: modules/online/templates/guests.php:33 modules/online/templates/index.php:36
+#: modules/online/templates/ip.php:33 modules/online/templates/ip.php:40
+msgid "IP Activity"
+msgstr "Белсенді IP"
+
+#: modules/profile/includes/option_edit.php:55
+#: modules/registration/includes/registration.php:57
+msgid "Gender"
+msgstr "Жыныс"
+
+#: modules/profile/includes/option_edit.php:59
+#: modules/registration/includes/registration.php:61
+msgid "Male"
+msgstr "Жігіт"
+
+#: modules/profile/includes/option_edit.php:60
+#: modules/registration/includes/registration.php:62
+msgid "Female"
+msgstr "Бойжеткен"
+
+#: modules/profile/includes/option_email.php:64
+msgid "Invalid Email address"
+msgstr ""
+
+#: modules/profile/includes/option_email.php:66
+#: modules/registration/includes/registration.php:129
+msgid "This Email is already taken"
+msgstr ""
+
+#: modules/profile/includes/option_email.php:71
+#: modules/profile/includes/option_nickname.php:93
+#: modules/profile/includes/option_password.php:67
+#: modules/profile/includes/option_rank.php:61
+msgid "Invalid password"
+msgstr "Құпия сөз дұрыс емес"
+
+#: modules/profile/includes/option_nickname.php:35
+#: modules/registration/includes/registration.php:31
+msgid "Min. 2, Max. 20 Characters.<br>Allowed letters are Cyrillic and Latin alphabet, numbers, spaces and punctuation - = @ ! ? ~ . _ ( ) [ ] *"
+msgstr "Мин . 2, Макс . 20 таңбадан <br> рұқсат етілетін кириллица мен латын алфавиті , сандар , кеңістікті және тыныс белгілер - . = @ ! ? ~ . _ ( ) [] *"
+
+#: modules/profile/includes/option_nickname.php:37
+#: modules/profile/includes/option_nickname.php:60
+msgid "Day"
+msgid_plural "Days"
+msgstr[0] ""
+
+#: modules/profile/includes/option_nickname.php:73
+msgid "Invalid characters"
+msgstr "Жазуға болмайтын таңбалар"
+
+#: modules/profile/includes/option_nickname.php:76
+msgid "It is forbidden to use characters of different languages"
+msgstr "Әр түрлі тілдерді таңбаларды қолдануға болмайды"
+
+#: modules/profile/includes/option_nickname.php:79
+msgid "Nicknames consisting only of numbers are prohibited"
+msgstr "Тек сандардан тұратын ник ашуға болмайды"
+
+#: modules/profile/includes/option_nickname.php:82
+msgid "Repeated characters"
+msgstr "Қайталанатын таңбалар"
+
+#: modules/profile/includes/option_nickname.php:85
+#: modules/registration/includes/registration.php:101
+msgid "Email cannot be used as the Nickname"
+msgstr "Электрондық поштаны Ник ретінде пайдаланылу мүмкін емес"
+
+#: modules/profile/includes/option_nickname.php:88
+#: modules/registration/includes/registration.php:102
+msgid "This Nickname is already taken"
+msgstr "Бұндай Ник бос емес"
+
+#: modules/profile/includes/option_password.php:30
+#: modules/registration/includes/registration.php:51
+msgid "The password length min. 3 characters"
+msgstr "Пароль ұзындығы кем дегенде 3 таңбадан тұруы тиіс"
+
+#: modules/profile/includes/option_password.php:36
+#: modules/registration/includes/registration.php:50
+msgid "Repeat password"
+msgstr "Құпия сөзді қайталаңыз"
+
+#: modules/profile/includes/option_password.php:50
+#: modules/registration/includes/registration.php:118
+msgid "Passwords don't coincide"
+msgstr "Құпия сөздер сәйкес емес"
+
+#: modules/profile/index.php:71
+msgid "User does not exists"
+msgstr "Пайдаланушы жоқ"
+
+#: modules/profile/templates/profile.php:86
+msgid "Write"
+msgstr "Жазу"
+
+#: modules/registration/includes/registration.php:30
+msgid "Choose Nickname"
+msgstr "Пайдаланушыны таңдаңыз"
+
+#: modules/registration/includes/registration.php:37
+#: modules/registration/notice/index.php:42
+msgid "Your Email"
+msgstr "Сіздің Электрондық поштаңыз"
+
+#: modules/registration/includes/registration.php:38
+#: modules/registration/notice/index.php:44
+msgid "Please correctly specify your email address. This address will be sent a confirmation code to your registration."
+msgstr "Дұрыс Электрондық пошта мекенжайын жазыңіз. Электрондық поштаңыз тіркеу кодын растау үшін қажет."
+
+#: modules/registration/includes/registration.php:70
+#: modules/registration/notice/index.php:51
+msgid "Verification code"
+msgstr "Тексеру коды"
+
+#: modules/registration/includes/registration.php:79
+msgid "Sign Up"
+msgstr "Тіркелу"
+
+#: modules/registration/includes/registration.php:96
+msgid "Nickname must be at least 2 and no more than 20 characters in length"
+msgstr ""
+
+#: modules/registration/includes/registration.php:97
+msgid "Nickname contains illegal characters"
+msgstr ""
+
+#: modules/registration/includes/registration.php:98
+msgid "Nickname contains characters from different languages"
+msgstr ""
+
+#: modules/registration/includes/registration.php:99
+msgid "Nicknames consisting only of digits are prohibited"
+msgstr ""
+
+#: modules/registration/includes/registration.php:100
+msgid "Nickname contains recurring characters"
+msgstr ""
+
+#: modules/registration/includes/registration.php:114
+msgid "Password must be at least 3 characters in length"
+msgstr ""
+
+#: modules/registration/includes/registration.php:128
+msgid "Please provide a valid email address"
+msgstr ""
+
+#: modules/registration/includes/registration.php:170
+msgid "When saving the form there errors occurred, try once again. If problem repeat, contact the Site Administrator"
+msgstr ""
+
+#: modules/registration/includes/registration.php:225
+msgid "When sending emails the error occurred. Please contact the site administrator."
+msgstr ""
+
+#: modules/registration/notice/index.php:35
+msgid "Your Nickname"
+msgstr ""
+
+#: modules/registration/notice/index.php:60
+msgid "Send"
+msgstr ""
+
+#: modules/registration/templates/registered.php:7
+msgid "You are already registered"
+msgstr "Сіз бұрын тіркелгенсіз"
+
+#: modules/registration/templates/registration.php:10
+#, php-format
+msgid "By clicking &quot;Sign Up&quot;, you agree that read our %s, and agree with them."
+msgstr ""
+
+#: modules/registration/templates/registration.php:10
+msgid "Terms"
+msgstr "Терминдер"
+
+#: modules/registration/templates/registration.php:14
+msgid "The site moderation is enabled. You can get authorized access to the web site after the confirmation of Your registration of the Administrator. Confirmation is carried out 1-2 times a day."
+msgstr "Сайтта модерация қосылулы. Сіз сайт әкімшісі сіздің тіркеулуіңізді расталғаннан кейін сайттың бөлімдеріне уәкілетті қол жеткізуге қабілеттіңіз болады. Растау күніне 1-2 рет өткізіледі."
+
+#: modules/registration/templates/registration.php:20
+msgid "Registration is temporarily closed"
+msgstr "Тіркелу уақытша жабық"
+
+#: modules/whois/index.php:34
+msgid "IP address"
+msgstr "IP мекен-жай"
+
+#: modules/whois/index.php:41
+msgid "Search"
+msgstr "Іздеу"
+
+#: system/includes/Functions.php:78
+msgid "Today"
+msgstr "Бүгін"
+
+#: system/includes/Functions.php:81
+msgid "Yesterday"
+msgstr "Кеше"
+
+#: system/includes/Functions.php:236
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d күндер"
+
+#: system/mobicms/Form/AssignValues.php:61
+msgid "This field is required"
+msgstr "Бұл керек аймақ"
+
+#: system/mobicms/Form/Form.php:64
+msgid "Errors occurred"
+msgstr "Қате орын алды"
+
+#: system/mobicms/Form/Validate.php:47
+msgid "The security code is not correct"
+msgstr "Тексеру коды дұрыс емес терілді"
+
+#: system/mobicms/Form/Validate.php:66
+#, php-format
+msgid "Min. %d symbol"
+msgid_plural "Min. %d symbols"
+msgstr[0] "Кемдегенде %d таңба"
+
+#: system/mobicms/Form/Validate.php:70
+#, php-format
+msgid "Max. %d symbol"
+msgid_plural "Max. %d symbols"
+msgstr[0] "Макс. %d таңба"
+
+#: system/mobicms/Form/Validate.php:92
+msgid "Must be a number"
+msgstr "Сан болуы тиіс"
+
+#: system/mobicms/Form/Validate.php:98
+#, php-format
+msgid "Minimum %d"
+msgstr "Кемдегенде %d"
+
+#: system/mobicms/Form/Validate.php:102
+#, php-format
+msgid "Maximum %d"
+msgstr "Максималды %d"
+
+#: system/mobicms/Form/Validate.php:123
+msgid "IP address is not valid"
+msgstr "IP- мекен-жайы жарамды емес"
+
+#: system/mobicms/Form/Validate.php:141
+msgid "The values do not match"
+msgstr "Мәндері сәйкес келмейді"
+

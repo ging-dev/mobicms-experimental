@@ -1,0 +1,34 @@
+/*======================================================
+Информационные блоки
+======================================================*/
+
+.info-block {
+  background-color: #CFD3DA;
+  border-bottom: 1px solid #b8bcc2;
+  box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.news-info {
+  font-size: x-small;
+  font-weight: bold;
+  color: #9a9fae;
+  text-shadow: 0 1px 1px #f9f9f9;
+  padding: 3px 0;
+}
+
+.sub {
+  font-size: x-small;
+}
+
+code {
+  font-family: Consolas, "Courier New", monospace;
+  margin-top: .25em;
+  margin-bottom: .25em;
+  position: relative;
+  background: #eee;
+  border: 1px solid #c0c0c0;
+  border-left-width: 3px;
+  white-space: pre;
+  padding: .25em;
+  display: block;
+}

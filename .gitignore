@@ -1,0 +1,11 @@
+/dist
+/distributive
+/system/cache/*
+!/system/cache/.gitkeep
+/system/config/Database.php
+/system/logs/*
+!/system/logs/.gitkeep
+/composer.lock
+/system/vendor
+/node_modules
+

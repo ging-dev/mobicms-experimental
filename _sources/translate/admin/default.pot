@@ -1,0 +1,467 @@
+# ##############################################################################
+# mobiCMS Content Management System (http://mobicms.net)                       #
+#                                                                              #
+# For copyright and license information, please see the LICENSE.md             #
+#                                                                              #
+# @link        http://mobicms.net mobiCMS Project                              #
+# @copyright   Copyright (C) mobiCMS Community                                 #
+# @license     LICENSE.md (see attached file)                                  #
+# ##############################################################################
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mobicms\n"
+"POT-Creation-Date: 2016-02-13 15:41+0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Oleg Kasyanov <dev@mobicms.net>\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ../../../modules/admin\n"
+"X-Poedit-KeywordsList: _m;_mp:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/acl.php:26 includes/acl.php:40 includes/acl.php:51
+#: includes/acl.php:63
+msgid "Access is open"
+msgstr ""
+
+#: includes/acl.php:27 includes/acl.php:52 includes/acl.php:64
+msgid "Only for the authorized"
+msgstr ""
+
+#: includes/acl.php:28
+msgid "Read only"
+msgstr ""
+
+#: includes/acl.php:29 includes/acl.php:41 includes/acl.php:53
+#: includes/acl.php:65
+msgid "Access denied"
+msgstr ""
+
+#: includes/acl.php:39
+msgid "Enable posting for guests"
+msgstr ""
+
+#: includes/languages.php:21 includes/languages.php:25
+msgid "Clear Cache"
+msgstr ""
+
+#: includes/languages.php:22
+msgid "The Cache clearing is required after installing a new language or upgrade existing ones."
+msgstr ""
+
+#: includes/languages.php:29
+msgid "Default Language"
+msgstr ""
+
+#: includes/languages.php:33
+msgid "If the choice is prohibited, the language will be forced to set for all visitors. If the choice is allowed, it will be applied only in the case, if requested by the client language is not in the system."
+msgstr ""
+
+#: includes/languages.php:40
+msgid "Allow to choose"
+msgstr ""
+
+#: includes/languages.php:41
+msgid "Allow visitors specify the desired language from the list of available in the system. Including activated auto select languages by signatures of the browser."
+msgstr ""
+
+#: includes/quarantine.php:25
+msgid "Keep in mind that this section reflect only the general settings.<br>Individual modules may have their quarantine settings. To set up, use the administrative part of the relevant modules."
+msgstr ""
+
+#: includes/quarantine.php:27 includes/users_settings.php:39
+msgid "Quarantine allows you to temporarily restrict user activity"
+msgstr ""
+
+#: includes/quarantine.php:30
+msgid "The Quarantine action period, in hours"
+msgstr ""
+
+#: includes/quarantine.php:42
+msgid "For the duration of the quarantine period, will be active the following restrictions:"
+msgstr ""
+
+#: includes/quarantine.php:45
+msgid "How much mail can be sent?"
+msgstr ""
+
+#: includes/quarantine.php:58
+msgid "How many mail recipients?"
+msgstr ""
+
+#: includes/quarantine.php:71
+msgid "How many comments are allowed?"
+msgstr ""
+
+#: includes/quarantine.php:84
+msgid "How many Chat posts are allowed?"
+msgstr ""
+
+#: includes/quarantine.php:97
+msgid "How many images are allowed to upload into the Album?"
+msgstr ""
+
+#: includes/quarantine.php:110
+msgid "Allow Reputation"
+msgstr ""
+
+#: includes/quarantine.php:117
+msgid "How many Topics is allowed to create?"
+msgstr ""
+
+#: includes/quarantine.php:130
+msgid "The Sections of the Forum which allowed to create Topics"
+msgstr ""
+
+#: includes/quarantine.php:132
+msgid "Type (separated by commas) ID of Sections where it is permitted to create Topics.<br>If the list is empty, then allowed to create anywhere."
+msgstr ""
+
+#: includes/quarantine.php:137
+msgid "How many Forum posts are allowed?"
+msgstr ""
+
+#: includes/quarantine.php:150
+msgid "The Topics of the Forum which allowed to create posts"
+msgstr ""
+
+#: includes/quarantine.php:152
+msgid "Type (separated by commas) ID of topics where it is permitted to post messages.<br>If the list is empty, then allowed to write anywhere. Please note, if allowed the creation of a topic, then they will be allowed posting messages, regardless of the limitations of this list."
+msgstr ""
+
+#: includes/scanner.php:20 templates/index.php:28
+msgid "Anti-Spyware"
+msgstr ""
+
+#: includes/scanner.php:26
+msgid "Scan to the appropriate distribution"
+msgstr ""
+
+#: includes/scanner.php:27
+msgid "Snapshot scan"
+msgstr ""
+
+#: includes/scanner.php:28
+msgid "Make snapshot"
+msgstr ""
+
+#: includes/scanner.php:53
+msgid "Distributive inconsistency!"
+msgstr ""
+
+#: includes/scanner.php:55
+msgid "List of files corresponds to the distributive"
+msgstr ""
+
+#: includes/scanner.php:63
+msgid "Snapshot image is not created"
+msgstr ""
+
+#: includes/scanner.php:69
+msgid "Snapshot inconsistency"
+msgstr ""
+
+#: includes/scanner.php:71
+msgid "All files are consistent with previously made image"
+msgstr ""
+
+#: includes/scanner.php:79
+msgid "Snapshot successfully created"
+msgstr ""
+
+#: includes/sitemap.php:20
+msgid "Where to turn?"
+msgstr ""
+
+#: includes/sitemap.php:33
+msgid "To whom to show?"
+msgstr ""
+
+#: includes/sitemap.php:39
+msgid "All"
+msgstr ""
+
+#: includes/sitemap.php:40
+msgid "Guests only"
+msgstr ""
+
+#: includes/smilies.php:19
+msgid "Update cache"
+msgstr ""
+
+#: includes/smilies.php:54
+msgid "The cache is updated"
+msgstr ""
+
+#: includes/smilies.php:56
+msgid "When updating a cache there was a error"
+msgstr ""
+
+#: includes/system_settings.php:21
+msgid "System Time"
+msgstr ""
+
+#: includes/system_settings.php:26
+msgid "Time Shift"
+msgstr ""
+
+#: includes/system_settings.php:35
+msgid "Upload Files"
+msgstr ""
+
+#: includes/system_settings.php:39
+msgid "Max. File size"
+msgstr ""
+
+#: includes/system_settings.php:40
+msgid "Note that the maximum size of uploaded file may be limited by your PHP settings. Most often the default 2000kb."
+msgstr ""
+
+#: includes/system_settings.php:50
+msgid "Profiling"
+msgstr ""
+
+#: includes/system_settings.php:54
+msgid "Show generation time"
+msgstr ""
+
+#: includes/system_settings.php:60
+msgid "Show used memory"
+msgstr ""
+
+#: includes/system_settings.php:63
+msgid "Site Requisites"
+msgstr ""
+
+#: includes/system_settings.php:67
+msgid "Site Email"
+msgstr ""
+
+#: includes/system_settings.php:73
+msgid "Copyright"
+msgstr ""
+
+#: includes/system_settings.php:76
+msgid "SEO Attributes"
+msgstr ""
+
+#: includes/system_settings.php:81
+msgid "Homepage title"
+msgstr ""
+
+#: includes/system_settings.php:82
+msgid "In the search results for keywords, search engines use the page title for the reference to the document. Well written title containing keywords will attract many visitors and increase chances are that the site is visited by many people."
+msgstr ""
+
+#: includes/system_settings.php:89
+msgid "Keywords (or phrases) separated by commas. This meta tag search engines use to determine the relevance of links. In forming this tag should be used only the words that are contained in the document. The use of words that are not on the page, is not recommended. The recommended number of words in this tag - no more than ten. In addition,revealed that the breakdown of the tag on a few lines affect the estimate of links by search engines.<br>Max. 250 characters."
+msgstr ""
+
+#: includes/system_settings.php:101
+msgid "This tag is used to create a short description of the page, use the search engines to index, as well as to create annotations the extradition request. In the absence of a tag search system gives the first line in the summary of the document or a passage containing the keywords. Displayed after the link in the search pages in search engine. Different search engines charge different rates for the length of the tag. Try to write a small description of 150 characters.<br>Max. 250 characters."
+msgstr ""
+
+#: includes/users_settings.php:24
+msgid "Allow registration"
+msgstr ""
+
+#: includes/users_settings.php:30
+msgid "Confirmation by the Administrator"
+msgstr ""
+
+#: includes/users_settings.php:32
+msgid "Regardless of other settings, the User will be activated only after confirmation by the Administrator"
+msgstr ""
+
+#: includes/users_settings.php:37
+msgid "Enable Quarantine"
+msgstr ""
+
+#: includes/users_settings.php:42
+msgid "Welcome Letter"
+msgstr ""
+
+#: includes/users_settings.php:48
+msgid "Do not send"
+msgstr ""
+
+#: includes/users_settings.php:48
+msgid "The letter is not sent, the Email field is not mandatory"
+msgstr ""
+
+#: includes/users_settings.php:49
+msgid "Send Welcome Letter"
+msgstr ""
+
+#: includes/users_settings.php:49
+msgid "On the specified at registration Email address will be sent a Welcome Letter"
+msgstr ""
+
+#: includes/users_settings.php:50
+msgid "Confirmation by Email"
+msgstr ""
+
+#: includes/users_settings.php:50
+msgid "On the specified at registration address will be sent an Email with a confirmation link"
+msgstr ""
+
+#: includes/users_settings.php:57
+msgid "For Users"
+msgstr ""
+
+#: includes/users_settings.php:60
+msgid "Change Sex"
+msgstr ""
+
+#: includes/users_settings.php:66
+msgid "Change Status"
+msgstr ""
+
+#: includes/users_settings.php:72
+msgid "Upload Avatars"
+msgstr ""
+
+#: includes/users_settings.php:78
+msgid "Allow Gravatar"
+msgstr ""
+
+#: includes/users_settings.php:84
+msgid "Allow Nicknames, consisting of digits"
+msgstr ""
+
+#: includes/users_settings.php:90
+msgid "Allow to change Nickname"
+msgstr ""
+
+#: includes/users_settings.php:96
+msgid "After how many days?"
+msgstr ""
+
+#: includes/users_settings.php:107
+msgid "For Guests"
+msgstr ""
+
+#: includes/users_settings.php:110
+msgid "Online Lists"
+msgstr ""
+
+#: includes/users_settings.php:116
+msgid "List of Users"
+msgstr ""
+
+#: includes/users_settings.php:122
+msgid "View Profiles"
+msgstr ""
+
+#: includes/users_settings.php:126
+msgid "Antiflood"
+msgstr ""
+
+#: includes/users_settings.php:132
+msgid "Day mode"
+msgstr ""
+
+#: includes/users_settings.php:133
+msgid "Night mode"
+msgstr ""
+
+#: includes/users_settings.php:134
+msgid "Autoswitch"
+msgstr ""
+
+#: includes/users_settings.php:134
+msgid "From 10:00 till 20:00 the day mode, in the rest of the time the night mode is active"
+msgstr ""
+
+#: includes/users_settings.php:135
+msgid "Adaptive"
+msgstr ""
+
+#: includes/users_settings.php:135
+msgid "If on the site there is someone from administration, the day mode, differently the night mode is active"
+msgstr ""
+
+#: includes/users_settings.php:143
+msgid "Day mode, delay in seconds"
+msgstr ""
+
+#: includes/users_settings.php:156
+msgid "Night mode, delay in seconds"
+msgstr ""
+
+#: templates/edit_form.php:13
+msgid "Options set to default"
+msgstr ""
+
+#: templates/edit_form.php:15
+msgid "The Cache cleared successfully"
+msgstr ""
+
+#: templates/index.php:12
+msgid "Modules"
+msgstr ""
+
+#: templates/index.php:14
+msgid "Counters"
+msgstr ""
+
+#: templates/index.php:15
+msgid "Site Map"
+msgstr ""
+
+#: templates/index.php:17
+msgid "System"
+msgstr ""
+
+#: templates/index.php:19
+msgid "System Settings"
+msgstr ""
+
+#: templates/index.php:20
+msgid "Users Settings"
+msgstr ""
+
+#: templates/index.php:21
+msgid "Languages"
+msgstr ""
+
+#: templates/index.php:24
+msgid "Security"
+msgstr ""
+
+#: templates/index.php:25
+msgid "Access Control"
+msgstr ""
+
+#: templates/index.php:27
+msgid "Firewall"
+msgstr ""
+
+#: templates/scanner.php:24
+msgid "Modified files"
+msgstr ""
+
+#: templates/scanner.php:25
+msgid "These files have been modified. If you do not make modifications to these files, it is strongly recommended to replace them with the original distributive of the correct version."
+msgstr ""
+
+#: templates/scanner.php:38
+msgid "Missing files"
+msgstr ""
+
+#: templates/scanner.php:39
+msgid "These files were in the distribution, but if you lack. Without them, can not be guaranteed and normal system operation. It is recommended to restore all missing files from correct version distributive."
+msgstr ""
+
+#: templates/scanner.php:49
+msgid "New files"
+msgstr ""
+
+#: templates/scanner.php:50
+msgid "If the files listed below does not pertain to your additional modules and you are not assured of their safety, remove them. They can be dangerous for your site."
+msgstr ""
