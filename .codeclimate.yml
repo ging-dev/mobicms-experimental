@@ -1,17 +1,30 @@
-languages:
-  Ruby: false
-  JavaScript: false
-  PHP: true
-  Python: false
+engines:
+  csslint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby
+      - javascript
+      - python
+      - php
+  fixme:
+    enabled: true
+  phpmd:
+    enabled: true
+ratings:
+  paths:
+  - "**.css"
+  - "**.php"
 exclude_paths:
-  - ".sources/**/*"
-  - "assets/**/*"
-  - "install/**/*"
-  - "modules/**/*"
-  - "themes/**/*"
-  - "uploads/**/*"
-  - "system/config/*"
-  - "system/includes/*"
-  - "system/logs/*"
-  - "system/bootstrap.php"
-  - "system/vendor/**/*"
+- "_install/**/*"
+- "_sources/**/*"
+- "assets/**/*"
+- "modules/**/*"
+- "themes/**/*"
+- "uploads/**/*"
+- "system/config/*"
+- "system/includes/*"
+- "system/logs/*"
+- "system/vendor/**/*"

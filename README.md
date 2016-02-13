@@ -7,6 +7,7 @@ Mobile Content Management System.
 [![Build Status](https://scrutinizer-ci.com/g/mobiCMS/mobicms-core/badges/build.png?b=develop)](https://scrutinizer-ci.com/g/mobiCMS/mobicms-core/build-status/develop)
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mobiCMS/mobicms-core/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/mobiCMS/mobicms-core/?branch=develop)
+[![Code Climate](https://codeclimate.com/github/mobiCMS/mobicms-core/badges/gpa.svg)](https://codeclimate.com/github/mobiCMS/mobicms-core)
 
 ## The main possibilities of the system
 - Based on components of the Zend Framework
