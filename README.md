@@ -2,8 +2,8 @@
 Mobile Content Management System.
 
 [![License](https://img.shields.io/badge/license-GPL%20v.3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0-standalone.html)
-[![SemVer](http://img.shields.io/badge/semver-✓-brightgreen.svg)](http://semver.org)
 [![devDependency Status](https://david-dm.org/mobiCMS/mobicms-core/dev-status.svg)](https://david-dm.org/mobiCMS/mobicms-core#info=devDependencies)
+[![Crowdin](https://d322cqt584bo4o.cloudfront.net/mobicms/localized.png)](http://translate.mobicms.net/project/mobicms)
 
 ## The main possibilities of the system
 - Based on components of the Zend Framework
