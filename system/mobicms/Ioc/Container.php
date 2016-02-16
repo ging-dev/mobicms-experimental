@@ -38,7 +38,6 @@ class Container implements ContainerInterface
     protected static $di;
     protected static $instance;
 
-    private $definitionFile = 'DiDefinition.php';
     private $services = [];
     private $callable = [];
     private $map = [];
