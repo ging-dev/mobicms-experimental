@@ -24,7 +24,7 @@ use Mobicms\Checkpoint\User\EmptyUser;
 use Mobicms\Checkpoint\User\User;
 use Mobicms\Database\PDOmysql;
 use Mobicms\Environment\Network;
-use Mobicms\Ext\Session\SessionManager;
+use Zend\Session\SessionManager;
 use Zend\Http\PhpEnvironment\Request;
 use Zend\Http\PhpEnvironment\Response;
 use Zend\Session\Container as Session;

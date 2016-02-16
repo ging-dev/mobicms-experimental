@@ -16,10 +16,10 @@
 
 defined('MOBICMS') or die('Error: restricted access');
 
-use Config\System as Config;
-
 $app = App::getInstance();
-$homeUrl = $app->request()->getBaseUrl();
+
+$config = $app->config()->get('sys');
+$homeUrl = $app->homeurl();
 $rssCacheFile = CACHE_PATH . 'rss-feed.cache';   // Cache file
 $rssCacheTime = 600;                             // Cache Time in seconds
 
@@ -30,7 +30,7 @@ if (!is_file($rssCacheFile)
     $rss = [
         '<rss version="2.0">',
         '<channel>',
-        '<title>' . htmlspecialchars(Config::$copyright) . '</title>',
+        '<title>' . htmlspecialchars($config['copyright']) . '</title>',
         '<link>' . $homeUrl . '</link>',
         '<description>Site news</description>',
         '<language>ru-ru</language>',
@@ -38,7 +38,7 @@ if (!is_file($rssCacheFile)
         '<lastBuildDate>' . date("D, j M Y G:i:s", time()) . ' GMT' . '</lastBuildDate>',
         '<docs>http://blogs.law.harvard.edu/tech/rss</docs>',
         '<generator>mobiCMS http://mobicms.net</generator>',
-        '<webMaster>' . Config::$email . '</webMaster>'
+        '<webMaster>' . $config['email'] . '</webMaster>',
     ];
 
     $query = $app->db()->query("SELECT * FROM `news` ORDER BY `id` DESC LIMIT 15");

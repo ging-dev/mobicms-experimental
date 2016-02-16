@@ -41,7 +41,7 @@ $url = $app->request()->getBaseUrl();
 
 <!-- Список онлайн -->
 <div class="content box m-list">
-    <?php if ($app->user()->isValid() || Config\Users::$allowGuestsOnlineLists): ?>
+    <?php if ($app->user()->isValid() || $app->config()['usr']['allowGuestsOnlineLists']): ?>
         <h2><?= $this->list_header ?></h2>
         <ul class="striped">
             <?php if (isset($this->list)): ?>

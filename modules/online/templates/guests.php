@@ -37,7 +37,7 @@ $app = App::getInstance();
 
 <!-- Список онлайн -->
 <div class="content box m-list">
-    <?php if ($app->user()->isValid() || Config\Users::$allowGuestsOnlineLists): ?>
+    <?php if ($app->user()->isValid()): ?>
         <h2><?= _s('Guests') ?></h2>
         <ul class="striped">
             <?php if (isset($this->list)): ?>

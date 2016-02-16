@@ -12,8 +12,6 @@
 
 namespace Registration;
 
-use Config\Registration;
-use Config\System;
 use Zend\Mail\Message;
 use Zend\Mail\Transport\Sendmail;
 

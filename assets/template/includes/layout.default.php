@@ -1,21 +1,20 @@
 <?php
-use Config\System as Config;
-
 $app = App::getInstance();
+$config = $app->config();
 $homeUrl = $app->request()->getBaseUrl();
 ?>
 <!DOCTYPE html>
-<html lang="<?= Config::$lng ?>">
+<html lang="<?= $config['lng']['lng'] ?>">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <meta name="keywords" content="<?= htmlspecialchars(Config::$metaKey) ?>"/>
-    <meta name="description" content="<?= htmlspecialchars(Config::$metaDesc) ?>"/>
+    <meta name="keywords" content="<?= htmlspecialchars($config['sys']['metaKey']) ?>"/>
+    <meta name="description" content="<?= htmlspecialchars($config['sys']['metaDesc']) ?>"/>
     <meta name="HandheldFriendly" content="true"/>
     <meta name="MobileOptimized" content="width"/>
     <meta content="yes" name="apple-mobile-web-app-capable"/>
-    <title><?= isset($this->pagetitle) ? $this->pagetitle : Config::$homeTitle ?></title>
+    <title><?= isset($this->pagetitle) ? $this->pagetitle : $config['sys']['homeTitle'] ?></title>
     <link rel="shortcut icon" href="<?= $app->image('favicon.ico', [], false, false) ?>"/>
     <link rel="alternate" type="application/rss+xml" title="<?= _s('News') ?>" href="<?= $homeUrl ?>/rss"/>
     <link rel="stylesheet" href="<?= $this->getLink('mobicms.min.css') ?>">
@@ -43,12 +42,12 @@ $homeUrl = $app->request()->getBaseUrl();
 
     <!-- Информация внизу страницы -->
     <div class="text-center text-primary small">
-        <div><?= Config::$copyright ?></div>
+        <div><?= $config['sys']['copyright'] ?></div>
         <div class="profiler">
-            <?php if (Config::$profilingGeneration): ?>
+            <?php if ($config['sys']['profilingGeneration']): ?>
                 <div>Generation: <?= round((microtime(true) - START_TIME), 4) ?> sec</div>
             <?php endif ?>
-            <?php if (Config::$profilingMemory): ?>
+            <?php if ($config['sys']['profilingMemory']): ?>
                 <div>Memory: <?= round((memory_get_usage() - START_MEMORY) / 1024, 2) ?> kb</div>
             <?php endif ?>
         </div>

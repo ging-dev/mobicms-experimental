@@ -1,9 +1,10 @@
 <?php
 
-use Config\Registration as Config;
 use Registration\WelcomeLetter;
 
 $app = App::getInstance();
+
+$config = $app->config()->get('reg');
 $user = $app->user()->get();
 
 if ($user->id) {
@@ -85,7 +86,7 @@ if ($user->id) {
         $app->view()->buttonText = _m('Send an activation again');
         $app->view()->slider = $form->display();
 
-        if ($form->isValid() && Config::$letterMode) {
+        if ($form->isValid() && $config['letterMode']) {
             try {
                 $message = new WelcomeLetter($app, $user->id, $form->output['nickname'], $form->output['email']);
                 $message->send(true);

@@ -12,37 +12,38 @@
 
 defined('MOBICMS') or die('Error: restricted access');
 
-use Config\Registration;
-use Config\Users;
-
 $app = App::getInstance();
+
+$regConfig = $app->config()->get('reg');
+$usrConfig = $app->config()->get('usr');
+
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
 $form
     ->title(_s('Registration'))
     ->element('checkbox', 'allow',
         [
             'label_inline' => _m('Allow registration'),
-            'checked'      => Registration::$allow,
+            'checked'      => $regConfig['allow'],
         ]
     )
     ->element('checkbox', 'approveByAdmin',
         [
             'label_inline' => _m('Confirmation by the Administrator'),
-            'checked'      => Registration::$approveByAdmin,
+            'checked'      => $regConfig['approveByAdmin'],
             'description'  => _m('Regardless of other settings, the User will be activated only after confirmation by the Administrator'),
         ]
     )
     ->element('checkbox', 'useQuarantine',
         [
             'label_inline' => _m('Enable Quarantine') . ' <a href="quarantine/" class="btn btn-link btn-xs">[ ' . _s('Settings') . ' ]</a>',
-            'checked'      => Registration::$useQuarantine,
+            'checked'      => $regConfig['useQuarantine'],
             'description'  => _m('Quarantine allows you to temporarily restrict user activity'),
         ]
     )
     ->title(_m('Welcome Letter'))
     ->element('radio', 'letterMode',
         [
-            'checked' => Registration::$letterMode,
+            'checked' => $regConfig['letterMode'],
             'items'   =>
                 [
                     '0' => ['label' => _m('Do not send'), 'description' => _m('The letter is not sent, the Email field is not mandatory')],
@@ -58,43 +59,43 @@ if ($app->user()->get()->rights == 9) {
         ->element('checkbox', 'allowChangeSex',
             [
                 'label_inline' => _m('Change Sex'),
-                'checked'      => Users::$allowChangeSex,
+                'checked'      => $usrConfig['allowChangeSex'],
             ]
         )
         ->element('checkbox', 'allowChangeStatus',
             [
                 'label_inline' => _m('Change Status'),
-                'checked'      => Users::$allowChangeStatus,
+                'checked'      => $usrConfig['allowChangeStatus'],
             ]
         )
         ->element('checkbox', 'allowUploadAvatars',
             [
                 'label_inline' => _m('Upload Avatars'),
-                'checked'      => Users::$allowUploadAvatars,
+                'checked'      => $usrConfig['allowUploadAvatars'],
             ]
         )
         ->element('checkbox', 'allowUseGravatar',
             [
                 'label_inline' => _m('Allow Gravatar'),
-                'checked'      => Users::$allowUseGravatar,
+                'checked'      => $usrConfig['allowUseGravatar'],
             ]
         )
         ->element('checkbox', 'allowNicknamesOfDigits',
             [
                 'label_inline' => _m('Allow Nicknames, consisting of digits'),
-                'checked'      => Users::$allowNicknamesOfDigits,
+                'checked'      => $usrConfig['allowNicknamesOfDigits'],
             ]
         )
         ->element('checkbox', 'allowToChangeNickname',
             [
                 'label_inline' => _m('Allow to change Nickname'),
-                'checked'      => Users::$allowToChangeNickname,
+                'checked'      => $usrConfig['allowToChangeNickname'],
             ]
         )
         ->element('text', 'changeNicknamePeriod',
             [
                 'label_inline' => _m('After how many days?') . ' <span class="note">(0-99)</span>',
-                'value'        => Users::$changeNicknamePeriod,
+                'value'        => $usrConfig['changeNicknamePeriod'],
                 'class'        => 'mini',
                 'limit'        =>
                     [
@@ -108,25 +109,25 @@ if ($app->user()->get()->rights == 9) {
         ->element('checkbox', 'allowGuestsOnlineLists',
             [
                 'label_inline' => _m('Online Lists'),
-                'checked'      => Users::$allowGuestsOnlineLists,
+                'checked'      => $usrConfig['allowGuestsOnlineLists'],
             ]
         )
         ->element('checkbox', 'allowGuestsToUserLists',
             [
                 'label_inline' => _m('List of Users'),
-                'checked'      => Users::$allowGuestsToUserLists,
+                'checked'      => $usrConfig['allowGuestsToUserLists'],
             ]
         )
         ->element('checkbox', 'allowGuestsToViewProfiles',
             [
                 'label_inline' => _m('View Profiles'),
-                'checked'      => Users::$allowGuestsToViewProfiles,
+                'checked'      => $usrConfig['allowGuestsToViewProfiles'],
             ]
         )
         ->title(_m('Antiflood'))
         ->element('radio', 'antifloodMode',
             [
-                'checked' => Users::$antifloodMode,
+                'checked' => $usrConfig['antifloodMode'],
                 'items'   =>
                     [
                         '3' => _m('Day mode'),
@@ -138,7 +139,7 @@ if ($app->user()->get()->rights == 9) {
         )
         ->element('text', 'antifloodDayDelay',
             [
-                'value'        => Users::$antifloodDayDelay,
+                'value'        => $usrConfig['antifloodDayDelay'],
                 'class'        => 'small',
                 'label_inline' => _m('Day mode, delay in seconds') . ' <span class="note">(3-300)</span>',
                 'limit'        =>
@@ -151,7 +152,7 @@ if ($app->user()->get()->rights == 9) {
         )
         ->element('text', 'antifloodNightDelay',
             [
-                'value'        => Users::$antifloodNightDelay,
+                'value'        => $usrConfig['antifloodNightDelay'],
                 'class'        => 'small',
                 'label_inline' => _m('Night mode, delay in seconds') . ' <span class="note">(3-300)</span>',
                 'limit'        =>
@@ -175,18 +176,14 @@ $form
     ->html('<a class="btn btn-link" href="../">' . _s('Back') . '</a>');
 
 if ($form->isValid()) {
-    // Записываем настройки регистрации
-    $regData =
+    $out['reg'] =
         [
             'allow'          => (bool)$form->output['allow'],
             'approveByAdmin' => (bool)$form->output['approveByAdmin'],
             'letterMode'     => (int)$form->output['letterMode'],
             'useQuarantine'  => (bool)$form->output['useQuarantine'],
         ];
-    (new Mobicms\Config\WriteHandler())->write('Registration', $regData);
-
-    // записываем настройки пользователей
-    $userData =
+    $out['usr'] =
         [
             'allowChangeSex'            => (bool)$form->output['allowChangeSex'],
             'allowChangeStatus'         => (bool)$form->output['allowChangeStatus'],
@@ -202,7 +199,15 @@ if ($form->isValid()) {
             'antifloodDayDelay'         => (int)$form->output['antifloodDayDelay'],
             'antifloodNightDelay'       => (int)$form->output['antifloodNightDelay'],
         ];
-    (new Mobicms\Config\WriteHandler())->write('Users', $userData);
+
+    $app->config()->merge(new Zend\Config\Config($out, true));
+    (new Zend\Config\Writer\PhpArray)->toFile(CONFIG_FILE_SYS, $app->config());
+
+    // Clear opcode cache
+    if (function_exists('opcache_invalidate')) {
+        opcache_invalidate(CONFIG_FILE_SYS);
+    }
+
     $app->redirect($app->uri() . '?saved');
 }
 

@@ -2,7 +2,7 @@
 /distributive
 /system/cache/*
 !/system/cache/.gitkeep
-/system/config/Database.php
+/system/config/classes/Database.php
 /system/logs/*
 !/system/logs/.gitkeep
 /composer.lock

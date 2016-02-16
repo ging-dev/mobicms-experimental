@@ -12,8 +12,6 @@
 
 defined('MOBICMS') or die('Error: restricted access');
 
-use Config\System as Config;
-
 $app = App::getInstance();
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
 $form

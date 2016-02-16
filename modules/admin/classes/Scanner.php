@@ -19,10 +19,19 @@
  */
 class Scanner
 {
+    private $config;
     private $snapCache = 'scanner.cache';
     private $snapFiles = [];
 
-    public $folders = [];
+    public $folders =
+        [
+            0 => '',
+            1 => '/assets',
+            3 => '/modules',
+            4 => '/system',
+            5 => '/themes',
+            6 => '/uploads',
+        ];
     public $whiteList = [];
     public $excludedFolders = [];
     public $excludedFiles = [];
@@ -33,10 +42,7 @@ class Scanner
 
     public function __construct()
     {
-        $this->folders = Config\ScannerDefs::$folders;
-        $this->whiteList = Config\ScannerDefs::$snap;
-        $this->excludedFolders = Config\ScannerDefs::$excludedFolders;
-        $this->excludedFiles = Config\ScannerDefs::$excludedFiles;
+        $this->config = App::getInstance()->config();
     }
 
     /**
@@ -117,12 +123,12 @@ class Scanner
                     if (preg_match("#.*\.(php|cgi|pl|perl|php3|php4|php5|php6|phtml|py|htaccess)$#i", $file)) {
                         $folder = str_replace("../..", ".", $dir);
                         $file_crc = strtoupper(dechex(crc32(file_get_contents($dir . '/' . $file))));
-                        $file_date = date("d.m.Y H:i:s", filemtime($dir . '/' . $file) + \Config\System::$timeshift * 3600);
+                        $file_date = date("d.m.Y H:i:s", filemtime($dir . '/' . $file) + $this->config['sys']['timeshift'] * 3600);
 
                         if ($snap) {
                             $this->snapFiles[] = [
                                 'file_path' => $folder . '/' . $file,
-                                'file_crc'  => $file_crc
+                                'file_crc' => $file_crc
                             ];
                         } else {
                             // Проверяем наличие новых файлов

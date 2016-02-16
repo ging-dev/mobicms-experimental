@@ -27,27 +27,28 @@ class Functions
     public static function antiFlood()
     {
         $app = App::getInstance();
+        $config = $app->config()->get('usr');
 
-        switch (Users::$antifloodMode) {
+        switch ($config['antifloodMode']) {
             case 1:
                 // Адаптивный режим
                 $adm = $app->db()->query("SELECT COUNT(*) FROM `usr__users` WHERE `rights` >= 3 AND `lastVisit` > " . (time() - 300))->fetchColumn();
-                $limit = $adm > 0 ? Users::$antifloodDayDelay : Users::$antifloodNightDelay;
+                $limit = $adm > 0 ? $config['antifloodDayDelay'] : $config['antifloodNightDelay'];
                 break;
             case 3:
                 // День
-                $limit = Users::$antifloodDayDelay;
+                $limit = $config['antifloodDayDelay'];
                 break;
             case 4:
                 // Ночь
-                $limit = Users::$antifloodNightDelay;
+                $limit = $config['antifloodNightDelay'];
                 break;
             default:
                 // По умолчанию день / ночь
                 $c_time = date('G', time());
                 $limit = $c_time > '10:00' && $c_time < '20:00' //TODO: Разобраться
-                    ? Users::$antifloodDayDelay
-                    : Users::$antifloodNightDelay;
+                    ? $config['antifloodDayDelay']
+                    : $config['antifloodNightDelay'];
         }
 
         $user = $app->user()->get();
@@ -71,8 +72,9 @@ class Functions
      */
     public static function displayDate($var)
     {
-        //TODO: Исправить время сдвига
-        $shift = ((int)System::$timeshift + App::getInstance()->user()->get()->config()->timeShift) * 3600;
+        $app = App::getInstance();
+        $timeshift = $app->config()['stys']['timeshift'];
+        $shift = ($timeshift + $app->user()->get()->config()->timeShift) * 3600;
         if (date('Y', $var) == date('Y', time())) {
             if (date('z', $var + $shift) == date('z', time() + $shift)) {
                 return _s('Today') . ', ' . date("H:i", $var + $shift);

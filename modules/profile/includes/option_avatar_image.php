@@ -12,13 +12,14 @@
 
 defined('MOBICMS') or die('Error: restricted access');
 
-use Config\System as Config;
-
 $app = App::getInstance();
+
+$config = (int)$app->config()['sys']['filesize'];
+
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
 $form
     ->title(_m('Upload image'))
-    ->element('hidden', 'MAX_FILE_SIZE', ['value' => (Config::$filesize * 1024)])
+    ->element('hidden', 'MAX_FILE_SIZE', ['value' => ($config * 1024)])
     ->element('file', 'image',
         [
             'label'       => _m('Image'),
@@ -49,7 +50,7 @@ if ($form->isValid()) {
                     'image/gif',
                     'image/png'
                 ];
-            $handle->file_max_size = Config::$filesize * 1024;
+            $handle->file_max_size = $config * 1024;
             $handle->file_overwrite = true;
             $handle->image_resize = true;
             $handle->image_x = 48;

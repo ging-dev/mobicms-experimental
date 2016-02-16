@@ -22,7 +22,6 @@ $user = $app->user()->get()
         <li><a href="smilies/"><i class="smile lg fw"></i><?= _s('Smilies') ?></a></li>
     <?php endif ?>
     <li class="title"><?= _m('Security') ?></li>
-    <li><a href="acl/"><i class="graduation-cap lg fw"></i><?= _m('Access Control') ?></a></li>
     <?php if ($user->rights == 9) : ?>
         <li><a href="firewall/"><i class="shield lg fw"></i><?= _m('Firewall') ?></a></li>
         <li><a href="scanner/"><i class="bug lg fw"></i><?= _m('Anti-Spyware') ?></a></li>

@@ -11,10 +11,10 @@
  */
 
 defined('MOBICMS') or die('Error: restricted access');
-
-use Config\Users;
-
+//TODO: Переделать
 $app = App::getInstance();
+
+$config = $app->config()->get('usr');
 $profile = $app->profile();
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
 $form->title(_m('Edit Profile'));
@@ -23,7 +23,7 @@ $profileRights = $app->profile()->rights;
 $userRights = $app->user()->get()->rights;
 $allowEdit = $userRights = 9 || ($userRights = 7 && $userRights > $profileRights) ? true : false;
 
-if (Users::$allowChangeStatus || $allowEdit) {
+if ($config['allowChangeStatus'] || $allowEdit) {
     $form
         ->html('<div class="form-group">')
         ->element('text', 'status',
@@ -48,7 +48,7 @@ $form
         ]
     );
 
-if (Users::$allowChangeSex || $allowEdit) {
+if ($config['allowChangeSex'] || $allowEdit) {
     $form
         ->element('radio', 'sex',
             [
@@ -66,19 +66,19 @@ if (Users::$allowChangeSex || $allowEdit) {
 $form
     ->element('text', 'day',
         [
-            'label'  => _m('Birthday'),
+            'label'    => _m('Birthday'),
             //'value'  => date("d", strtotime($profile->birth)),
-            'readonly'    => true,
-            'class'  => 'mini',
-            'filter' => FILTER_SANITIZE_NUMBER_INT,
+            'readonly' => true,
+            'class'    => 'mini',
+            'filter'   => FILTER_SANITIZE_NUMBER_INT,
         ]
     )
     ->element('text', 'month',
         [
             //'value'  => date("m", strtotime($profile->birth)),
-            'readonly'    => true,
-            'class'  => 'mini',
-            'filter' => FILTER_SANITIZE_NUMBER_INT,
+            'readonly' => true,
+            'class'    => 'mini',
+            'filter'   => FILTER_SANITIZE_NUMBER_INT,
         ]
     )
     ->element('text', 'year',
@@ -205,7 +205,7 @@ if ($form->isValid()) {
 //        $profile->birth = intval($form->output['year']) . '-' . intval($form->output['month']) . '-' . intval($form->output['day']);
 //    }
 
-    $profile->save();
+//    $profile->save();
 }
 
 $app->view()->form = $form->display();

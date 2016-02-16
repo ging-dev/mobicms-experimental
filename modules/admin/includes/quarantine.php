@@ -16,10 +16,11 @@
 
 defined('MOBICMS') or die('Error: restricted access');
 
-use Config\Quarantine as Qarantine;
-
 $app = App::getInstance();
+
+$config = $app->config()->get('quarantine');
 $uri = $app->uri();
+
 $form = new Mobicms\Form\Form(['action' => $uri]);
 $form
     ->html('<div class="alert alert-warning">' . _m('Keep in mind that this section reflect only the general settings.<br>Individual modules may have their quarantine settings. To set up, use the administrative part of the relevant modules.') . '</div>')
@@ -28,7 +29,7 @@ $form
     ->element('text', 'period',
         [
             'label_inline' => _m('The Quarantine action period, in hours') . ' <span class="note">(1-99)</span>',
-            'value'        => Qarantine::$period,
+            'value'        => $config['period'],
             'class'        => 'mini',
             'limit'        =>
                 [
@@ -43,7 +44,7 @@ $form
     ->element('text', 'mailSent',
         [
             'label_inline' => _m('How much mail can be sent?') . ' <span class="note">(0-99)</span>',
-            'value'        => Qarantine::$mailSent,
+            'value'        => $config['mailSent'],
             'class'        => 'mini',
             'limit'        =>
                 [
@@ -56,7 +57,7 @@ $form
     ->element('text', 'mailRecipients',
         [
             'label_inline' => _m('How many mail recipients?') . ' <span class="note">(0-9)</span>',
-            'value'        => Qarantine::$mailRecipients,
+            'value'        => $config['mailRecipients'],
             'class'        => 'mini',
             'limit'        =>
                 [
@@ -69,7 +70,7 @@ $form
     ->element('text', 'comments',
         [
             'label_inline' => _m('How many comments are allowed?') . ' <span class="note">(0-99)</span>',
-            'value'        => Qarantine::$comments,
+            'value'        => $config['comments'],
             'class'        => 'mini',
             'limit'        =>
                 [
@@ -79,23 +80,10 @@ $form
                 ],
         ]
     )
-    ->element('text', 'chat',
-        [
-            'label_inline' => _m('How many Chat posts are allowed?') . ' <span class="note">(0-99)</span>',
-            'value'        => Qarantine::$chat,
-            'class'        => 'mini',
-            'limit'        =>
-                [
-                    'type' => 'int',
-                    'min'  => 0,
-                    'max'  => 99,
-                ],
-        ]
-    )
-    ->element('text', 'album',
+    ->element('text', 'uploadImages',
         [
             'label_inline' => _m('How many images are allowed to upload into the Album?') . ' <span class="note">(0-99)</span>',
-            'value'        => Qarantine::$album,
+            'value'        => $config['uploadImages'],
             'class'        => 'mini',
             'limit'        =>
                 [
@@ -108,48 +96,7 @@ $form
     ->element('checkbox', 'reputation',
         [
             'label_inline' => _m('Allow Reputation'),
-            'checked'      => Qarantine::$reputation,
-        ]
-    )
-    ->title(_s('Forum'))
-    ->element('text', 'forumTopics',
-        [
-            'label_inline' => _m('How many Topics is allowed to create?') . ' <span class="note">(0-9)</span>',
-            'value'        => Qarantine::$forumTopics,
-            'class'        => 'mini',
-            'limit'        =>
-                [
-                    'type' => 'int',
-                    'min'  => 0,
-                    'max'  => 9,
-                ],
-        ]
-    )
-    ->element('text', 'forumSections',
-        [
-            'label_inline' => _m('The Sections of the Forum which allowed to create Topics'),
-            'value'        => Qarantine::$forumSections,
-            'description'  => _m('Type (separated by commas) ID of Sections where it is permitted to create Topics.<br>If the list is empty, then allowed to create anywhere.'),
-        ]
-    )
-    ->element('text', 'forumPosts',
-        [
-            'label_inline' => _m('How many Forum posts are allowed?') . ' <span class="note">(0-99)</span>',
-            'value'        => Qarantine::$forumPosts,
-            'class'        => 'mini',
-            'limit'        =>
-                [
-                    'type' => 'int',
-                    'min'  => 0,
-                    'max'  => 99,
-                ],
-        ]
-    )
-    ->element('text', 'forumAllowedTopics',
-        [
-            'label_inline' => _m('The Topics of the Forum which allowed to create posts'),
-            'value'        => Qarantine::$forumAllowedTopics,
-            'description'  => _m('Type (separated by commas) ID of topics where it is permitted to post messages.<br>If the list is empty, then allowed to write anywhere. Please note, if allowed the creation of a topic, then they will be allowed posting messages, regardless of the limitations of this list.'),
+            'checked'      => $config['reputation'],
         ]
     )
     ->divider()
@@ -162,22 +109,24 @@ $form
     ->html('<a class="btn btn-link" href="../">' . _s('Back') . '</a>');
 
 if ($form->isValid()) {
-    // Записываем настройки
-    $quarantine =
+    $out['quarantine'] =
         [
-            'period'             => (int)$form->output['period'],
-            'mailSent'           => (int)$form->output['mailSent'],
-            'mailRecipients'     => (int)$form->output['mailRecipients'],
-            'comments'           => (int)$form->output['comments'],
-            'chat'               => (int)$form->output['chat'],
-            'album'              => (int)$form->output['album'],
-            'reputation'         => (bool)$form->output['reputation'],
-            'forumTopics'        => (int)$form->output['forumTopics'],
-            'forumSections'      => $form->output['forumSections'],
-            'forumPosts'         => (int)$form->output['forumPosts'],
-            'forumAllowedTopics' => $form->output['forumAllowedTopics'],
+            'period'         => (int)$form->output['period'],
+            'mailSent'       => (int)$form->output['mailSent'],
+            'mailRecipients' => (int)$form->output['mailRecipients'],
+            'comments'       => (int)$form->output['comments'],
+            'album'          => (int)$form->output['uploadImages'],
+            'reputation'     => (bool)$form->output['reputation'],
         ];
-    (new Mobicms\Config\WriteHandler())->write('Quarantine', $quarantine);
+
+    $app->config()->merge(new Zend\Config\Config($out, true));
+    (new Zend\Config\Writer\PhpArray)->toFile(CONFIG_FILE_SYS, $app->config());
+
+    // Clear opcode cache
+    if (function_exists('opcache_invalidate')) {
+        opcache_invalidate(CONFIG_FILE_SYS);
+    }
+
     $app->redirect($uri . '?saved');
 }
 

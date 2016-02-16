@@ -13,7 +13,7 @@
 /**
  * System version
  */
-define('MOBICMS', '0.0.0');
+define('MOBICMS', '0.1.0');
 
 /**
  * Toggle debug mode

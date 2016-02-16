@@ -5,7 +5,7 @@
 
 <!-- Форма -->
 <div class="content box padding">
-    <?php if (Config\Registration::$allow): ?>
+    <?php if (App::getInstance()->config()['reg']['allow']): ?>
         <?= $this->form ?>
     <?php else: ?>
         <div class="alert alert-danger text-center">

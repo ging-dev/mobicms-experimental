@@ -12,15 +12,16 @@
 
 defined('MOBICMS') or die('Error: restricted access');
 
-use Config\Registration as Config;
 use Mobicms\Checkpoint\User\AddUser;
 use Mobicms\Validator\Email;
 use Mobicms\Validator\Nickname;
 
 $app = App::getInstance();
+
+$config = $app->config()->get('reg');
 $userId = 0;
 
-if (Config::$allow) {
+if ($config['allow']) {
     $form = new Mobicms\Form\Form(['action' => $app->uri()]);
     $form
         ->html('<div class="alert alert-warning">'
@@ -40,7 +41,7 @@ if (Config::$allow) {
             [
                 'label'       => _s('Your Email'),
                 'description' => _s('Please correctly specify your email address. This address will be sent a confirmation code to your registration.'),
-                'required'    => Config::$letterMode >= 1,
+                'required'    => $config['letterMode'],
             ]
         )
         ->element('password', 'newpass',
@@ -125,7 +126,7 @@ if (Config::$allow) {
         ////////////////////////////////////////////////////////////
         // Email validation                                       //
         ////////////////////////////////////////////////////////////
-        if (Config::$letterMode >= 1 || !empty($form->output['email'])) {
+        if ($config['letterMode'] >= 1 || !empty($form->output['email'])) {
             $checkEmail = new Email;
 
             if (!$checkEmail->isValid($form->output['email'])) {
@@ -153,16 +154,16 @@ if (Config::$allow) {
             $user->userAgent = $app->network()->getUserAgent();
 
             // Устанавливаем статус активации, подтверждения и карантина
-            $user->activated = Config::$letterMode < 2 ? true : false;
-            $user->approved = Config::$approveByAdmin ? false : true;
-            $user->quarantine = Config::$useQuarantine;
+            $user->activated = $config['letterMode'] < 2 ? true : false;
+            $user->approved = $config['approveByAdmin'] ? false : true;
+            $user->quarantine = $config['useQuarantine'];
 
             // Добавляем пользователя в базу данных
             $user->save();
             $userId = $user->getInsertId();
 
             // Если не требуется активация и модерация, сразу впускаем пользователя на сайт
-            if (Config::$letterMode < 2 && !Config::$approveByAdmin) {
+            if ($config['letterMode'] < 2 && !$config['approveByAdmin']) {
                 $app->user()->login($form->output['nickname'], $form->output['newpass'], true);
             }
         } catch (Exception $e) {
@@ -174,7 +175,7 @@ if (Config::$allow) {
     /**
      * Try to send Email
      */
-    if ($form->isValid() && Config::$letterMode) {
+    if ($form->isValid() && $config['letterMode']) {
         try {
             $message = new Registration\WelcomeLetter($app, $userId, $form->output['nickname'], $form->output['email']);
             $message->send();

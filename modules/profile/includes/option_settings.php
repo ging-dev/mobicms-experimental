@@ -15,8 +15,10 @@ defined('MOBICMS') or die('Error: restricted access');
 use Config\System as Config;
 
 $app = App::getInstance();
+
 $profile = $app->profile();
 $config = $profile->config();
+$sysConfig = $app->config()['sys'];
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
 $editors[0] = _m('Without Editor');
 $editors[1] = '<abbr title="SCeditor">' . _m('WYSIWYG Editor') . '</abbr>';
@@ -31,7 +33,7 @@ $form
     ->element('text', 'timeShift',
         [
             'value'        => $config->timeShift,
-            'label_inline' => '<span class="badge badge-large">' . date("H:i", time() + (Config::$timeshift + $config->timeShift) * 3600) . '</span> ' . _m('Time settings'),
+            'label_inline' => '<span class="badge badge-large">' . date("H:i", time() + ($sysConfig['timeshift'] + $config->timeShift) * 3600) . '</span> ' . _m('Time settings'),
             'description'  => _m('Time Shift') . ' (+ - 12)',
             'class'        => 'small',
             'maxlength'    => 3,

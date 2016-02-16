@@ -1,4 +1,4 @@
-# [mobiCMS 0.0.0](http://mobicms.net)
+# [mobiCMS 0.1.0](http://mobicms.net)
 Mobile Content Management System.
 
 [![License](https://img.shields.io/badge/license-GPL%20v.3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0-standalone.html)
@@ -29,9 +29,9 @@ GNU General Public License v.3
 ## How to install
 1. Run `composer install`
 2. Create database and import all SQL files ftom /install dir
-3. Copy `Database.php.inst` from `/_install` dir to a folder `/system/config/`, rename it to `Database.php` and write down in this file your requisites of access to a database
+3. Copy `Database.php.inst` from `/_install` dir to folder `/system/config/classes/`, rename it to `Database.php` and write down in this file your requisites of access to a database
 4. Make sure the folder `/system/cache/` has **write** permissions
-5. In order that the common configuration was tuned through the Admin Panel, make sure that all files in the directory `/system/config` have the **change** permissions
+5. In order that the common configuration was tuned through the Admin Panel, make sure that all files in the directory `/system/config/data/` have the **change** permissions
 
 ## Documentation
 Documentation is under development and will be constantly updated.    

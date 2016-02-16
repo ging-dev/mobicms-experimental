@@ -48,7 +48,8 @@ class Router
 
         $this->path = array_filter(explode('/', trim($uri, '/')));
 
-        $this->config = (new Routes)->routesMap;
+        $config = is_file(CONFIG_FILE_ROUTES) ? include CONFIG_FILE_ROUTES : [];
+        $this->config = new \Zend\Config\Config(is_array($config) ? $config : []);
         $this->module = $this->getModule();
         $this->dir = $this->config[$this->module];
     }

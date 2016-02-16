@@ -12,13 +12,13 @@
 
 defined('MOBICMS') or die('Error: restricted access');
 
-use Config\Users;
-
 $app = App::getInstance();
+
+$config = $app->config()->get('usr');
 $user = $app->user()->get();
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
 
-if ($user->rights >= 7 || $user->nickChanged < time() - (Users::$changeNicknamePeriod * 86400)) {
+if ($user->rights >= 7 || $user->nickChanged < time() - ($config['changeNicknamePeriod'] * 86400)) {
     $form
         ->title(_m('Change Nickname'))
         ->element('text', 'nickname',
@@ -34,7 +34,7 @@ if ($user->rights >= 7 || $user->nickChanged < time() - (Users::$changeNicknameP
                 'maxlength'   => 20,
                 'description' => _s('Min. 2, Max. 20 Characters.<br>Allowed letters are Cyrillic and Latin alphabet, numbers, spaces and punctuation - = @ ! ? ~ . _ ( ) [ ] *') . '<br/>' .
                     _m('Please note that while changing the nickname is changing your Login on the site.<br>The next change of nickname is allowed through') . ' ' .
-                    Users::$changeNicknamePeriod . ' ' . _sp('Day', 'Days', Users::$changeNicknamePeriod) . '.',
+                    $config['changeNicknamePeriod'] . ' ' . _sp('Day', 'Days', $config['changeNicknamePeriod']) . '.',
                 'required'    => true,
             ]
         )
@@ -57,16 +57,16 @@ if ($user->rights >= 7 || $user->nickChanged < time() - (Users::$changeNicknameP
 } else {
     $form
         ->html('<div class="alert alert-danger">' .
-            '<strong>' . _m('Nickname can not change more than once a') . ' ' . Users::$changeNicknamePeriod . ' ' . _sp('Day', 'Days', Users::$changeNicknamePeriod) . '</strong><br/><br/>' .
+            '<strong>' . _m('Nickname can not change more than once a') . ' ' . $config['changeNicknamePeriod'] . ' ' . _sp('Day', 'Days', $config['changeNicknamePeriod']) . '</strong><br/><br/>' .
             _m('You have already changed their nickname:') . ' ' . Includes\Functions::displayDate($user->nickChanged) . '<br/>' .
-            _m('Next time will be able to change:') . ' ' . Includes\Functions::displayDate($user->nickChanged + ((int)Users::$changeNicknamePeriod * 86400)) .
+            _m('Next time will be able to change:') . ' ' . Includes\Functions::displayDate($user->nickChanged + ($config['changeNicknamePeriod'] * 86400)) .
             '</div>')
         ->html('<a class="btn btn-primary" href="../">' . _s('Back') . '</a>');
 }
 
 if ($form->isValid()) {
     $valid = $app->user()->validate();
-    //TODO: Переделать валидацию как в регистрации
+    //TODO: Переделать на использование валидатора Nickname
     // Проверяем Ник
     if (!$valid->checkNicknameChars($form->output['nickname'])) {
         // Обнаружены запрещенные символы
@@ -74,7 +74,7 @@ if ($form->isValid()) {
     } elseif (!$valid->checkNicknameCharsets($form->output['nickname'])) {
         // Обнаружены символы из разных языков
         $form->setError('nickname', _s('It is forbidden to use characters of different languages'));
-    } elseif (ctype_digit($form->output['nickname']) && !Users::$allowNicknamesOfDigits) {
+    } elseif (ctype_digit($form->output['nickname'])) {
         // Ник состоит только из цифр
         $form->setError('nickname', _s('Nicknames consisting only of numbers are prohibited'));
     } elseif (!$valid->checkNicknameRepeatedChars($form->output['nickname'])) {

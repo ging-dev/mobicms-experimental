@@ -31,11 +31,13 @@ class Locales
     private $request;
 
     private $availableLocales;
+    private $sysConfig;
     private $userLocale;
 
     public function __construct(Request $request, Facade $user)
     {
         $this->request = $request;
+        $this->sysConfig = \App::getInstance()->config()->get('lng');
         $this->userLocale = $user->get()->config()->lng;
     }
 
@@ -64,8 +66,8 @@ class Locales
      */
     protected function getCurrentLocale($session)
     {
-        if (!Config::$lngSwitch) {
-            return Config::$lng;
+        if (!$this->sysConfig['lngSwitch']) {
+            return $this->sysConfig['lng'];
         }
 
         if (isset($session->lng)) {
@@ -107,7 +109,7 @@ class Locales
             }
         }
 
-        return Config::$lng;
+        return $this->sysConfig['lng'];
     }
 
     /**

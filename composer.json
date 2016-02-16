@@ -19,6 +19,7 @@
   },
   "require": {
     "php": ">=5.5.0",
+    "zendframework/zend-config": "^2.6",
     "zendframework/zend-di": "^2.5",
     "zendframework/zend-http": "^2.5",
     "zendframework/zend-loader": "^2.5",
@@ -34,7 +35,7 @@
   "autoload": {
     "psr-4": {
       "Mobicms\\": "system/mobicms/",
-      "Config\\": "system/config/",
+      "Config\\": "system/config/classes/",
       "Includes\\": "system/includes/"
     }
   }

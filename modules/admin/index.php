@@ -30,7 +30,6 @@ if ($user->rights >= 7) {
     ];
 
     $admin_actions = [
-        'acl'                       => 'acl.php',
         'links'                     => 'links.php',
         'users_settings/quarantine' => 'quarantine.php',
         'scanner'                   => 'scanner.php',

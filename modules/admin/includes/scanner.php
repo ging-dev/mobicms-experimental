@@ -20,10 +20,9 @@ $form
     ->title(_m('Anti-Spyware'))
     ->element('radio', 'mode',
         [
-            'checked' => 1,
+            'checked' => 2,
             'items'   =>
                 [
-                    '1' => _m('Scan to the appropriate distribution'),
                     '2' => _m('Snapshot scan'),
                     '3' => _m('Make snapshot')
                 ]

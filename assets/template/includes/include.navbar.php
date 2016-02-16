@@ -1,5 +1,6 @@
 <?php
 $app = App::getInstance();
+$config = $app->config();
 $url = $app->request()->getBaseUrl();
 $user = $app->user()->get();
 ?>
@@ -62,7 +63,7 @@ $user = $app->user()->get();
                         </ul>
                     </li>
                 <?php else: ?>
-                    <?php if (Config\Registration::$allow): ?>
+                    <?php if ($config['reg']['allow']): ?>
                         <li<?= ($app->router()->getCurrentModule() == 'registration' ? ' class="active"' : '') ?>>
                             <a href="<?= $url ?>/registration/"><i class="pencil fw"></i><?= _s('Registration') ?></a>
                         </li>

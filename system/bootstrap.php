@@ -11,74 +11,34 @@
  */
 
 /**
- * Toggle debug mode
+ * Common constants
  */
-defined('DEBUG') || define('DEBUG', false);
+defined('DEBUG') || define('DEBUG', false);                    // Toggle debug mode
+defined('MOBICMS') || define('MOBICMS', true);                 // mobiCMS version
+const DS = DIRECTORY_SEPARATOR;                                // Directory Separator alias
+define('START_MEMORY', memory_get_usage());                    // Profiling memory usage
+define('START_TIME', microtime(true));                         // Profiling generation time
 
 /**
- * mobiCMS version
+ * Pathes
  */
-defined('MOBICMS') || define('MOBICMS', true);
+define('ROOT_PATH', dirname(__DIR__) . DS);                    // Defines the root directory
+const VENDOR_PATH = ROOT_PATH . 'system' . DS . 'vendor' . DS; // Vendors path
+const CACHE_PATH = __DIR__ . DS . 'cache' . DS;                // Path to the system cache files
+const LOG_PATH = __DIR__ . DS . 'logs' . DS;                   // Path to the LOG files
+const LOCALE_PATH = __DIR__ . DS . 'locale' . DS;              // Path to the language files
+const MODULE_PATH = ROOT_PATH . 'modules' . DS;                // Path to the modiles
+const THEMES_PATH = ROOT_PATH . 'themes' . DS;                 // Path to the Templates
+const FILES_PATH = ROOT_PATH . 'uploads' . DS;                 // Path to the Upload files
+const ASSETS_PATH = ROOT_PATH . 'assets' . DS;                 // Path to the Upload files
 
 /**
- * Directory Separator alias
+ * Configuration files
  */
-define('DS', DIRECTORY_SEPARATOR);
-
-/**
- * Defines the root directory of the mobiCMS installation
- */
-define('ROOT_PATH', dirname(__DIR__) . DS);
-
-/**
- * Vendors path
- */
-define('VENDOR_PATH', ROOT_PATH . 'system' . DS . 'vendor' . DS);
-
-/**
- * Path to the configuration files
- */
-define('CONFIG_PATH', __DIR__ . DS . 'config' . DS);
-
-/**
- * Path to the system cache files
- */
-define('CACHE_PATH', __DIR__ . DS . 'cache' . DS);
-
-/**
- * Path to the LOG files
- */
-define('LOG_PATH', __DIR__ . DS . 'logs' . DS);
-
-/**
- * Path to the language files
- */
-define('LOCALE_PATH', __DIR__ . DS . 'locale' . DS);
-
-/**
- * Path to the modiles
- */
-define('MODULE_PATH', ROOT_PATH . 'modules' . DS);
-
-/**
- * Path to the Templates
- */
-define('THEMES_PATH', ROOT_PATH . 'themes' . DS);
-
-/**
- * Path to the Upload files
- */
-define('FILES_PATH', ROOT_PATH . 'uploads' . DS);
-
-/**
- * Path to the Upload files
- */
-define('ASSETS_PATH', ROOT_PATH . 'assets' . DS);
-
-
-// Profiling
-define('START_MEMORY', memory_get_usage());
-define('START_TIME', microtime(true));
+const CONFIG_DATA_DIR = __DIR__ . DS . 'config' . DS . 'data' . DS;
+const CONFIG_FILE_SYS = CONFIG_DATA_DIR . 'system.php';
+const CONFIG_FILE_IOC = CONFIG_DATA_DIR . 'dibase.php';
+const CONFIG_FILE_ROUTES = CONFIG_DATA_DIR . 'routes.php';
 
 // Define some PHP settings
 mb_internal_encoding('UTF-8');
@@ -117,12 +77,17 @@ use Mobicms\i18n\Translate;
 use Mobicms\Routing\Router;
 use Mobicms\Template\View;
 use Mobicms\Utility\Image;
+use Mobicms\Ext\Session\PdoSessionHandler;
+use Zend\Config\Config as ZendConfig;
 use Zend\Http\PhpEnvironment\Request;
 use Zend\Http\PhpEnvironment\Response;
+use Zend\Session\Storage\SessionArrayStorage;
+use Zend\Session\SessionManager;
 
 /**
  * Class App
  *
+ * @method ZendConfig   config()
  * @method PDOmysql     db()
  * @method Image        image($file, array $arguments = [], $isModule = false, $imgTag = true)
  * @method Filter       filter($string) //TODO: доработать, или удалить сервис
@@ -144,6 +109,7 @@ class App extends Mobicms\Ioc\Container
 }
 
 $app = App::getInstance();
+$di = App::getDiInstance();
 
 // Initialize the Request
 $app->newInstance('request', Request::class);
@@ -160,16 +126,35 @@ $app->newInstance('router', Router::class);
 // Initialize the database connection
 $app->newInstance('db', PDOmysql::class,
     [
-        'dbHost' => Config\Database::$dbHost,
-        'dbName' => Config\Database::$dbName,
-        'dbUser' => Config\Database::$dbUser,
-        'dbPass' => Config\Database::$dbPass
+        'dbHost' => Config\Database::DB_HOST,
+        'dbName' => Config\Database::DB_NAME,
+        'dbUser' => Config\Database::DB_USER,
+        'dbPass' => Config\Database::DB_PASS,
     ]
 );
 
+// Load configuration
+$config = is_file(CONFIG_FILE_SYS) ? include CONFIG_FILE_SYS : [];
+$app->setService('config', new ZendConfig(is_array($config) ? $config : []));
+
+// Shutdown handler
+register_shutdown_function(function () use ($app) {
+    $app->response()->setContent($app->view()->render());
+    $app->response()->send();
+});
+
 // Starting the Session and register instance
-$session = new Zend\Session\Container('app', App::getDiInstance()->newInstance('Mobicms\Ext\Session\SessionManager'));
-$app->setService('session', $session);
+$sessCfg = new Zend\Session\Config\StandardConfig;
+$sessCfg->setOptions([
+    'name'                => 'mobicms',
+    'remember_me_seconds' => 1800,
+    'use_cookies'         => true,
+    'cookie_httponly'     => true,
+]);
+$sessManager = new SessionManager($sessCfg, new SessionArrayStorage, $di->newInstance(PdoSessionHandler::class));
+$di->instanceManager()->addSharedInstance($sessManager, SessionManager::class);
+$app->setService('session', new Zend\Session\Container('app', $sessManager));
+
 
 // Initialize the User
 $app->newInstance('user', Facade::class);
@@ -268,10 +253,3 @@ function _mp($singular, $plural, $count, $domain = 'default')
 
 // Output buffering
 ob_start();
-
-// Shutdown handler
-register_shutdown_function(function () use ($app) {
-    $app->response()->setContent($app->view()->render());
-    $app->response()->send();
-    session_register_shutdown(); // This important!
-});

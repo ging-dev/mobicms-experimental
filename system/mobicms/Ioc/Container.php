@@ -14,6 +14,7 @@ namespace Mobicms\Ioc;
 
 use Interop\Container\ContainerInterface;
 use Mobicms\Ioc\Exception\NotFoundException;
+use Zend\Config\Writer\PhpArray  as ConfigWriter;
 use Zend\Di\Di;
 use Zend\Di\DefinitionList;
 use Zend\Di\Definition\ArrayDefinition;
@@ -196,20 +197,16 @@ class Container implements ContainerInterface
      */
     private function getDefinition()
     {
-        if (!is_file(CONFIG_PATH . $this->definitionFile)) {
+        if (!is_file(CONFIG_FILE_IOC)) {
             $diCompiler = new CompilerDefinition;
             $diCompiler->addDirectory(ROOT_PATH . 'system/mobicms');
             $diCompiler->compile();
             $definition = $diCompiler->toArrayDefinition()->toArray();
-
-            file_put_contents(
-                CONFIG_PATH . $this->definitionFile,
-                '<?php return ' . var_export($definition, true) . ';'
-            );
+            (new ConfigWriter)->toFile(CONFIG_FILE_IOC, $definition);
 
             return $definition;
         } else {
-            return include CONFIG_PATH . $this->definitionFile;
+            return include CONFIG_FILE_IOC;
         }
     }
 

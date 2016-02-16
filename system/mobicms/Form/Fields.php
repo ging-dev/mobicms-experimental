@@ -290,8 +290,7 @@ class Fields
             // Initialize editor
             $this->option['id'] = 'editor';
             $editor = new Editor($config->editor);
-            $lng = \Config\System::$lng; //TODO: разобраться
-            $editor->setLanguage($lng);
+            $editor->setLanguage(\App::getInstance()->config()['lng']['lng']);
             $this->option['style'] = $editor->getStyle();
 
             if (empty($this->option['description'])) {
