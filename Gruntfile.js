@@ -127,6 +127,11 @@ module.exports = function (grunt) {
                 '!distributive/system/vendor/zendframework/zend-eventmanager/README.md',
                 '!distributive/system/vendor/zendframework/zend-eventmanager/LICENSE.md',
 
+                'distributive/system/vendor/zendframework/zend-feed/*',
+                '!distributive/system/vendor/zendframework/zend-feed/src',
+                '!distributive/system/vendor/zendframework/zend-feed/README.md',
+                '!distributive/system/vendor/zendframework/zend-feed/LICENSE.md',
+
                 'distributive/system/vendor/zendframework/zend-http/*',
                 '!distributive/system/vendor/zendframework/zend-http/src',
                 '!distributive/system/vendor/zendframework/zend-http/README.md',
@@ -191,6 +196,7 @@ module.exports = function (grunt) {
                             'system/.htaccess',
                             'uploads/.htaccess',
                             '.htaccess',
+                            '!_sources/**',
                             '!dist/**',
                             '!distributive/**',
                             '!node_modules/**',
