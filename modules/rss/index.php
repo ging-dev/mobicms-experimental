@@ -17,54 +17,36 @@
 defined('MOBICMS') or die('Error: restricted access');
 
 $app = App::getInstance();
-
 $config = $app->config()->get('sys');
-$homeUrl = $app->homeurl();
-$rssCacheFile = CACHE_PATH . 'rss-feed.cache';   // Cache file
-$rssCacheTime = 600;                             // Cache Time in seconds
 
-// Read the RSS feed from the database and write cache
-if (!is_file($rssCacheFile)
-    || filemtime($rssCacheFile) < time() - $rssCacheTime
-) {
-    $rss = [
-        '<rss version="2.0">',
-        '<channel>',
-        '<title>' . htmlspecialchars($config['copyright']) . '</title>',
-        '<link>' . $homeUrl . '</link>',
-        '<description>Site news</description>',
-        '<language>ru-ru</language>',
-        '<pubDate>' . date("D, j M Y G:i:s", time()) . ' GMT' . '</pubDate>',
-        '<lastBuildDate>' . date("D, j M Y G:i:s", time()) . ' GMT' . '</lastBuildDate>',
-        '<docs>http://blogs.law.harvard.edu/tech/rss</docs>',
-        '<generator>mobiCMS http://mobicms.net</generator>',
-        '<webMaster>' . $config['email'] . '</webMaster>',
-    ];
+/**
+ * Create the parent feed
+ */
+$feed = new Zend\Feed\Writer\Feed;
+$feed->setTitle($config['siteName']);
+$feed->setLink($app->homeurl());
+$feed->setFeedLink($app->homeurl() . '/rss', 'rss');
+$feed->setGenerator('mobiCMS', MOBICMS, 'http://mobicms.net');
+$feed->setDateModified(time());
+$feed->setDescription('mobiCMS news');
 
-    $query = $app->db()->query("SELECT * FROM `news` ORDER BY `id` DESC LIMIT 15");
+/**
+ * Add one or more entries. Note that entries must
+ * be manually added once created.
+ */
+$entry = $feed->createEntry();
+$entry->setTitle('Тестовая новость');
+$entry->setLink($app->homeurl() . '/news/423');
+$entry->addAuthor(array(
+    'name'  => 'admin',
+    'email' => 'admin@example.com',
+    'uri'   => 'http://www.example.com',
+));
+$entry->setDateModified(time());
+$entry->setDateCreated(time());
+$entry->setDescription('Проверка слуха.');
+$feed->addEntry($entry);
 
-    while ($result = $query->fetch()) {
-        $rss[] = '<item>';
-        $rss[] = '<title><![CDATA[' . strip_tags(trim($result['title'])) . ']]></title>';
-        $rss[] = '<link>' . $homeUrl . '/news/' . '</link>';
-        $rss[] = '<description><![CDATA[' . strip_tags(trim($result['text'])) . ']]></description>';
-        $rss[] = '<pubDate>' . date("D, j M Y G:i:s", $result['time']) . ' GMT' . '</pubDate>';
-        $rss[] = '<guid>' . $homeUrl . '/news/' . '</guid>';
-        $rss[] = '</item>';
-    }
-
-    $rss[] = '</channel>';
-    $rss[] = '</rss>';
-
-    // Write RSS cache
-    if (file_put_contents($rssCacheFile, implode("\n", $rss)) === false) {
-        throw new RuntimeException('Can not write RSS cache file');
-    }
-}
-
-// Display RSS feed
-ob_end_clean();
 $app->view()->setLayout(false);
-header('Content-type: text/xml; charset="utf-8"');
-echo '<?xml version="1.0" encoding="utf-8"?>' . "\n";
-readfile($rssCacheFile);
+$app->response()->getHeaders()->addHeaderLine('Content-type', 'text/xml; charset="utf-8"');
+echo $feed->export('rss');

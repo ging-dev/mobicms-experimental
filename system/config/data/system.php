@@ -5,6 +5,7 @@ return array(
         'filesize' => 2100,
         'profilingGeneration' => true,
         'profilingMemory' => true,
+        'siteName' => 'mobiCMS DEV',
         'email' => 'user@example.com',
         'copyright' => 'Powered by mobiCMS',
         'homeTitle' => 'mobiCMS!',

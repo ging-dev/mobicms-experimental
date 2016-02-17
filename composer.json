@@ -13,7 +13,7 @@
       "homepage": "https://mobicms.net/contributors"
     }
   ],
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "config": {
     "vendor-dir": "system/vendor"
   },
@@ -30,7 +30,8 @@
     "container-interop/container-interop": "^1.1",
     "ezyang/htmlpurifier": "^4.7",
     "geshi/geshi": "dev-master",
-    "verot/class.upload.php": "dev-master"
+    "verot/class.upload.php": "dev-master",
+    "zendframework/zend-feed": "^2.7"
   },
   "autoload": {
     "psr-4": {
