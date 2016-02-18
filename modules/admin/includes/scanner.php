@@ -42,22 +42,9 @@ if ($form->isValid()) {
     $scanner = new Scanner;
 
     switch ($form->output['mode']) {
-        case 1:
-            // Сканируем на соответствие дистрибутиву
-            $scanner->scan();
-            if (count($scanner->modifiedFiles) || count($scanner->missingFiles) || count($scanner->newFiles)) {
-                $app->view()->modifiedFiles = $scanner->modifiedFiles;
-                $app->view()->missingFiles = $scanner->missingFiles;
-                $app->view()->extraFiles = $scanner->newFiles;
-                $app->view()->errormsg = _m('Distributive inconsistency!');
-            } else {
-                $app->view()->ok = _m('List of files corresponds to the distributive');
-            }
-            break;
-
         case 2:
             // Сканируем на соответствие ранее созданному снимку
-            $scanner->scan(true);
+            $scanner->scan();
             if (count($scanner->whiteList) == 0) {
                 $app->view()->errormsg = _m('Snapshot image is not created');
             } else {

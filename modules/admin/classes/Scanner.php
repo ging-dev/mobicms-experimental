@@ -20,7 +20,6 @@
 class Scanner
 {
     private $config;
-    private $snapCache = 'scanner.cache';
     private $snapFiles = [];
 
     public $folders =
@@ -34,7 +33,10 @@ class Scanner
         ];
     public $whiteList = [];
     public $excludedFolders = [];
-    public $excludedFiles = [];
+    public $excludedFiles =
+        [
+            './system/config/data/scan.php'
+        ];
 
     public $newFiles = [];
     public $modifiedFiles = [];
@@ -48,23 +50,9 @@ class Scanner
     /**
      * Сканирование
      */
-    public function scan($snap = false)
+    public function scan()
     {
-        // Загружаем конфигурацию из снимка
-        if ($snap) {
-            $this->whiteList = [];
-            if (file_exists(CACHE_PATH . $this->snapCache)) {
-                include_once CACHE_PATH . $this->snapCache;
-
-                if (isset($folders)) {
-                    $this->folders = $folders;
-                }
-
-                if (isset($snap)) {
-                    $this->whiteList = $snap;
-                }
-            }
-        }
+        $this->whiteList = include_once CONFIG_FILE_SCAN;
 
         // Сканируем предмет наличия новых, или модифицированных файлов
         foreach ($this->folders as $dir) {
@@ -94,11 +82,7 @@ class Scanner
             $filecontents[$data['file_path']] = $data['file_crc'];
         }
 
-        file_put_contents(CACHE_PATH . $this->snapCache,
-            '<?php' . "\n" .
-            '$folders = ' . var_export($this->folders, true) . ';' . "\n" .
-            '$snap = ' . var_export($filecontents, true) . ';' . "\n"
-        );
+        (new Zend\Config\Writer\PhpArray)->toFile(CONFIG_FILE_SCAN, $filecontents);
     }
 
     /**
@@ -128,20 +112,20 @@ class Scanner
                         if ($snap) {
                             $this->snapFiles[] = [
                                 'file_path' => $folder . '/' . $file,
-                                'file_crc' => $file_crc
+                                'file_crc'  => $file_crc,
                             ];
                         } else {
                             // Проверяем наличие новых файлов
                             if (!array_key_exists($folder . '/' . $file, $this->whiteList)) {
                                 $this->newFiles[] = [
                                     'file_path' => $folder . '/' . $file,
-                                    'file_date' => $file_date
+                                    'file_date' => $file_date,
                                 ];
                                 // Проверяем несоответствие контрольным суммам
                             } elseif ($this->whiteList[$folder . '/' . $file] != $file_crc && !in_array($folder . '/' . $file, $this->excludedFiles)) {
                                 $this->modifiedFiles[] = [
                                     'file_path' => $folder . '/' . $file,
-                                    'file_date' => $file_date
+                                    'file_date' => $file_date,
                                 ];
                             }
                         }
