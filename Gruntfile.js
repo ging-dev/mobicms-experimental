@@ -107,6 +107,11 @@ module.exports = function (grunt) {
                 '!distributive/system/vendor/zendframework/zend-code/README.md',
                 '!distributive/system/vendor/zendframework/zend-code/LICENSE.md',
 
+                'distributive/system/vendor/zendframework/zend-config/*',
+                '!distributive/system/vendor/zendframework/zend-config/src',
+                '!distributive/system/vendor/zendframework/zend-config/README.md',
+                '!distributive/system/vendor/zendframework/zend-config/LICENSE.md',
+
                 'distributive/system/vendor/zendframework/zend-crypt/*',
                 '!distributive/system/vendor/zendframework/zend-crypt/src',
                 '!distributive/system/vendor/zendframework/zend-crypt/README.md',
