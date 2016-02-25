@@ -14,7 +14,7 @@ namespace Mobicms\Ioc;
 
 use Interop\Container\ContainerInterface;
 use Mobicms\Ioc\Exception\NotFoundException;
-use Zend\Config\Writer\PhpArray  as ConfigWriter;
+use Zend\Config\Writer\PhpArray as ConfigWriter;
 use Zend\Di\Di;
 use Zend\Di\DefinitionList;
 use Zend\Di\Definition\ArrayDefinition;
@@ -47,7 +47,7 @@ class Container implements ContainerInterface
         static::$di = new Di(new DefinitionList(
             [
                 new ArrayDefinition($this->getDefinition()),
-                new RuntimeDefinition()
+                new RuntimeDefinition(),
             ]
         ));
     }
@@ -114,7 +114,7 @@ class Container implements ContainerInterface
      */
     public function has($name)
     {
-        return isset($this->services[$name]) || isset($this->map[$name]);
+        return isset($this->services[$name]) || isset($this->map[$name]) || isset($this->callable[$name]);
     }
 
     /**
@@ -211,10 +211,7 @@ class Container implements ContainerInterface
 
     private function checkExists($name)
     {
-        if (isset($this->map[$name])
-            || isset($this->services[$name])
-            || isset($this->callable[$name])
-        ) {
+        if ($this->has($name)) {
             throw new \InvalidArgumentException('The service [' . $name . '] already exists');
         }
     }
