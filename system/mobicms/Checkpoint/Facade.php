@@ -116,7 +116,7 @@ class Facade
             return $this->userInstance;
         }
 
-        return new EmptyUser;
+        return new EmptyUser($this->db, $this->network);
     }
 
     /**

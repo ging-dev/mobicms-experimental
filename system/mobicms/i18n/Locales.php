@@ -38,7 +38,7 @@ class Locales
     {
         $this->request = $request;
         $this->sysConfig = \App::getInstance()->config()->get('lng');
-        $this->userLocale = $user->get()->config()->lng;
+        $this->userLocale = $user->get()->getConfig()->lng;
     }
 
     /**

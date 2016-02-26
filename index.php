@@ -32,29 +32,3 @@ if (version_compare(PHP_VERSION, '5.5', '<')) {
  */
 require __DIR__ . '/system/bootstrap.php';
 App::getInstance()->router()->dispatch();
-
-// Fetch the latest Slashdot headlines
-//try {
-//    $rss = Zend\Feed\Reader\Reader::import('http://www.3dnews.ru/news/rss/');
-//    $rss = Zend\Feed\Reader\Reader::import('http://4pda.ru/feed/');
-//} catch (Zend\Feed\Reader\Exception\RuntimeException $e) {
-//    // feed import failed
-//    echo "Exception caught importing feed: {$e->getMessage()}\n";
-//    exit;
-//}
-
-//echo '<div class="content box padding">';
-
-//echo '<h3><a href="' . $rss->getLink() . '">' . $rss->getTitle() . '</a></h3>';
-
-/**
- * @var $val Zend\Feed\Reader\Feed\Rss
- */
-//foreach ($rss as $val) {
-//    echo '<div class="alert alert-neytral">';
-//    echo '<h4><a href="' . $val->getLink() . '" target="_blanc">' . $val->getTitle() . '</a></h4>';
-//    echo '<p>' . $val->getDescription() . '</p>';
-//    echo '</div>';
-//}
-//
-//echo '</div>';

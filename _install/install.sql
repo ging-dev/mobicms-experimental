@@ -86,6 +86,25 @@ CREATE TABLE `usr__users` (
   COLLATE = utf8_unicode_ci;
 
 --
+-- Структура таблицы `usr__data`
+--
+DROP TABLE IF EXISTS `usr__data`;
+CREATE TABLE `usr__data` (
+  `id`      INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `userId`  INT(10) UNSIGNED NOT NULL DEFAULT '0',
+  `section` VARCHAR(50)      NOT NULL DEFAULT '',
+  `key`     VARCHAR(50)      NOT NULL DEFAULT '',
+  `value`   TEXT             NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `userId` (`userId`),
+  KEY `section` (`section`),
+  UNIQUE KEY `userKey` (`userId`, `section`, `key`)
+)
+  ENGINE = InnoDB
+  DEFAULT CHARSET = utf8
+  COLLATE = utf8_unicode_ci;
+
+--
 -- Структура таблицы `usr__activations`
 --
 DROP TABLE IF EXISTS `usr__activations`;
@@ -104,7 +123,7 @@ CREATE TABLE `usr__activations` (
   UNIQUE KEY `activation` (`activation`),
   KEY `userId` (`userId`)
 )
-  ENGINE = InnoDB
+  ENGINE = MyISAM
   DEFAULT CHARSET = utf8
   COLLATE = utf8_unicode_ci;
 
@@ -135,5 +154,4 @@ SET `nickname` = 'admin',
   `activated`  = 1,
   `approved`   = 1,
   `sex`        = 'm',
-  -- `about`      = '',
   `config`     = '';

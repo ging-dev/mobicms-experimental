@@ -48,7 +48,7 @@ trait PathTrait
     protected function getPath($file, array $args = [])
     {
         $module = isset($args['module']) ? $args['module'] : false;
-        $skin = \App::getInstance()->user()->get()->config()->skin; //TODO: replace!
+        $skin = \App::getInstance()->user()->get()->getConfig()->skin; //TODO: replace!
 
         if ($module === false) {
             // Вызов системного файла
@@ -74,7 +74,7 @@ trait PathTrait
     private function links($file)
     {
         $url = \App::getInstance()->request()->getBaseUrl();
-        $skin = \App::getInstance()->user()->get()->config()->skin; //TODO: replace!
+        $skin = \App::getInstance()->user()->get()->getConfig()->skin; //TODO: replace!
         $type = strtolower(pathinfo($file, PATHINFO_EXTENSION));
         $moduleDir = \App::getInstance()->router()->dir;
         $themeLink = $url . '/themes/';

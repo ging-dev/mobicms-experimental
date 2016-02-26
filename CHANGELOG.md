@@ -2,6 +2,9 @@
 This list contains only most important changes.  
 Detailed change in the [repository log](https://github.com/mobiCMS/mobicms-core/commits).
 
+### 0.2.0 `26.02.2016`
+  * Improved Checkpoint package, added the possibility of reading/storing additional user data
+
 ### 0.1.0 `16.02.2016`
   * System configuration is altered to use `zendframework/zend-config`
   * Improved security scanner

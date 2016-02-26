@@ -12,6 +12,9 @@
 
 namespace Mobicms\Checkpoint\User;
 
+use Mobicms\Database\PDOmysql;
+use Mobicms\Environment\Network;
+
 /**
  * Class EmptyUser
  *
@@ -21,23 +24,35 @@ namespace Mobicms\Checkpoint\User;
  */
 class EmptyUser extends AbstractUser
 {
-    public function __construct()
-    {
-        $this->setFlags(parent::ARRAY_AS_PROPS);
-    }
-
-    public function offsetGet($key, $ignoreHidden = false)
-    {
-        $values = [
-            'id'        => 0,
-            'rights'    => 0,
-            'nickname'  => '',
-            'config'    => '',
-            'activated' => 0,
-            'approved'  => 2,
+    private $defaults =
+        [
+            'id'           => 0,
+            'email'        => '',
+            'nickname'     => '',
+            'password'     => '',
+            'token'        => '',
+            'activated'    => 0,
+            'approved'     => 0,
+            'quarantine'   => 0,
+            'rights'       => 0,
+            'sex'          => 'm',
+            'config'       => '',
+            'avatar'       => '',
+            'status'       => '',
+            'joinDate'     => 0,
+            'lastVisit'    => 0,
+            'lastActivity' => 0,
+            'ip'           => '',
+            'userAgent'    => '',
+            'reputation'   => '',
         ];
 
-        return isset($values[$key]) ? $values[$key] : false;
+    public function __construct(PDOmysql $db, Network $network)
+    {
+        $this->defaults['ip'] = $network->getClientIp();
+        $this->defaults['userAgent'] = $network->getUserAgent();
+        $this->defaults['joinDate'] = $this->defaults['lastVisit'] = $this->defaults['lastActivity'] = time();
+        parent::__construct($this->defaults, $db);
     }
 
     public function checkPassword($password = null)

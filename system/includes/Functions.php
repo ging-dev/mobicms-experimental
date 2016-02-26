@@ -74,7 +74,7 @@ class Functions
     {
         $app = App::getInstance();
         $timeshift = $app->config()['stys']['timeshift'];
-        $shift = ($timeshift + $app->user()->get()->config()->timeShift) * 3600;
+        $shift = ($timeshift + $app->user()->get()->getConfig()->timeShift) * 3600;
         if (date('Y', $var) == date('Y', time())) {
             if (date('z', $var + $shift) == date('z', time() + $shift)) {
                 return _s('Today') . ', ' . date("H:i", $var + $shift);

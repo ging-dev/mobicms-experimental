@@ -12,7 +12,7 @@
 
 namespace Mobicms\Checkpoint\User;
 
-use \PDO;
+use Mobicms\Database\PDOmysql;
 
 /**
  * Class AbstractUser
@@ -31,7 +31,6 @@ use \PDO;
  * @property bool   $quarantine
  * @property int    $rights
  * @property string $sex
- * @property string $config
  * @property string $avatar
  * @property string $status
  * @property int    $joinDate
@@ -44,7 +43,7 @@ use \PDO;
 abstract class AbstractUser extends \ArrayObject
 {
     /**
-     * @var \PDO
+     * @var PDOmysql
      */
     protected $db;
 
@@ -78,19 +77,20 @@ abstract class AbstractUser extends \ArrayObject
 
     protected $pdoTypes =
         [
-            'int'  => PDO::PARAM_INT,
-            'str'  => PDO::PARAM_STR,
-            'bool' => PDO::PARAM_BOOL,
-            'text' => PDO::PARAM_STR,
+            'int'  => PDOmysql::PARAM_INT,
+            'str'  => PDOmysql::PARAM_STR,
+            'bool' => PDOmysql::PARAM_BOOL,
+            'text' => PDOmysql::PARAM_STR,
         ];
 
+    protected $userDataInstances = [];
     protected $changedFields = [];
 
     /**
-     * @param array $user
-     * @param \PDO  $db
+     * @param array    $user
+     * @param PDOmysql $db
      */
-    public function __construct(array $user, \PDO $db)
+    public function __construct(array $user, PDOmysql $db)
     {
         $this->db = $db;
         parent::__construct($user, \ArrayObject::ARRAY_AS_PROPS);
@@ -148,12 +148,25 @@ abstract class AbstractUser extends \ArrayObject
      *
      * @return Config
      */
-    public function config()
+    public function getConfig()
     {
         if (null === $this->configInstance) {
             $this->configInstance = new Config($this);
         }
 
         return $this->configInstance;
+    }
+
+    /**
+     * @param $section
+     * @return Data
+     */
+    public function getUserData($section)
+    {
+        if (!isset($this->userDataInstances[$section])) {
+            $this->userDataInstances[$section] = new Data($this->db, $this->offsetGet('id'), $section);
+        }
+
+        return $this->userDataInstances[$section];
     }
 }

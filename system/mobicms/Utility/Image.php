@@ -62,7 +62,7 @@ class Image
 
         $this->router = $router;
         $this->request = $request;
-        $this->skin = $user->get()->config()->skin;
+        $this->skin = $user->get()->getConfig()->skin;
         $this->prepareAttributes($arguments);
         $this->isModule = isset($arguments[2]) && $arguments[2] === true ? true : false;
         $this->imgTag = isset($arguments[3]) && $arguments[3] === false ? false : true;

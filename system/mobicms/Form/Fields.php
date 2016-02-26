@@ -286,7 +286,7 @@ class Fields
     private function prepareTextarea()
     {
         if (!empty($this->option['editor'])) {
-            $config = \App::getInstance()->user()->get()->config();
+            $config = \App::getInstance()->user()->get()->getConfig();
             // Initialize editor
             $this->option['id'] = 'editor';
             $editor = new Editor($config->editor);

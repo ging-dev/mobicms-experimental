@@ -40,6 +40,6 @@ class PDOmysql extends \PDO
     public function pagination() //TODO: убрать
     {
         $app = \App::getInstance();
-        return ' LIMIT ' . $app->vars()->start . ',' . $app->user()->get()->config()->pageSize;
+        return ' LIMIT ' . $app->vars()->start . ',' . $app->user()->get()->getConfig()->pageSize;
     }
 }

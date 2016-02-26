@@ -24,7 +24,7 @@ class Vars
 
     public function __construct()
     {
-        $size = \App::getInstance()->user()->get()->config()->pageSize;
+        $size = \App::getInstance()->user()->get()->getConfig()->pageSize;
 
         // Obtain variables
         if (filter_has_var(INPUT_ENV, 'page')) {
