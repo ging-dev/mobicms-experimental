@@ -12,7 +12,7 @@
 
 namespace Mobicms\Routing;
 
-use Config\Routes;
+use Zend\Config\Config;
 use Zend\Http\PhpEnvironment\Request;
 
 /**
@@ -24,9 +24,13 @@ use Zend\Http\PhpEnvironment\Request;
  */
 class Router
 {
+    /**
+     * @var Config
+     */
+    private $config;
+
     private $path = [];
     private $pathQuery = [];
-    private $config = [];
     private $module = null;
     private $protectedPath = [
         'assets',
@@ -49,7 +53,7 @@ class Router
         $this->path = array_filter(explode('/', trim($uri, '/')));
 
         $config = is_file(CONFIG_FILE_ROUTES) ? include CONFIG_FILE_ROUTES : [];
-        $this->config = new \Zend\Config\Config(is_array($config) ? $config : []);
+        $this->config = new Config(is_array($config) ? $config : []);
         $this->module = $this->getModule();
         $this->dir = $this->config[$this->module];
     }
