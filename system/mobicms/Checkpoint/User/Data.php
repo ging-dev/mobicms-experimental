@@ -46,11 +46,6 @@ class Data extends \ArrayObject
         $this->allowModifications = $allow;
     }
 
-    public function offsetGet($key)
-    {
-        return $this->get($key);
-    }
-
     public function offsetSet($key, $value)
     {
         if ($this->allowModifications) {
@@ -63,7 +58,7 @@ class Data extends \ArrayObject
 
     public function get($key, $default = null)
     {
-        return $this->offsetExists($key) ? parent::offsetGet($key) : $default;
+        return $this->offsetExists($key) ? $this->offsetGet($key) : $default;
     }
 
     public function save()

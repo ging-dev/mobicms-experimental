@@ -39,7 +39,7 @@ use Zend\Session\Container as Session;
 class Facade
 {
     /**
-     * @var \PDO
+     * @var PDOmysql
      */
     private $db;
 
