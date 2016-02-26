@@ -34,11 +34,7 @@ class Data extends \ArrayObject
         $this->db = $db;
         $this->userId = $userId;
         $this->section = $section;
-        parent::__construct([], \ArrayObject::ARRAY_AS_PROPS);
-
-        if ($userId > 0) {
-            $this->getData();
-        }
+        parent::__construct(($userId > 0 ? $this->getData() : []), \ArrayObject::ARRAY_AS_PROPS);
     }
 
     public function allowModifications($allow)
@@ -56,9 +52,9 @@ class Data extends \ArrayObject
         }
     }
 
-    public function get($key, $default = null)
+    public function offsetGet($key)
     {
-        return $this->offsetExists($key) ? $this->offsetGet($key) : $default;
+        return $this->offsetExists($key) ? parent::offsetGet($key) : null;
     }
 
     public function save()
@@ -70,14 +66,18 @@ class Data extends \ArrayObject
 
     protected function getData()
     {
-        $stmt = $this->db->prepare('SELECT * FROM `usr__data` WHERE `userId` = :user AND `section` = :section');
+        $stmt = $this->db->prepare('SELECT `key`, `value` FROM `usr__data` WHERE `userId` = :user AND `section` = :section');
         $stmt->bindParam(':user', $this->userId, \PDO::PARAM_INT);
         $stmt->bindParam(':section', $this->section, \PDO::PARAM_STR);
         $stmt->execute();
 
+        $out = [];
+
         while ($result = $stmt->fetch(\PDO::FETCH_ASSOC)) {
-            parent::offsetSet($result['key'], $result['value']);
+            $out[$result['key']] = $result['value'];
         }
+
+        return $out;
     }
 
     protected function saveData()
@@ -93,13 +93,13 @@ class Data extends \ArrayObject
         $stmt->bindParam(':section', $this->section, \PDO::PARAM_STR);
 
         foreach ($this->changedFields as $key) {
-            $value = $this->get($key);
+            $value = $this->offsetGet($key);
 
             if (empty($value)) {
                 $this->deleteKey($key);
             } else {
                 $stmt->bindValue(':key', $key, \PDO::PARAM_STR);
-                $stmt->bindValue(':value', $this->get($key), \PDO::PARAM_STR);
+                $stmt->bindValue(':value', $this->offsetGet($key), \PDO::PARAM_STR);
                 $stmt->execute();
             }
         }
