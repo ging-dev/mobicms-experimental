@@ -1,4 +1,4 @@
-# [mobiCMS 0.1.0](http://mobicms.net)
+# [mobiCMS 0.2.0](http://mobicms.net)
 Mobile Content Management System.
 
 [![License](https://img.shields.io/badge/license-GPL%20v.3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0-standalone.html)
