@@ -54,6 +54,7 @@ CREATE TABLE `usr__users` (
   `rights`       TINYINT(1) UNSIGNED NOT NULL DEFAULT '0',
   `sex`          ENUM('m', 'w')      NOT NULL DEFAULT 'm',
   `config`       TEXT                NOT NULL,
+  `showEmail`    TINYINT(1) UNSIGNED NOT NULL DEFAULT '0',
   `avatar`       VARCHAR(255)        NOT NULL DEFAULT '',
   `status`       VARCHAR(255)        NOT NULL DEFAULT '',
   `joinDate`     INT(10) UNSIGNED    NOT NULL DEFAULT '0',

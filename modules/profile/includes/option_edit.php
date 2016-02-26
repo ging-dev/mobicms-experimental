@@ -11,17 +11,22 @@
  */
 
 defined('MOBICMS') or die('Error: restricted access');
-//TODO: Переделать
+
 $app = App::getInstance();
 
+/**
+ * @var $profile Mobicms\Checkpoint\User\AbstractUser
+ */
+$profile = $app->get('profile');
+$profileData = $profile->getUserData('profile');
+$profileData->allowModifications(true);
+
 $config = $app->config()->get('usr');
-$profile = $app->profile();
+$userRights = $app->user()->get()->rights;
+$allowEdit = $userRights = 9 || ($userRights = 7 && $userRights > $profile->rights) ? true : false;
+
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
 $form->title(_m('Edit Profile'));
-
-$profileRights = $app->profile()->rights;
-$userRights = $app->user()->get()->rights;
-$allowEdit = $userRights = 9 || ($userRights = 7 && $userRights > $profileRights) ? true : false;
 
 if ($config['allowChangeStatus'] || $allowEdit) {
     $form
@@ -151,8 +156,7 @@ $form
     ->element('text', 'skype',
         [
             'label'       => 'Skype',
-            //'value'       => $profile->skype,
-            'readonly'    => true,
+            'value'       => $profileData->skype,
             'description' => _m('Max. 50 characters'),
             'filter'      => FILTER_SANITIZE_STRING,
         ]
@@ -160,8 +164,7 @@ $form
     ->element('text', 'icq',
         [
             'label'       => 'ICQ',
-            //'value'       => $profile->icq,
-            'readonly'    => true,
+            'value'       => $profileData->icq,
             'description' => _m('Enter your UIN number'),
             'filter'      => FILTER_SANITIZE_NUMBER_INT,
         ]
@@ -192,8 +195,8 @@ if ($form->isValid()) {
     //$profile->tel = $form->output['tel'];
     //$profile->siteurl = $form->output['siteurl'];
     //$profile->mailvis = isset($form->output['mailvis']) ? 1 : 0;
-    //$profile->icq = $form->output['icq'];
-    //$profile->skype = $form->output['skype'];
+    $profileData->icq = $form->output['icq'];
+    $profileData->skype = $form->output['skype'];
 
     //TODO: Добавить валидацию даты
 //    if (empty($form->output['day'])
@@ -205,7 +208,8 @@ if ($form->isValid()) {
 //        $profile->birth = intval($form->output['year']) . '-' . intval($form->output['month']) . '-' . intval($form->output['day']);
 //    }
 
-//    $profile->save();
+    $profile->save();
+    $profileData->save();
 }
 
 $app->view()->form = $form->display();

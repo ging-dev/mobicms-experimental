@@ -98,9 +98,24 @@ class Data extends \ArrayObject
         $stmt->bindParam(':section', $this->section, \PDO::PARAM_STR);
 
         foreach ($this->changedFields as $key) {
-            $stmt->bindValue(':key', $key, \PDO::PARAM_STR);
-            $stmt->bindValue(':value', $this->get($key), \PDO::PARAM_STR);
-            $stmt->execute();
+            $value = $this->get($key);
+
+            if (empty($value)) {
+                $this->deleteKey($key);
+            } else {
+                $stmt->bindValue(':key', $key, \PDO::PARAM_STR);
+                $stmt->bindValue(':value', $this->get($key), \PDO::PARAM_STR);
+                $stmt->execute();
+            }
         }
+    }
+
+    protected function deleteKey($key)
+    {
+        $stmt = $this->db->prepare('DELETE FROM `usr__data` WHERE `userId` = :user AND `section` = :section AND `key` = :key');
+        $stmt->bindParam(':user', $this->userId, \PDO::PARAM_INT);
+        $stmt->bindParam(':section', $this->section, \PDO::PARAM_STR);
+        $stmt->bindValue(':key', $key, \PDO::PARAM_STR);
+        $stmt->execute();
     }
 }

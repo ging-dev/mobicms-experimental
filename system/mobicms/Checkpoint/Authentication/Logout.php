@@ -38,7 +38,6 @@ class Logout
         $this->clearToken($facade, $clearToken);
         $this->clearCookie($request, $response, $facade->domain);
         session_destroy();
-        $facade->setUser(new EmptyUser());
     }
 
     /**
