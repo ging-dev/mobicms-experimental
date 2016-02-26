@@ -43,11 +43,10 @@ if ($config['allowChangeStatus'] || $allowEdit) {
 }
 
 $form
-    ->element('text', 'imname',
+    ->element('text', 'realName',
         [
             'label'       => _m('Your Name'),
-            //'value'       => $profile->imname,
-            'readonly'    => true,
+            'value'       => $profileData->realName,
             'description' => _m('Max. 50 characters'),
             'filter'      => FILTER_SANITIZE_STRING,
         ]
@@ -98,8 +97,7 @@ $form
     ->element('text', 'live',
         [
             'label'       => _m('Accommodation'),
-            //'value'       => $profile->live,
-            'readonly'    => true,
+            'value'       => $profileData->live,
             'description' => _m('Specify the country of residence, your city.<br/>Max. 100 characters.'),
             'filter'      => FILTER_SANITIZE_STRING,
         ]
@@ -107,17 +105,15 @@ $form
     ->element('textarea', 'about',
         [
             'label'       => _m('About yourself'),
-            //'value'       => $profile->about,
-            'readonly'    => true,
-            'editor'      => true,
+            'value'       => $profileData->about,
+            'editor'      => false,
             'description' => _m('Max. 5000 characters'),
         ]
     )
     ->element('text', 'tel',
         [
             'label'       => _m('Phone Number'),
-            //'value'       => $profile->tel,
-            'readonly'    => true,
+            'value'       => $profileData->tel,
             'description' => _m('Max. 100 characters'),
             'filter'      => FILTER_SANITIZE_STRING,
         ]
@@ -125,8 +121,7 @@ $form
     ->element('text', 'siteurl',
         [
             'label'       => _m('Site'),
-            //'value'       => $profile->siteurl,
-            'readonly'    => true,
+            'value'       => $profileData->siteurl,
             'description' => _m('You can enter multiple URL, separated by spaces.<br/>Max. 100 characters'),
             'filter'      => FILTER_SANITIZE_STRING,
         ]
@@ -142,12 +137,10 @@ if (!empty($profile->email)) {
                 'filter'   => FILTER_SANITIZE_EMAIL,
             ]
         )
-        ->element('checkbox', 'mailvis',
+        ->element('checkbox', 'showEmail',
             [
-                'label_inline' => _m('Show in the Profile'),
-                //'checked'      => $profile->mailvis,
-                'description'  => _m('Correctly specify your email address, that it will be sent your password.<br/>Max. 50 characters') .
-                    '<br/><a href="../email/">' . _m('Change E-mail') . '</a>',
+                'label_inline' => _m('Your Email visible to everyone'),
+                'checked'      => $profile->showEmail,
             ]
         );
 }
@@ -178,7 +171,7 @@ $form
     )
     ->html('<a class="btn btn-link" href="../">' . _s('Back') . '</a>')
     ->validate('status', 'lenght', ['min' => 3, 'max' => 50, 'empty' => true])
-    ->validate('imname', 'lenght', ['max' => 50])
+    ->validate('realName', 'lenght', ['max' => 50])
     ->validate('live', 'lenght', ['max' => 100])
     ->validate('about', 'lenght', ['max' => 5000])
     ->validate('tel', 'lenght', ['max' => 100])
@@ -189,12 +182,12 @@ $form
 if ($form->isValid()) {
     $profile->status = $form->output['status'];
     $profile->sex = $form->output['sex'];
-    //$profile->imname = $form->output['imname'];
-    //$profile->live = $form->output['live'];
-    //$profile->about = $app->purify($form->output['about']);
-    //$profile->tel = $form->output['tel'];
-    //$profile->siteurl = $form->output['siteurl'];
-    //$profile->mailvis = isset($form->output['mailvis']) ? 1 : 0;
+    $profileData->realName = $form->output['realName'];
+    $profileData->live = $form->output['live'];
+    $profileData->about = trim($app->purify($form->output['about']));
+    $profileData->tel = $form->output['tel'];
+    $profileData->siteurl = $form->output['siteurl'];
+    $profile->showEmail = isset($form->output['showEmail']) ? 1 : 0;
     $profileData->icq = $form->output['icq'];
     $profileData->skype = $form->output['skype'];
 

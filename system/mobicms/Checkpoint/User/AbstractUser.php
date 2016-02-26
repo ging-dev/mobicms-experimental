@@ -32,6 +32,7 @@ use Mobicms\Database\PDOmysql;
  * @property int    $rights
  * @property string $sex
  * @property string $avatar
+ * @property string $showEmail
  * @property string $status
  * @property int    $joinDate
  * @property int    $lastVisit
@@ -65,6 +66,7 @@ abstract class AbstractUser extends \ArrayObject
             'rights'       => ['type' => 'int', 'readonly' => true, 'hidden' => false,],
             'sex'          => ['type' => 'str', 'readonly' => false, 'hidden' => false,],
             'config'       => ['type' => 'text', 'readonly' => true, 'hidden' => false,],
+            'showEmail'    => ['type' => 'bool', 'readonly' => false, 'hidden' => false,],
             'avatar'       => ['type' => 'str', 'readonly' => false, 'hidden' => false,],
             'status'       => ['type' => 'str', 'readonly' => false, 'hidden' => false,],
             'joinDate'     => ['type' => 'int', 'readonly' => false, 'hidden' => false,],
