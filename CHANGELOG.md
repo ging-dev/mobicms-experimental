@@ -2,9 +2,11 @@
 This list contains only most important changes.  
 Detailed change in the [repository log](https://github.com/mobiCMS/mobicms-core/commits).
 
-### 0.2.0 `26.02.2016`
+### 0.2.0 `06.05.2016`
+  * Compatible with PHP 7
   * Improved Checkpoint package
   * Added the possibility of reading/storing additional user data
+  * Refactoring due rename database tables (for compatibility with new versions of MySQL)
 
 ### 0.1.0 `16.02.2016`
   * System configuration is altered to use `zendframework/zend-config`
