@@ -25,18 +25,27 @@ class AssignValues
      */
     protected function setValues(array &$option)
     {
-        $types = [
-            'text'     => 'assignText',
-            'password' => 'assignText',
-            'hidden'   => 'assignText',
-            'textarea' => 'assignText',
-            'radio'    => 'assignRadio',
-            'select'   => 'assignSelect',
-            'checkbox' => 'assingCheckbox',
-        ];
-
         if (isset($types[$option['type']])) {
-            $this->$types[$option['type']]($option);
+            switch ($option['type']) {
+                case 'text':
+                case 'password':
+                case 'hidden':
+                case 'textarea':
+                    $this->assignText($option);
+                    break;
+
+                case 'radio':
+                    $this->assignRadio($option);
+                    break;
+
+                case 'select':
+                    $this->assignSelect($option);
+                    break;
+
+                case 'checkbox':
+                    $this->assingCheckbox($option);
+                    break;
+            }
         }
     }
 

@@ -86,7 +86,7 @@ class User extends AbstractUser
             }
 
             $stmt = $this->db->prepare(
-                'UPDATE `usr__users` SET '
+                'UPDATE `users` SET '
                 . implode(', ', $sql)
                 . ' WHERE `id` = ' . $this->offsetGet('id')
             );

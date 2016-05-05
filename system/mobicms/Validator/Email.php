@@ -74,7 +74,7 @@ class Email extends AbstractValidator
     private function checkExists($value)
     {
         if ($this->options['checkExists']) {
-            $stmt = \App::getInstance()->db()->prepare('SELECT `email` FROM usr__users WHERE `email` = :email LIMIT 1');
+            $stmt = \App::getInstance()->db()->prepare('SELECT `email` FROM users WHERE `email` = :email LIMIT 1');
             $stmt->bindValue(':email', $value, \PDO::PARAM_STR);
             $stmt->execute();
 

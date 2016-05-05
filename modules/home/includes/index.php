@@ -13,5 +13,5 @@
 defined('MOBICMS') or die('Error: restricted access');
 
 $app = App::getInstance();
-$app->view()->total_users = $app->db()->query('SELECT COUNT(*) FROM `usr__users`')->fetchColumn();
+$app->view()->total_users = $app->db()->query('SELECT COUNT(*) FROM `users`')->fetchColumn();
 $app->view()->setTemplate('index.php');

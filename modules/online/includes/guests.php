@@ -13,7 +13,7 @@
 defined('MOBICMS') or die('Error: restricted access');
 
 $app = App::getInstance();
-$app->view()->total = $app->db()->query("SELECT COUNT(*) FROM `sys__sessions` WHERE `userId` = 0 AND `timestamp`  > " . (time() - 300))->fetchColumn();
+$app->view()->total = $app->db()->query("SELECT COUNT(*) FROM `sessions` WHERE `userId` = 0 AND `timestamp`  > " . (time() - 300))->fetchColumn();
 
 if ($app->view()->total) {
     $app->view()->list = $app->db()->query("
@@ -21,13 +21,12 @@ if ($app->view()->total) {
             `userId` AS `id`,
             `timestamp` AS `lastVisit`,
             `ip`,
-            `ip_via_proxy`,
             `userAgent`,
             `place`,
             `views`,
             `movings`
         FROM
-            `sys__sessions`
+            `sessions`
         WHERE
             `userId` = 0 AND `timestamp`  > " . (time() - 300) . "
         ORDER BY

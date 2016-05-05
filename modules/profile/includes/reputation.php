@@ -26,7 +26,7 @@ if ($app->user()->isValid() && $profile->id != $user->id) {
     $update = false;
 
     // Поиск имеющегося голосования
-    $voteStmt = $db->prepare('SELECT * FROM `usr__reputation` WHERE `from` = ? AND `to` = ? LIMIT 1');
+    $voteStmt = $db->prepare('SELECT * FROM `users_reputation` WHERE `from` = ? AND `to` = ? LIMIT 1');
     $voteStmt->execute([$user->id, $profile->id]);
     $voteResult = $voteStmt->fetch();
 
@@ -63,9 +63,9 @@ if ($app->user()->isValid() && $profile->id != $user->id) {
 
     if ($form->isValid()) {
         if ($update) {
-            $writeStmt = $db->prepare('UPDATE `usr__reputation` SET `value` = ? WHERE `from` = ? AND `to` = ?');
+            $writeStmt = $db->prepare('UPDATE `users_reputation` SET `value` = ? WHERE `from` = ? AND `to` = ?');
         } else {
-            $writeStmt = $db->prepare('INSERT INTO `usr__reputation` SET `value` = ?, `from` = ?, `to` = ?');
+            $writeStmt = $db->prepare('INSERT INTO `users_reputation` SET `value` = ?, `from` = ?, `to` = ?');
         }
 
         $writeStmt->execute([$form->output['vote'], $user->id, $profile->id]);
@@ -78,7 +78,7 @@ if ($app->user()->isValid() && $profile->id != $user->id) {
             COUNT(IF(`value` =  0, 1, NULL)) AS `c`,
             COUNT(IF(`value` = -1, 1, NULL)) AS `d`,
             COUNT(IF(`value` = -2, 1, NULL)) AS `e`
-            FROM `usr__reputation`
+            FROM `users_reputation`
             WHERE `to` = ?
         ');
         $repStmt->execute([$profile->id]);

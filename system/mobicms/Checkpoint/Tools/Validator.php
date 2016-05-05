@@ -70,7 +70,7 @@ class Validator
      */
     public function checkNicknameExists($nickname)
     {
-        $stmt = $this->db->prepare('SELECT `nickname` FROM usr__users WHERE `nickname` = :nickname LIMIT 1');
+        $stmt = $this->db->prepare('SELECT `nickname` FROM users WHERE `nickname` = :nickname LIMIT 1');
         $stmt->bindValue(':nickname', $nickname, \PDO::PARAM_STR);
         $stmt->execute();
 
@@ -83,7 +83,7 @@ class Validator
      */
     public function checkEmailExists($email)
     {
-        $stmt = $this->db->prepare('SELECT `email` FROM usr__users WHERE `email` = :email LIMIT 1');
+        $stmt = $this->db->prepare('SELECT `email` FROM users WHERE `email` = :email LIMIT 1');
         $stmt->bindValue(':email', $email, \PDO::PARAM_STR);
         $stmt->execute();
 

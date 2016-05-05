@@ -10,12 +10,12 @@ $user = $app->user()->get();
 if ($user->id) {
     if (!$user->activated) {
         // Проверка на злоупотребление активацией (многократная отправка почты)
-        //$stmtCount = $app->db()->prepare('SELECT COUNT(*) FROM `usr__activations` WHERE `userId` = ? AND `type` = 0');
+        //$stmtCount = $app->db()->prepare('SELECT COUNT(*) FROM `users_activations` WHERE `userId` = ? AND `type` = 0');
         //$stmtCount->execute([$user->id]);
 
         //if ($stmtCount->fetchColumn() > 1) {
         // Если число попыток повторной активации больше 10, удаляем пользователя и чистим активации.
-        //    $stmtDel = $app->db()->prepare('DELETE FROM `usr__activations` WHERE `userId` = ?');
+        //    $stmtDel = $app->db()->prepare('DELETE FROM `users_activations` WHERE `userId` = ?');
         //    $stmtDel->execute([$user->id]);
         //}
 

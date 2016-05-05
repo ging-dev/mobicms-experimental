@@ -38,7 +38,7 @@ class FindById
         try {
             self::checkInquiry($id);
 
-            $stmt = $db->prepare('SELECT * FROM `usr__users` WHERE `id` = :id');
+            $stmt = $db->prepare('SELECT * FROM `users` WHERE `id` = :id');
             $stmt->bindParam(':id', $id, \PDO::PARAM_INT);
             $stmt->execute();
             $user = $stmt->fetch();

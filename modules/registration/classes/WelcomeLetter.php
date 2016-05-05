@@ -115,7 +115,7 @@ class WelcomeLetter
         if ($force || Registration::$letterMode == 2) {
             // Делаем старые незавершенные активации недействительными
             $stmtDel = $this->app->db()->prepare('
-              UPDATE `usr__activations`
+              UPDATE `users_activations`
               SET
               `isValid` = 0
               WHERE `type` = 0
@@ -126,7 +126,7 @@ class WelcomeLetter
 
             // Добавляем новую запись активации
             $stmt = $this->app->db()->prepare('
-              INSERT INTO `usr__activations`
+              INSERT INTO `users_activations`
               SET
               `type` = 0,
               `userId` = :userId,

@@ -39,9 +39,9 @@ class FindByLogin
             self::checkInquiry($login);
 
             if (filter_var($login, FILTER_VALIDATE_EMAIL)) {
-                $stmt = $db->prepare('SELECT * FROM `usr__users` WHERE `email` = :login LIMIT 1');
+                $stmt = $db->prepare('SELECT * FROM `users` WHERE `email` = :login LIMIT 1');
             } else {
-                $stmt = $db->prepare('SELECT * FROM `usr__users` WHERE `nickname` = :login LIMIT 1');
+                $stmt = $db->prepare('SELECT * FROM `users` WHERE `nickname` = :login LIMIT 1');
             }
 
             $stmt->bindParam(':login', $login, \PDO::PARAM_STR);

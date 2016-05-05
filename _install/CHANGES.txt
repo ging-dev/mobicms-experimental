@@ -1,0 +1,5 @@
+sys__sessions    -> sessions
+usr__users       -> users
+usr__data        -> users_data
+usr__activations -> users_activations
+usr__reputation  -> users_reputation

@@ -18,10 +18,10 @@ CREATE TABLE `news` (
   COLLATE = utf8_unicode_ci;
 
 --
--- Структура таблицы `sys__sessions`
+-- Структура таблицы `sessions`
 --
-DROP TABLE IF EXISTS `sys__sessions`;
-CREATE TABLE `sys__sessions` (
+DROP TABLE IF EXISTS `sessions`;
+CREATE TABLE `sessions` (
   `id`        VARBINARY(128)   NOT NULL,
   `data`      BLOB             NOT NULL,
   `timestamp` INT(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -39,10 +39,10 @@ CREATE TABLE `sys__sessions` (
   COLLATE = utf8_unicode_ci;
 
 --
--- Структура таблицы `usr__users`
+-- Структура таблицы `uusers`
 --
-DROP TABLE IF EXISTS `usr__users`;
-CREATE TABLE `usr__users` (
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
   `id`           INT(10) UNSIGNED    NOT NULL AUTO_INCREMENT,
   `email`        VARCHAR(50)         NOT NULL DEFAULT '',
   `nickname`     VARCHAR(50)         NOT NULL DEFAULT '',
@@ -87,10 +87,10 @@ CREATE TABLE `usr__users` (
   COLLATE = utf8_unicode_ci;
 
 --
--- Структура таблицы `usr__data`
+-- Структура таблицы `users_data`
 --
-DROP TABLE IF EXISTS `usr__data`;
-CREATE TABLE `usr__data` (
+DROP TABLE IF EXISTS `users_data`;
+CREATE TABLE `users_data` (
   `id`      INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `userId`  INT(10) UNSIGNED NOT NULL DEFAULT '0',
   `section` VARCHAR(50)      NOT NULL DEFAULT '',
@@ -106,10 +106,10 @@ CREATE TABLE `usr__data` (
   COLLATE = utf8_unicode_ci;
 
 --
--- Структура таблицы `usr__activations`
+-- Структура таблицы `users_activations`
 --
-DROP TABLE IF EXISTS `usr__activations`;
-CREATE TABLE `usr__activations` (
+DROP TABLE IF EXISTS `users_activations`;
+CREATE TABLE `users_activations` (
   `id`         INT(10) UNSIGNED    NOT NULL AUTO_INCREMENT,
   -- `type` field values:
   -- 0 - self activation by link
@@ -129,10 +129,10 @@ CREATE TABLE `usr__activations` (
   COLLATE = utf8_unicode_ci;
 
 --
--- Структура таблицы `usr__reputation`
+-- Структура таблицы `users_reputation`
 --
-DROP TABLE IF EXISTS `usr__reputation`;
-CREATE TABLE `usr__reputation` (
+DROP TABLE IF EXISTS `users_reputation`;
+CREATE TABLE `users_reputation` (
   `from`  INT(10) UNSIGNED NOT NULL DEFAULT '0',
   `to`    INT(10) UNSIGNED NOT NULL DEFAULT '0',
   `value` TINYINT(4)       NOT NULL DEFAULT '0',
@@ -147,7 +147,7 @@ CREATE TABLE `usr__reputation` (
 -- LOGIN:    admin
 -- PASSWORD: admin
 --
-INSERT INTO `usr__users`
+INSERT INTO `users`
 SET `nickname` = 'admin',
   `password`   = '$2a$09$3dc6eee4535ff2912c44fO4djfEMWdsfFM9dw4NKsWCaeLIRyzB6u',
   `email`      = 'admin@test.com',

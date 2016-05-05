@@ -114,7 +114,7 @@ class Counters
      */
     public static function usersOnline()
     {
-        return App::getInstance()->db()->query("SELECT COUNT(*) FROM `usr__users` WHERE `lastVisit` > " . (time() - 300))->fetchColumn();
+        return App::getInstance()->db()->query("SELECT COUNT(*) FROM `users` WHERE `lastVisit` > " . (time() - 300))->fetchColumn();
     }
 
     /**
@@ -124,7 +124,7 @@ class Counters
      */
     public static function guestsOnline()
     {
-        return App::getInstance()->db()->query("SELECT COUNT(*) FROM `sys__sessions` WHERE `userId` = 0 AND `timestamp` > " . (time() - 300))->fetchColumn();
+        return App::getInstance()->db()->query("SELECT COUNT(*) FROM `sessions` WHERE `userId` = 0 AND `timestamp` > " . (time() - 300))->fetchColumn();
     }
 
     /**
@@ -181,7 +181,7 @@ class Counters
     {
         if (!isset($var) || $var['time'] < time() - 600) {
             $this->update_cache = true;
-            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `usr__users` WHERE `level` > 0")->fetchColumn();
+            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `users` WHERE `level` > 0")->fetchColumn();
             $var['time'] = time();
         }
 
@@ -199,7 +199,7 @@ class Counters
     {
         if (!isset($var) || $var['time'] < time() - 600) {
             $this->update_cache = true;
-            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `usr__users` WHERE `joinDate` > " . (time() - 86400))->fetchColumn();
+            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `users` WHERE `joinDate` > " . (time() - 86400))->fetchColumn();
             $var['time'] = time();
         }
 

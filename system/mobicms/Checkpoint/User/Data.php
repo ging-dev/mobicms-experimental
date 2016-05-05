@@ -66,7 +66,7 @@ class Data extends \ArrayObject
 
     protected function getData()
     {
-        $stmt = $this->db->prepare('SELECT `key`, `value` FROM `usr__data` WHERE `userId` = :user AND `section` = :section');
+        $stmt = $this->db->prepare('SELECT `key`, `value` FROM `users_data` WHERE `userId` = :user AND `section` = :section');
         $stmt->bindParam(':user', $this->userId, \PDO::PARAM_INT);
         $stmt->bindParam(':section', $this->section, \PDO::PARAM_STR);
         $stmt->execute();
@@ -83,7 +83,7 @@ class Data extends \ArrayObject
     protected function saveData()
     {
         $stmt = $this->db->prepare('
-          INSERT INTO `usr__data` (`userId`, `section`, `key`, `value`)
+          INSERT INTO `users_data` (`userId`, `section`, `key`, `value`)
           VALUES(:user, :section, :key, :value)
           ON DUPLICATE KEY UPDATE
           `value` = :value
@@ -107,7 +107,7 @@ class Data extends \ArrayObject
 
     protected function deleteKey($key)
     {
-        $stmt = $this->db->prepare('DELETE FROM `usr__data` WHERE `userId` = :user AND `section` = :section AND `key` = :key');
+        $stmt = $this->db->prepare('DELETE FROM `users_data` WHERE `userId` = :user AND `section` = :section AND `key` = :key');
         $stmt->bindParam(':user', $this->userId, \PDO::PARAM_INT);
         $stmt->bindParam(':section', $this->section, \PDO::PARAM_STR);
         $stmt->bindValue(':key', $key, \PDO::PARAM_STR);

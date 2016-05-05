@@ -70,7 +70,7 @@ if ($act == 'set' && isset($themes[$mod])) {
         ->html('<a class="btn btn-link" href="../">' . _s('Back') . '</a>');
 
     if ($form->isValid()) {
-//        $stmt = App::db()->prepare("UPDATE `" . TP . "usr__users` SET `avatar` = ? WHERE `id` = " . App::user()->id);
+//        $stmt = App::db()->prepare("UPDATE `" . TP . "users` SET `avatar` = ? WHERE `id` = " . App::user()->id);
 //        $stmt->execute([$image]);
 //        $stmt = null;
 //

@@ -32,7 +32,7 @@ class Functions
         switch ($config['antifloodMode']) {
             case 1:
                 // Адаптивный режим
-                $adm = $app->db()->query("SELECT COUNT(*) FROM `usr__users` WHERE `rights` >= 3 AND `lastVisit` > " . (time() - 300))->fetchColumn();
+                $adm = $app->db()->query("SELECT COUNT(*) FROM `users` WHERE `rights` >= 3 AND `lastVisit` > " . (time() - 300))->fetchColumn();
                 $limit = $adm > 0 ? $config['antifloodDayDelay'] : $config['antifloodNightDelay'];
                 break;
             case 3:

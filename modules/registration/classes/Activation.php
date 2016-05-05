@@ -126,7 +126,7 @@ class Activation extends AbstractValidator
     private function getActivationToken($token)
     {
         // Ищем валидный токен активации
-        $stmt = $this->db->prepare('SELECT * FROM `usr__activations` WHERE `activation` = :token AND `type` = 0 AND `isValid` = 1');
+        $stmt = $this->db->prepare('SELECT * FROM `users_activations` WHERE `activation` = :token AND `type` = 0 AND `isValid` = 1');
         $stmt->bindParam(':token', $token, \PDO::PARAM_STR);
         $stmt->execute();
 
@@ -148,7 +148,7 @@ class Activation extends AbstractValidator
      */
     private function deleteUserTokens($userId)
     {
-        $stmt = $this->db->prepare('DELETE FROM `usr__activations` WHERE `userId` = :uid AND `type` = 0');
+        $stmt = $this->db->prepare('DELETE FROM `users_activations` WHERE `userId` = :uid AND `type` = 0');
         $stmt->bindParam(':uid', $userId, \PDO::PARAM_INT);
         $stmt->execute();
     }
@@ -164,7 +164,7 @@ class Activation extends AbstractValidator
         if ((int)$result['timestamp'] < time() - $this->lifetime * 3600) {
             $this->error(self::TOKENEXPIRED);
 
-            $stmt = $this->db->prepare('DELETE FROM `usr__users` WHERE `id` = :uid AND `activated` = 0');
+            $stmt = $this->db->prepare('DELETE FROM `users` WHERE `id` = :uid AND `activated` = 0');
             $stmt->bindParam(':uid', $result['userId'], \PDO::PARAM_INT);
             $stmt->execute();
 

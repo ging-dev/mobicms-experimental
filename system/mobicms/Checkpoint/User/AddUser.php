@@ -54,7 +54,7 @@ class AddUser extends AbstractUser
             }
 
             $stmt = $this->db->prepare(
-                'INSERT INTO `usr__users` SET '
+                'INSERT INTO `users` SET '
                 . implode(', ', $sql)
             );
 

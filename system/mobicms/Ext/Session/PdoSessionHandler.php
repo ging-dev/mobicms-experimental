@@ -81,7 +81,7 @@ class PdoSessionHandler implements SaveHandlerInterface
             $this->db->beginTransaction();
             $this->transaction = true;
 
-            $stmt = $this->db->prepare('SELECT * FROM `sys__sessions` WHERE `id` = :id FOR UPDATE');
+            $stmt = $this->db->prepare('SELECT * FROM `sessions` WHERE `id` = :id FOR UPDATE');
             $stmt->bindParam(':id', $sessionId, \PDO::PARAM_STR);
             $stmt->execute();
 
@@ -115,7 +115,7 @@ class PdoSessionHandler implements SaveHandlerInterface
     public function destroy($sessionId)
     {
         try {
-            $stmt = $this->db->prepare('DELETE FROM `sys__sessions` WHERE `id` = :id');
+            $stmt = $this->db->prepare('DELETE FROM `sessions` WHERE `id` = :id');
             $stmt->bindParam(':id', $sessionId, \PDO::PARAM_STR);
             $stmt->execute();
         } catch (\PDOException $e) {
@@ -137,7 +137,7 @@ class PdoSessionHandler implements SaveHandlerInterface
     {
         try {
             $stmt = $this->db->prepare(
-                'UPDATE `sys__sessions` SET
+                'UPDATE `sessions` SET
                 `data`      = :data,
                 `timestamp` = :time,
                 `ip`        = :ip,
@@ -236,7 +236,7 @@ class PdoSessionHandler implements SaveHandlerInterface
     {
         try {
             $insertStmt = $this->db->prepare('INSERT
-                INTO `sys__sessions` (`id`, `data`, `timestamp`, `ip`, `userAgent`, `place`, `views`, `movings`)
+                INTO `sessions` (`id`, `data`, `timestamp`, `ip`, `userAgent`, `place`, `views`, `movings`)
                 VALUES (:id, :data, :time, :ip, :ua, :place, 1, 1)'
             );
             $insertStmt->bindParam(':id', $sessionId, \PDO::PARAM_STR);
@@ -278,7 +278,7 @@ class PdoSessionHandler implements SaveHandlerInterface
     {
         if ($this->doGc) {
             $this->doGc = false;
-            $stmt = $this->db->prepare('DELETE FROM `sys__sessions` WHERE `timestamp` < :time');
+            $stmt = $this->db->prepare('DELETE FROM `sessions` WHERE `timestamp` < :time');
             $stmt->bindValue(':time', time() - $this->lifetime, \PDO::PARAM_INT);
             $stmt->execute();
         }
