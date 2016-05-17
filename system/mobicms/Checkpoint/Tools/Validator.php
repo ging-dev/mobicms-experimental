@@ -61,7 +61,7 @@ class Validator
      */
     public function checkNicknameRepeatedChars($nickname)
     {
-        return preg_match('/(.)\1\1\1/', $nickname) ? false : true;
+        return preg_match('/(.)\1\1\1/iu', $nickname) ? false : true;
     }
 
     /**
