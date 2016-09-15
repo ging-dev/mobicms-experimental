@@ -7,13 +7,8 @@
     {
       "name": "Oleg (AlkatraZ) Kasyanov",
       "email": "dev@mobicms.net"
-    },
-    {
-      "name": "mobiCMS Community",
-      "homepage": "https://mobicms.net/contributors"
     }
   ],
-  "minimum-stability": "dev",
   "config": {
     "vendor-dir": "system/vendor"
   },
