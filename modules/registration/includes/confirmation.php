@@ -1,6 +1,6 @@
 <?php
 
-defined('MOBICMS') or die('Error: restricted access');
+defined('JOHNCMS') or die('Error: restricted access');
 
 $app = App::getInstance();
 $config = $app->config()->get('reg');

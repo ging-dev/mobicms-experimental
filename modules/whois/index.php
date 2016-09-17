@@ -14,7 +14,7 @@
  * @version     v.1.0.0 2015-02-01
  */
 
-defined('MOBICMS') or die('Error: restricted access');
+defined('JOHNCMS') or die('Error: restricted access');
 
 $app = App::getInstance();
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);

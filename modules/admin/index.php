@@ -15,7 +15,7 @@
  */
 
 @ini_set("max_execution_time", "600");
-defined('MOBICMS') or die('Error: restricted access');
+defined('JOHNCMS') or die('Error: restricted access');
 
 $app = App::getInstance();
 $user = $app->user()->get();

@@ -10,7 +10,7 @@
  * @license     LICENSE.md (see attached file)
  */
 
-defined('MOBICMS') or die('Error: restricted access');
+defined('JOHNCMS') or die('Error: restricted access');
 
 $app = App::getInstance();
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);

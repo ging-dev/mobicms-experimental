@@ -14,7 +14,7 @@
  * @version     v.1.0.0 2015-02-01
  */
 
-defined('MOBICMS') or die('Error: restricted access');
+defined('JOHNCMS') or die('Error: restricted access');
 
 $app = App::getInstance();
 $config = $app->config()->get('sys');
@@ -26,7 +26,7 @@ $feed = new Zend\Feed\Writer\Feed;
 $feed->setTitle($config['siteName']);
 $feed->setLink($app->homeurl());
 $feed->setFeedLink($app->homeurl() . '/rss', 'rss');
-$feed->setGenerator('mobiCMS', MOBICMS, 'http://mobicms.net');
+$feed->setGenerator('mobiCMS', JOHNCMS, 'http://mobicms.net');
 $feed->setDateModified(time());
 $feed->setDescription('mobiCMS news');
 

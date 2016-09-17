@@ -13,7 +13,7 @@
 /**
  * System version
  */
-define('MOBICMS', '0.2.0');
+define('JOHNCMS', '8.0.0-alpha1');
 
 /**
  * Toggle debug mode

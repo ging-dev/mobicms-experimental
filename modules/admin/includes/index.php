@@ -10,6 +10,6 @@
  * @license     LICENSE.md (see attached file)
  */
 
-defined('MOBICMS') or die('Error: restricted access');
+defined('JOHNCMS') or die('Error: restricted access');
 
 App::getInstance()->view()->setTemplate('index.php');

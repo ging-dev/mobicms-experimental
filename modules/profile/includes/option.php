@@ -10,7 +10,7 @@
  * @license     LICENSE.md (see attached file)
  */
 
-defined('MOBICMS') or die('Error: restricted access');
+defined('JOHNCMS') or die('Error: restricted access');
 
 // Показываем меню настроек
 App::getInstance()->view()->setTemplate('option.php');

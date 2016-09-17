@@ -14,7 +14,7 @@
  * @version     v.2.0.0 2016-01-20
  */
 
-defined('MOBICMS') or die('Error: restricted access');
+defined('JOHNCMS') or die('Error: restricted access');
 
 $app = App::getInstance();
 $app->lng()->setModule('registration');
