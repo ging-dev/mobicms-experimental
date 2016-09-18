@@ -1,11 +1,8 @@
 {
-  "name": "mobiCMS",
-  "version": "0.2.0",
-  "description": "mobiCMS Mobile Content Management System",
-  "homepage": "http://mobicms.net",
-  "bugs": "https://github.com/mobiCMS/mobicms/issues",
-  "main": "index.php",
-  "author": "AUTHORS.md",
+  "name": "JohnCMS",
+  "version": "7.1.0",
+  "description": "JohnCMS Mobile Content Management System",
+  "homepage": "http://johncms.com",
   "license": "GPL-3.0",
   "keywords": [
     "mobicms",
@@ -16,13 +13,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mobiCMS/mobicms.git"
+    "url": "https://github.com/Gazenwagen/mobicms-core.git"
   },
   "engines": {
     "node": ">= 0.12.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "grunt": "^1.0.1",

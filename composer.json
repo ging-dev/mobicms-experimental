@@ -1,12 +1,12 @@
 {
-  "name": "mobicms/mobicms-core",
+  "name": "Gazenwagen/mobicms-core",
   "description": "Mobile Content Management System",
-  "homepage": "http://mobicms.net/",
+  "homepage": "http://johncms.com",
   "license": "GPL-3.0",
   "authors": [
     {
-      "name": "Oleg (AlkatraZ) Kasyanov",
-      "email": "dev@mobicms.net"
+      "name": "JohnCMS Community",
+      "homepage": "https://johncms.com/about/"
     }
   ],
   "config": {
