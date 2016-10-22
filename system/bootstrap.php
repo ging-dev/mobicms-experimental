@@ -22,7 +22,9 @@ define('START_TIME', microtime(true));                         // Profiling gene
 /**
  * Pathes
  */
+
 define('ROOT_PATH', dirname(__DIR__) . DS);                    // Defines the root directory
+const CONFIG_PATH = __DIR__ . DS . 'config' . DS;
 const VENDOR_PATH = ROOT_PATH . 'system' . DS . 'vendor' . DS; // Vendors path
 const CACHE_PATH = __DIR__ . DS . 'cache' . DS;                // Path to the system cache files
 const LOG_PATH = __DIR__ . DS . 'logs' . DS;                   // Path to the LOG files
@@ -85,6 +87,11 @@ use Zend\Http\PhpEnvironment\Response;
 use Zend\Session\Storage\SessionArrayStorage;
 use Zend\Session\SessionManager;
 
+use Zend\ServiceManager\ServiceManager;
+use Zend\Stdlib\ArrayObject as ConfigObject;
+use Zend\Stdlib\ArrayUtils;
+use Zend\Stdlib\Glob;
+
 /**
  * Class App
  *
@@ -107,7 +114,33 @@ use Zend\Session\SessionManager;
  */
 class App extends Mobicms\Ioc\Container
 {
+    private static $container;
+
+    /**
+     * @return ServiceManager
+     */
+    public static function getContainer()
+    {
+        if (null === self::$container) {
+            $config = [];
+
+            // Read configuration
+            foreach (Glob::glob(CONFIG_PATH . '{{,*.}global,{,*.}local}.php', Glob::GLOB_BRACE) as $file) {
+                $config = ArrayUtils::merge($config, include $file);
+            }
+
+            $container = new ServiceManager;
+            (new Zend\ServiceManager\Config($config['dependencies']))->configureServiceManager($container);
+            $container->setService('config', new ConfigObject($config, ConfigObject::ARRAY_AS_PROPS));
+            self::$container = $container;
+        }
+
+        return self::$container;
+    }
 }
+
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
 
 $app = App::getInstance();
 $di = App::getDiInstance();
