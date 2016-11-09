@@ -4,8 +4,8 @@ return array (
   'pdo' => 
   array (
     'db_host' => 'localhost',
-    'db_name' => 'johncms_next',
+    'db_name' => 'johncms',
     'db_user' => 'root',
-    'db_pass' => '120963',
+    'db_pass' => '',
   ),
 );
