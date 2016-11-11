@@ -1,11 +1,9 @@
-/dist
-/distributive
 /system/cache/*
 !/system/cache/.gitkeep
-/system/config/classes/Database.php
+/system/config/*.local.php
 /system/logs/*
 !/system/logs/.gitkeep
-/composer.lock
 /system/vendor
+/dist
+/distributive
 /node_modules
-
