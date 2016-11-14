@@ -36,7 +36,6 @@
   },
   "autoload": {
     "psr-4": {
-      "Johncms\\": "system/johncms/",
       "Mobicms\\": "system/mobicms/",
       "Config\\": "system/config/classes/",
       "Includes\\": "system/includes/"

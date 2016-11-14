@@ -36,10 +36,4 @@ class PDOmysql extends \PDO
             throw new \RuntimeException($e->getMessage());
         }
     }
-
-    public function pagination() //TODO: убрать
-    {
-        $app = \App::getInstance();
-        return ' LIMIT ' . $app->vars()->start . ',' . $app->user()->get()->getConfig()->pageSize;
-    }
 }
