@@ -24,6 +24,11 @@ use Zend\Mail\Transport\Sendmail;
  */
 class WelcomeLetter
 {
+    /**
+     * @var \PDO
+     */
+    private $db;
+
     private $app;
     private $userId;
     private $nickname;
@@ -33,6 +38,7 @@ class WelcomeLetter
 
     public function __construct(\APP $app, $userId, $nickname, $email)
     {
+        $this->db = \App::getContainer()->get(\PDO::class);
         $this->app = $app;
         $this->userId = $userId;
         $this->nickname = $nickname;
@@ -114,7 +120,7 @@ class WelcomeLetter
     {
         if ($force || Registration::$letterMode == 2) {
             // Делаем старые незавершенные активации недействительными
-            $stmtDel = $this->app->db()->prepare('
+            $stmtDel = $this->db->prepare('
               UPDATE `users_activations`
               SET
               `isValid` = 0
@@ -125,7 +131,7 @@ class WelcomeLetter
             $stmtDel->execute();
 
             // Добавляем новую запись активации
-            $stmt = $this->app->db()->prepare('
+            $stmt = $this->db->prepare('
               INSERT INTO `users_activations`
               SET
               `type` = 0,

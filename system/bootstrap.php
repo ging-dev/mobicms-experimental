@@ -71,7 +71,6 @@ if (DEBUG) {
 //(new Mobicms\Firewall\Firewall)->run($request->getClientIp());
 
 use Mobicms\Checkpoint\Facade;
-use Mobicms\Database\PDOmysql;
 use Mobicms\Environment\Vars;  //TODO: доработать, или удалить сервис
 use Mobicms\HtmlFilter\Filter; //TODO: доработать, или удалить сервис
 use Mobicms\HtmlFilter\Purify; //TODO: доработать, или удалить сервис
@@ -96,7 +95,6 @@ use Zend\Stdlib\Glob;
  * Class App
  *
  * @method ZendConfig   config()
- * @method PDOmysql     db()
  * @method Image        image($file, array $arguments = [], $isModule = false, $imgTag = true)
  * @method Filter       filter($string) //TODO: доработать, или удалить сервис
  * @method              homeurl()
@@ -156,16 +154,6 @@ $app->newInstance('network', Network::class);
 
 // Initialize the Router
 $app->newInstance('router', Router::class);
-
-// Initialize the database connection
-$app->newInstance('db', PDOmysql::class,
-    [
-        'dbHost' => Config\Database::DB_HOST,
-        'dbName' => Config\Database::DB_NAME,
-        'dbUser' => Config\Database::DB_USER,
-        'dbPass' => Config\Database::DB_PASS,
-    ]
-);
 
 // Load configuration
 $config = is_file(CONFIG_FILE_SYS) ? include CONFIG_FILE_SYS : [];

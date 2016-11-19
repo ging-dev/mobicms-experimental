@@ -326,30 +326,24 @@ return array(
         'parameters' => array(
             '__construct' => array(
                 'Mobicms\\Checkpoint\\Facade::__construct:0' => array(
-                    0 => 'db',
-                    1 => 'Mobicms\\Database\\PDOmysql',
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Checkpoint\\Facade::__construct:1' => array(
                     0 => 'request',
                     1 => 'Zend\\Http\\PhpEnvironment\\Request',
                     2 => true,
                     3 => null,
                 ),
-                'Mobicms\\Checkpoint\\Facade::__construct:2' => array(
+                'Mobicms\\Checkpoint\\Facade::__construct:1' => array(
                     0 => 'response',
                     1 => 'Zend\\Http\\PhpEnvironment\\Response',
                     2 => true,
                     3 => null,
                 ),
-                'Mobicms\\Checkpoint\\Facade::__construct:3' => array(
+                'Mobicms\\Checkpoint\\Facade::__construct:2' => array(
                     0 => 'manager',
                     1 => 'Zend\\Session\\SessionManager',
                     2 => true,
                     3 => null,
                 ),
-                'Mobicms\\Checkpoint\\Facade::__construct:4' => array(
+                'Mobicms\\Checkpoint\\Facade::__construct:3' => array(
                     0 => 'network',
                     1 => 'Mobicms\\Environment\\Network',
                     2 => true,
@@ -425,12 +419,6 @@ return array(
                     2 => true,
                     3 => null,
                 ),
-                'Mobicms\\Checkpoint\\User\\AbstractUser::__construct:1' => array(
-                    0 => 'db',
-                    1 => 'Mobicms\\Database\\PDOmysql',
-                    2 => true,
-                    3 => null,
-                ),
             ),
             'setPassword' => array(
                 'Mobicms\\Checkpoint\\User\\AbstractUser::setPassword:0' => array(
@@ -499,12 +487,6 @@ return array(
                 'Mobicms\\Checkpoint\\User\\AddUser::__construct:0' => array(
                     0 => 'user',
                     1 => null,
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Checkpoint\\User\\AddUser::__construct:1' => array(
-                    0 => 'db',
-                    1 => 'Mobicms\\Database\\PDOmysql',
                     2 => true,
                     3 => null,
                 ),
@@ -590,6 +572,65 @@ return array(
             ),
         ),
     ),
+    'Mobicms\\Checkpoint\\User\\Data' => array(
+        'supertypes' => array(
+            0 => 'Countable',
+            1 => 'Serializable',
+            2 => 'ArrayAccess',
+            3 => 'Traversable',
+            4 => 'IteratorAggregate',
+            5 => 'ArrayObject',
+            6 => 'IteratorAggregate',
+            7 => 'Traversable',
+            8 => 'ArrayAccess',
+            9 => 'Serializable',
+            10 => 'Countable',
+        ),
+        'instantiator' => '__construct',
+        'methods' => array(
+            '__construct' => 3,
+            'setFlags' => 0,
+            'setIteratorClass' => 0,
+        ),
+        'parameters' => array(
+            '__construct' => array(
+                'Mobicms\\Checkpoint\\User\\Data::__construct:0' => array(
+                    0 => 'db',
+                    1 => 'PDO',
+                    2 => true,
+                    3 => null,
+                ),
+                'Mobicms\\Checkpoint\\User\\Data::__construct:1' => array(
+                    0 => 'userId',
+                    1 => null,
+                    2 => true,
+                    3 => null,
+                ),
+                'Mobicms\\Checkpoint\\User\\Data::__construct:2' => array(
+                    0 => 'section',
+                    1 => null,
+                    2 => true,
+                    3 => null,
+                ),
+            ),
+            'setFlags' => array(
+                'Mobicms\\Checkpoint\\User\\Data::setFlags:0' => array(
+                    0 => 'flags',
+                    1 => null,
+                    2 => true,
+                    3 => null,
+                ),
+            ),
+            'setIteratorClass' => array(
+                'Mobicms\\Checkpoint\\User\\Data::setIteratorClass:0' => array(
+                    0 => 'iteratorClass',
+                    1 => null,
+                    2 => true,
+                    3 => null,
+                ),
+            ),
+        ),
+    ),
     'Mobicms\\Checkpoint\\User\\EmptyUser' => array(
         'supertypes' => array(
             0 => 'IteratorAggregate',
@@ -619,6 +660,14 @@ return array(
             'setIteratorClass' => 0,
         ),
         'parameters' => array(
+            '__construct' => array(
+                'Mobicms\\Checkpoint\\User\\EmptyUser::__construct:0' => array(
+                    0 => 'network',
+                    1 => 'Mobicms\\Environment\\Network',
+                    2 => true,
+                    3 => null,
+                ),
+            ),
             'setPassword' => array(
                 'Mobicms\\Checkpoint\\User\\EmptyUser::setPassword:0' => array(
                     0 => 'password',
@@ -689,12 +738,6 @@ return array(
                     2 => true,
                     3 => null,
                 ),
-                'Mobicms\\Checkpoint\\User\\User::__construct:1' => array(
-                    0 => 'db',
-                    1 => 'Mobicms\\Database\\PDOmysql',
-                    2 => true,
-                    3 => null,
-                ),
             ),
             'setPassword' => array(
                 'Mobicms\\Checkpoint\\User\\User::setPassword:0' => array(
@@ -730,116 +773,11 @@ return array(
             ),
         ),
     ),
-    'Mobicms\\Checkpoint\\User\\UserData' => array(
-        'supertypes' => array(
-            0 => 'Countable',
-            1 => 'Serializable',
-            2 => 'ArrayAccess',
-            3 => 'Traversable',
-            4 => 'IteratorAggregate',
-            5 => 'ArrayObject',
-            6 => 'IteratorAggregate',
-            7 => 'Traversable',
-            8 => 'ArrayAccess',
-            9 => 'Serializable',
-            10 => 'Countable',
-        ),
+    'Mobicms\\Database\\PdoFactory' => array(
+        'supertypes' => array(),
         'instantiator' => '__construct',
-        'methods' => array(
-            '__construct' => 3,
-            'setFlags' => 0,
-            'setIteratorClass' => 0,
-        ),
-        'parameters' => array(
-            '__construct' => array(
-                'Mobicms\\Checkpoint\\User\\UserData::__construct:0' => array(
-                    0 => 'db',
-                    1 => 'Mobicms\\Database\\PDOmysql',
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Checkpoint\\User\\UserData::__construct:1' => array(
-                    0 => 'userId',
-                    1 => null,
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Checkpoint\\User\\UserData::__construct:2' => array(
-                    0 => 'section',
-                    1 => null,
-                    2 => true,
-                    3 => null,
-                ),
-            ),
-            'setFlags' => array(
-                'Mobicms\\Checkpoint\\User\\UserData::setFlags:0' => array(
-                    0 => 'flags',
-                    1 => null,
-                    2 => true,
-                    3 => null,
-                ),
-            ),
-            'setIteratorClass' => array(
-                'Mobicms\\Checkpoint\\User\\UserData::setIteratorClass:0' => array(
-                    0 => 'iteratorClass',
-                    1 => null,
-                    2 => true,
-                    3 => null,
-                ),
-            ),
-        ),
-    ),
-    'Mobicms\\Database\\PDOmysql' => array(
-        'supertypes' => array(
-            0 => 'PDO',
-        ),
-        'instantiator' => '__construct',
-        'methods' => array(
-            '__construct' => 3,
-            'setAttribute' => 0,
-        ),
-        'parameters' => array(
-            '__construct' => array(
-                'Mobicms\\Database\\PDOmysql::__construct:0' => array(
-                    0 => 'dbHost',
-                    1 => null,
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Database\\PDOmysql::__construct:1' => array(
-                    0 => 'dbName',
-                    1 => null,
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Database\\PDOmysql::__construct:2' => array(
-                    0 => 'dbUser',
-                    1 => null,
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Database\\PDOmysql::__construct:3' => array(
-                    0 => 'dbPass',
-                    1 => null,
-                    2 => true,
-                    3 => null,
-                ),
-            ),
-            'setAttribute' => array(
-                'Mobicms\\Database\\PDOmysql::setAttribute:0' => array(
-                    0 => 'attribute',
-                    1 => null,
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Database\\PDOmysql::setAttribute:1' => array(
-                    0 => 'value',
-                    1 => null,
-                    2 => true,
-                    3 => null,
-                ),
-            ),
-        ),
+        'methods' => array(),
+        'parameters' => array(),
     ),
     'Mobicms\\Editors\\Adapters\\AdapterInterface' => array(
         'supertypes' => array(),
@@ -981,18 +919,12 @@ return array(
         'parameters' => array(
             '__construct' => array(
                 'Mobicms\\Ext\\Session\\PdoSessionHandler::__construct:0' => array(
-                    0 => 'db',
-                    1 => 'Mobicms\\Database\\PDOmysql',
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Ext\\Session\\PdoSessionHandler::__construct:1' => array(
                     0 => 'network',
                     1 => 'Mobicms\\Environment\\Network',
                     2 => true,
                     3 => null,
                 ),
-                'Mobicms\\Ext\\Session\\PdoSessionHandler::__construct:2' => array(
+                'Mobicms\\Ext\\Session\\PdoSessionHandler::__construct:1' => array(
                     0 => 'router',
                     1 => 'Mobicms\\Routing\\Router',
                     2 => true,
@@ -1307,6 +1239,7 @@ return array(
     'Mobicms\\Ioc\\Container' => array(
         'supertypes' => array(
             0 => 'Interop\\Container\\ContainerInterface',
+            1 => 'Psr\\Container\\ContainerInterface',
         ),
         'instantiator' => null,
         'methods' => array(
@@ -1348,11 +1281,13 @@ return array(
     'Mobicms\\Ioc\\Exception\\NotFoundException' => array(
         'supertypes' => array(
             0 => 'Interop\\Container\\Exception\\NotFoundException',
-            1 => 'Interop\\Container\\Exception\\ContainerException',
-            2 => 'BadMethodCallException',
-            3 => 'BadFunctionCallException',
-            4 => 'LogicException',
-            5 => 'Exception',
+            1 => 'Psr\\Container\\NotFoundExceptionInterface',
+            2 => 'Psr\\Container\\ContainerExceptionInterface',
+            3 => 'Interop\\Container\\Exception\\ContainerException',
+            4 => 'BadMethodCallException',
+            5 => 'BadFunctionCallException',
+            6 => 'LogicException',
+            7 => 'Exception',
         ),
         'instantiator' => '__construct',
         'methods' => array(

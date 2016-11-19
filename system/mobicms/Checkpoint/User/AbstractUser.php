@@ -12,8 +12,6 @@
 
 namespace Mobicms\Checkpoint\User;
 
-use Mobicms\Database\PDOmysql;
-
 /**
  * Class AbstractUser
  *
@@ -44,7 +42,7 @@ use Mobicms\Database\PDOmysql;
 abstract class AbstractUser extends \ArrayObject
 {
     /**
-     * @var PDOmysql
+     * @var \PDO
      */
     protected $db;
 
@@ -79,10 +77,10 @@ abstract class AbstractUser extends \ArrayObject
 
     protected $pdoTypes =
         [
-            'int'  => PDOmysql::PARAM_INT,
-            'str'  => PDOmysql::PARAM_STR,
-            'bool' => PDOmysql::PARAM_BOOL,
-            'text' => PDOmysql::PARAM_STR,
+            'int'  => \PDO::PARAM_INT,
+            'str'  => \PDO::PARAM_STR,
+            'bool' => \PDO::PARAM_BOOL,
+            'text' => \PDO::PARAM_STR,
         ];
 
     protected $userDataInstances = [];
@@ -90,11 +88,10 @@ abstract class AbstractUser extends \ArrayObject
 
     /**
      * @param array    $user
-     * @param PDOmysql $db
      */
-    public function __construct(array $user, PDOmysql $db)
+    public function __construct(array $user)
     {
-        $this->db = $db;
+        $this->db = \App::getContainer()->get(\PDO::class);
         parent::__construct($user, \ArrayObject::ARRAY_AS_PROPS);
     }
 

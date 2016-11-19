@@ -12,8 +12,6 @@
 
 namespace Mobicms\Checkpoint\User;
 
-use Mobicms\Database\PDOmysql;
-
 /**
  * Class UserData
  *
@@ -29,7 +27,7 @@ class Data extends \ArrayObject
     private $allowModifications = false;
     private $changedFields = [];
 
-    public function __construct(PDOmysql $db, $userId, $section)
+    public function __construct(\PDO $db, $userId, $section)
     {
         $this->db = $db;
         $this->userId = $userId;

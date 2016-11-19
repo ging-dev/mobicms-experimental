@@ -142,7 +142,7 @@ if ($config['allow']) {
     if ($form->isValid()) {
         try {
             // Инициализируем класс Регистрации
-            $user = new AddUser([], $app->db());
+            $user = new AddUser([]);
 
             // Вводим данные пользователя
             $user->email = $form->output['email'];

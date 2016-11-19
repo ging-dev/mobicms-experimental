@@ -12,6 +12,12 @@
 
 defined('JOHNCMS') or die('Error: restricted access');
 
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var PDO $db */
+$db = $container->get(PDO::class);
+
 $app = App::getInstance();
-$app->view()->total_users = $app->db()->query('SELECT COUNT(*) FROM `users`')->fetchColumn();
+$app->view()->total_users = $db->query('SELECT COUNT(*) FROM `users`')->fetchColumn();
 $app->view()->setTemplate('index.php');

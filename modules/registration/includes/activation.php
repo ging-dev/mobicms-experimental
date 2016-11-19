@@ -5,7 +5,7 @@ defined('JOHNCMS') or die('Error: restricted access');
 use Registration\Activation;
 
 $app = App::getInstance();
-$activator = new Activation($app->db(), $app->user());
+$activator = new Activation($app->user());
 
 // Задаем сообщения об ошибках
 $failedMsg = _m('<h3>Activation failed</h3>Possible reasons:<ul><li>You\'ve followed a broken activation link</li><li>From the moment of registration passed more than 24 hours.<br>In this case you need to be registered again.</li></ul>');

@@ -22,7 +22,6 @@ use Mobicms\Checkpoint\Tools\Validator;
 use Mobicms\Checkpoint\User\AbstractUser;
 use Mobicms\Checkpoint\User\EmptyUser;
 use Mobicms\Checkpoint\User\User;
-use Mobicms\Database\PDOmysql;
 use Mobicms\Environment\Network;
 use Zend\Session\SessionManager;
 use Zend\Http\PhpEnvironment\Request;
@@ -39,7 +38,7 @@ use Zend\Session\Container as Session;
 class Facade
 {
     /**
-     * @var PDOmysql
+     * @var \PDO
      */
     private $db;
 
@@ -74,13 +73,12 @@ class Facade
     public $domain = 'mobicms';
 
     public function __construct(
-        PDOmysql $db,
         Request $request,
         Response $response,
         SessionManager $manager,
         Network $network
     ) {
-        $this->db = $db;
+        $this->db = \App::getContainer()->get(\PDO::class);
         $this->session = new Session('auth', $manager);
         $this->request = $request;
         $this->response = $response;
@@ -116,7 +114,7 @@ class Facade
             return $this->userInstance;
         }
 
-        return new EmptyUser($this->db, $this->network);
+        return new EmptyUser($this->network);
     }
 
     /**

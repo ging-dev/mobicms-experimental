@@ -114,7 +114,7 @@ class Counters
      */
     public static function usersOnline()
     {
-        return App::getInstance()->db()->query("SELECT COUNT(*) FROM `users` WHERE `lastVisit` > " . (time() - 300))->fetchColumn();
+        return \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `users` WHERE `lastVisit` > " . (time() - 300))->fetchColumn();
     }
 
     /**
@@ -124,7 +124,7 @@ class Counters
      */
     public static function guestsOnline()
     {
-        return App::getInstance()->db()->query("SELECT COUNT(*) FROM `sessions` WHERE `userId` = 0 AND `timestamp` > " . (time() - 300))->fetchColumn();
+        return \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `sessions` WHERE `userId` = 0 AND `timestamp` > " . (time() - 300))->fetchColumn();
     }
 
     /**
@@ -181,7 +181,7 @@ class Counters
     {
         if (!isset($var) || $var['time'] < time() - 600) {
             $this->update_cache = true;
-            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `users` WHERE `level` > 0")->fetchColumn();
+            $var['count'] = \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `users` WHERE `level` > 0")->fetchColumn();
             $var['time'] = time();
         }
 
@@ -199,7 +199,7 @@ class Counters
     {
         if (!isset($var) || $var['time'] < time() - 600) {
             $this->update_cache = true;
-            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `users` WHERE `joinDate` > " . (time() - 86400))->fetchColumn();
+            $var['count'] = \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `users` WHERE `joinDate` > " . (time() - 86400))->fetchColumn();
             $var['time'] = time();
         }
 
@@ -217,7 +217,7 @@ class Counters
     {
         if (!isset($var) || $var['time'] < time() - 3600) {
             $this->update_cache = true;
-            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(DISTINCT `user_id`) FROM `album__files`")->fetchColumn();
+            $var['count'] = \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(DISTINCT `user_id`) FROM `album__files`")->fetchColumn();
             $var['time'] = time();
         }
 
@@ -235,7 +235,7 @@ class Counters
     {
         if (!isset($var) || $var['time'] < time() - 3600) {
             $this->update_cache = true;
-            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `album__files`")->fetchColumn();
+            $var['count'] = \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `album__files`")->fetchColumn();
             $var['time'] = time();
         }
 
@@ -253,7 +253,7 @@ class Counters
     {
         if (!isset($var) || $var['time'] < time() - 600) {
             $this->update_cache = true;
-            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `album__files` WHERE `time` > " . (time() - 259200) . " AND `access` > 1")->fetchColumn();
+            $var['count'] = \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `album__files` WHERE `time` > " . (time() - 259200) . " AND `access` > 1")->fetchColumn();
             $var['time'] = time();
         }
 
@@ -271,7 +271,7 @@ class Counters
     {
         if (!isset($var) || $var['time'] < time() - 3600) {
             $this->update_cache = true;
-            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `download__files` WHERE `type` = 2")->fetchColumn();
+            $var['count'] = \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `download__files` WHERE `type` = 2")->fetchColumn();
             $var['time'] = time();
         }
 
@@ -289,7 +289,7 @@ class Counters
     {
         if (!isset($var) || $var['time'] < time() - 3600) {
             $this->update_cache = true;
-            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `download__files` WHERE `type` = 2 AND `time` > " . (time() - 259200))->fetchColumn();
+            $var['count'] = \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `download__files` WHERE `type` = 2 AND `time` > " . (time() - 259200))->fetchColumn();
             $var['time'] = time();
         }
 
@@ -307,7 +307,7 @@ class Counters
     {
         if (!isset($var) || $var['time'] < time() - 600) {
             $this->update_cache = true;
-            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `download__files` WHERE `type` = 3")->fetchColumn();
+            $var['count'] = \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `download__files` WHERE `type` = 3")->fetchColumn();
             $var['time'] = time();
         }
 
@@ -325,7 +325,7 @@ class Counters
     {
         if (!isset($var) || $var['time'] < time() - 600) {
             $this->update_cache = true;
-            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `forum__` WHERE `type` = 't' AND `close` != '1'")->fetchColumn();
+            $var['count'] = \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `forum__` WHERE `type` = 't' AND `close` != '1'")->fetchColumn();
             $var['time'] = time();
         }
 
@@ -343,7 +343,7 @@ class Counters
     {
         if (!isset($var) || $var['time'] < time() - 600) {
             $this->update_cache = true;
-            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `forum__` WHERE `type` = 'm' AND `close` != '1'")->fetchColumn();
+            $var['count'] = \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `forum__` WHERE `type` = 'm' AND `close` != '1'")->fetchColumn();
             $var['time'] = time();
         }
 
@@ -364,7 +364,7 @@ class Counters
         }
 
         $user = $app->user()->get();
-        return $app->db()->query("SELECT COUNT(*) FROM `forum__`
+        return \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `forum__`
                 LEFT JOIN `forum__rdm` ON `forum__`.`id` = `forum__rdm`.`topic_id` AND `forum__rdm`.`user_id` = '" . $user->id . "'
                 WHERE `forum__`.`type`='t'" . ($user->rights >= 7 ? "" : " AND `forum__`.`close` != '1'") . "
                 AND (`forum__rdm`.`topic_id` IS NULL
@@ -382,7 +382,7 @@ class Counters
     {
         if (!isset($var) || $var['time'] < time() - 3600) {
             $this->update_cache = true;
-            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `library` WHERE `type` = 'bk' AND `moder` = '1'")->fetchColumn();
+            $var['count'] = \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `library` WHERE `type` = 'bk' AND `moder` = '1'")->fetchColumn();
             $var['time'] = time();
         }
 
@@ -400,7 +400,7 @@ class Counters
     {
         if (!isset($var) || $var['time'] < time() - 3600) {
             $this->update_cache = true;
-            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `library` WHERE `time` > '" . (time() - 259200) . "' AND `type` = 'bk' AND `moder` = '1'")->fetchColumn();
+            $var['count'] = \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `library` WHERE `time` > '" . (time() - 259200) . "' AND `type` = 'bk' AND `moder` = '1'")->fetchColumn();
             $var['time'] = time();
         }
 
@@ -418,7 +418,7 @@ class Counters
     {
         if (!isset($var) || $var['time'] < time() - 600) {
             $this->update_cache = true;
-            $var['count'] = App::getInstance()->db()->query("SELECT COUNT(*) FROM `library` WHERE `type` = 'bk' AND `moder` = '0'")->fetchColumn();
+            $var['count'] = App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `library` WHERE `type` = 'bk' AND `moder` = '0'")->fetchColumn();
             $var['time'] = time();
         }
 

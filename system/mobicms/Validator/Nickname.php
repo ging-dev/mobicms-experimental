@@ -163,7 +163,10 @@ class Nickname extends AbstractValidator
     private function checkExists($value)
     {
         if ($this->options['checkExists']) {
-            $stmt = \App::getInstance()->db()->prepare('SELECT `nickname` FROM users WHERE `nickname` = :nickname LIMIT 1');
+            /** @var \PDO $db */
+            $db = \App::getContainer()->get(\PDO::class);
+
+            $stmt = $db->prepare('SELECT `nickname` FROM users WHERE `nickname` = :nickname LIMIT 1');
             $stmt->bindValue(':nickname', $value, \PDO::PARAM_STR);
             $stmt->execute();
 

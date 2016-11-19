@@ -12,7 +12,6 @@
 
 namespace Registration;
 
-use Mobicms\Database\PDOmysql;
 use Mobicms\Checkpoint\Facade as User;
 use Mobicms\Checkpoint\Exceptions\UserExceptionInterface;
 use Zend\Validator\AbstractValidator;
@@ -40,7 +39,7 @@ class Activation extends AbstractValidator
         ];
 
     /**
-     * @var PDOmysql
+     * @var \PDO
      */
     private $db;
 
@@ -54,9 +53,9 @@ class Activation extends AbstractValidator
      */
     private $lifetime = 24;
 
-    public function __construct(PDOmysql $db, User $user, $options = null)
+    public function __construct(User $user, $options = null)
     {
-        $this->db = $db;
+        $this->db = \App::getContainer()->get(\PDO::class);
         $this->user = $user;
         parent::__construct($options);
     }

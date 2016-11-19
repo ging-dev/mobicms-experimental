@@ -12,7 +12,6 @@
 
 namespace Mobicms\Checkpoint\User;
 
-use Mobicms\Database\PDOmysql;
 use Mobicms\Environment\Network;
 
 /**
@@ -47,12 +46,12 @@ class EmptyUser extends AbstractUser
             'reputation'   => '',
         ];
 
-    public function __construct(PDOmysql $db, Network $network)
+    public function __construct(Network $network)
     {
         $this->defaults['ip'] = $network->getClientIp();
         $this->defaults['userAgent'] = $network->getUserAgent();
         $this->defaults['joinDate'] = $this->defaults['lastVisit'] = $this->defaults['lastActivity'] = time();
-        parent::__construct($this->defaults, $db);
+        parent::__construct($this->defaults);
     }
 
     public function checkPassword($password = null)
