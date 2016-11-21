@@ -54,10 +54,10 @@ class Form
 
         if (isset($option['method']) && $option['method'] == 'get') {
             $this->form['method'] = 'get';
-            $this->input = filter_input_array(INPUT_GET);
+            $this->input = $_GET;
         } else {
             $this->form['method'] = 'post';
-            $this->input = filter_input_array(INPUT_POST);
+            $this->input = $_POST;
         }
 
         $this->successMessage = _s('Data saved successfully');

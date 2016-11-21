@@ -25,7 +25,7 @@ class AssignValues
      */
     protected function setValues(array &$option)
     {
-        if (isset($types[$option['type']])) {
+        if (isset($option['type'])) {
             switch ($option['type']) {
                 case 'text':
                 case 'password':
