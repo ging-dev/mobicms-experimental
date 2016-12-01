@@ -33,12 +33,6 @@ return array(
                     3 => null,
                 ),
                 'Mobicms\\Checkpoint\\Authentication\\AbstractAuth::__construct:3' => array(
-                    0 => 'response',
-                    1 => 'Zend\\Http\\PhpEnvironment\\Response',
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Checkpoint\\Authentication\\AbstractAuth::__construct:4' => array(
                     0 => 'network',
                     1 => 'Mobicms\\Environment\\Network',
                     2 => true,
@@ -76,12 +70,6 @@ return array(
                     3 => null,
                 ),
                 'Mobicms\\Checkpoint\\Authentication\\Authentication::__construct:3' => array(
-                    0 => 'response',
-                    1 => 'Zend\\Http\\PhpEnvironment\\Response',
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Checkpoint\\Authentication\\Authentication::__construct:4' => array(
                     0 => 'network',
                     1 => 'Mobicms\\Environment\\Network',
                     2 => true,
@@ -119,12 +107,6 @@ return array(
                     3 => null,
                 ),
                 'Mobicms\\Checkpoint\\Authentication\\Identification::__construct:3' => array(
-                    0 => 'response',
-                    1 => 'Zend\\Http\\PhpEnvironment\\Response',
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Checkpoint\\Authentication\\Identification::__construct:4' => array(
                     0 => 'network',
                     1 => 'Mobicms\\Environment\\Network',
                     2 => true,
@@ -148,18 +130,6 @@ return array(
                     3 => null,
                 ),
                 'Mobicms\\Checkpoint\\Authentication\\Logout::__construct:1' => array(
-                    0 => 'request',
-                    1 => 'Zend\\Http\\PhpEnvironment\\Request',
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Checkpoint\\Authentication\\Logout::__construct:2' => array(
-                    0 => 'response',
-                    1 => 'Zend\\Http\\PhpEnvironment\\Response',
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Checkpoint\\Authentication\\Logout::__construct:3' => array(
                     0 => 'clearToken',
                     1 => null,
                     2 => false,
@@ -332,18 +302,12 @@ return array(
                     3 => null,
                 ),
                 'Mobicms\\Checkpoint\\Facade::__construct:1' => array(
-                    0 => 'response',
-                    1 => 'Zend\\Http\\PhpEnvironment\\Response',
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Checkpoint\\Facade::__construct:2' => array(
                     0 => 'manager',
                     1 => 'Zend\\Session\\SessionManager',
                     2 => true,
                     3 => null,
                 ),
-                'Mobicms\\Checkpoint\\Facade::__construct:3' => array(
+                'Mobicms\\Checkpoint\\Facade::__construct:2' => array(
                     0 => 'network',
                     1 => 'Mobicms\\Environment\\Network',
                     2 => true,

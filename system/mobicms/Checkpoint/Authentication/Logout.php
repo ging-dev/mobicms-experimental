@@ -13,10 +13,6 @@
 namespace Mobicms\Checkpoint\Authentication;
 
 use Mobicms\Checkpoint\Facade;
-use Mobicms\Checkpoint\User\EmptyUser;
-use Zend\Http\Header\SetCookie;
-use Zend\Http\PhpEnvironment\Request;
-use Zend\Http\PhpEnvironment\Response;
 
 /**
  * Class Logout
@@ -31,12 +27,12 @@ class Logout
      * Logout the User
      *
      * @param Facade $facade
-     * @param bool $clearToken
+     * @param bool   $clearToken
      */
-    public function __construct(Facade $facade, Request $request, Response $response, $clearToken = false)
+    public function __construct(Facade $facade, $clearToken = false)
     {
         $this->clearToken($facade, $clearToken);
-        $this->clearCookie($request, $response, $facade->domain);
+        $this->clearCookie($facade->domain);
         session_destroy();
     }
 
@@ -44,7 +40,7 @@ class Logout
      * Clear authorization token
      *
      * @param Facade $facade
-     * @param bool $clearToken
+     * @param bool   $clearToken
      */
     private function clearToken(Facade $facade, $clearToken)
     {
@@ -60,12 +56,10 @@ class Logout
      *
      * @param string $authDomain
      */
-    private function clearCookie(Request $request, Response $response, $authDomain)
+    private function clearCookie($authDomain)
     {
-        if (isset($request->getCookie()->$authDomain)) {
-            $cookie = new SetCookie($authDomain, '', strtotime('-1 Year', time()), '/');
-            $response->getHeaders()->addHeader($cookie);
-            $response->send();
+        if (isset($_COOKIE[$authDomain])) {
+            setcookie($authDomain, '', strtotime('-1 Year', time()), '/');
         }
     }
 }

@@ -25,7 +25,6 @@ use Mobicms\Checkpoint\User\User;
 use Mobicms\Environment\Network;
 use Zend\Session\SessionManager;
 use Zend\Http\PhpEnvironment\Request;
-use Zend\Http\PhpEnvironment\Response;
 use Zend\Session\Container as Session;
 
 /**
@@ -53,11 +52,6 @@ class Facade
     private $request;
 
     /**
-     * @var Response
-     */
-    private $response;
-
-    /**
      * @var Network
      */
     private $network;
@@ -74,16 +68,14 @@ class Facade
 
     public function __construct(
         Request $request,
-        Response $response,
         SessionManager $manager,
         Network $network
     ) {
         $this->db = \App::getContainer()->get(\PDO::class);
         $this->session = new Session('auth', $manager);
         $this->request = $request;
-        $this->response = $response;
         $this->network = $network;
-        $this->userInstance = (new Identification($this, $this->session, $request, $response, $network))->getUser();
+        $this->userInstance = (new Identification($this, $this->session, $request, $network))->getUser();
     }
 
     /**
@@ -165,12 +157,12 @@ class Facade
      * @param string $login
      * @param string $password
      * @param bool   $remember
-     * @throws UserExceptionInterface
+     * @throws \Exception
      */
     public function login($login, $password, $remember = false)
     {
         try {
-            $auth = new Authentication($this, $this->session, $this->request, $this->response, $this->network);
+            $auth = new Authentication($this, $this->session, $this->request, $this->network);
             $auth->authenticate($login, $password, $remember);
         } catch (UserExceptionInterface $e) {
             throw $e;
@@ -184,7 +176,7 @@ class Facade
      */
     public function logout($clearToken = false)
     {
-        new Logout($this, $this->request, $this->response, $clearToken);
+        new Logout($this, $clearToken);
     }
 
     /**

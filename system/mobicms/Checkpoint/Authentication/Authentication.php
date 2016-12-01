@@ -31,8 +31,8 @@ class Authentication extends AbstractAuth
      *
      * @param string $login
      * @param string $password
-     * @param bool $remember
-     * @throws UserExceptionInterface
+     * @param bool   $remember
+     * @throws \Exception
      */
     public function authenticate($login, $password, $remember = false)
     {
@@ -78,25 +78,20 @@ class Authentication extends AbstractAuth
      */
     private function writeSession(AbstractUser $user)
     {
-        $this->session->offsetSet($this->facade->domain, serialize([$user->offsetGet('id'), $user->offsetGet('token', true)]));
+        $this->session->offsetSet($this->facade->domain,
+            serialize([$user->offsetGet('id'), $user->offsetGet('token', true)]));
     }
 
     /**
      * Write identification Cookie
      *
      * @param AbstractUser $user
-     * @param bool $remember
+     * @param bool         $remember
      */
     private function writeCookie(AbstractUser $user, $remember)
     {
         if ($remember) {
-            $cookie = new SetCookie(
-                $this->facade->domain,
-                $user->offsetGet('id') . '::' . $user->offsetGet('token', true),
-                time() + 3600 * 24 * 31,
-                '/'
-            );
-            $this->response->getHeaders()->addHeader($cookie);
+            setcookie($this->facade->domain, $user->offsetGet('id') . '::' . $user->offsetGet('token', true), time() + 3600 * 24 * 31, '/');
         }
     }
 }

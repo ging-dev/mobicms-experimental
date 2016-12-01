@@ -16,7 +16,6 @@ use Mobicms\Checkpoint\Facade;
 use Mobicms\Checkpoint\User\AbstractUser;
 use Mobicms\Environment\Network;
 use Zend\Http\PhpEnvironment\Request;
-use Zend\Http\PhpEnvironment\Response;
 use Zend\Session\Container;
 
 /**
@@ -44,11 +43,6 @@ class AbstractAuth
     protected $request;
 
     /**
-     * @var Response
-     */
-    protected $response;
-
-    /**
      * @var Network
      */
     protected $network;
@@ -57,12 +51,10 @@ class AbstractAuth
         Facade $facade,
         Container $session,
         Request $request,
-        Response $response,
         Network $network
     ) {
         $this->session = $session;
         $this->request = $request;
-        $this->response = $response;
         $this->network = $network;
         $this->facade = $facade;
     }

@@ -82,7 +82,6 @@ use Mobicms\Utility\Image;
 use Mobicms\Ext\Session\PdoSessionHandler;
 use Zend\Config\Config as ZendConfig;
 use Zend\Http\PhpEnvironment\Request;
-use Zend\Http\PhpEnvironment\Response;
 use Zend\Session\Storage\SessionArrayStorage;
 use Zend\Session\SessionManager;
 
@@ -103,7 +102,6 @@ use Zend\Stdlib\Glob;
  * @method Purify       purify($string) //TODO: доработать, или удалить сервис
  * @method              redirect($url) Closure function
  * @method Request      request()
- * @method Response     response()
  * @method Router       router()
  * @method              uri()
  * @method Facade       user()
@@ -146,9 +144,6 @@ $di = App::getDiInstance();
 // Initialize the Request
 $app->newInstance('request', Request::class);
 
-// Initialize the Response
-$app->newInstance('response', Response::class);
-
 // Initialize the Network
 $app->newInstance('network', Network::class);
 
@@ -159,10 +154,11 @@ $app->newInstance('router', Router::class);
 $config = is_file(CONFIG_FILE_SYS) ? include CONFIG_FILE_SYS : [];
 $app->setService('config', new ZendConfig(is_array($config) ? $config : []));
 
-// Shutdown handler
+/**
+ * Shutdown handler
+ */
 register_shutdown_function(function () use ($app) {
-    $app->response()->setContent($app->view()->render());
-    $app->response()->send();
+    echo $app->view()->render();
 });
 
 // Starting the Session and register instance
@@ -193,9 +189,9 @@ $app->lazyLoad('vars', Vars::class);            //TODO: удалить серв�
 
 // Redirect to given URL
 $app->setCallable('redirect', function ($url) use ($app) {
-    $app->response()->getHeaders()->addHeaderLine('Location', $url[0]);
-    $app->response()->setStatusCode(302);
-    $app->response()->send();
+    ob_end_clean();
+    http_response_code(302);
+    header('Location: ' . $url[0]);
 });
 
 // Get HomeUrl

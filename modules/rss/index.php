@@ -48,5 +48,5 @@ $entry->setDescription('Проверка слуха.');
 $feed->addEntry($entry);
 
 $app->view()->setLayout(false);
-$app->response()->getHeaders()->addHeaderLine('Content-type', 'text/xml; charset="utf-8"');
+header('Content-type: text/xml; charset="utf-8"');
 echo $feed->export('rss');
