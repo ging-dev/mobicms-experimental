@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mobicms\n"
-"POT-Creation-Date: 2016-02-13 15:41+0400\n"
+"POT-Creation-Date: 2017-05-08 12:23+0400\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,16 +19,16 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Oleg Kasyanov <dev@mobicms.net>\n"
-"X-Generator: Poedit 1.8.7\n"
-"X-Poedit-Basepath: ../../../modules/profile\n"
+"X-Generator: Poedit 2.0.1\n"
+"X-Poedit-Basepath: ../..\n"
 "X-Poedit-KeywordsList: _m;_mp:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: includes/option_avatar_animation.php:18 templates/option_avatar.php:25
+#: includes/option_avatar_animation.php:18 templates/option_avatar.php:26
 msgid "Upload GIF animation"
 msgstr ""
 
-#: includes/option_avatar_animation.php:22 includes/option_avatar_image.php:24
+#: includes/option_avatar_animation.php:22 includes/option_avatar_image.php:25
 msgid "Image"
 msgstr ""
 
@@ -48,7 +48,7 @@ msgstr ""
 msgid "The size of the images must be 48x48"
 msgstr ""
 
-#: includes/option_avatar_animation.php:67 includes/option_avatar_image.php:68
+#: includes/option_avatar_animation.php:67 includes/option_avatar_image.php:69
 msgid "Avatar is uploaded"
 msgstr ""
 
@@ -56,11 +56,11 @@ msgstr ""
 msgid "Error uploading avatar"
 msgstr ""
 
-#: includes/option_avatar_animation.php:78 includes/option_avatar_image.php:78
+#: includes/option_avatar_animation.php:78 includes/option_avatar_image.php:79
 msgid "The file is not selected"
 msgstr ""
 
-#: includes/option_avatar_delete.php:18 templates/option_avatar.php:34
+#: includes/option_avatar_delete.php:18 templates/option_avatar.php:35
 msgid "Delete Avatar"
 msgstr ""
 
@@ -76,7 +76,7 @@ msgstr ""
 msgid "Avatar is deleted"
 msgstr ""
 
-#: includes/option_avatar_gravatar.php:18 templates/option_avatar.php:28
+#: includes/option_avatar_gravatar.php:18 templates/option_avatar.php:29
 msgid "Set Gravatar"
 msgstr ""
 
@@ -88,67 +88,67 @@ msgstr ""
 msgid "Avatar is established"
 msgstr ""
 
-#: includes/option_avatar_image.php:20 templates/option_avatar.php:24
+#: includes/option_avatar_image.php:21 templates/option_avatar.php:25
 msgid "Upload image"
 msgstr ""
 
-#: includes/option_avatar_image.php:25
+#: includes/option_avatar_image.php:26
 msgid "The following files are allowed to unload: JPG, JPEG, PNG, GIF. File size should not exceed 100kb. Regardless of the resolution of the source file, it will be converted to the size of the 48х48. For best results, the image should have an equal ratio. New image replaces the old (if it was)."
 msgstr ""
 
-#: includes/option_edit.php:20 templates/option.php:25
+#: includes/option_edit.php:29 templates/option.php:26
 msgid "Edit Profile"
 msgstr ""
 
-#: includes/option_edit.php:31
+#: includes/option_edit.php:36
 msgid "Status"
 msgstr ""
 
-#: includes/option_edit.php:33
+#: includes/option_edit.php:38
 msgid "Min.3, Max. 50 symbols, or blank to remove status"
 msgstr ""
 
-#: includes/option_edit.php:43
+#: includes/option_edit.php:48
 msgid "Your Name"
 msgstr ""
 
-#: includes/option_edit.php:46 includes/option_edit.php:156
+#: includes/option_edit.php:50 includes/option_edit.php:153
 msgid "Max. 50 characters"
 msgstr ""
 
-#: includes/option_edit.php:69
+#: includes/option_edit.php:73
 msgid "Birthday"
 msgstr ""
 
-#: includes/option_edit.php:89
+#: includes/option_edit.php:93
 msgid "Day, month, year"
 msgstr ""
 
-#: includes/option_edit.php:95
+#: includes/option_edit.php:99
 msgid "Accommodation"
 msgstr ""
 
-#: includes/option_edit.php:98
+#: includes/option_edit.php:101
 msgid "Specify the country of residence, your city.<br/>Max. 100 characters."
 msgstr ""
 
-#: includes/option_edit.php:104
+#: includes/option_edit.php:107
 msgid "About yourself"
 msgstr ""
 
-#: includes/option_edit.php:108
+#: includes/option_edit.php:110
 msgid "Max. 5000 characters"
 msgstr ""
 
-#: includes/option_edit.php:113
+#: includes/option_edit.php:115
 msgid "Phone Number"
 msgstr ""
 
-#: includes/option_edit.php:116
+#: includes/option_edit.php:117
 msgid "Max. 100 characters"
 msgstr ""
 
-#: includes/option_edit.php:122 includes/option_theme.php:54
+#: includes/option_edit.php:123 includes/option_theme.php:54
 #: templates/option_theme.php:32
 msgid "Site"
 msgstr ""
@@ -158,20 +158,15 @@ msgid "You can enter multiple URL, separated by spaces.<br/>Max. 100 characters"
 msgstr ""
 
 #: includes/option_edit.php:142
-msgid "Show in the Profile"
+msgid "Your Email visible to everyone"
 msgstr ""
 
-#: includes/option_edit.php:144 includes/option_email.php:41
-msgid "Correctly specify your email address, that it will be sent your password.<br/>Max. 50 characters"
-msgstr ""
-
-#: includes/option_edit.php:145 includes/option_email.php:18
-#: templates/option.php:28
-msgid "Change E-mail"
-msgstr ""
-
-#: includes/option_edit.php:165
+#: includes/option_edit.php:161
 msgid "Enter your UIN number"
+msgstr ""
+
+#: includes/option_email.php:18 templates/option.php:29
+msgid "Change E-mail"
 msgstr ""
 
 #: includes/option_email.php:23
@@ -184,6 +179,10 @@ msgstr ""
 
 #: includes/option_email.php:39
 msgid "Repeat E-mail"
+msgstr ""
+
+#: includes/option_email.php:41
+msgid "Correctly specify your email address, that it will be sent your password.<br/>Max. 50 characters"
 msgstr ""
 
 #: includes/option_email.php:46 includes/option_nickname.php:43
@@ -203,7 +202,7 @@ msgstr ""
 msgid "If you turn on automatic mode, the system language is set depending on the settings of your browser."
 msgstr ""
 
-#: includes/option_nickname.php:23 templates/option.php:30
+#: includes/option_nickname.php:23 templates/option.php:31
 msgid "Change Nickname"
 msgstr ""
 
@@ -235,7 +234,7 @@ msgstr ""
 msgid "Nickname successfully changed"
 msgstr ""
 
-#: includes/option_password.php:20 templates/option.php:27
+#: includes/option_password.php:20 templates/option.php:28
 msgid "Change Password"
 msgstr ""
 
@@ -283,47 +282,47 @@ msgstr ""
 msgid "Supervisor"
 msgstr ""
 
-#: includes/option_rank.php:36 templates/option.php:39
+#: includes/option_rank.php:36 templates/option.php:40
 msgid "Rank"
 msgstr ""
 
-#: includes/option_settings.php:21
+#: includes/option_settings.php:23
 msgid "Without Editor"
 msgstr ""
 
-#: includes/option_settings.php:22
+#: includes/option_settings.php:24
 msgid "WYSIWYG Editor"
 msgstr ""
 
-#: includes/option_settings.php:25
+#: includes/option_settings.php:27
 msgid "HTML Editor"
 msgstr ""
 
-#: includes/option_settings.php:30 templates/option.php:33
+#: includes/option_settings.php:32 templates/option.php:34
 msgid "System Settings"
 msgstr ""
 
-#: includes/option_settings.php:34
+#: includes/option_settings.php:36
 msgid "Time settings"
 msgstr ""
 
-#: includes/option_settings.php:35
+#: includes/option_settings.php:37
 msgid "Time Shift"
 msgstr ""
 
-#: includes/option_settings.php:49
+#: includes/option_settings.php:51
 msgid "List Size"
 msgstr ""
 
-#: includes/option_settings.php:50
+#: includes/option_settings.php:52
 msgid "Number of items per page"
 msgstr ""
 
-#: includes/option_settings.php:64
+#: includes/option_settings.php:66
 msgid "Direct URL"
 msgstr ""
 
-#: includes/option_settings.php:68
+#: includes/option_settings.php:70
 msgid "Text Editor"
 msgstr ""
 
@@ -335,7 +334,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: includes/option_theme.php:61 templates/option.php:34
+#: includes/option_theme.php:61 templates/option.php:35
 msgid "Choose Skin"
 msgstr ""
 
@@ -343,43 +342,43 @@ msgstr ""
 msgid "Choose"
 msgstr ""
 
-#: includes/reputation.php:40
+#: includes/reputation.php:35
 msgid "Vote"
 msgstr ""
 
-#: includes/reputation.php:41
+#: includes/reputation.php:36
 msgid "You can express your relationship to the person, what is its reputation in your opinion. You can change your attitude when you want, no restrictions."
 msgstr ""
 
-#: includes/reputation.php:47 templates/reputation.php:33
+#: includes/reputation.php:42 templates/reputation.php:33
 msgid "Excellent"
 msgstr ""
 
-#: includes/reputation.php:48 templates/reputation.php:41
+#: includes/reputation.php:43 templates/reputation.php:41
 msgid "Good"
 msgstr ""
 
-#: includes/reputation.php:49 templates/reputation.php:49
+#: includes/reputation.php:44 templates/reputation.php:49
 msgid "Neutrally"
 msgstr ""
 
-#: includes/reputation.php:50 templates/reputation.php:57
+#: includes/reputation.php:45 templates/reputation.php:57
 msgid "Bad"
 msgstr ""
 
-#: includes/reputation.php:51 templates/reputation.php:65
+#: includes/reputation.php:46 templates/reputation.php:65
 msgid "Very Bad"
 msgstr ""
 
-#: templates/option.php:26
+#: templates/option.php:27
 msgid "Set Avatar"
 msgstr ""
 
-#: templates/option.php:36
+#: templates/option.php:37
 msgid "Choose Language"
 msgstr ""
 
-#: templates/option_avatar.php:31
+#: templates/option_avatar.php:32
 msgid "Choose in the catalog"
 msgstr ""
 
