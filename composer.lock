@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce7dafa5d842317324f7ec4a97d56ae9",
+    "content-hash": "b0d7a4b2d00a2c70d503782273e609f5",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -120,6 +120,41 @@
             "description": "Generic Syntax Highlighter",
             "homepage": "http://qbnz.com/highlighter/",
             "time": "2014-11-03T21:20:34+00:00"
+        },
+        {
+            "name": "mobicms/mobicms-captcha",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mobicms/mobicms-captcha.git",
+                "reference": "8fd1f62ecf31a08916240fd9ba38fdcf0a2c302c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mobicms/mobicms-captcha/zipball/8fd1f62ecf31a08916240fd9ba38fdcf0a2c302c",
+                "reference": "8fd1f62ecf31a08916240fd9ba38fdcf0a2c302c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mobicms\\Captcha\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "mobiCMS, Captcha package",
+            "homepage": "https://github.com/mobicms/mobicms-captcha",
+            "keywords": [
+                "captcha",
+                "mobicms"
+            ],
+            "time": "2017-05-08 20:11:20"
         },
         {
             "name": "psr/container",
@@ -1029,7 +1064,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mobicms/mobicms-captcha": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
