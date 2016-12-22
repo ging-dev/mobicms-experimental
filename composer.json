@@ -30,7 +30,7 @@
     "zendframework/zend-uri": "^2.5",
     "zendframework/zend-validator": "^2.9",
     "container-interop/container-interop": "^1.2",
-    "mobicms/mobicms-captcha": "dev-develop",
+    "mobicms/mobicms-captcha": "^1.0",
     "ezyang/htmlpurifier": "^4.9",
     "geshi/geshi": "v1.0.8.12",
     "verot/class.upload.php": "^0.33.0"

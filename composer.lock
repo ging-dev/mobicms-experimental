@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0d7a4b2d00a2c70d503782273e609f5",
+    "content-hash": "1a158f5c68ad86e8d9430fd583eea84f",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -123,16 +123,16 @@
         },
         {
             "name": "mobicms/mobicms-captcha",
-            "version": "dev-develop",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mobicms/mobicms-captcha.git",
-                "reference": "8fd1f62ecf31a08916240fd9ba38fdcf0a2c302c"
+                "reference": "de40e2acf7eb1a9d5254b7a3202d5872a80160c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mobicms/mobicms-captcha/zipball/8fd1f62ecf31a08916240fd9ba38fdcf0a2c302c",
-                "reference": "8fd1f62ecf31a08916240fd9ba38fdcf0a2c302c",
+                "url": "https://api.github.com/repos/mobicms/mobicms-captcha/zipball/de40e2acf7eb1a9d5254b7a3202d5872a80160c1",
+                "reference": "de40e2acf7eb1a9d5254b7a3202d5872a80160c1",
                 "shasum": ""
             },
             "require": {
@@ -154,7 +154,7 @@
                 "captcha",
                 "mobicms"
             ],
-            "time": "2017-05-08 20:11:20"
+            "time": "2017-05-08T20:48:29+00:00"
         },
         {
             "name": "psr/container",
@@ -1064,9 +1064,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "mobicms/mobicms-captcha": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
