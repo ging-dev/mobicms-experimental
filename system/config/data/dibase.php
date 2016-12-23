@@ -1,11 +1,5 @@
 <?php
 return array(
-    'Mobicms\\Captcha\\Captcha' => array(
-        'supertypes' => array(),
-        'instantiator' => '__construct',
-        'methods' => array(),
-        'parameters' => array(),
-    ),
     'Mobicms\\Checkpoint\\Authentication\\AbstractAuth' => array(
         'supertypes' => array(),
         'instantiator' => '__construct',
@@ -841,19 +835,8 @@ return array(
     'Mobicms\\Environment\\Network' => array(
         'supertypes' => array(),
         'instantiator' => '__construct',
-        'methods' => array(
-            '__construct' => 3,
-        ),
-        'parameters' => array(
-            '__construct' => array(
-                'Mobicms\\Environment\\Network::__construct:0' => array(
-                    0 => 'request',
-                    1 => 'Zend\\Http\\PhpEnvironment\\Request',
-                    2 => true,
-                    3 => null,
-                ),
-            ),
-        ),
+        'methods' => array(),
+        'parameters' => array(),
     ),
     'Mobicms\\Environment\\Vars' => array(
         'supertypes' => array(),
@@ -883,12 +866,6 @@ return array(
         'parameters' => array(
             '__construct' => array(
                 'Mobicms\\Ext\\Session\\PdoSessionHandler::__construct:0' => array(
-                    0 => 'network',
-                    1 => 'Mobicms\\Environment\\Network',
-                    2 => true,
-                    3 => null,
-                ),
-                'Mobicms\\Ext\\Session\\PdoSessionHandler::__construct:1' => array(
                     0 => 'router',
                     1 => 'Mobicms\\Routing\\Router',
                     2 => true,

@@ -47,11 +47,12 @@ class PdoSessionHandler implements SaveHandlerInterface
      */
     public $lifetime;
 
-    public function __construct(Network $network, Router $router)
+    public function __construct(Router $router)
     {
+        //TODO: Переделать на invocables, или фабрику
         $this->db = \App::getContainer()->get(\PDO::class);
         $this->router = $router;
-        $this->network = $network;
+        $this->network = \App::getContainer()->get(Network::class);
         $this->lifetime = (int)ini_get('session.gc_maxlifetime');
     }
 

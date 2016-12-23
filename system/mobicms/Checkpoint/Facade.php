@@ -71,10 +71,11 @@ class Facade
         SessionManager $manager,
         Network $network
     ) {
+        //TODO: Переделать на invocables, или фабрику
         $this->db = \App::getContainer()->get(\PDO::class);
         $this->session = new Session('auth', $manager);
         $this->request = $request;
-        $this->network = $network;
+        $this->network = \App::getContainer()->get(Network::class);
         $this->userInstance = (new Identification($this, $this->session, $request, $network))->getUser();
     }
 

@@ -98,7 +98,6 @@ use Zend\Stdlib\Glob;
  * @method Filter       filter($string) //TODO: доработать, или удалить сервис
  * @method              homeurl()
  * @method Translate    lng()
- * @method Network      network()
  * @method Purify       purify($string) //TODO: доработать, или удалить сервис
  * @method              redirect($url) Closure function
  * @method Request      request()
@@ -143,9 +142,6 @@ $di = App::getDiInstance();
 
 // Initialize the Request
 $app->newInstance('request', Request::class);
-
-// Initialize the Network
-$app->newInstance('network', Network::class);
 
 // Initialize the Router
 $app->newInstance('router', Router::class);

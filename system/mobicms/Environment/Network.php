@@ -1,36 +1,24 @@
 <?php
-/*
- * mobiCMS Content Management System (http://mobicms.net)
- *
- * For copyright and license information, please see the LICENSE.md
- * Installing the system or redistributions of files must retain the above copyright notice.
- *
- * @link        http://mobicms.net mobiCMS Project
- * @copyright   Copyright (C) mobiCMS Community
- * @license     LICENSE.md (see attached file)
- */
 
 namespace Mobicms\Environment;
 
-use Zend\Http\PhpEnvironment\Request;
+use Psr\Container\ContainerInterface;
 
 /**
  * Class Network
  *
  * @package Mobicms\Environment
  * @author  Oleg (AlkatraZ) Kasyanov <dev@mobicms.net>
- * @version v.1.0.0 2015-11-11
  */
 class Network
 {
     private $ip;
-    private $request;
     private $userAgent;
     private $trustedProxies = [];
 
-    public function __construct(Request $request)
+    public function __invoke(ContainerInterface $container)
     {
-        $this->request = $request;
+        return $this;
     }
 
     /**
@@ -68,11 +56,17 @@ class Network
      */
     public function getUserAgent()
     {
-        if (null === $this->userAgent) {
-            $this->userAgent = $this->request->getHeader('User-Agent')->getFieldValue();
+        if ($this->userAgent !== null) {
+            return $this->userAgent;
+        } elseif (isset($_SERVER['HTTP_X_OPERAMINI_PHONE_UA']) && strlen(trim($_SERVER['HTTP_X_OPERAMINI_PHONE_UA'])) > 5) {
+            return $this->userAgent = 'Opera Mini: ' . mb_substr(filter_var($_SERVER['HTTP_X_OPERAMINI_PHONE_UA'],
+                    FILTER_SANITIZE_SPECIAL_CHARS), 0, 150);
+        } elseif (isset($_SERVER['HTTP_USER_AGENT'])) {
+            return $this->userAgent = mb_substr(filter_var($_SERVER['HTTP_USER_AGENT'], FILTER_SANITIZE_SPECIAL_CHARS),
+                0, 150);
+        } else {
+            return $this->userAgent = 'Not Recognised';
         }
-
-        return filter_var($this->userAgent, FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
     /**
@@ -183,7 +177,7 @@ class Network
         }
 
         return 0 === substr_compare(sprintf('%032b', ip2long($requestIp)), sprintf('%032b', ip2long($address)), 0,
-            $netmask);
+                $netmask);
     }
 
     /**
@@ -236,6 +230,6 @@ class Network
     private function isFromTrustedProxy()
     {
         return !empty($this->trustedProxies) && $this->checkIp(filter_input(INPUT_SERVER, 'REMOTE_ADDR'),
-            $this->trustedProxies);
+                $this->trustedProxies);
     }
 }

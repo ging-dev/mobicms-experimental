@@ -1,9 +1,14 @@
 <?php
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Environment\Network $network */
+$network = $container->get(Mobicms\Environment\Network::class);
+
 $app = App::getInstance();
 $url = $app->request()->getBaseUrl();
 $profile = isset($profile) ? $profile : $app->profile();
 $rights = $app->user()->get()->rights;
-$proxy = $app->network()->isProxyIp();
 ?>
 <li>
     <!-- Кнопка выпадающего меню -->
@@ -13,13 +18,13 @@ $proxy = $app->network()->isProxyIp();
             <ul class="dropdown-menu" role="menu">
                 <li class="dropdown-header"><?= _s('IP Management') ?></li>
                 <li><a href="<?= $url ?>/whois/<?= $profile['ip'] ?>"><i class="search fw"></i>IP Whois</a></li>
-                <?php if ($proxy): ?>
+                <?php if ($network->isProxyIp()): ?>
                     <li><a href="#"><i class="cogs fw"></i><?= _s('Proxy Management') ?></a></li>
                 <?php endif ?>
                 <?php if (
                     $rights == 9
-                    && $profile['ip'] != $app->network()->getClientIp()
-                    && !in_array($profile['ip'], $app->network()->getTrustedProxies())
+                    && $profile['ip'] != $network->getClientIp()
+                    && !in_array($profile['ip'], $network->getTrustedProxies())
                 ): ?>
                     <li><a href="#"><i class="ban fw"></i><?= _s('Block this IP') ?></a></li>
                 <?php endif ?>
@@ -53,7 +58,7 @@ $proxy = $app->network()->isProxyIp();
                 <?php if ($rights): ?>
                     <div class="small inline margin"><?= $profile['userAgent'] ?></div>
                     <div class="small">
-                        <?php if ($proxy): ?>
+                        <?php if ($network->isProxyIp()): ?>
                             <span class="label label-danger">Proxy</span>
                         <?php endif ?>
                         <?= $profile['ip'] ?>

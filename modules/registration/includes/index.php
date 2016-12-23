@@ -16,8 +16,10 @@ use Mobicms\Checkpoint\User\AddUser;
 use Mobicms\Validator\Email;
 use Mobicms\Validator\Nickname;
 
-$app = App::getInstance();
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
 
+$app = App::getInstance();
 $config = $app->config()->get('reg');
 $userId = 0;
 
@@ -141,6 +143,9 @@ if ($config['allow']) {
      */
     if ($form->isValid()) {
         try {
+            /** @var Mobicms\Environment\Network $network */
+            $network = $container->get(Mobicms\Environment\Network::class);
+
             // Инициализируем класс Регистрации
             $user = new AddUser([]);
 
@@ -150,8 +155,8 @@ if ($config['allow']) {
             $user->setPassword($form->output['newpass']);
             $user->sex = $form->output['sex'];
             $user->joinDate = time();
-            $user->ip = $app->network()->getClientIp();
-            $user->userAgent = $app->network()->getUserAgent();
+            $user->ip = $network->getClientIp();
+            $user->userAgent = $network->getUserAgent();
 
             // Устанавливаем статус активации, подтверждения и карантина
             $user->activated = $config['letterMode'] < 2 ? true : false;
