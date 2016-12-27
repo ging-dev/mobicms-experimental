@@ -12,7 +12,7 @@
 
 namespace Mobicms\Template;
 
-use App;
+use Mobicms\Api\ViewInterface;
 use Mobicms\Routing\Router;
 use Mobicms\Template\Traits\HelpersTrait;
 use Mobicms\Template\Traits\PathTrait;
@@ -24,7 +24,7 @@ use Mobicms\Template\Traits\PathTrait;
  * @author  Oleg (AlkatraZ) Kasyanov <dev@mobicms.net>
  * @version v.2.2.0 2015-08-29
  */
-class View extends \ArrayObject
+class View extends \ArrayObject implements ViewInterface
 {
     use HelpersTrait;
     use PathTrait;

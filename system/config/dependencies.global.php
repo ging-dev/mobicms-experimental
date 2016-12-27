@@ -2,16 +2,10 @@
 
 return [
     'dependencies' => [
-        'invokables' => [
-            Mobicms\Environment\Network::class => Mobicms\Environment\Network::class,
-        ],
-
         'factories' => [
-            PDO::class => Mobicms\Database\PdoFactory::class,
-        ],
-
-        'aliases' => [
-
+            Mobicms\Api\ViewInterface::class   => Mobicms\Template\ViewFactory::class,
+            Mobicms\Environment\Network::class => Mobicms\Environment\Network::class,
+            PDO::class                         => Mobicms\Database\PdoFactory::class,
         ],
     ],
 ];
