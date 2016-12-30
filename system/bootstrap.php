@@ -153,8 +153,12 @@ $app->setService('config', new ZendConfig(is_array($config) ? $config : []));
 /**
  * Shutdown handler
  */
-register_shutdown_function(function () use ($app) {
+register_shutdown_function(function () use ($app, $container) {
     echo $app->view()->render();
+
+    /** @var Mobicms\Api\ViewInterface $view */
+    //$view = $container->get(Mobicms\Api\ViewInterface::class);
+    //echo $view->render();
 });
 
 // Starting the Session and register instance
