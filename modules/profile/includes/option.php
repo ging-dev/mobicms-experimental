@@ -12,5 +12,8 @@
 
 defined('JOHNCMS') or die('Error: restricted access');
 
+/** @var Mobicms\Api\ViewInterface $view */
+$view = App::getContainer()->get(Mobicms\Api\ViewInterface::class);
+
 // Показываем меню настроек
-App::getInstance()->view()->setTemplate('option.php');
+$view->setTemplate('option.php');

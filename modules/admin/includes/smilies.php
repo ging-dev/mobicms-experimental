@@ -12,6 +12,12 @@
 
 defined('JOHNCMS') or die('Error: restricted access');
 
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
+
 $app = App::getInstance();
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
 $form->infoMessages = false;
@@ -51,11 +57,11 @@ if ($form->isValid()) {
     }
 
     if (file_put_contents(CACHE_PATH . 'smilies.cache', serialize($cache))) {
-        $app->view()->save = _m('The cache is updated');
+        $view->save = _m('The cache is updated');
     } else {
-        $app->view()->error = _m('When updating a cache there was a error');
+        $view->error = _m('When updating a cache there was a error');
     }
 }
 
-$app->view()->form = $form->display();
-$app->view()->setTemplate('smilies.php');
+$view->form = $form->display();
+$view->setTemplate('smilies.php');

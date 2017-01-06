@@ -12,6 +12,12 @@
 
 defined('JOHNCMS') or die('Error: restricted access');
 
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
+
 $app = App::getInstance();
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
 $form
@@ -63,5 +69,5 @@ if ($form->isValid()) {
     }
 }
 
-$app->view()->form = $form->display();
-$app->view()->setTemplate('login.php');
+$view->form = $form->display();
+$view->setTemplate('login.php');

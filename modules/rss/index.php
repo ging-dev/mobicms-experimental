@@ -16,6 +16,12 @@
 
 defined('JOHNCMS') or die('Error: restricted access');
 
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
+
 $app = App::getInstance();
 $config = $app->config()->get('sys');
 
@@ -47,6 +53,6 @@ $entry->setDateCreated(time());
 $entry->setDescription('Проверка слуха.');
 $feed->addEntry($entry);
 
-$app->view()->setLayout(false);
+$view->setLayout(false);
 header('Content-type: text/xml; charset="utf-8"');
 echo $feed->export('rss');

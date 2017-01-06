@@ -12,6 +12,12 @@
 
 defined('JOHNCMS') or die('Error: restricted access');
 
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
+
 $catalog = [];
 $names = [
     'animals'  => _m('Animals'),
@@ -34,7 +40,7 @@ $app = App::getInstance();
 $uri = $app->uri();
 $homeUrl = $app->request()->getBaseUrl();
 $query = $app->router()->getQuery();
-$app->view()->pagesize = 40;
+$view->pagesize = 40;
 $user = $app->user()->get();
 
 if ($app->user()->isValid() && isset($query[1], $query[2], $catalog[$query[2]]) && $query[1] == 'set') {
@@ -68,26 +74,26 @@ if ($app->user()->isValid() && isset($query[1], $query[2], $catalog[$query[2]]) 
         $form->continueLink = $homeUrl . '/profile/' . $user->id . '/option/avatar/';
         $form->successMessage = _s('Avatar is installed');
         $form->confirmation = true;
-        $app->view()->hideuser = true;
+        $view->hideuser = true;
     }
 
-    $app->view()->form = $form->display();
-    $app->view()->setTemplate('avatars_set.php');
+    $view->form = $form->display();
+    $view->setTemplate('avatars_set.php');
 } elseif (isset($query[1], $query[2], $catalog[$query[2]]) && $query[1] == 'list') {
     // Показываем список аватаров в выбранной категории
     $avatars = glob(ROOT_PATH . 'assets' . DS . 'avatars' . DS . $query[2] . DS . '*.{gif,jpg,png}', GLOB_BRACE);
 
-    $app->view()->total = count($avatars);
-    $app->view()->start = $app->vars()->page * $app->view()->pagesize - $app->view()->pagesize;
-    $end = $app->vars()->page * $app->view()->pagesize;
-    if ($end > $app->view()->total) {
-        $end = $app->view()->total;
+    $view->total = count($avatars);
+    $view->start = $app->vars()->page * view->pagesize - $view->pagesize;
+    $end = $app->vars()->page * $view->pagesize;
+    if ($end > $view->total) {
+        $end = $view->total;
     }
 
-    if ($app->view()->total) {
-        $app->view()->list = [];
-        for ($i = $app->view()->start; $i < $end; $i++) {
-            $app->view()->list[$i] =
+    if ($view->total) {
+        $view->list = [];
+        for ($i = $view->start; $i < $end; $i++) {
+            $view->list[$i] =
                 [
                     'image' => $homeUrl . '/assets/avatars/' . urlencode($query[2]) . '/' . basename($avatars[$i]),
                     'link'  => ($app->user()->isValid() ? '../../set/' . urlencode($query[2]) . '/' . urlencode(basename($avatars[$i])) : '#')
@@ -95,13 +101,13 @@ if ($app->user()->isValid() && isset($query[1], $query[2], $catalog[$query[2]]) 
         }
     }
 
-    $app->view()->cat = $query[2];
-    $app->view()->setTemplate('avatars_list.php');
+    $view->cat = $query[2];
+    $view->setTemplate('avatars_list.php');
 } else {
     // Показываем каталог аватаров (список категорий)
-    $app->view()->list = [];
+    $view->list = [];
     foreach ($catalog as $key => $val) {
-        $app->view()->list[] =
+        $view->list[] =
             [
                 'link'  => $uri . 'list/' . urlencode($key) . '/',
                 'name'  => $val,
@@ -109,5 +115,5 @@ if ($app->user()->isValid() && isset($query[1], $query[2], $catalog[$query[2]]) 
             ];
     }
 
-    $app->view()->setTemplate('avatars_index.php');
+    $view->setTemplate('avatars_index.php');
 }

@@ -12,8 +12,13 @@
 
 defined('JOHNCMS') or die('Error: restricted access');
 
-$app = App::getInstance();
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
 
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
+
+$app = App::getInstance();
 $config = $app->config()->get('sys');
 $uri = $app->uri();
 
@@ -141,5 +146,5 @@ if ($form->isValid()) {
     $app->redirect($uri . '?saved');
 }
 
-$app->view()->form = $form->display();
-$app->view()->setTemplate('edit_form.php');
+$view->form = $form->display();
+$view->setTemplate('edit_form.php');

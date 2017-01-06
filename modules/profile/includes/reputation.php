@@ -8,6 +8,9 @@ $container = App::getContainer();
 /** @var PDO $db */
 $db = $container->get(PDO::class);
 
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
+
 $app = App::getInstance();
 $user = $app->user()->get();
 $profile = $app->profile();
@@ -83,16 +86,16 @@ if ($app->user()->isValid() && $profile->id != $user->id) {
         $profile->save();
     }
 
-    $app->view()->form = $form->display();
+    $view->form = $form->display();
 }
 
-$app->view()->counters = $reputation;
-$app->view()->reputation = [];
-$app->view()->reputation_total = array_sum($reputation);
+$view->counters = $reputation;
+$view->reputation = [];
+$view->reputation_total = array_sum($reputation);
 foreach ($reputation as $key => $val) {
-    $app->view()->reputation[$key] = $app->view()->reputation_total
-        ? 100 / $app->view()->reputation_total * $val
+    $view->reputation[$key] = $view->reputation_total
+        ? 100 / $view->reputation_total * $val
         : 0;
 }
 
-$app->view()->setTemplate('reputation.php');
+$view->setTemplate('reputation.php');

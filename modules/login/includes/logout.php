@@ -12,6 +12,12 @@
 
 defined('JOHNCMS') or die('Error: restricted access');
 
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
+
 $app = App::getInstance();
 $homeUrl = $app->request()->getBaseUrl();
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
@@ -36,5 +42,5 @@ if ($form->isValid()) {
     $app->redirect($homeUrl);
 }
 
-$app->view()->form = $form->display();
-$app->view()->setTemplate('login.php');
+$view->form = $form->display();
+$view->setTemplate('login.php');

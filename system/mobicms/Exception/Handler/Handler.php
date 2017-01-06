@@ -20,7 +20,6 @@ use Exception;
  * @package Mobicms\Exceptions\Handler
  * @author  Oleg (AlkatraZ) Kasyanov <dev@mobicms.net>
  * @author  DE BONA Vivien <debona.vivien@gmail.com>
- * @version v.1.0.0 2015-07-18
  */
 class Handler
 {
@@ -89,7 +88,7 @@ class Handler
 
         include 'templates/footer.php';
         ob_end_flush();
-        \App::getInstance()->view()->setLayout(false); //TODO: improve!
+        \App::getContainer()->get(\Mobicms\Api\ViewInterface::class)->view->setLayout(false); //TODO: improve!
         exit;
     }
 

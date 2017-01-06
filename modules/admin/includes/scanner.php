@@ -13,6 +13,12 @@
 defined('JOHNCMS') or die('Error: restricted access');
 define('ROOT_DIR', '.');
 
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
+
 $app = App::getInstance();
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
 $form->infoMessages = false;
@@ -46,15 +52,15 @@ if ($form->isValid()) {
             // Сканируем на соответствие ранее созданному снимку
             $scanner->scan();
             if (count($scanner->whiteList) == 0) {
-                $app->view()->errormsg = _m('Snapshot image is not created');
+                $view->errormsg = _m('Snapshot image is not created');
             } else {
                 if (count($scanner->modifiedFiles) || count($scanner->missingFiles) || count($scanner->newFiles)) {
-                    $app->view()->modifiedFiles = $scanner->modifiedFiles;
-                    $app->view()->missingFiles = $scanner->missingFiles;
-                    $app->view()->extraFiles = $scanner->newFiles;
-                    $app->view()->errormsg = _m('Snapshot inconsistency');
+                    $view->modifiedFiles = $scanner->modifiedFiles;
+                    $view->missingFiles = $scanner->missingFiles;
+                    $view->extraFiles = $scanner->newFiles;
+                    $view->errormsg = _m('Snapshot inconsistency');
                 } else {
-                    $app->view()->ok = _m('All files are consistent with previously made image');
+                    $view->ok = _m('All files are consistent with previously made image');
                 }
             }
             break;
@@ -62,10 +68,10 @@ if ($form->isValid()) {
         case 3:
             // Создаем снимок файлов
             $scanner->snap();
-            $app->view()->ok = _m('Snapshot successfully created');
+            $view->ok = _m('Snapshot successfully created');
             break;
     }
 }
 
-$app->view()->form = $form->display();
-$app->view()->setTemplate('scanner.php');
+$view->form = $form->display();
+$view->setTemplate('scanner.php');

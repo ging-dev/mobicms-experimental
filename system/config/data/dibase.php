@@ -1,5 +1,64 @@
 <?php
 return array(
+    'Mobicms\\Api\\ViewInterface' => array(
+        'supertypes' => array(),
+        'instantiator' => null,
+        'methods' => array(
+            'setCss' => 0,
+            'setLayout' => 0,
+            'setTemplate' => 0,
+        ),
+        'parameters' => array(
+            'setCss' => array(
+                'Mobicms\\Api\\ViewInterface::setCss:0' => array(
+                    0 => 'cssFile',
+                    1 => null,
+                    2 => true,
+                    3 => null,
+                ),
+                'Mobicms\\Api\\ViewInterface::setCss:1' => array(
+                    0 => 'media',
+                    1 => null,
+                    2 => false,
+                    3 => '',
+                ),
+            ),
+            'setLayout' => array(
+                'Mobicms\\Api\\ViewInterface::setLayout:0' => array(
+                    0 => 'templateFile',
+                    1 => null,
+                    2 => true,
+                    3 => null,
+                ),
+                'Mobicms\\Api\\ViewInterface::setLayout:1' => array(
+                    0 => 'module',
+                    1 => null,
+                    2 => false,
+                    3 => false,
+                ),
+            ),
+            'setTemplate' => array(
+                'Mobicms\\Api\\ViewInterface::setTemplate:0' => array(
+                    0 => 'templateFile',
+                    1 => null,
+                    2 => true,
+                    3 => null,
+                ),
+                'Mobicms\\Api\\ViewInterface::setTemplate:1' => array(
+                    0 => 'key',
+                    1 => null,
+                    2 => false,
+                    3 => null,
+                ),
+                'Mobicms\\Api\\ViewInterface::setTemplate:2' => array(
+                    0 => 'module',
+                    1 => null,
+                    2 => false,
+                    3 => true,
+                ),
+            ),
+        ),
+    ),
     'Mobicms\\Checkpoint\\Authentication\\AbstractAuth' => array(
         'supertypes' => array(),
         'instantiator' => '__construct',
@@ -1293,12 +1352,13 @@ return array(
             2 => 'ArrayAccess',
             3 => 'Traversable',
             4 => 'IteratorAggregate',
-            5 => 'ArrayObject',
-            6 => 'IteratorAggregate',
-            7 => 'Traversable',
-            8 => 'ArrayAccess',
-            9 => 'Serializable',
-            10 => 'Countable',
+            5 => 'Mobicms\\Api\\ViewInterface',
+            6 => 'ArrayObject',
+            7 => 'IteratorAggregate',
+            8 => 'Traversable',
+            9 => 'ArrayAccess',
+            10 => 'Serializable',
+            11 => 'Countable',
         ),
         'instantiator' => '__construct',
         'methods' => array(
@@ -1413,6 +1473,12 @@ return array(
                 ),
             ),
         ),
+    ),
+    'Mobicms\\Template\\ViewFactory' => array(
+        'supertypes' => array(),
+        'instantiator' => '__construct',
+        'methods' => array(),
+        'parameters' => array(),
     ),
     'Mobicms\\Utility\\Image' => array(
         'supertypes' => array(),

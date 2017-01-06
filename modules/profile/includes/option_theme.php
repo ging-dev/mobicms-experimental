@@ -12,6 +12,12 @@
 
 defined('JOHNCMS') or die('Error: restricted access');
 
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
+
 $app = App::getInstance();
 
 function getThemesList()
@@ -83,9 +89,9 @@ if ($act == 'set' && isset($themes[$mod])) {
 //        App::view()->hideuser = true;
     }
 
-    $app->view()->form = $form->display();
-    $app->view()->setTemplate('option_theme_set.php');
+    $view->form = $form->display();
+    $view->setTemplate('option_theme_set.php');
 } else {
-    $app->view()->tpl_list = $themes;
-    $app->view()->setTemplate('option_theme.php');
+    $view->tpl_list = $themes;
+    $view->setTemplate('option_theme.php');
 }

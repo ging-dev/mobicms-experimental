@@ -2,8 +2,13 @@
 
 use Registration\WelcomeLetter;
 
-$app = App::getInstance();
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
 
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
+
+$app = App::getInstance();
 $config = $app->config()->get('reg');
 $user = $app->user()->get();
 
@@ -28,7 +33,7 @@ if ($user->id) {
         $message .= '<li>' . _m('If the message still does not come, try to change Email and send the letter again.') . '</li>';
         $message .= '<li>' . _m('If Email was specified in error, correct it and send the letter again.') . '</li>';
         $message .= '</ol>';
-        $app->view()->info[] = $message;
+        $view->info[] = $message; //TODO: Разобраться
 
         // Показываем форму отправки повторного письма
         $form = new Mobicms\Form\Form(['action' => $app->uri()]);
@@ -83,8 +88,8 @@ if ($user->id) {
 
         }
 
-        $app->view()->buttonText = _m('Send an activation again');
-        $app->view()->slider = $form->display();
+        $view->buttonText = _m('Send an activation again');
+        $view->slider = $form->display();
 
         if ($form->isValid() && $config['letterMode']) {
             try {
@@ -100,13 +105,13 @@ if ($user->id) {
 
     if (!$user->activated && !$user->approved) {
         // Выводим сообщение, если пользователь не активирован и не промодерирован
-        $app->view()->warning = _m('Your account must be approved by Administrator, but before that need activation.<br>Follow the instructions below.');
+        $view->warning = _m('Your account must be approved by Administrator, but before that need activation.<br>Follow the instructions below.');
     } elseif (!$user->approved) {
         // Выводим сообщение, если пользователь активирован, но еще не промодерирован
-        $app->view()->warning = _m('Your account must be approved by Administrator.<br>Please wait...');
+        $view->warning = _m('Your account must be approved by Administrator.<br>Please wait...');
     }
 } else {
     echo 'Надо залогиниться';
 }
 
-$app->view()->setTemplate('message.php', null, false);
+$view->setTemplate('message.php', null, false);

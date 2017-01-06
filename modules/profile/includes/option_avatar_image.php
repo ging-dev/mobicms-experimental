@@ -12,8 +12,13 @@
 
 defined('JOHNCMS') or die('Error: restricted access');
 
-$app = App::getInstance();
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
 
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
+
+$app = App::getInstance();
 $config = (int)$app->config()['sys']['filesize'];
 
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
@@ -68,7 +73,7 @@ if ($form->isValid()) {
                 $form->continueLink = '../';
                 $form->successMessage = _m('Avatar is uploaded');
                 $form->confirmation = true;
-                $app->view()->hideuser = true;
+                $view->hideuser = true;
             } else {
                 $error[] = ($handle->error);
             }
@@ -80,9 +85,9 @@ if ($form->isValid()) {
     }
 
     if (!empty($error)) {
-        $app->view()->error = implode('<br/>', $error);
+        $view->error = implode('<br/>', $error);
     }
 }
 
-$app->view()->form = $form->display();
-$app->view()->setTemplate('edit_form.php');
+$view->form = $form->display();
+$view->setTemplate('edit_form.php');

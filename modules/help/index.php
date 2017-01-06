@@ -16,6 +16,12 @@
 
 defined('JOHNCMS') or die('Error: restricted access');
 
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
+
 $app = App::getInstance();
 $query = $app->router()->getQuery();
 $app->lng()->setModule('help');
@@ -27,12 +33,12 @@ if (isset($query[0])) {
             break;
 
         case 'rules':
-            $app->view()->setTemplate('rules.php');
+            $view->setTemplate('rules.php');
             break;
 
         default:
             $app->redirect($app->request()->getBaseUrl() . '/404');
     }
 } else {
-    $app->view()->setTemplate('index.php');
+    $view->setTemplate('index.php');
 }

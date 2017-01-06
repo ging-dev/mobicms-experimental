@@ -19,6 +19,9 @@ use Mobicms\Validator\Nickname;
 /** @var Psr\Container\ContainerInterface $container */
 $container = App::getContainer();
 
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
+
 $app = App::getInstance();
 $config = $app->config()->get('reg');
 $userId = 0;
@@ -201,8 +204,8 @@ if ($config['allow']) {
             $app->redirect($app->uri() . 'confirmation/');
         }
     } else {
-        $app->view()->form = $form->display();
+        $view->form = $form->display();
     }
 
-    $app->view()->setTemplate('index.php');
+    $view->setTemplate('index.php');
 }

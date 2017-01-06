@@ -12,4 +12,4 @@
 
 defined('JOHNCMS') or die('Error: restricted access');
 
-App::getInstance()->view()->setTemplate('index.php');
+App::getContainer()->get(Mobicms\Api\ViewInterface::class)->setTemplate('index.php');

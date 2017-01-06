@@ -12,6 +12,12 @@
 
 defined('JOHNCMS') or die('Error: restricted access');
 
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
+
 $app = App::getInstance();
 $user = $app->user()->get();
 $profile = $app->profile();
@@ -71,7 +77,7 @@ if ($user->rights == 9 || ($user->rights == 7 && $user->rights > $profile->right
         }
     }
 
-    $app->view()->admin = true;
-    $app->view()->form = $form->display();
-    $app->view()->setTemplate('edit_form.php');
+    $view->admin = true;
+    $view->form = $form->display();
+    $view->setTemplate('edit_form.php');
 }

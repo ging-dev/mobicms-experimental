@@ -8,11 +8,14 @@ $container = App::getContainer();
 /** @var PDO $db */
 $db = $container->get(PDO::class);
 
-$app = App::getInstance();
-$app->view()->total = $db->query("SELECT COUNT(*) FROM `sessions` WHERE `userId` = 0 AND `timestamp`  > " . (time() - 300))->fetchColumn();
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
 
-if ($app->view()->total) {
-    $app->view()->list = $db->query("
+$app = App::getInstance();
+$view->total = $db->query("SELECT COUNT(*) FROM `sessions` WHERE `userId` = 0 AND `timestamp`  > " . (time() - 300))->fetchColumn();
+
+if ($view->total) {
+    $view->list = $db->query("
         SELECT
             `userId` AS `id`,
             `timestamp` AS `lastVisit`,
@@ -30,4 +33,4 @@ if ($app->view()->total) {
     )->fetchAll();
 }
 
-$app->view()->setTemplate('guests.php');
+$view->setTemplate('guests.php');

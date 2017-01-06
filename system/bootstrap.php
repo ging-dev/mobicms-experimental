@@ -77,7 +77,6 @@ use Mobicms\HtmlFilter\Purify; //TODO: доработать, или удалит
 use Mobicms\Environment\Network;
 use Mobicms\i18n\Translate;
 use Mobicms\Routing\Router;
-use Mobicms\Template\View;
 use Mobicms\Utility\Image;
 use Mobicms\Ext\Session\PdoSessionHandler;
 use Zend\Config\Config as ZendConfig;
@@ -105,7 +104,6 @@ use Zend\Stdlib\Glob;
  * @method              uri()
  * @method Facade       user()
  * @method Vars         vars() //TODO: удалить
- * @method View         view()
  */
 class App extends Mobicms\Ioc\Container
 {
@@ -154,11 +152,9 @@ $app->setService('config', new ZendConfig(is_array($config) ? $config : []));
  * Shutdown handler
  */
 register_shutdown_function(function () use ($app, $container) {
-    echo $app->view()->render();
-
     /** @var Mobicms\Api\ViewInterface $view */
-    //$view = $container->get(Mobicms\Api\ViewInterface::class);
-    //echo $view->render();
+    $view = $container->get(Mobicms\Api\ViewInterface::class);
+    echo $view->render();
 });
 
 // Starting the Session and register instance
@@ -176,9 +172,6 @@ $app->setService('session', new Zend\Session\Container('app', $sessManager));
 
 // Initialize the User
 $app->newInstance('user', Facade::class);
-
-// Initialize the View
-$app->newInstance('view', View::class);
 
 // Registering lazy loading services
 $app->lazyLoad('image', Image::class, false);

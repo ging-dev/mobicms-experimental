@@ -4,6 +4,9 @@ defined('JOHNCMS') or die('Error: restricted access');
 
 use Registration\Activation;
 
+/** @var Mobicms\Api\ViewInterface $view */
+$view = App::getContainer()->get(Mobicms\Api\ViewInterface::class);
+
 $app = App::getInstance();
 $activator = new Activation($app->user());
 
@@ -19,15 +22,15 @@ $activator->setMessages(
 );
 
 if ($activator->isValid($app->router()->getQuery(1))) {
-    $app->view()->success = _m('<h3>Your Account has been successfully activated</h3>You can now log in using the username and password you chose during the registration.<br>Thank you for registering.');
+    $view->success = _m('<h3>Your Account has been successfully activated</h3>You can now log in using the username and password you chose during the registration.<br>Thank you for registering.');
 
     if (!$app->user()->get()->id) {
         // Если пользователь не залогинен, показываем ссылку на вход
-        $app->view()->message = '<a href="' . $app->request()->getBaseUrl() . '/login/" class="btn btn-primary">' . _s('Login') . '</a>';
+        $view->message = '<a href="' . $app->request()->getBaseUrl() . '/login/" class="btn btn-primary">' . _s('Login') . '</a>';
     }
 } else {
-    $app->view()->error = implode('<br>', $activator->getMessages());
+    $view->error = implode('<br>', $activator->getMessages());
 }
 
-$app->view()->title = _s('Registration');
-$app->view()->setTemplate('message.php', null, false);
+$view->title = _s('Registration');
+$view->setTemplate('message.php', null, false);

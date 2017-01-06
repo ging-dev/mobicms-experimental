@@ -1,16 +1,12 @@
 <?php
-/*
- * mobiCMS Content Management System (http://mobicms.net)
- *
- * For copyright and license information, please see the LICENSE.md
- * Installing the system or redistributions of files must retain the above copyright notice.
- *
- * @link        http://mobicms.net mobiCMS Project
- * @copyright   Copyright (C) mobiCMS Community
- * @license     LICENSE.md (see attached file)
- */
 
 defined('JOHNCMS') or die('Error: restricted access');
+
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
 
 $app = App::getInstance();
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
@@ -50,9 +46,9 @@ $form
 
 if ($form->isValid()) {
     // Записываем настройки
-    (new Mobicms\Config\WriteHandler())->write('System', $form->output);
-    $app->view()->save = true;
+    (new Mobicms\Config\WriteHandler())->write('System', $form->output); //TODO: Исправить!!!
+    $view->save = true;
 }
 
-$app->view()->form = $form->display();
-$app->view()->setTemplate('edit_form.php');
+$view->form = $form->display();
+$view->setTemplate('edit_form.php');

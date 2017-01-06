@@ -16,6 +16,12 @@
 
 defined('JOHNCMS') or die('Error: restricted access');
 
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\ViewInterface $view */
+$view = $container->get(Mobicms\Api\ViewInterface::class);
+
 $app = App::getInstance();
 $app->lng()->setModule('registration');
 $query = $app->router()->getQuery(0);
@@ -24,9 +30,9 @@ $query = $app->router()->getQuery(0);
 
 if ($app->user()->isValid()) {
     // Если регистрацию пытается открыть вошедший на сайт пользователь, показываем уведомление
-    $app->view()->title = _s('Registration');
-    $app->view()->success = _s('You are already registered');
-    $app->view()->setTemplate('message.php', null, false);
+    $view->title = _s('Registration');
+    $view->success = _s('You are already registered');
+    $view->setTemplate('message.php', null, false);
 } else {
     $include = __DIR__ . '/includes/';
     $actions =
