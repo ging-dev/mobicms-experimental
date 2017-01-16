@@ -74,7 +74,6 @@ use Mobicms\Checkpoint\Facade;
 use Mobicms\Environment\Vars;  //TODO: доработать, или удалить сервис
 use Mobicms\HtmlFilter\Filter; //TODO: доработать, или удалить сервис
 use Mobicms\HtmlFilter\Purify; //TODO: доработать, или удалить сервис
-use Mobicms\Environment\Network;
 use Mobicms\i18n\Translate;
 use Mobicms\Routing\Router;
 use Mobicms\Utility\Image;
