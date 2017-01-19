@@ -84,7 +84,6 @@ use Zend\Session\Storage\SessionArrayStorage;
 use Zend\Session\SessionManager;
 
 use Zend\ServiceManager\ServiceManager;
-use Zend\Stdlib\ArrayObject as ConfigObject;
 use Zend\Stdlib\ArrayUtils;
 use Zend\Stdlib\Glob;
 
@@ -123,7 +122,7 @@ class App extends Mobicms\Ioc\Container
 
             $container = new ServiceManager;
             (new Zend\ServiceManager\Config($config['dependencies']))->configureServiceManager($container);
-            $container->setService('config', new ConfigObject($config, ConfigObject::ARRAY_AS_PROPS));
+            $container->setService('config', $config);
             self::$container = $container;
         }
 
@@ -150,7 +149,7 @@ $app->setService('config', new ZendConfig(is_array($config) ? $config : []));
 /**
  * Shutdown handler
  */
-register_shutdown_function(function () use ($app, $container) {
+register_shutdown_function(function () use ($container) {
     /** @var Mobicms\Api\ViewInterface $view */
     $view = $container->get(Mobicms\Api\ViewInterface::class);
     echo $view->render();
