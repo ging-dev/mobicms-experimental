@@ -286,11 +286,14 @@ class Fields
     private function prepareTextarea()
     {
         if (!empty($this->option['editor'])) {
-            $config = \App::getInstance()->user()->get()->getConfig();
+            /** @var \Mobicms\Api\ConfigInterface $config */
+            $config = \App::getContainer()->get(\Mobicms\Api\ConfigInterface::class);
+            //TODO: убрать быдлокод
+            $userConfig = \App::getInstance()->user()->get()->getConfig();
             // Initialize editor
             $this->option['id'] = 'editor';
-            $editor = new Editor($config->editor);
-            $editor->setLanguage(\App::getInstance()->config()['lng']['lng']);
+            $editor = new Editor($userConfig->editor);
+            $editor->setLanguage($config->lng);
             $this->option['style'] = $editor->getStyle();
 
             if (empty($this->option['description'])) {

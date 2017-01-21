@@ -15,6 +15,9 @@ defined('JOHNCMS') or die('Error: restricted access');
 /** @var Psr\Container\ContainerInterface $container */
 $container = App::getContainer();
 
+/** @var Mobicms\Api\ConfigInterface $config */
+$config = $container->get(Mobicms\Api\ConfigInterface::class);
+
 /** @var Mobicms\Api\ViewInterface $view */
 $view = $container->get(Mobicms\Api\ViewInterface::class);
 
@@ -27,14 +30,13 @@ $profile = $app->get('profile');
 $profileData = $profile->getUserData('profile');
 $profileData->allowModifications(true);
 
-$config = $app->config()->get('usr');
 $userRights = $app->user()->get()->rights;
 $allowEdit = $userRights = 9 || ($userRights = 7 && $userRights > $profile->rights) ? true : false;
 
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
 $form->title(_m('Edit Profile'));
 
-if ($config['allowChangeStatus'] || $allowEdit) {
+if ($config->userAllowChangeStatus || $allowEdit) {
     $form
         ->html('<div class="form-group">')
         ->element('text', 'status',
@@ -58,7 +60,7 @@ $form
         ]
     );
 
-if ($config['allowChangeSex'] || $allowEdit) {
+if ($config->userAllowChangeSex || $allowEdit) {
     $form
         ->element('radio', 'sex',
             [

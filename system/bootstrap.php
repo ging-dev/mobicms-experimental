@@ -90,7 +90,6 @@ use Zend\Stdlib\Glob;
 /**
  * Class App
  *
- * @method ZendConfig   config()
  * @method Image        image($file, array $arguments = [], $isModule = false, $imgTag = true)
  * @method Filter       filter($string) //TODO: доработать, или удалить сервис
  * @method              homeurl()
@@ -141,10 +140,6 @@ $app->newInstance('request', Request::class);
 
 // Initialize the Router
 $app->newInstance('router', Router::class);
-
-// Load configuration
-$config = is_file(CONFIG_FILE_SYS) ? include CONFIG_FILE_SYS : [];
-$app->setService('config', new ZendConfig(is_array($config) ? $config : []));
 
 /**
  * Shutdown handler

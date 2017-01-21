@@ -8,8 +8,9 @@ $container = App::getContainer();
 /** @var Mobicms\Api\ViewInterface $view */
 $view = $container->get(Mobicms\Api\ViewInterface::class);
 
+$quarantine = $container->get(Mobicms\Api\ConfigInterface::class)->quarantine;
+
 $app = App::getInstance();
-$config = $app->config()->get('quarantine');
 $uri = $app->uri();
 
 $form = new Mobicms\Form\Form(['action' => $uri]);
@@ -20,7 +21,7 @@ $form
     ->element('text', 'period',
         [
             'label_inline' => _m('The Quarantine action period, in hours') . ' <span class="note">(1-99)</span>',
-            'value'        => $config['period'],
+            'value'        => $quarantine['period'],
             'class'        => 'mini',
             'limit'        =>
                 [
@@ -35,7 +36,7 @@ $form
     ->element('text', 'mailSent',
         [
             'label_inline' => _m('How much mail can be sent?') . ' <span class="note">(0-99)</span>',
-            'value'        => $config['mailSent'],
+            'value'        => $quarantine['mailSent'],
             'class'        => 'mini',
             'limit'        =>
                 [
@@ -48,7 +49,7 @@ $form
     ->element('text', 'mailRecipients',
         [
             'label_inline' => _m('How many mail recipients?') . ' <span class="note">(0-9)</span>',
-            'value'        => $config['mailRecipients'],
+            'value'        => $quarantine['mailRecipients'],
             'class'        => 'mini',
             'limit'        =>
                 [
@@ -61,7 +62,7 @@ $form
     ->element('text', 'comments',
         [
             'label_inline' => _m('How many comments are allowed?') . ' <span class="note">(0-99)</span>',
-            'value'        => $config['comments'],
+            'value'        => $quarantine['comments'],
             'class'        => 'mini',
             'limit'        =>
                 [
@@ -74,7 +75,7 @@ $form
     ->element('text', 'uploadImages',
         [
             'label_inline' => _m('How many images are allowed to upload into the Album?') . ' <span class="note">(0-99)</span>',
-            'value'        => $config['uploadImages'],
+            'value'        => $quarantine['uploadImages'],
             'class'        => 'mini',
             'limit'        =>
                 [
@@ -87,7 +88,7 @@ $form
     ->element('checkbox', 'reputation',
         [
             'label_inline' => _m('Allow Reputation'),
-            'checked'      => $config['reputation'],
+            'checked'      => $quarantine['reputation'],
         ]
     )
     ->divider()
@@ -100,6 +101,8 @@ $form
     ->html('<a class="btn btn-link" href="../">' . _s('Back') . '</a>');
 
 if ($form->isValid()) {
+    //TODO: запилить запись настроек!!!
+    /*
     $out['quarantine'] =
         [
             'period'         => (int)$form->output['period'],
@@ -117,7 +120,7 @@ if ($form->isValid()) {
     if (function_exists('opcache_invalidate')) {
         opcache_invalidate(CONFIG_FILE_SYS);
     }
-
+    */
     $app->redirect($uri . '?saved');
 }
 

@@ -15,16 +15,18 @@ defined('JOHNCMS') or die('Error: restricted access');
 /** @var Psr\Container\ContainerInterface $container */
 $container = App::getContainer();
 
+/** @var Mobicms\Api\ConfigInterface $config */
+$config = $container->get(Mobicms\Api\ConfigInterface::class);
+
 /** @var Mobicms\Api\ViewInterface $view */
 $view = $container->get(Mobicms\Api\ViewInterface::class);
 
 $app = App::getInstance();
-$config = (int)$app->config()['sys']['filesize'];
 
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
 $form
     ->title(_m('Upload image'))
-    ->element('hidden', 'MAX_FILE_SIZE', ['value' => ($config * 1024)])
+    ->element('hidden', 'MAX_FILE_SIZE', ['value' => ($config->filesize * 1024)])
     ->element('file', 'image',
         [
             'label'       => _m('Image'),
@@ -55,7 +57,7 @@ if ($form->isValid()) {
                     'image/gif',
                     'image/png'
                 ];
-            $handle->file_max_size = $config * 1024;
+            $handle->file_max_size = $config->filesize * 1024;
             $handle->file_overwrite = true;
             $handle->image_resize = true;
             $handle->image_x = 48;

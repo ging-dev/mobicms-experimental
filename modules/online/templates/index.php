@@ -1,4 +1,10 @@
 <?php
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\ConfigInterface $config */
+$config = $container->get(Mobicms\Api\ConfigInterface::class);
+
 $app = App::getInstance();
 $url = $app->request()->getBaseUrl();
 ?>
@@ -41,7 +47,7 @@ $url = $app->request()->getBaseUrl();
 
 <!-- Список онлайн -->
 <div class="content box m-list">
-    <?php if ($app->user()->isValid() || $app->config()['usr']['allowGuestsOnlineLists']): ?>
+    <?php if ($app->user()->isValid() || $config->guestsAllowOnlineLists): ?>
         <h2><?= $this->list_header ?></h2>
         <ul class="striped">
             <?php if (isset($this->list)): ?>

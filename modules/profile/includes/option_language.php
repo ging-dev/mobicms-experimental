@@ -20,7 +20,7 @@ $view = $container->get(Mobicms\Api\ViewInterface::class);
 
 $app = App::getInstance();
 $uri = $app->uri();
-$config = $app->profile()->config();
+$config = $app->profile()->getConfig();
 $items['#'] = _m('Select automatically');
 $items = array_merge($items, $app->lng()->getLocalesList());
 $form = new Mobicms\Form\Form(['action' => $uri]);

@@ -5,11 +5,13 @@ use Registration\WelcomeLetter;
 /** @var Psr\Container\ContainerInterface $container */
 $container = App::getContainer();
 
+/** @var Mobicms\Api\ConfigInterface $config */
+$config = $container->get(Mobicms\Api\ConfigInterface::class);
+
 /** @var Mobicms\Api\ViewInterface $view */
 $view = $container->get(Mobicms\Api\ViewInterface::class);
 
 $app = App::getInstance();
-$config = $app->config()->get('reg');
 $user = $app->user()->get();
 
 if ($user->id) {
@@ -91,7 +93,7 @@ if ($user->id) {
         $view->buttonText = _m('Send an activation again');
         $view->slider = $form->display();
 
-        if ($form->isValid() && $config['letterMode']) {
+        if ($form->isValid() && $config->registrationLetterMode) {
             try {
                 $message = new WelcomeLetter($app, $user->id, $form->output['nickname'], $form->output['email']);
                 $message->send(true);

@@ -19,6 +19,9 @@
  */
 class Scanner
 {
+    /**
+     * @var Mobicms\Api\ConfigInterface
+     */
     private $config;
     private $snapFiles = [];
 
@@ -44,7 +47,7 @@ class Scanner
 
     public function __construct()
     {
-        $this->config = App::getInstance()->config();
+        $this->config = App::getContainer()->get(Mobicms\Api\ConfigInterface::class);
     }
 
     /**
@@ -107,7 +110,7 @@ class Scanner
                     if (preg_match("#.*\.(php|cgi|pl|perl|php3|php4|php5|php6|phtml|py|htaccess)$#i", $file)) {
                         $folder = str_replace("../..", ".", $dir);
                         $file_crc = strtoupper(dechex(crc32(file_get_contents($dir . '/' . $file))));
-                        $file_date = date("d.m.Y H:i:s", filemtime($dir . '/' . $file) + $this->config['sys']['timeshift'] * 3600);
+                        $file_date = date("d.m.Y H:i:s", filemtime($dir . '/' . $file) + $this->config->timeshift * 3600);
 
                         if ($snap) {
                             $this->snapFiles[] = [

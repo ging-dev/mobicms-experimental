@@ -1,9 +1,11 @@
 <?php
-use Config\System;
-use Config\Users;
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\ConfigInterface $config */
+$config = $container->get(Mobicms\Api\ConfigInterface::class);
 
 $app = App::getInstance();
-$config = $app->config();
 $uri = $app->request()->getUri();
 $user = $app->user()->get();
 $profile = $app->profile();
@@ -27,13 +29,13 @@ $profile = $app->profile();
     <li><a href="<?= $uri ?>avatar/"><i class="picture fw lg"></i><?= _m('Set Avatar') ?></a></li>
     <li><a href="<?= $uri ?>password/"><i class="shield fw lg"></i><?= _m('Change Password') ?></a></li>
     <li><a href="<?= $uri ?>email/"><i class="shield fw lg"></i><?= _m('Change E-mail') ?></a></li>
-    <?php if ($config['usr']['allowToChangeNickname'] || $user->rights >= 7): ?>
+    <?php if ($config->userAllowChangeNickname || $user->rights >= 7): ?>
         <li><a href="<?= $uri ?>nickname/"><i class="shield fw lg"></i><?= _m('Change Nickname') ?></a></li>
     <?php endif ?>
     <li class="title"><?= _s('Settings') ?></li>
     <li><a href="<?= $uri ?>settings/"><i class="settings fw lg"></i><?= _m('System Settings') ?></a></li>
     <li><a href="<?= $uri ?>theme/"><i class="paint-format fw lg"></i><?= _m('Choose Skin') ?> <span class="label label-danger">draft</span></a></li>
-    <?php if ($config['lng']['lngSwitch']): ?>
+    <?php if ($config->lngSwitch): ?>
         <li><a href="<?= $uri ?>language/"><i class="language fw lg"></i><?= _m('Choose Language') ?></a></li>
     <?php endif ?>
     <?php if ($user->rights == 9 || ($user->rights == 7 && $user->rights > $profile->rights)): ?>

@@ -15,11 +15,13 @@ defined('JOHNCMS') or die('Error: restricted access');
 /** @var Psr\Container\ContainerInterface $container */
 $container = App::getContainer();
 
+/** @var Mobicms\Api\ConfigInterface $config */
+$config = $container->get(Mobicms\Api\ConfigInterface::class);
+
 /** @var Mobicms\Api\ViewInterface $view */
 $view = $container->get(Mobicms\Api\ViewInterface::class);
 
 $app = App::getInstance();
-$config = $app->config()->get('lng');
 $uri = $app->uri();
 
 $form = new Mobicms\Form\Form(['action' => $uri]);
@@ -35,14 +37,14 @@ $form
     ->title(_m('Default Language'))
     ->element('radio', 'lng',
         [
-            'checked'     => $config['lng'],
+            'checked'     => $config->lng,
             'description' => _m('If the choice is prohibited, the language will be forced to set for all visitors. If the choice is allowed, it will be applied only in the case, if requested by the client language is not in the system.'),
             'items'       => $app->lng()->getLocalesList(),
         ]
     )
     ->element('checkbox', 'lngSwitch',
         [
-            'checked'      => $config['lngSwitch'],
+            'checked'      => $config->lngSwitch,
             'label_inline' => _m('Allow to choose'),
             'description'  => _m('Allow visitors specify the desired language from the list of available in the system. Including activated auto select languages by signatures of the browser.'),
         ]
@@ -62,6 +64,8 @@ if ($form->isValid()) {
         $app->lng()->clearCache();
         $app->redirect($uri . '?cache');
     } else {
+        //TODO: запилить запись настроек!!!
+        /*
         $out =
             [
                 'lng' =>
@@ -79,7 +83,7 @@ if ($form->isValid()) {
         if (function_exists('opcache_invalidate')) {
             opcache_invalidate(CONFIG_FILE_SYS);
         }
-
+        */
         $app->redirect($uri . '?saved');
     }
 }

@@ -27,28 +27,30 @@ class Functions
     public static function antiFlood()
     {
         $app = App::getInstance();
-        $config = $app->config()->get('usr');
+        //TODO: убрать быдлокод
+        /** @var \Mobicms\Api\ConfigInterface $config */
+        $config = \App::getContainer()->get(\Mobicms\Api\ConfigInterface::class);
 
-        switch ($config['antifloodMode']) {
+        switch ($config->antifloodMode) {
             case 1:
                 // Адаптивный режим
                 $adm = \App::getContainer()->get(\PDO::class)->query("SELECT COUNT(*) FROM `users` WHERE `rights` >= 3 AND `lastVisit` > " . (time() - 300))->fetchColumn();
-                $limit = $adm > 0 ? $config['antifloodDayDelay'] : $config['antifloodNightDelay'];
+                $limit = $adm > 0 ? $config->antifloodDayDelay : $config->antifloodNightDelay;
                 break;
             case 3:
                 // День
-                $limit = $config['antifloodDayDelay'];
+                $limit = $config->antifloodDayDelay;
                 break;
             case 4:
                 // Ночь
-                $limit = $config['antifloodNightDelay'];
+                $limit = $config->antifloodNightDelay;
                 break;
             default:
                 // По умолчанию день / ночь
                 $c_time = date('G', time());
                 $limit = $c_time > '10:00' && $c_time < '20:00' //TODO: Разобраться
-                    ? $config['antifloodDayDelay']
-                    : $config['antifloodNightDelay'];
+                    ? $config->antifloodDayDelay
+                    : $config->antifloodNightDelay;
         }
 
         $user = $app->user()->get();
@@ -72,9 +74,11 @@ class Functions
      */
     public static function displayDate($var)
     {
+        /** @var \Mobicms\Api\ConfigInterface $config */
+        $config = \App::getContainer()->get(\Mobicms\Api\ConfigInterface::class);
+        //TODO: убрать быдлокод
         $app = App::getInstance();
-        $timeshift = $app->config()['stys']['timeshift'];
-        $shift = ($timeshift + $app->user()->get()->getConfig()->timeShift) * 3600;
+        $shift = ($config->timeshift + $app->user()->get()->getConfig()->timeShift) * 3600;
         if (date('Y', $var) == date('Y', time())) {
             if (date('z', $var + $shift) == date('z', time() + $shift)) {
                 return _s('Today') . ', ' . date("H:i", $var + $shift);

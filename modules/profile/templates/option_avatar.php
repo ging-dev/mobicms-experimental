@@ -1,6 +1,11 @@
 <?php
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\ConfigInterface $config */
+$config = $container->get(Mobicms\Api\ConfigInterface::class);
+
 $app = App::getInstance();
-$config = $app->config()->get('usr');
 $user = $app->user()->get();
 $profile = $app->profile();
 $owner = $profile->id == $user->id;
@@ -21,11 +26,11 @@ $owner = $profile->id == $user->id;
 
 <ul class="nav nav-pills nav-stacked">
     <li class="title"><?= _s('Set Avatar') ?></li>
-    <?php if ($config['allowUploadAvatars'] || $user->rights >= 7): ?>
+    <?php if ($config->userAllowUploadAvatars || $user->rights >= 7): ?>
         <li><a href="image/"><i class="upload lg fw"></i><?= _m('Upload image') ?></a></li>
         <li><a href="animation/"><i class="upload lg fw"></i><?= _m('Upload GIF animation') ?></a></li>
     <?php endif ?>
-    <?php if ($config['allowUseGravatar'] || $user->rights >= 7): ?>
+    <?php if ($config->userAllowUseGravatar || $user->rights >= 7): ?>
         <li><a href="gravatar/"><i class="link lg fw"></i><?= _m('Set Gravatar') ?></a></li>
     <?php endif ?>
     <?php if ($owner) : ?>

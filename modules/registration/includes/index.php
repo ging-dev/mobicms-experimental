@@ -19,14 +19,16 @@ use Mobicms\Validator\Nickname;
 /** @var Psr\Container\ContainerInterface $container */
 $container = App::getContainer();
 
+/** @var Mobicms\Api\ConfigInterface $config */
+$config = $container->get(Mobicms\Api\ConfigInterface::class);
+
 /** @var Mobicms\Api\ViewInterface $view */
 $view = $container->get(Mobicms\Api\ViewInterface::class);
 
 $app = App::getInstance();
-$config = $app->config()->get('reg');
 $userId = 0;
 
-if ($config['allow']) {
+if ($config->registrationAllow) {
     $form = new Mobicms\Form\Form(['action' => $app->uri()]);
     $form
         ->html('<div class="alert alert-warning">'
@@ -46,7 +48,7 @@ if ($config['allow']) {
             [
                 'label'       => _s('Your Email'),
                 'description' => _s('Please correctly specify your email address. This address will be sent a confirmation code to your registration.'),
-                'required'    => $config['letterMode'],
+                'required'    => $config->registrationLetterMode,
             ]
         )
         ->element('password', 'newpass',
@@ -131,7 +133,7 @@ if ($config['allow']) {
         ////////////////////////////////////////////////////////////
         // Email validation                                       //
         ////////////////////////////////////////////////////////////
-        if ($config['letterMode'] >= 1 || !empty($form->output['email'])) {
+        if ($config->registrationLetterMode >= 1 || !empty($form->output['email'])) {
             $checkEmail = new Email;
 
             if (!$checkEmail->isValid($form->output['email'])) {
@@ -162,16 +164,16 @@ if ($config['allow']) {
             $user->userAgent = $network->getUserAgent();
 
             // Устанавливаем статус активации, подтверждения и карантина
-            $user->activated = $config['letterMode'] < 2 ? true : false;
-            $user->approved = $config['approveByAdmin'] ? false : true;
-            $user->quarantine = $config['useQuarantine'];
+            $user->activated = $config->registrationLetterMode < 2 ? true : false;
+            $user->approved = $config->registrationApproveByAdmin ? false : true;
+            $user->quarantine = $config->registrationQuarantine;
 
             // Добавляем пользователя в базу данных
             $user->save();
             $userId = $user->getInsertId();
 
             // Если не требуется активация и модерация, сразу впускаем пользователя на сайт
-            if ($config['letterMode'] < 2 && !$config['approveByAdmin']) {
+            if ($config->registrationLetterMode < 2 && !$config->registrationApproveByAdmin) {
                 $app->user()->login($form->output['nickname'], $form->output['newpass'], true);
             }
         } catch (Exception $e) {
@@ -183,7 +185,7 @@ if ($config['allow']) {
     /**
      * Try to send Email
      */
-    if ($form->isValid() && $config['letterMode']) {
+    if ($form->isValid() && $config->registrationLetterMode) {
         try {
             $message = new Registration\WelcomeLetter($app, $userId, $form->output['nickname'], $form->output['email']);
             $message->send();

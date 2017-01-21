@@ -15,15 +15,17 @@ defined('JOHNCMS') or die('Error: restricted access');
 /** @var Psr\Container\ContainerInterface $container */
 $container = App::getContainer();
 
+/** @var Mobicms\Api\ConfigInterface $config */
+$config = $container->get(Mobicms\Api\ConfigInterface::class);
+
 /** @var Mobicms\Api\ViewInterface $view */
 $view = $container->get(Mobicms\Api\ViewInterface::class);
 
 $app = App::getInstance();
-$config = $app->config()->get('usr');
 $user = $app->user()->get();
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
 
-if ($user->rights >= 7 || $user->nickChanged < time() - ($config['changeNicknamePeriod'] * 86400)) {
+if ($user->rights >= 7 || $user->nickChanged < time() - ($config->userChangeNicknamePeriod * 86400)) {
     $form
         ->title(_m('Change Nickname'))
         ->element('text', 'nickname',
@@ -39,7 +41,7 @@ if ($user->rights >= 7 || $user->nickChanged < time() - ($config['changeNickname
                 'maxlength'   => 20,
                 'description' => _s('Min. 2, Max. 20 Characters.<br>Allowed letters are Cyrillic and Latin alphabet, numbers, spaces and punctuation - = @ ! ? ~ . _ ( ) [ ] *') . '<br/>' .
                     _m('Please note that while changing the nickname is changing your Login on the site.<br>The next change of nickname is allowed through') . ' ' .
-                    $config['changeNicknamePeriod'] . ' ' . _sp('Day', 'Days', $config['changeNicknamePeriod']) . '.',
+                    $config->userChangeNicknamePeriod . ' ' . _sp('Day', 'Days', $config->userChangeNicknamePeriod) . '.',
                 'required'    => true,
             ]
         )
@@ -62,9 +64,9 @@ if ($user->rights >= 7 || $user->nickChanged < time() - ($config['changeNickname
 } else {
     $form
         ->html('<div class="alert alert-danger">' .
-            '<strong>' . _m('Nickname can not change more than once a') . ' ' . $config['changeNicknamePeriod'] . ' ' . _sp('Day', 'Days', $config['changeNicknamePeriod']) . '</strong><br/><br/>' .
+            '<strong>' . _m('Nickname can not change more than once a') . ' ' . $config->userChangeNicknamePeriod . ' ' . _sp('Day', 'Days', $config->userChangeNicknamePeriod) . '</strong><br/><br/>' .
             _m('You have already changed their nickname:') . ' ' . Includes\Functions::displayDate($user->nickChanged) . '<br/>' .
-            _m('Next time will be able to change:') . ' ' . Includes\Functions::displayDate($user->nickChanged + ($config['changeNicknamePeriod'] * 86400)) .
+            _m('Next time will be able to change:') . ' ' . Includes\Functions::displayDate($user->nickChanged + ($config->userChangeNicknamePeriod * 86400)) .
             '</div>')
         ->html('<a class="btn btn-primary" href="../">' . _s('Back') . '</a>');
 }

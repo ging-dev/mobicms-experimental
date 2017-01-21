@@ -201,7 +201,8 @@ class Container implements ContainerInterface
             $diCompiler->addDirectory(ROOT_PATH . 'system/mobicms');
             $diCompiler->compile();
             $definition = $diCompiler->toArrayDefinition()->toArray();
-            (new ConfigWriter)->toFile(CONFIG_FILE_IOC, $definition);
+            $configFile = "<?php\n\n" . 'return ' . var_export($definition, true) . ";\n";
+            file_put_contents(CONFIG_FILE_IOC, $configFile);
 
             return $definition;
         } else {

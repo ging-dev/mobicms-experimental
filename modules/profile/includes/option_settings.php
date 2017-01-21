@@ -15,13 +15,15 @@ defined('JOHNCMS') or die('Error: restricted access');
 /** @var Psr\Container\ContainerInterface $container */
 $container = App::getContainer();
 
+/** @var Mobicms\Api\ConfigInterface $config */
+$config = $container->get(Mobicms\Api\ConfigInterface::class);
+
 /** @var Mobicms\Api\ViewInterface $view */
 $view = $container->get(Mobicms\Api\ViewInterface::class);
 
 $app = App::getInstance();
 $profile = $app->profile();
-$config = $profile->config();
-$sysConfig = $app->config()['sys'];
+$userConfig = $profile->getConfig();
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
 $editors[0] = _m('Without Editor');
 $editors[1] = '<abbr title="SCeditor">' . _m('WYSIWYG Editor') . '</abbr>';
@@ -35,8 +37,8 @@ $form
     ->title(_m('System Settings'))
     ->element('text', 'timeShift',
         [
-            'value'        => $config->timeShift,
-            'label_inline' => '<span class="badge badge-large">' . date("H:i", time() + ($sysConfig['timeshift'] + $config->timeShift) * 3600) . '</span> ' . _m('Time settings'),
+            'value'        => $userConfig->timeShift,
+            'label_inline' => '<span class="badge badge-large">' . date("H:i", time() + ($config->timeshift + $userConfig->timeShift) * 3600) . '</span> ' . _m('Time settings'),
             'description'  => _m('Time Shift') . ' (+ - 12)',
             'class'        => 'small',
             'maxlength'    => 3,
@@ -50,7 +52,7 @@ $form
     )
     ->element('text', 'pageSize',
         [
-            'value'        => $config->pageSize,
+            'value'        => $userConfig->pageSize,
             'label_inline' => _m('List Size'),
             'description'  => _m('Number of items per page') . ' (5-99)',
             'class'        => 'small',
@@ -65,7 +67,7 @@ $form
     )
     ->element('checkbox', 'directUrl',
         [
-            'checked'      => $config->directUrl,
+            'checked'      => $userConfig->directUrl,
             'label_inline' => _m('Direct URL')
         ]
     )
@@ -73,7 +75,7 @@ $form
     ->title(_m('Text Editor'))
     ->element('radio', 'editor',
         [
-            'checked' => $config->editor,
+            'checked' => $userConfig->editor,
             'items'   => $editors
         ]
     )
@@ -87,11 +89,11 @@ $form
     ->html('<a class="btn btn-link" href="../">' . _s('Back') . '</a>');
 
 if ($form->isValid()) {
-    $config->timeShift = $form->output['timeShift'];
-    $config->pageSize = $form->output['pageSize'];
-    $config->directUrl = $form->output['directUrl'];
-    $config->editor = $form->output['editor'];
-    $config->save();
+    $userConfig->timeShift = $form->output['timeShift'];
+    $userConfig->pageSize = $form->output['pageSize'];
+    $userConfig->directUrl = $form->output['directUrl'];
+    $userConfig->editor = $form->output['editor'];
+    $userConfig->save();
 
     $app->redirect($app->request()->getUri() . '?saved');
 }

@@ -30,14 +30,18 @@ class Locales
      */
     private $request;
 
-    private $availableLocales;
+    /**
+     * @var \Mobicms\Api\ConfigInterface
+     */
     private $sysConfig;
+
+    private $availableLocales;
     private $userLocale;
 
     public function __construct(Request $request, Facade $user)
     {
         $this->request = $request;
-        $this->sysConfig = \App::getInstance()->config()->get('lng');
+        $this->sysConfig = \App::getContainer()->get(\Mobicms\Api\ConfigInterface::class);
         $this->userLocale = $user->get()->getConfig()->lng;
     }
 
