@@ -1,4 +1,4 @@
-# [mobiCMS 0.3.0](http://mobicms.net)
+# [mobiCMS 0.1.0](http://mobicms.net)
 Mobile Content Management System.
 
 [![License](https://img.shields.io/badge/license-GPL%20v.3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0-standalone.html)
@@ -6,7 +6,6 @@ Mobile Content Management System.
 
 ## The main possibilities of the system
 - Based on components of the Zend Framework
-- PSR-4 compliant core
 - modular architecture
 - a high level of security
 - multilingual
@@ -28,7 +27,7 @@ GNU General Public License v.3
 
 ## Documentation
 Documentation is under development and will be constantly updated.    
-Read here: [http://mobicms.info](http://mobicms.info/ru/index.html)
+Read here: [http://mobicms.info](http://mobicms.info/)
 
 ## Thanks
 We express gratitude for the grant assistance to our project (alphabetical list):

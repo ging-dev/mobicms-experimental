@@ -1,8 +1,8 @@
 {
-  "name": "JohnCMS",
-  "version": "7.1.0",
-  "description": "JohnCMS Mobile Content Management System",
-  "homepage": "http://johncms.com",
+  "name": "mobiCMS",
+  "version": "0.1.0",
+  "description": "mobiCMS Mobile Content Management System",
+  "homepage": "http://mobicms.org",
   "license": "GPL-3.0",
   "keywords": [
     "mobicms",
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Gazenwagen/mobicms-core.git"
+    "url": "https://github.com/mobicms/mobicms-classic.git"
   },
   "engines": {
     "node": ">= 0.12.0"
