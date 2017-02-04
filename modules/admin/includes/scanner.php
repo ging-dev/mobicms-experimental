@@ -10,7 +10,7 @@
  * @license     LICENSE.md (see attached file)
  */
 
-defined('JOHNCMS') or die('Error: restricted access');
+defined('MOBICMS') or die('Error: restricted access');
 define('ROOT_DIR', '.');
 
 /** @var Psr\Container\ContainerInterface $container */

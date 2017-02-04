@@ -1,20 +1,6 @@
 <?php
-/*
- * mobiCMS Content Management System (http://mobicms.net)
- *
- * For copyright and license information, please see the LICENSE.md
- * Installing the system or redistributions of files must retain the above copyright notice.
- *
- * @link        http://mobicms.net mobiCMS Project
- * @copyright   Copyright (C) mobiCMS Community
- * @license     LICENSE.md (see attached file)
- *
- * @module      Registration
- * @author      Oleg (AlkatraZ) Kasyanov <dev@mobicms.net>
- * @version     v.2.0.0 2016-01-20
- */
 
-defined('JOHNCMS') or die('Error: restricted access');
+defined('MOBICMS') or die('Error: restricted access');
 
 /** @var Psr\Container\ContainerInterface $container */
 $container = App::getContainer();

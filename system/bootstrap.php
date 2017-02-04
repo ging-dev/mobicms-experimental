@@ -4,7 +4,7 @@
  * Common constants
  */
 defined('DEBUG') || define('DEBUG', false);                    // Toggle debug mode
-defined('JOHNCMS') || define('JOHNCMS', true);                 // mobiCMS version
+defined('MOBICMS') || define('MOBICMS', true);                 // mobiCMS version
 const DS = DIRECTORY_SEPARATOR;                                // Directory Separator alias
 define('START_MEMORY', memory_get_usage());                    // Profiling memory usage
 define('START_TIME', microtime(true));                         // Profiling generation time

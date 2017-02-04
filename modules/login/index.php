@@ -14,6 +14,6 @@
  * @version     v.1.0.0 2015-02-01
  */
 
-defined('JOHNCMS') or die('Error: restricted access');
+defined('MOBICMS') or die('Error: restricted access');
 
 require_once __DIR__ . '/includes/' . (App::getInstance()->user()->isValid() ? 'logout.php' : 'login.php');
