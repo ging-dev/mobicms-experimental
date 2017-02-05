@@ -24,7 +24,7 @@ if ($config->registrationAllow) {
         ->html('<div class="alert alert-warning">'
             . sprintf(
                 _s('By registering on the site, you acknowledge that you have read <a href="%s">Terms of Use</a> and agree with them.'),
-                $app->homeurl() . '/help/rules/'
+                $config->homeUrl . '/help/rules/'
             )
             . '</div>')
         ->element('text', 'nickname',
@@ -177,7 +177,7 @@ if ($config->registrationAllow) {
      */
     if ($form->isValid() && $config->registrationLetterMode) {
         try {
-            $message = new Registration\WelcomeLetter($app, $userId, $form->output['nickname'], $form->output['email']);
+            $message = new Registration\WelcomeLetter($container, $userId, $form->output['nickname'], $form->output['email']);
             $message->send();
         } catch (\Exception $e) {
             // Если возникли ошибки, выводим сообщение
@@ -191,7 +191,7 @@ if ($config->registrationAllow) {
      */
     if ($form->isValid()) {
         if ($app->user()->isValid()) {
-            $app->redirect($app->homeurl());
+            header('Location: ' . $config->homeUrl);
         } else {
             $app->redirect($app->uri() . 'confirmation/');
         }

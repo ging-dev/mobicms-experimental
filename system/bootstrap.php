@@ -28,7 +28,6 @@ const ASSETS_PATH = ROOT_PATH . 'assets' . DS;                 // Path to the Up
  * Configuration files
  */
 const CONFIG_DATA_DIR = __DIR__ . DS . 'config' . DS . 'data' . DS;
-const CONFIG_FILE_SYS = CONFIG_DATA_DIR . 'system.php';
 const CONFIG_FILE_IOC = CONFIG_DATA_DIR . 'dibase.php';
 const CONFIG_FILE_ROUTES = CONFIG_DATA_DIR . 'routes.php';
 const CONFIG_FILE_SCAN = CONFIG_DATA_DIR . 'scan.php';
@@ -81,7 +80,6 @@ use Zend\Stdlib\Glob;
  *
  * @method Image        image($file, array $arguments = [], $isModule = false, $imgTag = true)
  * @method Filter       filter($string) //TODO: доработать, или удалить сервис
- * @method              homeurl()
  * @method Translate    lng()
  * @method Purify       purify($string) //TODO: доработать, или удалить сервис
  * @method              redirect($url) Closure function
@@ -134,9 +132,7 @@ $app->newInstance('router', Router::class);
  * Shutdown handler
  */
 register_shutdown_function(function () use ($container) {
-    /** @var Mobicms\Api\ViewInterface $view */
-    $view = $container->get(Mobicms\Api\ViewInterface::class);
-    echo $view->render();
+    echo $container->get(Mobicms\Api\ViewInterface::class)->render();
 });
 
 // Starting the Session and register instance
@@ -167,13 +163,6 @@ $app->setCallable('redirect', function ($url) use ($app) {
     ob_end_clean();
     http_response_code(302);
     header('Location: ' . $url[0]);
-});
-
-// Get HomeUrl
-$app->setCallable('homeurl', function () use ($app) {
-    $uri = $app->request()->getUri();
-
-    return $uri->getScheme() . '://' . $uri->getHost() . $app->request()->getBaseUrl();
 });
 
 // Get Uri path
