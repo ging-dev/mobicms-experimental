@@ -196,17 +196,19 @@ class Container implements ContainerInterface
      */
     private function getDefinition()
     {
-        if (!is_file(CONFIG_FILE_IOC)) {
+        $file = CACHE_PATH . 'ioc.cache';
+
+        if (!is_file($file)) {
             $diCompiler = new CompilerDefinition;
             $diCompiler->addDirectory(ROOT_PATH . 'system/mobicms');
             $diCompiler->compile();
             $definition = $diCompiler->toArrayDefinition()->toArray();
             $configFile = "<?php\n\n" . 'return ' . var_export($definition, true) . ";\n";
-            file_put_contents(CONFIG_FILE_IOC, $configFile);
+            file_put_contents($file, $configFile);
 
             return $definition;
         } else {
-            return include CONFIG_FILE_IOC;
+            return include $file;
         }
     }
 
