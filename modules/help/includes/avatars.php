@@ -74,7 +74,7 @@ if ($app->user()->isValid() && isset($query[1], $query[2], $catalog[$query[2]]) 
     $avatars = glob(ROOT_PATH . 'assets' . DS . 'avatars' . DS . $query[2] . DS . '*.{gif,jpg,png}', GLOB_BRACE);
 
     $view->total = count($avatars);
-    $view->start = $app->vars()->page * view->pagesize - $view->pagesize;
+    $view->start = $app->vars()->page * $view->pagesize - $view->pagesize;
     $end = $app->vars()->page * $view->pagesize;
     if ($end > $view->total) {
         $end = $view->total;
