@@ -12,7 +12,7 @@
 
 namespace Mobicms\Routing;
 
-use Zend\Http\PhpEnvironment\Request;
+use Mobicms\Api\RouterInterface;
 
 /**
  * Class Router
@@ -21,7 +21,7 @@ use Zend\Http\PhpEnvironment\Request;
  * @author  Oleg (AlkatraZ) Kasyanov <dev@mobicms.net>
  * @version v.2.0.0 2015-08-07
  */
-class Router
+class Router implements RouterInterface
 {
     private $config;
 
@@ -38,9 +38,10 @@ class Router
 
     public $dir = '';
 
-    public function __construct(Request $request)
+    public function __construct()
     {
-        $uri = substr($request->getRequestUri(), strlen($request->getBaseUrl()));
+        $uri = trim(urldecode(filter_var($_SERVER['REQUEST_URI'], FILTER_SANITIZE_URL)), '/');
+        $uri = substr($uri, strlen(trim(dirname(filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING)), DIRECTORY_SEPARATOR)), 400);
 
         if ($pos = strpos($uri, '?')) {
             $uri = substr($uri, 0, $pos);
@@ -50,6 +51,11 @@ class Router
         $this->config = is_file(CONFIG_FILE_ROUTES) ? include CONFIG_FILE_ROUTES : [];
         $this->module = $this->getModule();
         $this->dir = $this->config[$this->module];
+    }
+
+    public function __invoke()
+    {
+        return $this;
     }
 
     public function dispatch()
