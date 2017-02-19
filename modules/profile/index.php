@@ -2,6 +2,12 @@
 
 defined('MOBICMS') or die('Error: restricted access');
 
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\RouterInterface $router */
+$router = $container->get(Mobicms\Api\RouterInterface::class);
+
 $public_actions = [
     'reputation' => 'reputation.php',
 ];
@@ -25,7 +31,7 @@ $personal_actions = [
 
 $app = App::getInstance();
 $app->lng()->setModule('profile');
-$query = $app->router()->getQuery();
+$query = $router->getQuery();
 $user = $app->user()->get();
 $include = __DIR__ . '/includes/';
 

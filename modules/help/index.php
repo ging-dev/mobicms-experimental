@@ -5,11 +5,14 @@ defined('MOBICMS') or die('Error: restricted access');
 /** @var Psr\Container\ContainerInterface $container */
 $container = App::getContainer();
 
+/** @var Mobicms\Api\RouterInterface $router */
+$router = $container->get(Mobicms\Api\RouterInterface::class);
+
 /** @var Mobicms\Api\ViewInterface $view */
 $view = $container->get(Mobicms\Api\ViewInterface::class);
 
 $app = App::getInstance();
-$query = $app->router()->getQuery();
+$query = $router->getQuery();
 $app->lng()->setModule('help');
 
 if (isset($query[0])) {

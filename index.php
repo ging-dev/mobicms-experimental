@@ -21,4 +21,4 @@ if (version_compare(PHP_VERSION, '5.6', '<')) {
  * Bootstrap the application
  */
 require __DIR__ . '/system/bootstrap.php';
-App::getInstance()->router()->dispatch();
+App::getContainer()->get(Mobicms\Api\RouterInterface::class)->dispatch();

@@ -5,13 +5,16 @@ defined('MOBICMS') or die('Error: restricted access');
 /** @var Psr\Container\ContainerInterface $container */
 $container = App::getContainer();
 
+/** @var Mobicms\Api\RouterInterface $router */
+$router = $container->get(Mobicms\Api\RouterInterface::class);
+
 /** @var Mobicms\Api\ViewInterface $view */
 $view = $container->get(Mobicms\Api\ViewInterface::class);
 
 $app = App::getInstance();
 $form = new Mobicms\Form\Form(['action' => $app->uri()]);
 $form->infoMessages = false;
-$query = $app->router()->getQuery();
+$query = $router->getQuery();
 
 if (isset($query[0])) {
     $form->input['ip'] = $query[0];

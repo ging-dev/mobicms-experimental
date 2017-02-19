@@ -5,6 +5,9 @@ $container = App::getContainer();
 /** @var Mobicms\Api\ConfigInterface $config */
 $config = $container->get(Mobicms\Api\ConfigInterface::class);
 
+/** @var Mobicms\Api\RouterInterface $router */
+$router = $container->get(Mobicms\Api\RouterInterface::class);
+
 $app = App::getInstance();
 $url = $app->request()->getBaseUrl();
 ?>
@@ -27,10 +30,10 @@ $url = $app->request()->getBaseUrl();
 <!-- Слайдер с Админскими кнопками -->
 <div class="content slider close">
     <ul class="nav nav-pills nav-justified">
-        <li<?= $app->router()->getQuery(0) == false ? ' class="active"' : '' ?>>
+        <li<?= $router->getQuery(0) == false ? ' class="active"' : '' ?>>
             <a href="<?= $url ?>/online/"><i class="user fw"></i><?= _s('Users') ?></a>
         </li>
-        <li<?= $app->router()->getQuery(0) == 'history' ? ' class="active"' : '' ?>>
+        <li<?= $router->getQuery(0) == 'history' ? ' class="active"' : '' ?>>
             <a href="<?= $url ?>/online/history/"><i class="sort-amount-desc fw"></i><?= _s('History') ?></i></a>
         </li>
         <!-- Показываем только для администрации -->

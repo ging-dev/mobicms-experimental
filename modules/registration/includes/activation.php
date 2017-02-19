@@ -4,8 +4,14 @@ defined('MOBICMS') or die('Error: restricted access');
 
 use Registration\Activation;
 
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\RouterInterface $router */
+$router = $container->get(Mobicms\Api\RouterInterface::class);
+
 /** @var Mobicms\Api\ViewInterface $view */
-$view = App::getContainer()->get(Mobicms\Api\ViewInterface::class);
+$view = $container->get(Mobicms\Api\ViewInterface::class);
 
 $app = App::getInstance();
 $activator = new Activation($app->user());
@@ -21,7 +27,7 @@ $activator->setMessages(
     ]
 );
 
-if ($activator->isValid($app->router()->getQuery(1))) {
+if ($activator->isValid($router->getQuery(1))) {
     $view->success = _m('<h3>Your Account has been successfully activated</h3>You can now log in using the username and password you chose during the registration.<br>Thank you for registering.');
 
     if (!$app->user()->get()->id) {

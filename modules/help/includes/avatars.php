@@ -5,6 +5,9 @@ defined('MOBICMS') or die('Error: restricted access');
 /** @var Psr\Container\ContainerInterface $container */
 $container = App::getContainer();
 
+/** @var Mobicms\Api\RouterInterface $router */
+$router = $container->get(Mobicms\Api\RouterInterface::class);
+
 /** @var Mobicms\Api\ViewInterface $view */
 $view = $container->get(Mobicms\Api\ViewInterface::class);
 
@@ -29,7 +32,7 @@ asort($catalog);
 $app = App::getInstance();
 $uri = $app->uri();
 $homeUrl = $app->request()->getBaseUrl();
-$query = $app->router()->getQuery();
+$query = $router->getQuery();
 $view->pagesize = 40;
 $user = $app->user()->get();
 
@@ -47,7 +50,7 @@ if ($app->user()->isValid() && isset($query[1], $query[2], $catalog[$query[2]]) 
                 'class' => 'btn btn-primary'
             ]
         )
-        ->html('<a class="btn btn-link" href="' . $uri . 'list/' . $app->router()->getQuery(2) . '">' . _s('Back') . '</a>');
+        ->html('<a class="btn btn-link" href="' . $uri . 'list/' . $router->getQuery(2) . '">' . _s('Back') . '</a>');
 
     if ($form->isValid()) {
         $user->avatar = $image;

@@ -3,6 +3,12 @@
 @ini_set("max_execution_time", "600");
 defined('MOBICMS') or die('Error: restricted access');
 
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\RouterInterface $router */
+$router = $container->get(Mobicms\Api\RouterInterface::class);
+
 $app = App::getInstance();
 $user = $app->user()->get();
 
@@ -26,7 +32,7 @@ if ($user->rights >= 7) {
     $common_actions = [];
 
     $app->lng()->setModule('admin');
-    $query = implode('/', $app->router()->getQuery());
+    $query = implode('/', $router->getQuery());
     $include = __DIR__ . '/includes/';
 
     if (!empty($query)) {

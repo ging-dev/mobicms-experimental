@@ -13,7 +13,7 @@
 namespace Mobicms\Template;
 
 use Mobicms\Api\ViewInterface;
-use Mobicms\Routing\Router;
+use Mobicms\Api\RouterInterface;
 use Mobicms\Template\Traits\HelpersTrait;
 use Mobicms\Template\Traits\PathTrait;
 
@@ -38,7 +38,7 @@ class View extends \ArrayObject implements ViewInterface
 
     private $router;
 
-    public function __construct(Router $router)
+    public function __construct(RouterInterface $router)
     {
         $this->setFlags(parent::ARRAY_AS_PROPS);
         $this->router = $router;

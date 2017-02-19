@@ -5,6 +5,8 @@ $container = App::getContainer();
 /** @var Mobicms\Api\ConfigInterface $config */
 $config = $container->get(Mobicms\Api\ConfigInterface::class);
 
+$module = $container->get(Mobicms\Api\RouterInterface::class)->getCurrentModule();
+
 $app = App::getInstance();
 $user = $app->user()->get();
 ?>
@@ -28,7 +30,7 @@ $user = $app->user()->get();
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="visible-xs-inline-block"><i class="sitemap fw"></i><?= _s('Go To') ?>&nbsp;</span><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <?php if ($app->router()->getCurrentModule() != 'home'): ?>
+                        <?php if ($module != 'home'): ?>
                             <li><a href="<?= $config->homeUrl ?>/"><i class="home fw"></i><?= _s('Home') ?></a></li>
                         <?php endif ?>
                         <li><a href="<?= $config->homeUrl ?>/news/"><i class="rss fw"></i><?= _s('News') ?></a></li>
@@ -49,14 +51,14 @@ $user = $app->user()->get();
             <ul class="nav navbar-nav navbar-right">
                 <?php if ($app->user()->isValid()): ?>
                     <?php if ($user->rights): ?>
-                        <li<?= ($app->router()->getCurrentModule() == 'admin' ? ' class="active"' : '') ?>>
+                        <li<?= ($module == 'admin' ? ' class="active"' : '') ?>>
                             <a href="<?= $config->homeUrl ?>/admin/"><i class="cogs fw"></i><?= _s('Admin Panel') ?></a>
                         </li>
                     <?php endif ?>
-                    <li<?= ($app->router()->getCurrentModule() == 'mail' ? ' class="active"' : '') ?>>
+                    <li<?= ($module == 'mail' ? ' class="active"' : '') ?>>
                         <a href="#"><i class="envelope fw"></i><?= _s('Mail') ?></a>
                     </li>
-                    <li class="dropdown<?= ($app->router()->getCurrentModule() == 'profile' ? ' active' : '') ?>">
+                    <li class="dropdown<?= ($module == 'profile' ? ' active' : '') ?>">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="user fw"></i><?= $user->nickname ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="<?= $config->homeUrl ?>/profile/<?= $user->id ?>/"><i class="user fw"></i><?= _s('Profile') ?></a></li>
@@ -68,11 +70,11 @@ $user = $app->user()->get();
                     </li>
                 <?php else: ?>
                     <?php if ($config->registrationAllow): ?>
-                        <li<?= ($app->router()->getCurrentModule() == 'registration' ? ' class="active"' : '') ?>>
+                        <li<?= ($module == 'registration' ? ' class="active"' : '') ?>>
                             <a href="<?= $config->homeUrl ?>/registration/"><i class="pencil fw"></i><?= _s('Registration') ?></a>
                         </li>
                     <?php endif ?>
-                    <li<?= ($app->router()->getCurrentModule() == 'login' ? ' class="active"' : '') ?>>
+                    <li<?= ($module == 'login' ? ' class="active"' : '') ?>>
                         <a href="<?= $config->homeUrl ?>/login/"><i class="sign-in fw"></i><?= _s('Login') ?></a>
                     </li>
                 <?php endif ?>

@@ -1,10 +1,16 @@
 <?php
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\RouterInterface $router */
+$router = $container->get(Mobicms\Api\RouterInterface::class);
+
 $app = App::getInstance();
 ?>
 <!-- Заголовок раздела -->
 <div class="titlebar">
     <div class="button">
-        <a href="../../list/<?= $app->router()->getQuery(2) ?>" title="<?= _s('Back') ?>">
+        <a href="../../list/<?= $router->getQuery(2) ?>" title="<?= _s('Back') ?>">
             <i class="arrow-circle-left lg"></i>
         </a>
     </div>

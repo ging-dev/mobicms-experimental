@@ -60,7 +60,6 @@ use Mobicms\Environment\Vars;  //TODO: доработать, или удалит
 use Mobicms\HtmlFilter\Filter; //TODO: доработать, или удалить сервис
 use Mobicms\HtmlFilter\Purify; //TODO: доработать, или удалить сервис
 use Mobicms\i18n\Translate;
-use Mobicms\Routing\Router;
 use Mobicms\Utility\Image;
 use Mobicms\Ext\Session\PdoSessionHandler;
 use Zend\Http\PhpEnvironment\Request;
@@ -80,7 +79,6 @@ use Zend\Stdlib\Glob;
  * @method Purify       purify($string) //TODO: доработать, или удалить сервис
  * @method              redirect($url) Closure function
  * @method Request      request()
- * @method Router       router()
  * @method              uri()
  * @method Facade       user()
  * @method Vars         vars() //TODO: удалить
@@ -120,9 +118,6 @@ $di = App::getDiInstance();
 
 // Initialize the Request
 $app->newInstance('request', Request::class);
-
-// Initialize the Router
-$app->newInstance('router', Router::class);
 
 /**
  * Shutdown handler

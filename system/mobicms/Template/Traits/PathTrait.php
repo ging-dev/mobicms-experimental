@@ -59,7 +59,7 @@ trait PathTrait
             }
         } else {
             // Вызов файла модуля
-            $module = \App::getInstance()->router()->dir;
+            $module = \App::getContainer()->get(\Mobicms\Api\RouterInterface::class)->dir;
 
             if (is_file(THEMES_PATH . $skin . DS . 'modules' . DS . $module . DS . 'templates' . DS . $file)) {
                 return THEMES_PATH . $skin . DS . 'modules' . DS . $module . DS . 'templates' . DS . $file;
@@ -76,7 +76,7 @@ trait PathTrait
         $url = \App::getInstance()->request()->getBaseUrl();
         $skin = \App::getInstance()->user()->get()->getConfig()->skin; //TODO: replace!
         $type = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-        $moduleDir = \App::getInstance()->router()->dir;
+        $moduleDir = \App::getContainer()->get(\Mobicms\Api\RouterInterface::class)->dir;
         $themeLink = $url . '/themes/';
         $skinLink = $themeLink . $skin . '/';
         $skinPath = THEMES_PATH . $skin . DS;

@@ -2,6 +2,12 @@
 
 defined('MOBICMS') or die('Error: restricted access');
 
+/** @var Psr\Container\ContainerInterface $container */
+$container = App::getContainer();
+
+/** @var Mobicms\Api\RouterInterface $router */
+$router = $container->get(Mobicms\Api\RouterInterface::class);
+
 $admin_actions = [
     'guests' => 'guests.php',
     'ip'     => 'ip.php'
@@ -12,7 +18,7 @@ $common_actions = [
 ];
 
 $app = App::getInstance();
-$query = $app->router()->getQuery();
+$query = $router->getQuery();
 $include = __DIR__ . '/includes/';
 
 if (isset($query[0])) {
