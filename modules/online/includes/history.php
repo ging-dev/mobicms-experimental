@@ -22,4 +22,5 @@ if ($view->total) {
     )->fetchAll();
 }
 
+$view->list_header = _s('Visits History');
 $view->setTemplate('index.php');
