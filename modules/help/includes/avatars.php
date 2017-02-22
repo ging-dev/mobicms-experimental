@@ -33,7 +33,7 @@ $app = App::getInstance();
 $uri = $app->uri();
 $homeUrl = $app->request()->getBaseUrl();
 $query = $router->getQuery();
-$view->pagesize = 40;
+$pagesize = 40;
 $user = $app->user()->get();
 
 if ($app->user()->isValid() && isset($query[1], $query[2], $catalog[$query[2]]) && $query[1] == 'set') {
@@ -47,7 +47,7 @@ if ($app->user()->isValid() && isset($query[1], $query[2], $catalog[$query[2]]) 
         ->element('submit', 'submit',
             [
                 'value' => _s('Save'),
-                'class' => 'btn btn-primary'
+                'class' => 'btn btn-primary',
             ]
         )
         ->html('<a class="btn btn-link" href="' . $uri . 'list/' . $router->getQuery(2) . '">' . _s('Back') . '</a>');
@@ -75,38 +75,43 @@ if ($app->user()->isValid() && isset($query[1], $query[2], $catalog[$query[2]]) 
 } elseif (isset($query[1], $query[2], $catalog[$query[2]]) && $query[1] == 'list') {
     // Показываем список аватаров в выбранной категории
     $avatars = glob(ROOT_PATH . 'assets' . DS . 'avatars' . DS . $query[2] . DS . '*.{gif,jpg,png}', GLOB_BRACE);
+    $list = [];
+    $total = count($avatars);
+    $start = $app->vars()->page * $pagesize - $pagesize;
+    $end = $app->vars()->page * $pagesize;
 
-    $view->total = count($avatars);
-    $view->start = $app->vars()->page * $view->pagesize - $view->pagesize;
-    $end = $app->vars()->page * $view->pagesize;
-    if ($end > $view->total) {
-        $end = $view->total;
+    if ($end > $total) {
+        $end = $total;
     }
 
-    if ($view->total) {
-        $view->list = [];
-        for ($i = $view->start; $i < $end; $i++) {
-            $view->list[$i] =
+    if ($total) {
+
+        for ($i = $start; $i < $end; $i++) {
+            $list[$i] =
                 [
                     'image' => $homeUrl . '/assets/avatars/' . urlencode($query[2]) . '/' . basename($avatars[$i]),
-                    'link'  => ($app->user()->isValid() ? '../../set/' . urlencode($query[2]) . '/' . urlencode(basename($avatars[$i])) : '#')
+                    'link'  => ($app->user()->isValid() ? '../../set/' . urlencode($query[2]) . '/' . urlencode(basename($avatars[$i])) : '#'),
                 ];
         }
     }
 
+    $view->total = $total;
+    $view->list = $list;
     $view->cat = $query[2];
     $view->setTemplate('avatars_list.php');
 } else {
     // Показываем каталог аватаров (список категорий)
-    $view->list = [];
+    $list = [];
+
     foreach ($catalog as $key => $val) {
-        $view->list[] =
+        $list[] =
             [
                 'link'  => $uri . 'list/' . urlencode($key) . '/',
                 'name'  => $val,
-                'count' => count(glob(ROOT_PATH . 'assets' . DS . 'avatars' . DS . $key . DS . '*.{gif,jpg,png}', GLOB_BRACE))
+                'count' => count(glob(ROOT_PATH . 'assets' . DS . 'avatars' . DS . $key . DS . '*.{gif,jpg,png}', GLOB_BRACE)),
             ];
     }
 
+    $view->list = $list;
     $view->setTemplate('avatars_index.php');
 }

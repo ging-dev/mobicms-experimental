@@ -1,7 +1,7 @@
 <!-- Заголовок раздела -->
 <div class="titlebar">
     <div class="button">
-        <a href="../" title="<?= _s('Back') ?>">
+        <a href="../../" title="<?= _s('Back') ?>">
             <i class="arrow-circle-left lg"></i>
         </a>
     </div>
