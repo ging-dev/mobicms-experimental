@@ -53,11 +53,6 @@ class Router implements RouterInterface //TODO: проверить где исп
         $this->dir = $this->config[$this->module];
     }
 
-    public function __invoke()
-    {
-        return $this;
-    }
-
     public function dispatch()
     {
         $file = 'index.php';

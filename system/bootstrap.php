@@ -3,11 +3,11 @@
 /**
  * Common constants
  */
-defined('DEBUG') || define('DEBUG', false);                    // Toggle debug mode
-defined('MOBICMS') || define('MOBICMS', true);                 // mobiCMS version
-const DS = DIRECTORY_SEPARATOR;                                // Directory Separator alias
+defined('DEBUG') || define('DEBUG', false);
+defined('MOBICMS') or die('Error: restricted access');
 define('START_MEMORY', memory_get_usage());                    // Profiling memory usage
 define('START_TIME', microtime(true));                         // Profiling generation time
+const DS = DIRECTORY_SEPARATOR;                                // Directory Separator alias
 
 /**
  * Pathes
