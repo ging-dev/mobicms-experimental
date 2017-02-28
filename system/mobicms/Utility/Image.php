@@ -13,7 +13,7 @@
 namespace Mobicms\Utility;
 
 use Mobicms\Checkpoint\Facade;
-use Mobicms\Routing\Router;
+use Mobicms\Api\RouterInterface;
 use Zend\Http\PhpEnvironment\Request;
 
 /**
@@ -47,20 +47,20 @@ class Image
     private $request;
 
     /**
-     * @var Router
+     * @var RouterInterface
      */
     private $router;
 
     /**
      * @param array $arguments
      */
-    public function __construct(Request $request, Router $router, Facade $user, array $arguments)
+    public function __construct(Request $request, Facade $user, array $arguments)
     {
         if (!isset($arguments[0]) || empty($arguments[0])) {
             throw new \RuntimeException('Image not specified');
         }
 
-        $this->router = $router;
+        $this->router = \App::getContainer()->get(RouterInterface::class);//TODO: переделать
         $this->request = $request;
         $this->skin = $user->get()->getConfig()->skin;
         $this->prepareAttributes($arguments);

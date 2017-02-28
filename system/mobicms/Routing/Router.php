@@ -21,7 +21,7 @@ use Mobicms\Api\RouterInterface;
  * @author  Oleg (AlkatraZ) Kasyanov <dev@mobicms.net>
  * @version v.2.0.0 2015-08-07
  */
-class Router implements RouterInterface //TODO: проверить где используется и заменить на вызов интерфейса
+class Router implements RouterInterface
 {
     private $config;
 

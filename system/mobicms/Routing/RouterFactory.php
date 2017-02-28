@@ -8,6 +8,9 @@ class RouterFactory
 {
     public function __invoke(ContainerInterface $container)
     {
-        return new Router();
+        $config = $container->get('config');
+        $routes = isset($config['routes']) ? $config['routes'] : [];
+
+        return new Router($routes);
     }
 }

@@ -13,7 +13,7 @@
 namespace Mobicms\Ext\Session;
 
 use Mobicms\Environment\Network;
-use Mobicms\Routing\Router;
+use Mobicms\Api\RouterInterface;
 use Zend\Session\SaveHandler\SaveHandlerInterface;
 
 /**
@@ -35,6 +35,9 @@ class PdoSessionHandler implements SaveHandlerInterface
      */
     private $network;
 
+    /**
+     * @var RouterInterface
+     */
     private $router;
 
     private $transaction = false;
@@ -47,11 +50,11 @@ class PdoSessionHandler implements SaveHandlerInterface
      */
     public $lifetime;
 
-    public function __construct(Router $router)
+    public function __construct()
     {
         //TODO: Переделать на invocables, или фабрику
         $this->db = \App::getContainer()->get(\PDO::class);
-        $this->router = $router;
+        $this->router = \App::getContainer()->get(RouterInterface::class);
         $this->network = \App::getContainer()->get(Network::class);
         $this->lifetime = (int)ini_get('session.gc_maxlifetime');
     }
