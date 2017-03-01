@@ -25,7 +25,6 @@ const FILES_PATH = ROOT_PATH . 'uploads' . DS;                 // Path to the Up
 const ASSETS_PATH = ROOT_PATH . 'assets' . DS;                 // Path to the Upload files
 
 const CONFIG_DATA_DIR = __DIR__ . DS . 'config' . DS . 'data' . DS;
-const CONFIG_FILE_ROUTES = CONFIG_DATA_DIR . 'routes.php';
 const CONFIG_FILE_SCAN = CONFIG_DATA_DIR . 'scan.php';
 
 // Define some PHP settings

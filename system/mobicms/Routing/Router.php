@@ -23,7 +23,7 @@ use Mobicms\Api\RouterInterface;
  */
 class Router implements RouterInterface
 {
-    private $config;
+    private $routes;
 
     private $path = [];
     private $pathQuery = [];
@@ -38,8 +38,9 @@ class Router implements RouterInterface
 
     public $dir = '';
 
-    public function __construct()
+    public function __construct(array $routes)
     {
+        $this->routes = $routes;
         $uri = trim(urldecode(filter_var($_SERVER['REQUEST_URI'], FILTER_SANITIZE_URL)), '/');
         $uri = substr($uri, strlen(trim(dirname(filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING)), DIRECTORY_SEPARATOR)), 400);
 
@@ -48,9 +49,8 @@ class Router implements RouterInterface
         }
 
         $this->path = array_filter(explode('/', trim($uri, '/')));
-        $this->config = is_file(CONFIG_FILE_ROUTES) ? include CONFIG_FILE_ROUTES : [];
         $this->module = $this->getModule();
-        $this->dir = $this->config[$this->module];
+        $this->dir = $routes[$this->module];
     }
 
     public function dispatch()
@@ -116,7 +116,7 @@ class Router implements RouterInterface
     {
         $module = !empty($this->path) ? $this->path[0] : 'home';
 
-        if (!isset($this->config[$module]) || !$this->checkModule($module)) {
+        if (!isset($this->routes[$module]) || !$this->checkModule($module)) {
             $module = '404';
         }
 
@@ -129,8 +129,8 @@ class Router implements RouterInterface
      */
     private function checkModule($module)
     {
-        if (is_dir(MODULE_PATH . $this->config[$module])
-            && is_file(MODULE_PATH . $this->config[$module] . DS . 'index.php')
+        if (is_dir(MODULE_PATH . $this->routes[$module])
+            && is_file(MODULE_PATH . $this->routes[$module] . DS . 'index.php')
         ) {
             return true;
         }
