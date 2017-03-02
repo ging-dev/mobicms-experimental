@@ -15,13 +15,15 @@ $reputation = !empty($app->profile()->reputation)
     ? unserialize($app->profile()->reputation)
     : ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0];
 
-$view->reputation = [];
-$view->reputation_total = array_sum($reputation);
+$array = [];
+$total = array_sum($reputation);
 
 foreach ($reputation as $key => $val) {
-    $view->reputation[$key] = $view->reputation_total
-        ? 100 / $view->reputation_total * $val
+    $array[$key] = $total
+        ? 100 / $total * $val
         : 0;
 }
 
+$view->reputation = $array;
+$view->reputation_total = $total;
 $view->setTemplate('profile.php');
