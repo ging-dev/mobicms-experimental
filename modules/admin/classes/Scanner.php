@@ -1,21 +1,10 @@
 <?php
-/*
- * mobiCMS Content Management System (http://mobicms.net)
- *
- * For copyright and license information, please see the LICENSE.md
- * Installing the system or redistributions of files must retain the above copyright notice.
- *
- * @link        http://mobicms.net mobiCMS Project
- * @copyright   Copyright (C) mobiCMS Community
- * @license     LICENSE.md (see attached file)
- */
 
 /**
  * Class Scanner
  *
  * @package Mobicms\SecurityScanner
- * @author  Oleg (AlkatraZ) Kasyanov <dev@mobicms.net>
- * @version v.1.0.0 2015-02-01
+ * @author  Oleg Kasyanov <dev@mobicms.net>
  */
 class Scanner
 {
@@ -24,6 +13,7 @@ class Scanner
      */
     private $config;
     private $snapFiles = [];
+    private $cacheFile = 'scaner.cache';
 
     public $folders =
         [
@@ -36,10 +26,7 @@ class Scanner
         ];
     public $whiteList = [];
     public $excludedFolders = [];
-    public $excludedFiles =
-        [
-            './system/config/data/scan.php'
-        ];
+    public $excludedFiles = [];
 
     public $newFiles = [];
     public $modifiedFiles = [];
@@ -55,7 +42,9 @@ class Scanner
      */
     public function scan()
     {
-        $this->whiteList = include_once CONFIG_FILE_SCAN;
+        $this->whiteList = is_file(CACHE_PATH . $this->cacheFile)
+            ? include_once CACHE_PATH . $this->cacheFile
+            : [];
 
         // Сканируем предмет наличия новых, или модифицированных файлов
         foreach ($this->folders as $dir) {
@@ -85,7 +74,8 @@ class Scanner
             $filecontents[$data['file_path']] = $data['file_crc'];
         }
 
-        (new Zend\Config\Writer\PhpArray)->toFile(CONFIG_FILE_SCAN, $filecontents);
+        $configFile = "<?php\n\n" . 'return ' . var_export($filecontents, true) . ";\n";
+        file_put_contents(CACHE_PATH . $this->cacheFile, $configFile);
     }
 
     /**

@@ -36,7 +36,7 @@
     <?php if (!empty($this->missingFiles)): ?>
         <div class="alert alert-danger">
             <h4>(<?= count($this->missingFiles) ?>) <?= _m('Missing files') ?></h4>
-            <?= _m('These files were in the distribution, but if you lack. Without them, can not be guaranteed and normal system operation. It is recommended to restore all missing files from correct version distributive.') ?><br/><br/>
+            <?= _m('The given files were in the Snapshot created earlier, but they do not exist at the moment.') ?><br/><br/>
             <?php foreach ($this->missingFiles as $file): ?>
                 <div style="font-size: small; font-weight: bold; padding-top: 2px; padding-bottom: 2px; border-top: 1px dotted #ec8583;">
                     <?= htmlspecialchars($file) ?>

@@ -24,9 +24,6 @@ const THEMES_PATH = ROOT_PATH . 'themes' . DS;                 // Path to the Te
 const FILES_PATH = ROOT_PATH . 'uploads' . DS;                 // Path to the Upload files
 const ASSETS_PATH = ROOT_PATH . 'assets' . DS;                 // Path to the Upload files
 
-const CONFIG_DATA_DIR = __DIR__ . DS . 'config' . DS . 'data' . DS;
-const CONFIG_FILE_SCAN = CONFIG_DATA_DIR . 'scan.php';
-
 // Define some PHP settings
 mb_internal_encoding('UTF-8');
 date_default_timezone_set('UTC');
