@@ -10,12 +10,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mobicms\n"
-"POT-Creation-Date: 2016-02-07 12:33+0400\n"
+"POT-Creation-Date: 2017-05-14 14:40+0400\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"PO-Revision-Date: 2016-02-07 04:24-0500\n"
+"PO-Revision-Date: 2017-05-14 06:55-0400\n"
 "Last-Translator: mobiCMS <dev@mobicms.net>\n"
 "Language-Team: Ukrainian\n"
 "X-Generator: crowdin.com\n"
@@ -31,163 +31,120 @@ msgstr ""
 "X-Crowdin-File: /system/default.pot\n"
 "Language: uk_UA\n"
 
-#: assets/template/includes/include.navbar.php:24
+#: assets/template/includes/include.navbar.php:31
 msgid "Go To"
 msgstr "Перейти До"
 
-#: assets/template/includes/include.navbar.php:27
+#: assets/template/includes/include.navbar.php:34
 msgid "Home"
 msgstr "На Головну"
 
-#: assets/template/includes/include.navbar.php:29
-#: assets/template/includes/layout.default.php:20
-#: modules/news/templates/edit_form.php:5 modules/news/templates/index.php:10
+#: assets/template/includes/include.navbar.php:36
+#: assets/template/includes/layout.default.php:23
 msgid "News"
 msgstr "Новини"
 
-#: assets/template/includes/include.navbar.php:31
-#: modules/admin/includes/acl.php:33 modules/home/templates/index.php:11
-#: modules/profile/templates/profile.php:80
+#: assets/template/includes/include.navbar.php:38
+#: modules/home/templates/index.php:11 modules/profile/templates/profile.php:80
 msgid "Guestbook"
 msgstr "Гостьова книга"
 
-#: assets/template/includes/include.navbar.php:32
-#: modules/admin/includes/acl.php:20 modules/admin/includes/quarantine.php:114
-#: modules/admin/includes/sitemap.php:23 modules/home/templates/index.php:12
+#: assets/template/includes/include.navbar.php:39
+#: modules/admin/includes/sitemap.php:17 modules/home/templates/index.php:12
 msgid "Forum"
 msgstr "Форум"
 
-#: assets/template/includes/include.navbar.php:34
-#: modules/admin/includes/acl.php:57 modules/home/templates/index.php:14
+#: assets/template/includes/include.navbar.php:41
+#: modules/home/templates/index.php:14
 msgid "Downloads"
 msgstr "Завантаження"
 
-#: assets/template/includes/include.navbar.php:35
-#: modules/admin/includes/acl.php:45 modules/admin/includes/sitemap.php:29
-#: modules/home/templates/index.php:15
+#: assets/template/includes/include.navbar.php:42
+#: modules/admin/includes/sitemap.php:23 modules/home/templates/index.php:15
 msgid "Library"
 msgstr "Бібліотека"
 
-#: assets/template/includes/include.navbar.php:37
+#: assets/template/includes/include.navbar.php:44
 #: modules/home/templates/index.php:16
 msgid "Community"
 msgstr "Спільнота"
 
-#: assets/template/includes/include.navbar.php:38
+#: assets/template/includes/include.navbar.php:45
 #: modules/home/templates/index.php:18 modules/profile/templates/profile.php:79
 msgid "Photo Album"
 msgstr "Фотоальбом"
 
-#: assets/template/includes/include.navbar.php:48
+#: assets/template/includes/include.navbar.php:55
 #: modules/admin/templates/edit_form.php:5 modules/admin/templates/index.php:7
 #: modules/admin/templates/scanner.php:5
 msgid "Admin Panel"
 msgstr "Панель адміністратора"
 
-#: assets/template/includes/include.navbar.php:52
+#: assets/template/includes/include.navbar.php:59
 #: modules/profile/templates/profile.php:84
 msgid "Mail"
 msgstr "Пошта"
 
-#: assets/template/includes/include.navbar.php:57
-#: modules/profile/templates/option.php:24
+#: assets/template/includes/include.navbar.php:64
+#: modules/profile/templates/option.php:27
 msgid "Profile"
 msgstr "Профіль"
 
-#: assets/template/includes/include.navbar.php:59
-#: modules/admin/includes/users_settings.php:37
-#: modules/news/templates/index.php:33
+#: assets/template/includes/include.navbar.php:66
+#: modules/admin/includes/users_settings.php:34
 #: modules/profile/templates/edit_form.php:9
-#: modules/profile/templates/option.php:14
-#: modules/profile/templates/option.php:32
-#: modules/profile/templates/option_avatar.php:12
+#: modules/profile/templates/option.php:17
+#: modules/profile/templates/option.php:35
+#: modules/profile/templates/option_avatar.php:18
 #: modules/profile/templates/option_theme.php:10
 #: modules/profile/templates/option_theme_set.php:10
 #: modules/profile/templates/profile.php:29
 msgid "Settings"
 msgstr "Налаштування"
 
-#: assets/template/includes/include.navbar.php:61
-#: modules/login/includes/logout.php:28 modules/login/templates/login.php:5
+#: assets/template/includes/include.navbar.php:68
+#: modules/login/includes/logout.php:24 modules/login/templates/login.php:5
 msgid "Exit"
 msgstr "Вихід"
 
-#: assets/template/includes/include.navbar.php:67
-#: modules/admin/includes/users_settings.php:21
-#: modules/registration/includes/activation.php:28
-#: modules/registration/templates/registered.php:3
-#: modules/registration/templates/registration.php:3
+#: assets/template/includes/include.navbar.php:74
+#: modules/admin/includes/users_settings.php:18
+#: modules/registration/includes/activation.php:41
+#: modules/registration/includes/confirmation.php:25
+#: modules/registration/index.php:22 modules/registration/templates/index.php:7
 msgid "Registration"
 msgstr "Реєстрація"
 
-#: assets/template/includes/include.navbar.php:71
-#: modules/login/includes/login.php:41 modules/login/templates/login.php:5
+#: assets/template/includes/include.navbar.php:78
+#: modules/login/includes/login.php:37 modules/login/templates/login.php:5
 #: modules/login/templates/login_captcha.php:5
-#: modules/registration/includes/activation.php:23
+#: modules/registration/includes/activation.php:35
 msgid "Login"
 msgstr "Увійти"
 
-#: assets/template/includes/include.user.php:14
+#: assets/template/includes/include.user.php:19
 msgid "IP Management"
 msgstr "Управління IP"
 
-#: assets/template/includes/include.user.php:17
+#: assets/template/includes/include.user.php:22
 msgid "Proxy Management"
 msgstr "Управління Проксі"
 
-#: assets/template/includes/include.user.php:24
+#: assets/template/includes/include.user.php:29
 msgid "Block this IP"
 msgstr "Блокувати цей IP"
 
-#: assets/template/includes/include.user.php:51
+#: assets/template/includes/include.user.php:56
 msgid "Last visit"
 msgstr "Останнє відвідування"
 
-#: assets/template/includes/layout.default.php:40
+#: assets/template/includes/layout.default.php:43
 msgid "Help"
 msgstr "Довідка"
 
-#: assets/template/includes/layout.default.php:41
+#: assets/template/includes/layout.default.php:44
 msgid "Up"
 msgstr "Вгору"
-
-#: assets/template/includes/message.php:11
-#: modules/login/templates/login_captcha.php:29
-#: system/mobicms/Form/Form.php:225
-msgid "Continue"
-msgstr "Продовжити"
-
-#: assets/template/includes/message.php:14 modules/admin/includes/acl.php:82
-#: modules/admin/includes/languages.php:51
-#: modules/admin/includes/quarantine.php:162
-#: modules/admin/includes/scanner.php:39 modules/admin/includes/sitemap.php:51
-#: modules/admin/includes/smilies.php:27
-#: modules/admin/includes/system_settings.php:116
-#: modules/admin/includes/users_settings.php:175
-#: modules/help/includes/avatars.php:54
-#: modules/help/templates/avatars_index.php:4
-#: modules/help/templates/avatars_list.php:4
-#: modules/help/templates/avatars_set.php:7 modules/help/templates/rules.php:4
-#: modules/login/includes/logout.php:32 modules/news/includes/add.php:45
-#: modules/news/includes/delete.php:35 modules/news/includes/delete.php:40
-#: modules/news/includes/edit.php:54 modules/news/includes/edit.php:62
-#: modules/news/includes/edit.php:67
-#: modules/profile/includes/option_avatar_animation.php:33
-#: modules/profile/includes/option_avatar_animation.php:74
-#: modules/profile/includes/option_avatar_gravatar.php:33
-#: modules/profile/includes/option_avatar_image.php:35
-#: modules/profile/includes/option_edit.php:176
-#: modules/profile/includes/option_email.php:57
-#: modules/profile/includes/option_language.php:37
-#: modules/profile/includes/option_nickname.php:54
-#: modules/profile/includes/option_nickname.php:64
-#: modules/profile/includes/option_password.php:47
-#: modules/profile/includes/option_rank.php:56
-#: modules/profile/includes/option_settings.php:82
-#: modules/profile/includes/option_theme.php:70
-#: modules/profile/includes/reputation.php:62 modules/whois/index.php:45
-msgid "Back"
-msgstr "Повернутися"
 
 #: modules/404/index.php:3
 msgid "Page does not exist"
@@ -197,44 +154,67 @@ msgstr "Сторінка не існує"
 msgid "Sorry, but the page you were trying to view does not exist"
 msgstr "Вибачте, але сторінка, яку ви намагаєтесь переглянути, не існує"
 
-#: modules/admin/includes/acl.php:71 modules/news/templates/index.php:53
-msgid "Comments"
-msgstr "Коментарі"
-
-#: modules/admin/includes/acl.php:78 modules/admin/includes/languages.php:47
-#: modules/admin/includes/quarantine.php:158
-#: modules/admin/includes/sitemap.php:47
-#: modules/admin/includes/system_settings.php:112
-#: modules/admin/includes/users_settings.php:171
-#: modules/help/includes/avatars.php:50 modules/news/includes/add.php:41
-#: modules/news/includes/edit.php:50
-#: modules/profile/includes/option_avatar_animation.php:29
-#: modules/profile/includes/option_avatar_gravatar.php:29
-#: modules/profile/includes/option_avatar_image.php:31
-#: modules/profile/includes/option_edit.php:172
-#: modules/profile/includes/option_email.php:53
-#: modules/profile/includes/option_language.php:33
-#: modules/profile/includes/option_nickname.php:50
-#: modules/profile/includes/option_password.php:43
-#: modules/profile/includes/option_rank.php:52
-#: modules/profile/includes/option_settings.php:78
-#: modules/profile/includes/reputation.php:58
+#: modules/admin/includes/languages.php:45
+#: modules/admin/includes/quarantine.php:97
+#: modules/admin/includes/sitemap.php:41
+#: modules/admin/includes/system_settings.php:110
+#: modules/admin/includes/users_settings.php:168
+#: modules/help/includes/avatars.php:49
+#: modules/profile/includes/option_avatar_animation.php:25
+#: modules/profile/includes/option_avatar_gravatar.php:25
+#: modules/profile/includes/option_avatar_image.php:29
+#: modules/profile/includes/option_edit.php:166
+#: modules/profile/includes/option_email.php:49
+#: modules/profile/includes/option_language.php:29
+#: modules/profile/includes/option_nickname.php:47
+#: modules/profile/includes/option_password.php:39
+#: modules/profile/includes/option_rank.php:48
+#: modules/profile/includes/option_settings.php:75
+#: modules/profile/includes/reputation.php:56
 msgid "Save"
 msgstr "Зберегти"
 
-#: modules/admin/includes/quarantine.php:26
+#: modules/admin/includes/languages.php:49
+#: modules/admin/includes/quarantine.php:101
+#: modules/admin/includes/scanner.php:44 modules/admin/includes/sitemap.php:45
+#: modules/admin/includes/smilies.php:23
+#: modules/admin/includes/system_settings.php:114
+#: modules/admin/includes/users_settings.php:172
+#: modules/help/includes/avatars.php:53
+#: modules/help/templates/avatars_index.php:4
+#: modules/help/templates/avatars_list.php:4
+#: modules/help/templates/avatars_set.php:13 modules/help/templates/rules.php:4
+#: modules/login/includes/logout.php:28
+#: modules/profile/includes/option_avatar_animation.php:29
+#: modules/profile/includes/option_avatar_animation.php:70
+#: modules/profile/includes/option_avatar_gravatar.php:29
+#: modules/profile/includes/option_avatar_image.php:33
+#: modules/profile/includes/option_edit.php:170
+#: modules/profile/includes/option_email.php:53
+#: modules/profile/includes/option_language.php:33
+#: modules/profile/includes/option_nickname.php:51
+#: modules/profile/includes/option_nickname.php:61
+#: modules/profile/includes/option_password.php:43
+#: modules/profile/includes/option_rank.php:52
+#: modules/profile/includes/option_settings.php:79
+#: modules/profile/includes/option_theme.php:66
+#: modules/profile/includes/reputation.php:60 modules/whois/index.php:40
+msgid "Back"
+msgstr "Повернутися"
+
+#: modules/admin/includes/quarantine.php:19
 msgid "Quarantine"
 msgstr "Карантин"
 
-#: modules/admin/includes/quarantine.php:41
+#: modules/admin/includes/quarantine.php:34
 msgid "Restrictions"
 msgstr "Обмеження"
 
-#: modules/admin/includes/scanner.php:35 modules/admin/includes/smilies.php:23
+#: modules/admin/includes/scanner.php:40 modules/admin/includes/smilies.php:19
 msgid "Run"
 msgstr "Запустити"
 
-#: modules/admin/index.php:67
+#: modules/admin/index.php:58
 msgid "Access forbidden"
 msgstr "Доступ заборонено"
 
@@ -247,64 +227,39 @@ msgstr "Дані успішно збережено"
 msgid "Smilies"
 msgstr "Смайли"
 
-#: modules/community/templates/user_list.php:7
-#: modules/home/templates/index.php:17 modules/online/includes/index.php:26
-#: modules/online/templates/guests.php:24 modules/online/templates/index.php:25
-#: modules/online/templates/ip.php:24
-msgid "Users"
-msgstr "Користувачі"
-
-#: modules/community/templates/user_list.php:11
-#: modules/news/templates/index.php:15 modules/online/templates/guests.php:11
-#: modules/online/templates/index.php:12 modules/online/templates/ip.php:11
-#: modules/profile/templates/profile.php:19
-msgid "Control"
-msgstr "Керування"
-
-#: modules/community/templates/user_list.php:24
-msgid "Users List"
-msgstr "Список користувачів"
-
-#: modules/community/templates/user_list.php:31
-#: modules/help/templates/avatars_list.php:23
-#: modules/news/templates/index.php:65 modules/online/templates/guests.php:82
-#: modules/online/templates/index.php:52 modules/online/templates/ip.php:52
-#: modules/profile/templates/option_theme.php:47
-msgid "List is empty"
-msgstr "Список порожній"
-
-#: modules/community/templates/user_list.php:34
-#: modules/help/templates/avatars_list.php:26
-#: modules/news/templates/index.php:70 modules/online/templates/guests.php:85
-#: modules/online/templates/index.php:55 modules/online/templates/ip.php:55
-#: modules/profile/templates/option_theme.php:50
-msgid "Total"
-msgstr "Разом"
-
-#: modules/community/templates/user_list.php:40
-#: modules/online/templates/guests.php:88 modules/online/templates/index.php:58
-msgid "Only for registered users"
-msgstr "Тільки для зареєстрованих користувачів"
-
-#: modules/help/includes/avatars.php:45
-#: modules/profile/templates/option_avatar.php:22
+#: modules/help/includes/avatars.php:44
+#: modules/profile/templates/option_avatar.php:28
 msgid "Set Avatar"
 msgstr "Встановити аватар"
 
-#: modules/help/includes/avatars.php:46
+#: modules/help/includes/avatars.php:45
 msgid "Are you sure you want to set yourself this avatar?"
 msgstr "Ви впевнені, що хочете встановити собі цей аватар?"
 
-#: modules/help/includes/avatars.php:69
+#: modules/help/includes/avatars.php:68
 msgid "Avatar is installed"
 msgstr "Аватар встановлено"
 
 #: modules/help/templates/avatars_index.php:9
 #: modules/help/templates/avatars_list.php:9
-#: modules/help/templates/avatars_set.php:12
+#: modules/help/templates/avatars_set.php:18
 #: modules/help/templates/index.php:10
 msgid "Avatars"
 msgstr "Аватар"
+
+#: modules/help/templates/avatars_list.php:23
+#: modules/online/templates/guests.php:82 modules/online/templates/index.php:61
+#: modules/online/templates/ip.php:52
+#: modules/profile/templates/option_theme.php:47
+msgid "List is empty"
+msgstr "Список порожній"
+
+#: modules/help/templates/avatars_list.php:26
+#: modules/online/templates/guests.php:85 modules/online/templates/index.php:64
+#: modules/online/templates/ip.php:55
+#: modules/profile/templates/option_theme.php:50
+msgid "Total"
+msgstr "Разом"
 
 #: modules/help/templates/index.php:3 modules/home/templates/index.php:8
 #: modules/profile/templates/profile.php:74
@@ -319,7 +274,7 @@ msgstr "Умови використання"
 msgid "Welcome"
 msgstr "Ласкаво просимо"
 
-#: modules/home/templates/index.php:9 modules/news/templates/index.php:40
+#: modules/home/templates/index.php:9
 msgid "News Archive"
 msgstr "Архів Новин"
 
@@ -331,32 +286,38 @@ msgstr "Спілкування"
 msgid "Useful"
 msgstr "Корисне"
 
-#: modules/login/includes/login.php:20
+#: modules/home/templates/index.php:17 modules/online/includes/index.php:25
+#: modules/online/templates/guests.php:24 modules/online/templates/index.php:34
+#: modules/online/templates/ip.php:24
+msgid "Users"
+msgstr "Користувачі"
+
+#: modules/login/includes/login.php:16
 msgid "Nickname or Email"
 msgstr "Нік або електронна пошта"
 
-#: modules/login/includes/login.php:27
-#: modules/registration/includes/registration.php:44
+#: modules/login/includes/login.php:23
+#: modules/registration/includes/index.php:46
 msgid "Password"
 msgstr "Пароль"
 
-#: modules/login/includes/login.php:35
+#: modules/login/includes/login.php:31
 msgid "Remember"
 msgstr "Запам’ятати"
 
-#: modules/login/includes/login.php:45
+#: modules/login/includes/login.php:41
 msgid "Forgot password?"
 msgstr "Забули пароль?"
 
-#: modules/login/includes/login.php:60
+#: modules/login/includes/login.php:56
 msgid "Login information are incorrect"
 msgstr "Дані для входу невірні"
 
-#: modules/login/includes/logout.php:19
+#: modules/login/includes/logout.php:15
 msgid "Leave the site?"
 msgstr "Бажаєте покинути сайт?"
 
-#: modules/login/includes/logout.php:22
+#: modules/login/includes/logout.php:18
 msgid "Remove authorization from all devices"
 msgstr "Видалити авторизацію з усіх пристроїв"
 
@@ -369,149 +330,136 @@ msgstr "Символи, які зображені на картинці"
 msgid "If you do not see the picture with the code, turn the graphics support in your browser and refresh the page"
 msgstr "Якщо Ви не бачите зображення з кодом, увімкніть підтримку графіки в налаштуваннях вашого браузера і оновіть сторінку"
 
-#: modules/news/includes/add.php:21 modules/news/includes/edit.php:28
-msgid "Title"
-msgstr "Назва"
+#: modules/login/templates/login_captcha.php:29
+#: system/mobicms/Form/Form.php:225
+msgid "Continue"
+msgstr "Продовжити"
 
-#: modules/news/includes/add.php:27 modules/news/includes/edit.php:35
-msgid "Text"
-msgstr "Текст"
+#: modules/online/includes/history.php:25
+msgid "Visits History"
+msgstr "Історія відвідувань"
 
-#: modules/news/includes/clean.php:37 modules/news/includes/delete.php:31
-#: modules/profile/includes/option_avatar_delete.php:27
-#: modules/registration/includes/registration.php:83
-#: modules/registration/notice/index.php:66
-msgid "Cancel"
-msgstr "Скасувати"
-
-#: modules/news/includes/delete.php:27 modules/news/templates/index.php:58
-msgid "Delete"
-msgstr "Видалити"
-
-#: modules/news/includes/delete.php:34 modules/news/includes/delete.php:39
-#: modules/news/includes/edit.php:61 modules/news/includes/edit.php:66
-msgid "Wrong data"
-msgstr "Невірні дані"
-
-#: modules/news/templates/index.php:16
-msgid "Toggle navigation"
-msgstr "Переключити навігацію"
-
-#: modules/news/templates/index.php:31
-msgid "Add"
-msgstr "Додати"
-
-#: modules/news/templates/index.php:57
-msgid "Edit"
-msgstr "Редагувати"
-
-#: modules/online/templates/guests.php:7 modules/online/templates/index.php:8
+#: modules/online/templates/guests.php:7 modules/online/templates/index.php:17
 #: modules/online/templates/ip.php:7
 msgid "Who is online"
 msgstr "Хто в мережі"
 
-#: modules/online/templates/guests.php:27 modules/online/templates/index.php:28
+#: modules/online/templates/guests.php:11 modules/online/templates/index.php:21
+#: modules/online/templates/ip.php:11 modules/profile/templates/profile.php:19
+msgid "Control"
+msgstr "Керування"
+
+#: modules/online/templates/guests.php:27 modules/online/templates/index.php:37
 #: modules/online/templates/ip.php:27
 msgid "History"
 msgstr "Історія"
 
 #: modules/online/templates/guests.php:30
-#: modules/online/templates/guests.php:41 modules/online/templates/index.php:33
+#: modules/online/templates/guests.php:41 modules/online/templates/index.php:42
 #: modules/online/templates/ip.php:30
 msgid "Guests"
 msgstr "Гості"
 
-#: modules/online/templates/guests.php:33 modules/online/templates/index.php:36
+#: modules/online/templates/guests.php:33 modules/online/templates/index.php:45
 #: modules/online/templates/ip.php:33 modules/online/templates/ip.php:40
 msgid "IP Activity"
 msgstr "IP діяльність"
 
-#: modules/profile/includes/option_edit.php:55
-#: modules/registration/includes/registration.php:57
+#: modules/online/templates/guests.php:88 modules/online/templates/index.php:67
+msgid "Only for registered users"
+msgstr "Тільки для зареєстрованих користувачів"
+
+#: modules/profile/includes/option_avatar_delete.php:23
+#: modules/registration/includes/index.php:85
+#: modules/registration/includes/notice.php:77
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: modules/profile/includes/option_edit.php:57
+#: modules/registration/includes/index.php:59
 msgid "Gender"
 msgstr "Стать"
 
-#: modules/profile/includes/option_edit.php:59
-#: modules/registration/includes/registration.php:61
+#: modules/profile/includes/option_edit.php:61
+#: modules/registration/includes/index.php:63
 msgid "Male"
 msgstr "Чоловічий"
 
-#: modules/profile/includes/option_edit.php:60
-#: modules/registration/includes/registration.php:62
+#: modules/profile/includes/option_edit.php:62
+#: modules/registration/includes/index.php:64
 msgid "Female"
 msgstr "Жіночий"
 
-#: modules/profile/includes/option_email.php:64
+#: modules/profile/includes/option_email.php:60
 msgid "Invalid Email address"
 msgstr "Неприпустимий адресу електронної пошти"
 
-#: modules/profile/includes/option_email.php:66
-#: modules/registration/includes/registration.php:129
+#: modules/profile/includes/option_email.php:62
 msgid "This Email is already taken"
 msgstr "Цей email вже зайнятий"
 
-#: modules/profile/includes/option_email.php:71
-#: modules/profile/includes/option_nickname.php:93
-#: modules/profile/includes/option_password.php:67
-#: modules/profile/includes/option_rank.php:61
+#: modules/profile/includes/option_email.php:67
+#: modules/profile/includes/option_nickname.php:90
+#: modules/profile/includes/option_password.php:63
+#: modules/profile/includes/option_rank.php:57
 msgid "Invalid password"
 msgstr "Невірний пароль"
 
-#: modules/profile/includes/option_nickname.php:35
-#: modules/registration/includes/registration.php:31
+#: modules/profile/includes/option_nickname.php:32
+#: modules/registration/includes/index.php:33
 msgid "Min. 2, Max. 20 Characters.<br>Allowed letters are Cyrillic and Latin alphabet, numbers, spaces and punctuation - = @ ! ? ~ . _ ( ) [ ] *"
 msgstr "Мін. 2, Макс. 20 символів. <br> Допускаються літери кирилиці та латинського алфавіту, цифри, пробіли та знаки пунктуації - = @!? ~ . _ ( ) [ ] *"
 
-#: modules/profile/includes/option_nickname.php:37
-#: modules/profile/includes/option_nickname.php:60
+#: modules/profile/includes/option_nickname.php:34
+#: modules/profile/includes/option_nickname.php:57
 msgid "Day"
 msgid_plural "Days"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "День"
+msgstr[1] "Днів"
+msgstr[2] "Днів"
 
-#: modules/profile/includes/option_nickname.php:73
+#: modules/profile/includes/option_nickname.php:70
 msgid "Invalid characters"
 msgstr "Неприпустимі символи"
 
-#: modules/profile/includes/option_nickname.php:76
+#: modules/profile/includes/option_nickname.php:73
 msgid "It is forbidden to use characters of different languages"
 msgstr "Заборонено використовувати символи з різних мов"
 
-#: modules/profile/includes/option_nickname.php:79
+#: modules/profile/includes/option_nickname.php:76
 msgid "Nicknames consisting only of numbers are prohibited"
 msgstr "Ніки, що складаються тільки з чисел заборонені"
 
-#: modules/profile/includes/option_nickname.php:82
+#: modules/profile/includes/option_nickname.php:79
 msgid "Repeated characters"
 msgstr "Символи, що повторюються"
 
-#: modules/profile/includes/option_nickname.php:85
-#: modules/registration/includes/registration.php:101
+#: modules/profile/includes/option_nickname.php:82
+#: modules/registration/includes/index.php:103
 msgid "Email cannot be used as the Nickname"
 msgstr "E-Mail не може використовуватися як нік"
 
-#: modules/profile/includes/option_nickname.php:88
-#: modules/registration/includes/registration.php:102
+#: modules/profile/includes/option_nickname.php:85
+#: modules/registration/includes/index.php:104
 msgid "This Nickname is already taken"
 msgstr "Цей нік вже використовується"
 
-#: modules/profile/includes/option_password.php:30
-#: modules/registration/includes/registration.php:51
+#: modules/profile/includes/option_password.php:26
+#: modules/registration/includes/index.php:53
 msgid "The password length min. 3 characters"
 msgstr "Довжина пароля мін. 3 символи"
 
-#: modules/profile/includes/option_password.php:36
-#: modules/registration/includes/registration.php:50
+#: modules/profile/includes/option_password.php:32
+#: modules/registration/includes/index.php:52
 msgid "Repeat password"
 msgstr "Повторіть пароль"
 
-#: modules/profile/includes/option_password.php:50
-#: modules/registration/includes/registration.php:118
+#: modules/profile/includes/option_password.php:46
+#: modules/registration/includes/index.php:120
 msgid "Passwords don't coincide"
 msgstr "Паролі не співпадають"
 
-#: modules/profile/index.php:71
+#: modules/profile/index.php:63
 msgid "User does not exists"
 msgstr "Користувача не існує"
 
@@ -519,111 +467,100 @@ msgstr "Користувача не існує"
 msgid "Write"
 msgstr "Написати"
 
-#: modules/registration/includes/registration.php:30
+#: modules/registration/includes/index.php:26
+#, php-format
+msgid "By registering on the site, you acknowledge that you have read <a href=\"%s\">Terms of Use</a> and agree with them."
+msgstr "Реєструючись на сайті, ви підтверджуєте, що ви прочитали <a href=\"%s\"> Умови використання</a> і згодні з ними."
+
+#: modules/registration/includes/index.php:32
 msgid "Choose Nickname"
 msgstr "Виберіть нік"
 
-#: modules/registration/includes/registration.php:37
-#: modules/registration/notice/index.php:42
+#: modules/registration/includes/index.php:39
+#: modules/registration/includes/notice.php:53
 msgid "Your Email"
 msgstr "Ваш E-Mail"
 
-#: modules/registration/includes/registration.php:38
-#: modules/registration/notice/index.php:44
+#: modules/registration/includes/index.php:40
+#: modules/registration/includes/notice.php:55
 msgid "Please correctly specify your email address. This address will be sent a confirmation code to your registration."
 msgstr "Будь ласка, правильно вкажіть адресу електронної пошти. Цю адресу буде надіслано код підтвердження вашої реєстрації."
 
-#: modules/registration/includes/registration.php:70
-#: modules/registration/notice/index.php:51
+#: modules/registration/includes/index.php:72
+#: modules/registration/includes/notice.php:62
 msgid "Verification code"
 msgstr "Код перевірки"
 
-#: modules/registration/includes/registration.php:79
+#: modules/registration/includes/index.php:81
 msgid "Sign Up"
 msgstr "Зареєструватися"
 
-#: modules/registration/includes/registration.php:96
+#: modules/registration/includes/index.php:98
 msgid "Nickname must be at least 2 and no more than 20 characters in length"
-msgstr ""
+msgstr "Нік повинен бути не менше 2 і не більше 20 символів у довжину"
 
-#: modules/registration/includes/registration.php:97
+#: modules/registration/includes/index.php:99
 msgid "Nickname contains illegal characters"
-msgstr ""
+msgstr "Нік містить неприпустимі символи"
 
-#: modules/registration/includes/registration.php:98
+#: modules/registration/includes/index.php:100
 msgid "Nickname contains characters from different languages"
-msgstr ""
+msgstr "Нік містить символи з різних мов"
 
-#: modules/registration/includes/registration.php:99
+#: modules/registration/includes/index.php:101
 msgid "Nicknames consisting only of digits are prohibited"
-msgstr ""
+msgstr "Ніки, що складаються тільки з цифр заборонені"
 
-#: modules/registration/includes/registration.php:100
+#: modules/registration/includes/index.php:102
 msgid "Nickname contains recurring characters"
-msgstr ""
+msgstr "Нік містить неприпустимі символи"
 
-#: modules/registration/includes/registration.php:114
+#: modules/registration/includes/index.php:116
 msgid "Password must be at least 3 characters in length"
-msgstr ""
+msgstr "Пароль повинен містити не менше 3 символів"
 
-#: modules/registration/includes/registration.php:128
-msgid "Please provide a valid email address"
-msgstr ""
-
-#: modules/registration/includes/registration.php:170
+#: modules/registration/includes/index.php:170
 msgid "When saving the form there errors occurred, try once again. If problem repeat, contact the Site Administrator"
-msgstr ""
+msgstr "При збереженні форми сталася помилка, спробуйте ще раз. Якщо проблема повториться, зв'яжіться з адміністратором сайту"
 
-#: modules/registration/includes/registration.php:225
+#: modules/registration/includes/index.php:184
+#: modules/registration/includes/notice.php:102
 msgid "When sending emails the error occurred. Please contact the site administrator."
-msgstr ""
+msgstr "При відправленні листа сталася помилка. Будь ласка, зв'яжіться з адміністратором сайту."
 
-#: modules/registration/notice/index.php:35
+#: modules/registration/includes/notice.php:46
 msgid "Your Nickname"
-msgstr ""
+msgstr "Ваш Нік"
 
-#: modules/registration/notice/index.php:60
+#: modules/registration/includes/notice.php:71
 msgid "Send"
-msgstr ""
+msgstr "Надіслати"
 
-#: modules/registration/templates/registered.php:7
+#: modules/registration/index.php:23
 msgid "You are already registered"
 msgstr "Ви вже зареєстровані"
 
-#: modules/registration/templates/registration.php:10
-#, php-format
-msgid "By clicking &quot;Sign Up&quot;, you agree that read our %s, and agree with them."
-msgstr "Натискаючи \"Зареєструватись\", ви погоджуєтесь, що прочитали %s і згодні з ними."
-
-#: modules/registration/templates/registration.php:10
-msgid "Terms"
-msgstr "Умови"
-
-#: modules/registration/templates/registration.php:14
-msgid "The site moderation is enabled. You can get authorized access to the web site after the confirmation of Your registration of the Administrator. Confirmation is carried out 1-2 times a day."
-msgstr "На сайті ввімкнена модерація. Ви зможете отримати авторизований доступ до розділів сайту після підтвердження вашої реєстрації адміністратором. Підтвердження проводиться 1-2 рази в день."
-
-#: modules/registration/templates/registration.php:20
+#: modules/registration/templates/index.php:16
 msgid "Registration is temporarily closed"
 msgstr "Реєстрація тимчасово закрита"
 
-#: modules/whois/index.php:34
+#: modules/whois/index.php:29
 msgid "IP address"
 msgstr "IP-адреса"
 
-#: modules/whois/index.php:41
+#: modules/whois/index.php:36
 msgid "Search"
 msgstr "Пошук"
 
-#: system/includes/Functions.php:78
+#: system/includes/Functions.php:84
 msgid "Today"
 msgstr "Сьогодні"
 
-#: system/includes/Functions.php:81
+#: system/includes/Functions.php:87
 msgid "Yesterday"
 msgstr "Вчора"
 
-#: system/includes/Functions.php:236
+#: system/includes/Functions.php:242
 #, php-format
 msgid "%d day"
 msgid_plural "%d days"
@@ -631,7 +568,7 @@ msgstr[0] "%d день"
 msgstr[1] "%d днів"
 msgstr[2] "%d днів"
 
-#: system/mobicms/Form/AssignValues.php:61
+#: system/mobicms/Form/AssignValues.php:70
 msgid "This field is required"
 msgstr "Це поле обов'язкове для заповнення"
 

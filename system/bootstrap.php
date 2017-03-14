@@ -14,8 +14,6 @@ const DS = DIRECTORY_SEPARATOR;                                // Directory Sepa
  */
 
 define('ROOT_PATH', dirname(__DIR__) . DS);                    // Defines the root directory
-const CONFIG_PATH = __DIR__ . DS . 'config' . DS;
-const VENDOR_PATH = ROOT_PATH . 'system' . DS . 'vendor' . DS; // Vendors path
 const CACHE_PATH = __DIR__ . DS . 'cache' . DS;                // Path to the system cache files
 const LOG_PATH = __DIR__ . DS . 'logs' . DS;                   // Path to the LOG files
 const LOCALE_PATH = __DIR__ . DS . 'locale' . DS;              // Path to the language files
@@ -47,9 +45,6 @@ if (DEBUG) {
     ini_set('display_errors', 'Off');
     ini_set('log_errors', 'Off');
 }
-
-// Starting the Firewall
-//(new Mobicms\Firewall\Firewall)->run($request->getClientIp());
 
 use Mobicms\Checkpoint\Facade;
 use Mobicms\Environment\Vars;  //TODO: доработать, или удалить сервис
@@ -92,7 +87,7 @@ class App extends Mobicms\Ioc\Container
             $config = [];
 
             // Read configuration
-            foreach (Glob::glob(CONFIG_PATH . '{{,*.}global,{,*.}local}.php', Glob::GLOB_BRACE) as $file) {
+            foreach (Glob::glob(__DIR__ . '/config/' . '{{,*.}global,{,*.}local}.php', Glob::GLOB_BRACE) as $file) {
                 $config = ArrayUtils::merge($config, include $file);
             }
 

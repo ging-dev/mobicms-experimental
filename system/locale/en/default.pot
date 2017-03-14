@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mobicms\n"
-"POT-Creation-Date: 2017-05-08 12:26+0400\n"
+"POT-Creation-Date: 2017-05-14 14:40+0400\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,118 +27,118 @@ msgstr ""
 "X-Poedit-SearchPath-2: assets/template/includes\n"
 "X-Poedit-SearchPath-3: system/mobicms\n"
 
-#: assets/template/includes/include.navbar.php:25
+#: assets/template/includes/include.navbar.php:31
 msgid "Go To"
 msgstr ""
 
-#: assets/template/includes/include.navbar.php:28
+#: assets/template/includes/include.navbar.php:34
 msgid "Home"
 msgstr ""
 
-#: assets/template/includes/include.navbar.php:30
-#: assets/template/includes/layout.default.php:19
+#: assets/template/includes/include.navbar.php:36
+#: assets/template/includes/layout.default.php:23
 msgid "News"
 msgstr ""
 
-#: assets/template/includes/include.navbar.php:32
+#: assets/template/includes/include.navbar.php:38
 #: modules/home/templates/index.php:11 modules/profile/templates/profile.php:80
 msgid "Guestbook"
 msgstr ""
 
-#: assets/template/includes/include.navbar.php:33
-#: modules/admin/includes/sitemap.php:21 modules/home/templates/index.php:12
+#: assets/template/includes/include.navbar.php:39
+#: modules/admin/includes/sitemap.php:17 modules/home/templates/index.php:12
 msgid "Forum"
 msgstr ""
 
-#: assets/template/includes/include.navbar.php:35
+#: assets/template/includes/include.navbar.php:41
 #: modules/home/templates/index.php:14
 msgid "Downloads"
 msgstr ""
 
-#: assets/template/includes/include.navbar.php:36
-#: modules/admin/includes/sitemap.php:27 modules/home/templates/index.php:15
+#: assets/template/includes/include.navbar.php:42
+#: modules/admin/includes/sitemap.php:23 modules/home/templates/index.php:15
 msgid "Library"
 msgstr ""
 
-#: assets/template/includes/include.navbar.php:38
+#: assets/template/includes/include.navbar.php:44
 #: modules/home/templates/index.php:16
 msgid "Community"
 msgstr ""
 
-#: assets/template/includes/include.navbar.php:39
+#: assets/template/includes/include.navbar.php:45
 #: modules/home/templates/index.php:18 modules/profile/templates/profile.php:79
 msgid "Photo Album"
 msgstr ""
 
-#: assets/template/includes/include.navbar.php:49
+#: assets/template/includes/include.navbar.php:55
 #: modules/admin/templates/edit_form.php:5 modules/admin/templates/index.php:7
 #: modules/admin/templates/scanner.php:5
 msgid "Admin Panel"
 msgstr ""
 
-#: assets/template/includes/include.navbar.php:53
+#: assets/template/includes/include.navbar.php:59
 #: modules/profile/templates/profile.php:84
 msgid "Mail"
 msgstr ""
 
-#: assets/template/includes/include.navbar.php:58
-#: modules/profile/templates/option.php:25
+#: assets/template/includes/include.navbar.php:64
+#: modules/profile/templates/option.php:27
 msgid "Profile"
 msgstr ""
 
-#: assets/template/includes/include.navbar.php:60
-#: modules/admin/includes/users_settings.php:38
+#: assets/template/includes/include.navbar.php:66
+#: modules/admin/includes/users_settings.php:34
 #: modules/profile/templates/edit_form.php:9
-#: modules/profile/templates/option.php:15
-#: modules/profile/templates/option.php:33
-#: modules/profile/templates/option_avatar.php:13
+#: modules/profile/templates/option.php:17
+#: modules/profile/templates/option.php:35
+#: modules/profile/templates/option_avatar.php:18
 #: modules/profile/templates/option_theme.php:10
 #: modules/profile/templates/option_theme_set.php:10
 #: modules/profile/templates/profile.php:29
 msgid "Settings"
 msgstr ""
 
-#: assets/template/includes/include.navbar.php:62
-#: modules/login/includes/logout.php:28 modules/login/templates/login.php:5
+#: assets/template/includes/include.navbar.php:68
+#: modules/login/includes/logout.php:24 modules/login/templates/login.php:5
 msgid "Exit"
 msgstr ""
 
-#: assets/template/includes/include.navbar.php:68
-#: modules/admin/includes/users_settings.php:22
-#: modules/registration/includes/activation.php:32
-#: modules/registration/includes/confirmation.php:19
-#: modules/registration/index.php:27 modules/registration/templates/index.php:3
+#: assets/template/includes/include.navbar.php:74
+#: modules/admin/includes/users_settings.php:18
+#: modules/registration/includes/activation.php:41
+#: modules/registration/includes/confirmation.php:25
+#: modules/registration/index.php:22 modules/registration/templates/index.php:7
 msgid "Registration"
 msgstr ""
 
-#: assets/template/includes/include.navbar.php:72
-#: modules/login/includes/login.php:41 modules/login/templates/login.php:5
+#: assets/template/includes/include.navbar.php:78
+#: modules/login/includes/login.php:37 modules/login/templates/login.php:5
 #: modules/login/templates/login_captcha.php:5
-#: modules/registration/includes/activation.php:26
+#: modules/registration/includes/activation.php:35
 msgid "Login"
 msgstr ""
 
-#: assets/template/includes/include.user.php:14
+#: assets/template/includes/include.user.php:19
 msgid "IP Management"
 msgstr ""
 
-#: assets/template/includes/include.user.php:17
+#: assets/template/includes/include.user.php:22
 msgid "Proxy Management"
 msgstr ""
 
-#: assets/template/includes/include.user.php:24
+#: assets/template/includes/include.user.php:29
 msgid "Block this IP"
 msgstr ""
 
-#: assets/template/includes/include.user.php:51
+#: assets/template/includes/include.user.php:56
 msgid "Last visit"
 msgstr ""
 
-#: assets/template/includes/layout.default.php:39
+#: assets/template/includes/layout.default.php:43
 msgid "Help"
 msgstr ""
 
-#: assets/template/includes/layout.default.php:40
+#: assets/template/includes/layout.default.php:44
 msgid "Up"
 msgstr ""
 
@@ -150,67 +150,67 @@ msgstr ""
 msgid "Sorry, but the page you were trying to view does not exist"
 msgstr ""
 
-#: modules/admin/includes/languages.php:48
-#: modules/admin/includes/quarantine.php:105
-#: modules/admin/includes/sitemap.php:45
-#: modules/admin/includes/system_settings.php:113
-#: modules/admin/includes/users_settings.php:172
-#: modules/help/includes/avatars.php:50
-#: modules/profile/includes/option_avatar_animation.php:29
-#: modules/profile/includes/option_avatar_gravatar.php:29
-#: modules/profile/includes/option_avatar_image.php:32
-#: modules/profile/includes/option_edit.php:168
-#: modules/profile/includes/option_email.php:53
-#: modules/profile/includes/option_language.php:33
-#: modules/profile/includes/option_nickname.php:50
-#: modules/profile/includes/option_password.php:43
-#: modules/profile/includes/option_rank.php:52
-#: modules/profile/includes/option_settings.php:80
-#: modules/profile/includes/reputation.php:53
+#: modules/admin/includes/languages.php:45
+#: modules/admin/includes/quarantine.php:97
+#: modules/admin/includes/sitemap.php:41
+#: modules/admin/includes/system_settings.php:110
+#: modules/admin/includes/users_settings.php:168
+#: modules/help/includes/avatars.php:49
+#: modules/profile/includes/option_avatar_animation.php:25
+#: modules/profile/includes/option_avatar_gravatar.php:25
+#: modules/profile/includes/option_avatar_image.php:29
+#: modules/profile/includes/option_edit.php:166
+#: modules/profile/includes/option_email.php:49
+#: modules/profile/includes/option_language.php:29
+#: modules/profile/includes/option_nickname.php:47
+#: modules/profile/includes/option_password.php:39
+#: modules/profile/includes/option_rank.php:48
+#: modules/profile/includes/option_settings.php:75
+#: modules/profile/includes/reputation.php:56
 msgid "Save"
 msgstr ""
 
-#: modules/admin/includes/languages.php:52
-#: modules/admin/includes/quarantine.php:109
-#: modules/admin/includes/scanner.php:38 modules/admin/includes/sitemap.php:49
-#: modules/admin/includes/smilies.php:27
-#: modules/admin/includes/system_settings.php:117
-#: modules/admin/includes/users_settings.php:176
-#: modules/help/includes/avatars.php:54
+#: modules/admin/includes/languages.php:49
+#: modules/admin/includes/quarantine.php:101
+#: modules/admin/includes/scanner.php:44 modules/admin/includes/sitemap.php:45
+#: modules/admin/includes/smilies.php:23
+#: modules/admin/includes/system_settings.php:114
+#: modules/admin/includes/users_settings.php:172
+#: modules/help/includes/avatars.php:53
 #: modules/help/templates/avatars_index.php:4
 #: modules/help/templates/avatars_list.php:4
-#: modules/help/templates/avatars_set.php:7 modules/help/templates/rules.php:4
-#: modules/login/includes/logout.php:32
-#: modules/profile/includes/option_avatar_animation.php:33
-#: modules/profile/includes/option_avatar_animation.php:74
-#: modules/profile/includes/option_avatar_gravatar.php:33
-#: modules/profile/includes/option_avatar_image.php:36
-#: modules/profile/includes/option_edit.php:172
-#: modules/profile/includes/option_email.php:57
-#: modules/profile/includes/option_language.php:37
-#: modules/profile/includes/option_nickname.php:54
-#: modules/profile/includes/option_nickname.php:64
-#: modules/profile/includes/option_password.php:47
-#: modules/profile/includes/option_rank.php:56
-#: modules/profile/includes/option_settings.php:84
-#: modules/profile/includes/option_theme.php:70
-#: modules/profile/includes/reputation.php:57 modules/whois/index.php:45
+#: modules/help/templates/avatars_set.php:13 modules/help/templates/rules.php:4
+#: modules/login/includes/logout.php:28
+#: modules/profile/includes/option_avatar_animation.php:29
+#: modules/profile/includes/option_avatar_animation.php:70
+#: modules/profile/includes/option_avatar_gravatar.php:29
+#: modules/profile/includes/option_avatar_image.php:33
+#: modules/profile/includes/option_edit.php:170
+#: modules/profile/includes/option_email.php:53
+#: modules/profile/includes/option_language.php:33
+#: modules/profile/includes/option_nickname.php:51
+#: modules/profile/includes/option_nickname.php:61
+#: modules/profile/includes/option_password.php:43
+#: modules/profile/includes/option_rank.php:52
+#: modules/profile/includes/option_settings.php:79
+#: modules/profile/includes/option_theme.php:66
+#: modules/profile/includes/reputation.php:60 modules/whois/index.php:40
 msgid "Back"
 msgstr ""
 
-#: modules/admin/includes/quarantine.php:27
+#: modules/admin/includes/quarantine.php:19
 msgid "Quarantine"
 msgstr ""
 
-#: modules/admin/includes/quarantine.php:42
+#: modules/admin/includes/quarantine.php:34
 msgid "Restrictions"
 msgstr ""
 
-#: modules/admin/includes/scanner.php:34 modules/admin/includes/smilies.php:23
+#: modules/admin/includes/scanner.php:40 modules/admin/includes/smilies.php:19
 msgid "Run"
 msgstr ""
 
-#: modules/admin/index.php:66
+#: modules/admin/index.php:58
 msgid "Access forbidden"
 msgstr ""
 
@@ -223,35 +223,35 @@ msgstr ""
 msgid "Smilies"
 msgstr ""
 
-#: modules/help/includes/avatars.php:45
-#: modules/profile/templates/option_avatar.php:23
+#: modules/help/includes/avatars.php:44
+#: modules/profile/templates/option_avatar.php:28
 msgid "Set Avatar"
 msgstr ""
 
-#: modules/help/includes/avatars.php:46
+#: modules/help/includes/avatars.php:45
 msgid "Are you sure you want to set yourself this avatar?"
 msgstr ""
 
-#: modules/help/includes/avatars.php:69
+#: modules/help/includes/avatars.php:68
 msgid "Avatar is installed"
 msgstr ""
 
 #: modules/help/templates/avatars_index.php:9
 #: modules/help/templates/avatars_list.php:9
-#: modules/help/templates/avatars_set.php:12
+#: modules/help/templates/avatars_set.php:18
 #: modules/help/templates/index.php:10
 msgid "Avatars"
 msgstr ""
 
 #: modules/help/templates/avatars_list.php:23
-#: modules/online/templates/guests.php:82 modules/online/templates/index.php:52
+#: modules/online/templates/guests.php:82 modules/online/templates/index.php:61
 #: modules/online/templates/ip.php:52
 #: modules/profile/templates/option_theme.php:47
 msgid "List is empty"
 msgstr ""
 
 #: modules/help/templates/avatars_list.php:26
-#: modules/online/templates/guests.php:85 modules/online/templates/index.php:55
+#: modules/online/templates/guests.php:85 modules/online/templates/index.php:64
 #: modules/online/templates/ip.php:55
 #: modules/profile/templates/option_theme.php:50
 msgid "Total"
@@ -282,38 +282,38 @@ msgstr ""
 msgid "Useful"
 msgstr ""
 
-#: modules/home/templates/index.php:17 modules/online/includes/index.php:22
-#: modules/online/templates/guests.php:24 modules/online/templates/index.php:25
+#: modules/home/templates/index.php:17 modules/online/includes/index.php:25
+#: modules/online/templates/guests.php:24 modules/online/templates/index.php:34
 #: modules/online/templates/ip.php:24
 msgid "Users"
 msgstr ""
 
-#: modules/login/includes/login.php:20
+#: modules/login/includes/login.php:16
 msgid "Nickname or Email"
 msgstr ""
 
-#: modules/login/includes/login.php:27
-#: modules/registration/includes/index.php:49
+#: modules/login/includes/login.php:23
+#: modules/registration/includes/index.php:46
 msgid "Password"
 msgstr ""
 
-#: modules/login/includes/login.php:35
+#: modules/login/includes/login.php:31
 msgid "Remember"
 msgstr ""
 
-#: modules/login/includes/login.php:45
+#: modules/login/includes/login.php:41
 msgid "Forgot password?"
 msgstr ""
 
-#: modules/login/includes/login.php:60
+#: modules/login/includes/login.php:56
 msgid "Login information are incorrect"
 msgstr ""
 
-#: modules/login/includes/logout.php:19
+#: modules/login/includes/logout.php:15
 msgid "Leave the site?"
 msgstr ""
 
-#: modules/login/includes/logout.php:22
+#: modules/login/includes/logout.php:18
 msgid "Remove authorization from all devices"
 msgstr ""
 
@@ -331,126 +331,130 @@ msgstr ""
 msgid "Continue"
 msgstr ""
 
-#: modules/online/templates/guests.php:7 modules/online/templates/index.php:8
+#: modules/online/includes/history.php:25
+msgid "Visits History"
+msgstr ""
+
+#: modules/online/templates/guests.php:7 modules/online/templates/index.php:17
 #: modules/online/templates/ip.php:7
 msgid "Who is online"
 msgstr ""
 
-#: modules/online/templates/guests.php:11 modules/online/templates/index.php:12
+#: modules/online/templates/guests.php:11 modules/online/templates/index.php:21
 #: modules/online/templates/ip.php:11 modules/profile/templates/profile.php:19
 msgid "Control"
 msgstr ""
 
-#: modules/online/templates/guests.php:27 modules/online/templates/index.php:28
+#: modules/online/templates/guests.php:27 modules/online/templates/index.php:37
 #: modules/online/templates/ip.php:27
 msgid "History"
 msgstr ""
 
 #: modules/online/templates/guests.php:30
-#: modules/online/templates/guests.php:41 modules/online/templates/index.php:33
+#: modules/online/templates/guests.php:41 modules/online/templates/index.php:42
 #: modules/online/templates/ip.php:30
 msgid "Guests"
 msgstr ""
 
-#: modules/online/templates/guests.php:33 modules/online/templates/index.php:36
+#: modules/online/templates/guests.php:33 modules/online/templates/index.php:45
 #: modules/online/templates/ip.php:33 modules/online/templates/ip.php:40
 msgid "IP Activity"
 msgstr ""
 
-#: modules/online/templates/guests.php:88 modules/online/templates/index.php:58
+#: modules/online/templates/guests.php:88 modules/online/templates/index.php:67
 msgid "Only for registered users"
 msgstr ""
 
-#: modules/profile/includes/option_avatar_delete.php:27
-#: modules/registration/includes/index.php:88
-#: modules/registration/includes/notice.php:70
+#: modules/profile/includes/option_avatar_delete.php:23
+#: modules/registration/includes/index.php:85
+#: modules/registration/includes/notice.php:77
 msgid "Cancel"
 msgstr ""
 
-#: modules/profile/includes/option_edit.php:59
-#: modules/registration/includes/index.php:62
+#: modules/profile/includes/option_edit.php:57
+#: modules/registration/includes/index.php:59
 msgid "Gender"
 msgstr ""
 
-#: modules/profile/includes/option_edit.php:63
-#: modules/registration/includes/index.php:66
+#: modules/profile/includes/option_edit.php:61
+#: modules/registration/includes/index.php:63
 msgid "Male"
 msgstr ""
 
-#: modules/profile/includes/option_edit.php:64
-#: modules/registration/includes/index.php:67
+#: modules/profile/includes/option_edit.php:62
+#: modules/registration/includes/index.php:64
 msgid "Female"
 msgstr ""
 
-#: modules/profile/includes/option_email.php:64
+#: modules/profile/includes/option_email.php:60
 msgid "Invalid Email address"
 msgstr ""
 
-#: modules/profile/includes/option_email.php:66
+#: modules/profile/includes/option_email.php:62
 msgid "This Email is already taken"
 msgstr ""
 
-#: modules/profile/includes/option_email.php:71
-#: modules/profile/includes/option_nickname.php:93
-#: modules/profile/includes/option_password.php:67
-#: modules/profile/includes/option_rank.php:61
+#: modules/profile/includes/option_email.php:67
+#: modules/profile/includes/option_nickname.php:90
+#: modules/profile/includes/option_password.php:63
+#: modules/profile/includes/option_rank.php:57
 msgid "Invalid password"
 msgstr ""
 
-#: modules/profile/includes/option_nickname.php:35
-#: modules/registration/includes/index.php:36
+#: modules/profile/includes/option_nickname.php:32
+#: modules/registration/includes/index.php:33
 msgid "Min. 2, Max. 20 Characters.<br>Allowed letters are Cyrillic and Latin alphabet, numbers, spaces and punctuation - = @ ! ? ~ . _ ( ) [ ] *"
 msgstr ""
 
-#: modules/profile/includes/option_nickname.php:37
-#: modules/profile/includes/option_nickname.php:60
+#: modules/profile/includes/option_nickname.php:34
+#: modules/profile/includes/option_nickname.php:57
 msgid "Day"
 msgid_plural "Days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: modules/profile/includes/option_nickname.php:73
+#: modules/profile/includes/option_nickname.php:70
 msgid "Invalid characters"
 msgstr ""
 
-#: modules/profile/includes/option_nickname.php:76
+#: modules/profile/includes/option_nickname.php:73
 msgid "It is forbidden to use characters of different languages"
 msgstr ""
 
-#: modules/profile/includes/option_nickname.php:79
+#: modules/profile/includes/option_nickname.php:76
 msgid "Nicknames consisting only of numbers are prohibited"
 msgstr ""
 
-#: modules/profile/includes/option_nickname.php:82
+#: modules/profile/includes/option_nickname.php:79
 msgid "Repeated characters"
 msgstr ""
 
-#: modules/profile/includes/option_nickname.php:85
-#: modules/registration/includes/index.php:106
+#: modules/profile/includes/option_nickname.php:82
+#: modules/registration/includes/index.php:103
 msgid "Email cannot be used as the Nickname"
 msgstr ""
 
-#: modules/profile/includes/option_nickname.php:88
-#: modules/registration/includes/index.php:107
+#: modules/profile/includes/option_nickname.php:85
+#: modules/registration/includes/index.php:104
 msgid "This Nickname is already taken"
 msgstr ""
 
-#: modules/profile/includes/option_password.php:30
-#: modules/registration/includes/index.php:56
+#: modules/profile/includes/option_password.php:26
+#: modules/registration/includes/index.php:53
 msgid "The password length min. 3 characters"
 msgstr ""
 
-#: modules/profile/includes/option_password.php:36
-#: modules/registration/includes/index.php:55
+#: modules/profile/includes/option_password.php:32
+#: modules/registration/includes/index.php:52
 msgid "Repeat password"
 msgstr ""
 
-#: modules/profile/includes/option_password.php:50
-#: modules/registration/includes/index.php:123
+#: modules/profile/includes/option_password.php:46
+#: modules/registration/includes/index.php:120
 msgid "Passwords don't coincide"
 msgstr ""
 
-#: modules/profile/index.php:71
+#: modules/profile/index.php:63
 msgid "User does not exists"
 msgstr ""
 
@@ -458,55 +462,55 @@ msgstr ""
 msgid "Write"
 msgstr ""
 
-#: modules/registration/includes/index.php:29
+#: modules/registration/includes/index.php:26
 #, php-format
 msgid "By registering on the site, you acknowledge that you have read <a href=\"%s\">Terms of Use</a> and agree with them."
 msgstr ""
 
-#: modules/registration/includes/index.php:35
+#: modules/registration/includes/index.php:32
 msgid "Choose Nickname"
 msgstr ""
 
-#: modules/registration/includes/index.php:42
-#: modules/registration/includes/notice.php:46
+#: modules/registration/includes/index.php:39
+#: modules/registration/includes/notice.php:53
 msgid "Your Email"
 msgstr ""
 
-#: modules/registration/includes/index.php:43
-#: modules/registration/includes/notice.php:48
+#: modules/registration/includes/index.php:40
+#: modules/registration/includes/notice.php:55
 msgid "Please correctly specify your email address. This address will be sent a confirmation code to your registration."
 msgstr ""
 
-#: modules/registration/includes/index.php:75
-#: modules/registration/includes/notice.php:55
+#: modules/registration/includes/index.php:72
+#: modules/registration/includes/notice.php:62
 msgid "Verification code"
 msgstr ""
 
-#: modules/registration/includes/index.php:84
+#: modules/registration/includes/index.php:81
 msgid "Sign Up"
 msgstr ""
 
-#: modules/registration/includes/index.php:101
+#: modules/registration/includes/index.php:98
 msgid "Nickname must be at least 2 and no more than 20 characters in length"
 msgstr ""
 
-#: modules/registration/includes/index.php:102
+#: modules/registration/includes/index.php:99
 msgid "Nickname contains illegal characters"
 msgstr ""
 
-#: modules/registration/includes/index.php:103
+#: modules/registration/includes/index.php:100
 msgid "Nickname contains characters from different languages"
 msgstr ""
 
-#: modules/registration/includes/index.php:104
+#: modules/registration/includes/index.php:101
 msgid "Nicknames consisting only of digits are prohibited"
 msgstr ""
 
-#: modules/registration/includes/index.php:105
+#: modules/registration/includes/index.php:102
 msgid "Nickname contains recurring characters"
 msgstr ""
 
-#: modules/registration/includes/index.php:119
+#: modules/registration/includes/index.php:116
 msgid "Password must be at least 3 characters in length"
 msgstr ""
 
@@ -515,43 +519,43 @@ msgid "When saving the form there errors occurred, try once again. If problem re
 msgstr ""
 
 #: modules/registration/includes/index.php:184
-#: modules/registration/includes/notice.php:95
+#: modules/registration/includes/notice.php:102
 msgid "When sending emails the error occurred. Please contact the site administrator."
 msgstr ""
 
-#: modules/registration/includes/notice.php:39
+#: modules/registration/includes/notice.php:46
 msgid "Your Nickname"
 msgstr ""
 
-#: modules/registration/includes/notice.php:64
+#: modules/registration/includes/notice.php:71
 msgid "Send"
 msgstr ""
 
-#: modules/registration/index.php:28
+#: modules/registration/index.php:23
 msgid "You are already registered"
 msgstr ""
 
-#: modules/registration/templates/index.php:12
+#: modules/registration/templates/index.php:16
 msgid "Registration is temporarily closed"
 msgstr ""
 
-#: modules/whois/index.php:34
+#: modules/whois/index.php:29
 msgid "IP address"
 msgstr ""
 
-#: modules/whois/index.php:41
+#: modules/whois/index.php:36
 msgid "Search"
 msgstr ""
 
-#: system/includes/Functions.php:80
+#: system/includes/Functions.php:84
 msgid "Today"
 msgstr ""
 
-#: system/includes/Functions.php:83
+#: system/includes/Functions.php:87
 msgid "Yesterday"
 msgstr ""
 
-#: system/includes/Functions.php:238
+#: system/includes/Functions.php:242
 #, php-format
 msgid "%d day"
 msgid_plural "%d days"
