@@ -11,7 +11,7 @@ return [
         'guestsAllowUserLists'       => true,
         'guestsAllowViewProfiles'    => true,
         'homeTitle'                  => 'mobiCMS!',
-        'homeUrl'                    => 'http://mobicms/mobicms-classic',
+        'homeUrl'                    => 'http://mobicms/mobicms-archive',
         'lng'                        => 'ru',
         'lngSwitch'                  => true,
         'metaDesc'                   => 'mobiCMS mobile content management system http://mobicms.net',
